@@ -57,7 +57,7 @@ const Nav = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Link
-              href="/questionnaire"
+              href="/start"
               className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
             >
               Get Your Reckoning
@@ -108,7 +108,7 @@ const Nav = () => {
               </a>
             ))}
             <Link
-              href="/questionnaire"
+              href="/start"
               className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >

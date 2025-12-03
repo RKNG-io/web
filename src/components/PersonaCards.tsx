@@ -12,19 +12,19 @@ const personaData: PersonaCard[] = [
     title: 'Launching',
     description:
       'Still dreaming, planning, or just getting started. You need clarity on what actually matters — and permission to begin.',
-    href: '/questionnaire?persona=launcher',
+    href: '/start?persona=launcher',
   },
   {
     title: 'Building',
     description:
       'Running, but doing everything yourself. Busy but stuck. You need systems that give you time back — without hiring.',
-    href: '/questionnaire?persona=builder',
+    href: '/start?persona=builder',
   },
   {
     title: 'Scaling',
     description:
       "Successful, but capped. The business can't run without you. You need operations that free up space for what's next.",
-    href: '/questionnaire?persona=architect',
+    href: '/start?persona=architect',
   },
 ];
 

@@ -33,16 +33,16 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/questionnaire"
+                href="/start"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
               >
                 Get Your Reckoning — Free
               </Link>
               <Link
-                href="#how-it-works"
+                href="/start/website"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-transparent border-2 border-white text-white font-medium transition-transform hover:-translate-y-0.5"
               >
-                How it works
+                I know what I need
               </Link>
             </div>
           </div>
