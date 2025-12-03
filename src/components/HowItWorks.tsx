@@ -55,9 +55,13 @@ const HowItWorks: React.FC = () => {
 
         {/* Steps grid with connecting line */}
         <div className="relative">
-          {/* Connecting gradient line - hidden on mobile, visible on lg */}
+          {/* Connecting line segments - hidden on mobile, visible on lg */}
           <div className="absolute left-0 right-0 top-6 hidden h-1 lg:block">
-            <div className="mx-auto h-full max-w-5xl bg-gradient-to-r from-mint via-fuchsia to-blue" />
+            <div className="mx-auto flex h-full max-w-5xl">
+              <div className="h-full flex-1 bg-mint" />
+              <div className="h-full flex-1 bg-fuchsia" />
+              <div className="h-full flex-1 bg-blue" />
+            </div>
           </div>
 
           {/* Steps grid */}

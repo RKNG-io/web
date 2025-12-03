@@ -28,11 +28,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand column */}
           <div className="space-y-4">
-            <div className="mb-3">
-              <h3 className="text-2xl font-semibold">
-                Reckoning
-              </h3>
-              <div className="mt-1 h-1 w-16 rounded-full bg-gradient-to-r from-fuchsia via-mint to-blue" />
+            <div className="relative mb-3 inline-block">
+              <span className="text-2xl font-semibold">Reckoning</span>
+              <span
+                className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm"
+                style={{ background: 'linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%)' }}
+              />
             </div>
             <p className="text-sm leading-relaxed text-white/70">
               Stop dreaming. Start running. We help solopreneurs and small businesses get clear on where they are and build the systems to get where they want to be.

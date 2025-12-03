@@ -29,13 +29,16 @@ const Nav = () => {
       }`}
     >
       <div className="flex justify-between items-center">
-        {/* Wordmark */}
-        <div className="relative">
-          <h1 className="text-2xl font-bold text-charcoal">
+        {/* Wordmark with rising line */}
+        <a href="/" className="relative inline-block">
+          <span className={`text-2xl font-semibold tracking-tight ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
             Reckoning
-            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-fuchsia to-fuchsia-dark"></span>
-          </h1>
-        </div>
+          </span>
+          <span
+            className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm"
+            style={{ background: 'linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%)' }}
+          />
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -43,7 +46,7 @@ const Nav = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-charcoal hover:text-fuchsia transition-colors font-medium"
+              className={`hover:text-fuchsia transition-colors font-medium ${isScrolled ? 'text-charcoal' : 'text-white/90'}`}
             >
               {link.label}
             </a>

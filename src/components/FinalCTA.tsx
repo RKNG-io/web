@@ -3,16 +3,8 @@ import { Button } from '@/components/ui';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="relative bg-charcoal py-32 px-6 md:px-12 lg:px-24">
-      {/* Radial gradient overlay */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: 'radial-gradient(circle at center, rgba(209, 75, 168, 0.15) 0%, transparent 70%)',
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
+    <section className="bg-charcoal py-32 px-6 md:px-12 lg:px-24">
+      <div className="mx-auto max-w-4xl text-center">
         <h2 className="mb-6 text-5xl font-semibold text-white md:text-6xl lg:text-7xl">
           Your time is now.
         </h2>

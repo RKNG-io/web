@@ -13,23 +13,9 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-charcoal text-white overflow-hidden">
-      {/* Gradient overlays */}
-      <div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle at 20% 30%, rgba(182, 226, 211, 0.2) 0%, transparent 50%)',
-        }}
-      />
-      <div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle at 80% 70%, rgba(209, 75, 168, 0.2) 0%, transparent 50%)',
-        }}
-      />
-
+    <section className="min-h-screen bg-charcoal text-white">
       {/* Content */}
-      <div className="relative flex flex-col items-center justify-center text-center min-h-screen pt-24 pb-16 px-8">
+      <div className="flex flex-col items-center justify-center text-center min-h-screen pt-24 pb-16 px-8">
         <div className="max-w-4xl mx-auto animate-fadeInUp">
           {/* Tagline */}
           <p className="text-xs md:text-sm uppercase tracking-widest mb-6 text-white/80">
