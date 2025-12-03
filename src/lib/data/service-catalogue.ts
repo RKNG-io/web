@@ -4,11 +4,11 @@
 import { ServiceItem } from '../types';
 
 export const SERVICE_CATALOGUE: ServiceItem[] = [
-
+  
   // ═══════════════════════════════════════════════════════════════
   // PRESENCE
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'website_single',
     name: 'One-Page Website',
@@ -27,7 +27,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 800,
     revenuePotential: 'First impression that converts'
   },
-
+  
   {
     id: 'website_multi',
     name: 'Multi-Page Website',
@@ -46,7 +46,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 2000,
     revenuePotential: 'Professional presence that works 24/7'
   },
-
+  
   {
     id: 'website_refresh',
     name: 'Website Refresh',
@@ -64,7 +64,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 1200
   },
-
+  
   {
     id: 'domain_setup',
     name: 'Domain & Hosting Setup',
@@ -82,7 +82,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 150
   },
-
+  
   {
     id: 'email_pro',
     name: 'Professional Email',
@@ -100,7 +100,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 100
   },
-
+  
   {
     id: 'link_hub',
     name: 'Link-in-Bio Hub',
@@ -118,11 +118,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 200
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // OPERATIONS
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'booking_system',
     name: 'Booking System',
@@ -142,7 +142,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     timeSavedPerMonth: 4,
     revenuePotential: 'No more email tennis'
   },
-
+  
   {
     id: 'payment_setup',
     name: 'Payment Setup',
@@ -161,7 +161,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 250,
     revenuePotential: 'Get paid faster, look professional'
   },
-
+  
   {
     id: 'invoicing',
     name: 'Invoicing System',
@@ -180,7 +180,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 200,
     timeSavedPerMonth: 2
   },
-
+  
   {
     id: 'intake_form',
     name: 'Client Intake Form',
@@ -198,7 +198,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 150
   },
-
+  
   {
     id: 'crm_setup',
     name: 'Simple CRM Setup',
@@ -217,7 +217,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 500,
     timeSavedPerMonth: 3
   },
-
+  
   {
     id: 'ordering_system',
     name: 'Ordering System',
@@ -236,7 +236,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 600,
     revenuePotential: 'Take orders while you sleep'
   },
-
+  
   {
     id: 'class_booking',
     name: 'Class/Session Booking',
@@ -255,11 +255,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 400,
     timeSavedPerMonth: 5
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // AUTOMATION
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'welcome_sequence',
     name: 'Welcome Email Sequence',
@@ -278,7 +278,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 500,
     revenuePotential: 'Convert leads while you sleep'
   },
-
+  
   {
     id: 'email_capture',
     name: 'Email List Setup',
@@ -296,7 +296,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 250
   },
-
+  
   {
     id: 'review_automation',
     name: 'Review Request Automation',
@@ -315,7 +315,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 300,
     revenuePotential: 'More reviews = more trust = more clients'
   },
-
+  
   {
     id: 'workflow_automation',
     name: 'Custom Workflow Automation',
@@ -334,7 +334,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 600,
     timeSavedPerMonth: 5
   },
-
+  
   {
     id: 'social_media_setup',
     name: 'Social Media System Setup',
@@ -354,7 +354,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     timeSavedPerMonth: 6,
     revenuePotential: 'Consistent visibility without the daily scramble'
   },
-
+  
   {
     id: 'content_bank',
     name: 'Content Bank & Calendar',
@@ -374,7 +374,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     timeSavedPerMonth: 4,
     revenuePotential: 'Never stare at a blank screen again'
   },
-
+  
   {
     id: 'social_templates',
     name: 'Social Media Templates',
@@ -394,7 +394,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     timeSavedPerMonth: 3,
     revenuePotential: 'Look professional without design skills'
   },
-
+  
   {
     id: 'social_training',
     name: 'Social Media Training Session',
@@ -412,7 +412,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 300
   },
-
+  
   {
     id: 'social_audit',
     name: 'Social Media Audit',
@@ -430,11 +430,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 250
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // LEGAL
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'contract_template',
     name: 'Contract Template',
@@ -452,7 +452,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 350
   },
-
+  
   {
     id: 'terms_privacy',
     name: 'Terms & Privacy Policy',
@@ -470,7 +470,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 250
   },
-
+  
   {
     id: 'waiver_form',
     name: 'Waiver / Consent Form',
@@ -488,11 +488,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 200
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // VISIBILITY
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'google_business',
     name: 'Google Business Setup',
@@ -511,7 +511,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 200,
     revenuePotential: 'Show up when people search for what you do'
   },
-
+  
   {
     id: 'seo_basics',
     name: 'SEO Foundations',
@@ -529,7 +529,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 500
   },
-
+  
   {
     id: 'multi_location',
     name: 'Multi-Location Setup',
@@ -547,11 +547,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 800
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // SCALE WITH SANITY (Overwhelmed-specific)
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'ops_audit',
     name: 'Operations Audit',
@@ -569,7 +569,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 1500
   },
-
+  
   {
     id: 'ops_sprint',
     name: 'Operations Sprint',
@@ -588,7 +588,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 3000,
     timeSavedPerMonth: 15
   },
-
+  
   {
     id: 'process_documentation',
     name: 'Process Documentation',
@@ -607,7 +607,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     agencyComparison: 800,
     timeSavedPerMonth: 5
   },
-
+  
   {
     id: 'reporting_dashboard',
     name: 'Reporting Dashboard',
@@ -625,11 +625,11 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 1000
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // SUPPORT / RETAINERS
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'retainer_lite',
     name: 'Ongoing Support — Lite',
@@ -647,7 +647,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 200
   },
-
+  
   {
     id: 'retainer_standard',
     name: 'Ongoing Support — Standard',
@@ -665,7 +665,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 400
   },
-
+  
   {
     id: 'retainer_scale',
     name: 'Ongoing Support — Scale',

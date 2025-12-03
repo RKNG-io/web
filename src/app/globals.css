@@ -1,22 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary */
+  /* Brand Colors */
   --charcoal: #2d2926;
   --ice: #F2F6F9;
-
-  /* Accents */
   --fuchsia: #D14BA8;
+  --fuchsia-dark: #a33a85;
   --mint: #B6E2D3;
+  --mint-light: #d4efe6;
   --blue: #A8C3D1;
-
-  /* Extended */
+  --blue-light: #c5d8e3;
   --ink: #1a1a1a;
   --stone: #E5E7E9;
-  --fuchsia-dark: #a33a85;
-  --fuchsia-light: #e066bb;
-  --mint-light: #d4efe6;
-  --blue-light: #c5d8e3;
+  --white: #ffffff;
 
   /* Semantic */
   --success: #2A7F78;
@@ -26,6 +22,30 @@
   /* Backgrounds */
   --background: var(--ice);
   --foreground: var(--charcoal);
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
 }
 
 @theme inline {
@@ -38,9 +58,9 @@
   --color-ink: var(--ink);
   --color-stone: var(--stone);
   --color-fuchsia-dark: var(--fuchsia-dark);
-  --color-fuchsia-light: var(--fuchsia-light);
   --color-mint-light: var(--mint-light);
   --color-blue-light: var(--blue-light);
+  --color-white: var(--white);
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-error: var(--error);
@@ -60,7 +80,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 16px;
+  font-size: var(--text-base);
   line-height: 1.6;
   font-weight: 400;
 }
@@ -85,7 +105,142 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Animations */
+/* ============================================
+   Section Backgrounds
+   ============================================ */
+
+.section-ice {
+  background-color: var(--ice);
+  color: var(--charcoal);
+}
+
+.section-charcoal {
+  background-color: var(--charcoal);
+  color: var(--ice);
+}
+
+.section-mint {
+  background-color: var(--mint);
+  color: var(--charcoal);
+}
+
+/* ============================================
+   Typography Utilities
+   ============================================ */
+
+.overline {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fuchsia);
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--fuchsia);
+  color: var(--white);
+  border-color: var(--fuchsia);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--fuchsia-dark);
+  border-color: var(--fuchsia-dark);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--fuchsia);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: var(--mint);
+  color: var(--charcoal);
+  border-color: var(--mint);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--mint-light);
+  border-color: var(--mint-light);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 2px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--charcoal);
+  color: var(--ice);
+}
+
+.btn-outline:focus-visible {
+  outline: 2px solid var(--charcoal);
+  outline-offset: 2px;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--charcoal);
+  border-color: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--ice);
+}
+
+.btn-ghost:focus-visible {
+  outline: 2px solid var(--fuchsia);
+  outline-offset: 2px;
+}
+
+/* Button size variants */
+.btn-sm {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-sm);
+}
+
+.btn-lg {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-lg);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -114,11 +269,14 @@ h1, h2, h3, h4, h5, h6 {
   animation: bounce 2s ease-in-out infinite;
 }
 
-/* Questionnaire specific styles */
+/* ============================================
+   Questionnaire Specific Styles
+   ============================================ */
+
 .welcome-text {
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   color: #555;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
   line-height: 1.7;
 }
 
@@ -129,16 +287,16 @@ h1, h2, h3, h4, h5, h6 {
 .time-estimate {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-xs);
   background: var(--ice);
-  padding: 0.5rem 1rem;
-  border-radius: 1.25rem;
-  font-size: 0.875rem;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
   color: #666;
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
 }
 
 .time-estimate::before {
   content: '⏱';
-  font-size: 1rem;
+  font-size: var(--text-base);
 }

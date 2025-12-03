@@ -53,7 +53,7 @@ You must respond with valid JSON that matches this structure:
 
 {
   "meta": {
-    "persona": "leaper" | "scrappy" | "overwhelmed",
+    "persona": "launcher" | "builder" | "architect",
     "name": string,
     "businessType": string,
     "generatedDate": ISO date string
@@ -63,9 +63,9 @@ You must respond with valid JSON that matches this structure:
     "reflection": string (2-3 sentences)
   },
   "snapshot": {
-    // For leaper: whereYouAre, whatsWorking, whatsMissing
-    // For scrappy: whatYouveBuilt, whatsWorking, whatsCostingYou
-    // For overwhelmed: whatYouveBuilt, whatsWorking, whatsCostingYou
+    // For launcher: whereYouAre, whatsWorking, whatsMissing
+    // For builder: whatYouveBuilt, whatsWorking, whatsCostingYou
+    // For architect: whatYouveBuilt, whatsWorking, whatsCostingYou
     "whereYouAre"?: string,
     "whatYouveBuilt"?: string,
     "whatsWorking": string[],
@@ -73,9 +73,9 @@ You must respond with valid JSON that matches this structure:
     "whatsCostingYou"?: string[]
   },
   "diagnosis": {
-    // For leaper: coreInsight, blockersReframed, hiddenAdvantage
-    // For scrappy: pattern, hiddenCost, quickWins
-    // For overwhelmed: pattern, hiddenCost
+    // For launcher: coreInsight, blockersReframed, hiddenAdvantage
+    // For builder: pattern, hiddenCost, quickWins
+    // For architect: pattern, hiddenCost
     "coreInsight"?: string,
     "pattern"?: string,
     "blockersReframed"?: string,

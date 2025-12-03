@@ -18,17 +18,17 @@ export interface PersonaQuestion {
 }
 
 export interface Persona {
-  id: 'leaper' | 'scrappy' | 'overwhelmed';
+  id: 'launcher' | 'builder' | 'architect';
   name: string;
   description: string;
   questions: PersonaQuestion[];
 }
 
 export const PERSONAS: Record<string, Persona> = {
-  leaper: {
-    id: 'leaper',
-    name: 'Starting Out',
-    description: "You're ready to launch but haven't fully started yet",
+  launcher: {
+    id: 'launcher',
+    name: 'Launching',
+    description: "You're ready to start but haven't fully launched yet",
     questions: [
       {
         id: 'welcome',
@@ -240,9 +240,9 @@ export const PERSONAS: Record<string, Persona> = {
     ]
   },
 
-  scrappy: {
-    id: 'scrappy',
-    name: 'Already Running',
+  builder: {
+    id: 'builder',
+    name: 'Building',
     description: "You're making it work but everything is duct tape",
     questions: [
       {
@@ -403,9 +403,9 @@ export const PERSONAS: Record<string, Persona> = {
     ]
   },
 
-  overwhelmed: {
-    id: 'overwhelmed',
-    name: 'Scaling Up',
+  architect: {
+    id: 'architect',
+    name: 'Scaling',
     description: "You've built something real but it's running you",
     questions: [
       {

@@ -2,9 +2,11 @@ import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import PersonaCards from '@/components/PersonaCards';
 import HowItWorks from '@/components/HowItWorks';
-import ReckoningCTA from '@/components/ReckoningCTA';
-import ServiceExplorer from '@/components/ServiceExplorer';
+import Benefits from '@/components/Benefits';
+import BlockedUnlocked from '@/components/BlockedUnlocked';
+import Packages from '@/components/Packages';
 import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
@@ -18,11 +20,15 @@ export default function Home() {
         <section id="how-it-works">
           <HowItWorks />
         </section>
-        <ReckoningCTA />
-        <section id="services">
-          <ServiceExplorer />
+        <Benefits />
+        <BlockedUnlocked />
+        <section id="packages">
+          <Packages />
         </section>
         <Testimonials />
+        <section id="faq">
+          <FAQ />
+        </section>
         <FinalCTA />
       </main>
       <Footer />

@@ -5,7 +5,7 @@ import { BASE_SYSTEM_PROMPT, OUTPUT_SCHEMA_INSTRUCTIONS } from '@/prompts/base';
 import { getPersonaPrompt } from '@/prompts/personas';
 
 // Validation schemas
-const VALID_PERSONAS: PersonaType[] = ['leaper', 'scrappy', 'overwhelmed'];
+const VALID_PERSONAS: PersonaType[] = ['launcher', 'builder', 'architect'];
 
 interface ReckoningRequestBody {
   answers: Record<string, string | string[]>;

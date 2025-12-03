@@ -1,37 +1,32 @@
 import React from 'react';
-import { SectionHeader, Badge } from '@/components/ui';
 
 interface Step {
-  number: number;
+  number: string;
   title: string;
   description: string;
-  timeBadge: string;
   color: 'mint' | 'fuchsia' | 'blue';
 }
 
 const steps: Step[] = [
   {
-    number: 1,
-    title: 'Take the questionnaire',
+    number: '01',
+    title: 'Tell us where you are',
     description:
-      'Answer a few questions about your business, your challenges, and your goals. No jargon, no trick questions — just honest conversation.',
-    timeBadge: '~10 minutes',
+      'A 15-minute conversation (not a form). Your business, your goals, what feels like it\'s in the way.',
     color: 'mint',
   },
   {
-    number: 2,
+    number: '02',
     title: 'Get your Reckoning',
     description:
-      'Receive a personalised report that diagnoses where you are, prioritises what matters, and maps out your next steps.',
-    timeBadge: 'Within 24 hours',
+      'Not a 50-point action plan. Just what matters now. Small shifts that compound — starting with one.',
     color: 'fuchsia',
   },
   {
-    number: 3,
-    title: 'Take action',
+    number: '03',
+    title: 'Take the next step',
     description:
-      'Follow your roadmap DIY, or let us handle the heavy lifting. Either way, you\'ll know exactly what to do and why.',
-    timeBadge: 'Your pace',
+      'Just one. Then the next. Run with it yourself, or let us help.',
     color: 'blue',
   },
 ];
@@ -44,19 +39,22 @@ const colorClasses = {
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="bg-white py-32 px-8">
+    <section className="bg-charcoal py-32 px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader
-          number="02"
-          subtitle="The Process"
-          title="Three steps to clarity"
-          className="mb-16 text-center"
-        />
+        {/* Section header */}
+        <div className="mb-20 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-mint">
+            How it works
+          </p>
+          <h2 className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+            Three steps. No&nbsp;overwhelm.
+          </h2>
+        </div>
 
-        {/* Steps grid with connecting line */}
+        {/* Steps with colour segments */}
         <div className="relative">
-          {/* Connecting line segments - hidden on mobile, visible on lg */}
-          <div className="absolute left-0 right-0 top-6 hidden h-1 lg:block">
+          {/* Three solid colour segments - hidden on mobile, visible on lg */}
+          <div className="absolute left-0 right-0 top-8 hidden h-1 lg:block">
             <div className="mx-auto flex h-full max-w-5xl">
               <div className="h-full flex-1 bg-mint" />
               <div className="h-full flex-1 bg-fuchsia" />
@@ -65,27 +63,33 @@ const HowItWorks: React.FC = () => {
           </div>
 
           {/* Steps grid */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-3 lg:gap-12">
             {steps.map((step) => (
-              <div key={step.number} className="relative flex flex-col items-center text-center">
-                {/* Step circle */}
-                <div
-                  className={`relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full text-white font-bold ${colorClasses[step.color]}`}
-                >
-                  {step.number}
+              <div key={step.number} className="relative flex flex-col text-center lg:items-center">
+                {/* Large step number with reduced opacity */}
+                <div className="relative z-10 mb-6">
+                  <span className="text-8xl font-bold text-fuchsia opacity-30 md:text-9xl">
+                    {step.number}
+                  </span>
                 </div>
 
                 {/* Step content */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-charcoal">{step.title}</h3>
-                  <p className="text-base leading-relaxed text-charcoal/70">{step.description}</p>
-                  <Badge variant="default" className="bg-ice">
-                    {step.timeBadge}
-                  </Badge>
+                  <h3 className="text-2xl font-bold text-white md:text-3xl">{step.title}</h3>
+                  <p className="text-base leading-relaxed text-white/80 md:text-lg">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20 text-center">
+          <button className="rounded-full bg-fuchsia px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-fuchsia/90 hover:shadow-lg">
+            Get Your Reckoning — Free
+          </button>
         </div>
       </div>
     </section>

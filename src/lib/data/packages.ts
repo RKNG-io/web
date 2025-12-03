@@ -4,34 +4,34 @@
 import { Package } from '../types';
 
 export const PACKAGES: Record<string, Package> = {
-  launchpad: {
-    id: 'launchpad',
-    name: 'Launchpad',
-    tagline: 'Everything you need to launch properly',
+  launcher: {
+    id: 'launcher',
+    name: 'Launcher',
+    tagline: 'Everything you need to start properly',
     persona: 'launcher',
     price: 399,
     includes: [
       'website_single',
-      'domain_setup',
+      'domain_setup', 
       'email_pro',
       'booking_system',
       'payment_setup',
       'contract_template'
     ],
-    alaCarteValue: 574,   // Sum of individual prices
+    alaCarteValue: 574,
     savings: 175
   },
-
-  upgrade: {
-    id: 'upgrade',
-    name: 'The Upgrade',
-    tagline: 'From duct tape to done right',
+  
+  builder: {
+    id: 'builder',
+    name: 'Builder',
+    tagline: 'Systems that give you time back',
     persona: 'builder',
     price: 599,
     includes: [
       'website_refresh',
       'booking_system',
-      'invoicing',
+      'invoicing_automation',
       'contract_template',
       'welcome_sequence',
       'google_business'
@@ -39,20 +39,22 @@ export const PACKAGES: Record<string, Package> = {
     alaCarteValue: 804,
     savings: 205
   },
-
-  scaleWithSanity: {
-    id: 'scaleWithSanity',
-    name: 'Scale with Sanity',
-    tagline: 'Get your business — and your life — back',
+  
+  architect: {
+    id: 'architect',
+    name: 'Architect',
+    tagline: 'Scale without losing yourself',
     persona: 'architect',
     price: 999,
     includes: [
       'ops_audit',
-      'ops_sprint'
+      'ops_sprint',
+      'process_documentation',
+      'dashboard_setup'
     ],
-    alaCarteValue: 1098,
-    savings: 99,
-    note: 'Audit first, then we scope the sprint together'
+    alaCarteValue: 1298,
+    savings: 299,
+    note: 'Starts with audit, then we scope the sprint together'
   }
 };
 

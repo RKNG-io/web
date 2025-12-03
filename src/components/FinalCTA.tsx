@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui';
 
 const FinalCTA: React.FC = () => {
@@ -9,19 +10,15 @@ const FinalCTA: React.FC = () => {
           Your time is now.
         </h2>
 
-        <p className="mb-10 text-xl text-white/80 md:text-2xl">
-          Stop planning. Start running. Get the clarity you need to move forward.
+        <p className="mb-10 text-xl text-white/60 md:text-2xl">
+          Find out what&rsquo;s blocking you — and what unlocks it. 15 minutes. Free. No commitment.
         </p>
 
-        <div className="mb-6">
-          <Button variant="primary" size="lg" className="px-10 py-4 text-xl">
+        <Link href="/questionnaire">
+          <Button variant="primary" size="lg" className="bg-fuchsia px-10 py-4 text-xl">
             Get Your Reckoning — Free
           </Button>
-        </div>
-
-        <p className="text-xs font-medium uppercase tracking-wider text-white/60">
-          FREE · NO OBLIGATION · TAKES 10 MINUTES
-        </p>
+        </Link>
       </div>
     </section>
   );

@@ -17,15 +17,17 @@ const Nav = () => {
   }, []);
 
   const navLinks = [
+    { label: 'Where are you?', href: '#where-are-you' },
     { label: 'How it works', href: '#how-it-works' },
+    { label: 'What you get', href: '#what-you-get' },
     { label: 'Services', href: '#services' },
-    { label: 'About', href: '#about' },
+    { label: 'FAQ', href: '#faq' },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-8 py-5 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : ''
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : ''
       }`}
     >
       <div className="flex justify-between items-center">
@@ -51,8 +53,8 @@ const Nav = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="primary" size="md">
-            Get Started
+          <Button variant="primary" size="md" href="/questionnaire">
+            Get Your Reckoning
           </Button>
         </div>
 
@@ -97,8 +99,8 @@ const Nav = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="primary" size="md" className="w-full">
-            Get Started
+          <Button variant="primary" size="md" className="w-full" href="/questionnaire">
+            Get Your Reckoning
           </Button>
         </div>
       </div>

@@ -32,7 +32,7 @@ export function QuestionCard({
   // Welcome screen
   if (question.type === 'welcome') {
     return (
-      <div className="bg-white rounded-2xl p-10 shadow-lg flex flex-col min-h-[500px]">
+      <div className="bg-white rounded-lg p-10 shadow-lg flex flex-col min-h-[500px]">
         <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
           {personaName}
         </div>
@@ -46,13 +46,13 @@ export function QuestionCard({
         <div className="flex gap-4 mt-auto pt-6">
           <button
             onClick={onBack}
-            className="px-6 py-3 rounded-xl border-2 border-stone text-gray-600 font-medium hover:border-charcoal hover:text-charcoal transition-colors"
+            className="px-6 py-3 rounded-lg border-2 border-stone text-charcoal/60 font-medium hover:border-charcoal hover:text-charcoal transition-colors"
           >
             ← Back
           </button>
           <button
             onClick={onNext}
-            className="flex-1 px-6 py-3 rounded-xl bg-fuchsia text-white font-medium hover:bg-fuchsia-dark transition-colors"
+            className="flex-1 px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-colors"
           >
             Let's begin →
           </button>
@@ -81,7 +81,7 @@ export function QuestionCard({
   };
 
   return (
-    <div className="bg-white rounded-2xl p-10 shadow-lg flex flex-col min-h-[500px]">
+    <div className="bg-white rounded-lg p-10 shadow-lg flex flex-col min-h-[500px]">
       {questionNumber && totalQuestions && (
         <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
           Question {questionNumber} of {totalQuestions - 1}
@@ -93,7 +93,7 @@ export function QuestionCard({
       </h2>
 
       {question.subtext && (
-        <p className="text-gray-600 mb-6">{question.subtext}</p>
+        <p className="text-charcoal/60 mb-6">{question.subtext}</p>
       )}
 
       {/* Single select */}
@@ -102,7 +102,7 @@ export function QuestionCard({
           {question.options.map(option => (
             <label
               key={option.value}
-              className={`flex items-start gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+              className={`flex items-start gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all ${
                 answer === option.value
                   ? 'border-fuchsia bg-white'
                   : 'border-transparent bg-ice hover:border-blue'
@@ -123,7 +123,7 @@ export function QuestionCard({
               <div className="flex-1">
                 <div className="font-medium text-charcoal">{option.label}</div>
                 {option.description && (
-                  <div className="text-sm text-gray-500 mt-1">
+                  <div className="text-sm text-charcoal/50 mt-1">
                     {option.description}
                   </div>
                 )}
@@ -141,7 +141,7 @@ export function QuestionCard({
             return (
               <label
                 key={option.value}
-                className={`flex items-start gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+                className={`flex items-start gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all ${
                   isSelected
                     ? 'border-fuchsia bg-white'
                     : 'border-transparent bg-ice hover:border-blue'
@@ -162,7 +162,7 @@ export function QuestionCard({
                 <div className="flex-1">
                   <div className="font-medium text-charcoal">{option.label}</div>
                   {option.description && (
-                    <div className="text-sm text-gray-500 mt-1">
+                    <div className="text-sm text-charcoal/50 mt-1">
                       {option.description}
                     </div>
                   )}
@@ -177,7 +177,7 @@ export function QuestionCard({
       {question.type === 'text' && (
         <div className="mb-6 flex-1">
           <textarea
-            className="w-full p-4 border-2 border-stone rounded-xl resize-vertical min-h-[150px] focus:outline-none focus:border-fuchsia transition-colors"
+            className="w-full p-4 border-2 border-stone rounded-lg resize-vertical min-h-[150px] focus:outline-none focus:border-fuchsia transition-colors"
             placeholder={question.placeholder}
             value={typeof answer === 'string' ? answer : ''}
             onChange={handleTextChange}
@@ -189,14 +189,14 @@ export function QuestionCard({
       <div className="flex gap-4 mt-auto pt-6">
         <button
           onClick={onBack}
-          className="px-6 py-3 rounded-xl border-2 border-stone text-gray-600 font-medium hover:border-charcoal hover:text-charcoal transition-colors"
+          className="px-6 py-3 rounded-lg border-2 border-stone text-charcoal/60 font-medium hover:border-charcoal hover:text-charcoal transition-colors"
         >
           ← Back
         </button>
         <button
           onClick={onNext}
           disabled={!canContinue}
-          className="flex-1 px-6 py-3 rounded-xl bg-fuchsia text-white font-medium hover:bg-fuchsia-dark transition-colors disabled:bg-stone disabled:text-gray-400 disabled:cursor-not-allowed"
+          className="flex-1 px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-colors disabled:bg-stone disabled:text-charcoal/40 disabled:cursor-not-allowed"
         >
           {isLastQuestion ? 'Complete →' : 'Continue →'}
         </button>

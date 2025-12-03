@@ -52,11 +52,11 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative rounded-2xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              className="relative rounded-lg bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
             >
               {/* Large quote mark */}
               <div
-                className="absolute -top-2 left-6 font-serif text-6xl leading-none text-charcoal/10"
+                className="absolute -top-2 left-6 text-6xl leading-none text-charcoal/10"
                 aria-hidden="true"
               >
                 &ldquo;

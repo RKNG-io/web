@@ -1,14 +1,15 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
 import { PERSONAS } from '@/data/persona-questions';
 import { useQuestionnaire } from './useQuestionnaire';
 import { ProgressBar } from './ProgressBar';
 import { QuestionCard } from './QuestionCard';
 
-export default function QuestionnairePage() {
+function QuestionnaireContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const {
     state,
     selectPersona,
@@ -22,6 +23,14 @@ export default function QuestionnairePage() {
   } = useQuestionnaire();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Check for persona in URL params on mount
+  useEffect(() => {
+    const personaParam = searchParams.get('persona');
+    if (personaParam && PERSONAS[personaParam] && !state.persona) {
+      selectPersona(personaParam);
+    }
+  }, [searchParams, selectPersona, state.persona]);
 
   // Handle question submission
   const handleSubmit = async () => {
@@ -66,19 +75,19 @@ export default function QuestionnairePage() {
             <h1 className="text-3xl font-semibold tracking-tight text-charcoal mb-2">
               Reckoning
             </h1>
-            <p className="text-sm text-gray-500">Your time is now</p>
+            <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
           <ProgressBar {...getProgress()} />
 
-          <div className="bg-white rounded-2xl p-10 shadow-lg">
+          <div className="bg-white rounded-lg p-10 shadow-lg">
             <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
               Let's start
             </div>
             <h2 className="text-2xl font-semibold mb-3 text-charcoal">
               Which best describes where you are?
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-charcoal/60 mb-8">
               This helps us ask the right questions.
             </p>
 
@@ -87,7 +96,7 @@ export default function QuestionnairePage() {
                 <div
                   key={key}
                   onClick={() => selectPersona(key)}
-                  className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${
+                  className={`p-6 rounded-lg border-2 cursor-pointer transition-all ${
                     state.persona === key
                       ? 'border-fuchsia bg-white'
                       : 'border-transparent bg-ice hover:border-blue'
@@ -96,7 +105,7 @@ export default function QuestionnairePage() {
                   <h3 className="text-lg font-medium text-charcoal mb-2">
                     {persona.name}
                   </h3>
-                  <p className="text-sm text-gray-600">{persona.description}</p>
+                  <p className="text-sm text-charcoal/60">{persona.description}</p>
                 </div>
               ))}
             </div>
@@ -104,7 +113,7 @@ export default function QuestionnairePage() {
             <button
               onClick={startQuestions}
               disabled={!state.persona}
-              className="w-full px-6 py-3 rounded-xl bg-fuchsia text-white font-medium hover:bg-fuchsia-dark transition-colors disabled:bg-stone disabled:text-gray-400 disabled:cursor-not-allowed"
+              className="w-full px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity disabled:bg-stone disabled:text-charcoal/40 disabled:cursor-not-allowed"
             >
               Continue →
             </button>
@@ -141,7 +150,7 @@ export default function QuestionnairePage() {
             <h1 className="text-3xl font-semibold tracking-tight text-charcoal mb-2">
               Reckoning
             </h1>
-            <p className="text-sm text-gray-500">Your time is now</p>
+            <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
           <ProgressBar {...progress} />
@@ -173,17 +182,17 @@ export default function QuestionnairePage() {
             <h1 className="text-3xl font-semibold tracking-tight text-charcoal mb-2">
               Reckoning
             </h1>
-            <p className="text-sm text-gray-500">Your time is now</p>
+            <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
-          <div className="bg-white rounded-2xl p-10 shadow-lg text-center">
+          <div className="bg-white rounded-lg p-10 shadow-lg text-center">
             <div className="w-20 h-20 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
               <div className="animate-spin text-3xl">⏱</div>
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-charcoal">
               Preparing your Reckoning...
             </h2>
-            <p className="text-gray-600">
+            <p className="text-charcoal/60">
               We're analysing your answers and creating your personalised report.
               This takes about 30 seconds.
             </p>
@@ -194,4 +203,16 @@ export default function QuestionnairePage() {
   }
 
   return null;
+}
+
+export default function QuestionnairePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-ice py-8 px-4 flex items-center justify-center">
+        <div className="text-charcoal/60">Loading...</div>
+      </div>
+    }>
+      <QuestionnaireContent />
+    </Suspense>
+  );
 }

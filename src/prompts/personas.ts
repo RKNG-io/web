@@ -3,7 +3,7 @@
 import type { PersonaType } from '@/types';
 
 export const PERSONA_PROMPTS: Record<PersonaType, string> = {
-  leaper: `# PERSONA: LEAPER (Priya)
+  launcher: `# PERSONA: LAUNCHER (Priya)
 
 ## Context
 You are writing for someone who is **starting a business** — they have a dream, possibly some early clients, but haven't fully launched. They're likely still employed or transitioning.
@@ -24,7 +24,7 @@ You are writing for someone who is **starting a business** — they have a dream
 - Anything condescending about their fear
 - Overly corporate jargon
 
-## Output Requirements for Leaper
+## Output Requirements for Launcher
 
 Your response must include:
 
@@ -58,7 +58,7 @@ Your response must include:
 
 8. **Sign Off**: "Your time is now."`,
 
-  scrappy: `# PERSONA: SCRAPPY (Jordan)
+  builder: `# PERSONA: BUILDER (Jordan)
 
 ## Context
 You are writing for someone **already running a business** — freelancing, taking clients, making money — but everything is duct tape. They've proven they can do it; now they need to tighten up.
@@ -79,7 +79,7 @@ You are writing for someone **already running a business** — freelancing, taki
 - Anything that sounds like they're beginners
 - Condescension about the duct tape — it got them here
 
-## Output Requirements for Scrappy
+## Output Requirements for Builder
 
 Your response must include:
 
@@ -116,7 +116,7 @@ Your response must include:
 
 10. **Sign Off**: "This is the upgrade."`,
 
-  overwhelmed: `# PERSONA: OVERWHELMED (Marcus)
+  architect: `# PERSONA: ARCHITECT (Marcus)
 
 ## Context
 You are writing for someone who has **built a real business** — staff, revenue, locations, responsibility — but has become the bottleneck. The business runs them, not the other way around.

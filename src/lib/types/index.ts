@@ -7,13 +7,13 @@
 
 export type PersonaType = 'launcher' | 'builder' | 'architect';
 
-export type BusinessCategory =
-  | 'coaching'
-  | 'creative'
-  | 'food'
-  | 'fitness'
-  | 'professional'
-  | 'ecommerce'
+export type BusinessCategory = 
+  | 'coaching' 
+  | 'creative' 
+  | 'food' 
+  | 'fitness' 
+  | 'professional' 
+  | 'ecommerce' 
   | 'therapy'
   | 'teaching'
   | 'other';
@@ -87,7 +87,7 @@ export interface RegulatoryFlag {
 // SERVICES & PRICING
 // ═══════════════════════════════════════════════════════════════
 
-export type ServiceCategory =
+export type ServiceCategory = 
   | 'presence'      // Website, branding, email
   | 'operations'    // Booking, payments, CRM
   | 'automation'    // Email sequences, workflows
@@ -101,28 +101,28 @@ export interface ServiceItem {
   id: string;
   name: string;
   description: string;
-
+  
   // Pricing
   basePrice: number;                    // £ GBP
   timeEstimate: string;                 // "2-3 hours" or "1 week"
-
+  
   // Filtering
   personas: PersonaType[];              // Who sees this
   businessTypes: BusinessCategory[];    // Which industries (empty = all)
-
+  
   // Delivery
   deliveryType: DeliveryType;
-
+  
   // Bundling
   category: ServiceCategory;
   suggestedWith: string[];              // IDs of complementary services
   requiredWith: string[];               // IDs of dependencies
-
+  
   // Display
   popular: boolean;
   impact: 'low' | 'medium' | 'high';
   effort: 'low' | 'medium' | 'high';
-
+  
   // Value framing
   agencyComparison: number;             // What an agency would charge
   timeSavedPerMonth?: number;           // Hours saved (for ROI calc)
@@ -143,17 +143,17 @@ export interface PricingResult {
     quantity: number;
     subtotal: number;
   }[];
-
+  
   subtotal: number;                 // À la carte total
   discount: number;                 // Discount amount
   discountPercentage: number;       // e.g., 0.15 for 15%
   total: number;                    // After discount
-
+  
   // Comparisons
   agencyTotal: number;              // What agencies would charge
   agencySavings: number;            // Difference
   agencySavingsPercentage: number;
-
+  
   // Cost of inaction
   costOfInaction: {
     timeLost: {
@@ -167,13 +167,13 @@ export interface PricingResult {
     };
     lifeCost: string;               // Qualitative, from questionnaire
   };
-
+  
   // ROI framing
   roi: {
     paybackPeriod: string;          // "Pays for itself in X months"
     yearOneValue: number;           // Time saved + revenue potential
   };
-
+  
   // Suggested additions
   suggestions: {
     service: ServiceItem;
@@ -208,12 +208,12 @@ export interface ReckoningReport {
     businessType: string;
     generatedDate: string;
   };
-
+  
   opening: {
     headline: string;
     reflection: string;
   };
-
+  
   snapshot: {
     whereYouAre?: string;
     whatYouveBuilt?: string;
@@ -221,7 +221,7 @@ export interface ReckoningReport {
     whatsMissing?: string[];
     whatsCostingYou?: string[];
   };
-
+  
   diagnosis: {
     coreInsight?: string;
     pattern?: string;
@@ -230,33 +230,33 @@ export interface ReckoningReport {
     hiddenCost?: string;
     quickWins?: string[];
   };
-
+  
   journeyMap?: {
     phase1: Phase;
     phase2: Phase;
     phase3: Phase;
   };
-
+  
   theFix?: {
     principle: string;
     phase1: FixPhase;
     phase2: FixPhase;
     phase3: FixPhase;
   };
-
+  
   costOfWaiting?: {
     timeCost: string;
     moneyCost: string;
     lifeCost: string;
   };
-
+  
   costOfStatusQuo?: {
     time: string;
     money: string;
     energy: string;
     reputation: string;
   };
-
+  
   theUpgrade?: {
     beforeAfter: {
       before: string;
@@ -264,19 +264,19 @@ export interface ReckoningReport {
     };
     priorityFixes: PriorityFix[];
   };
-
+  
   toolsAudit?: {
     alreadyPayingFor: string[];
     underutilised: string[];
     missing: string[];
     recommendation: string;
   };
-
+  
   freedomVision?: {
     theirWords: string;
     whatItTakes: string;
   };
-
+  
   yourInvestment: {
     diyPath: {
       description: string;
@@ -293,7 +293,7 @@ export interface ReckoningReport {
       roiFraming?: string;
     };
   };
-
+  
   closing: {
     affirmation?: string;
     validation?: string;
