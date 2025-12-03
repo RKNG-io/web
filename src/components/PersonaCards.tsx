@@ -30,44 +30,34 @@ const personaData: PersonaCard[] = [
 
 const PersonaCards: React.FC = () => {
   return (
-    <section className="bg-ice py-20 md:py-28">
+    <section className="bg-ice py-24" id="where-are-you">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="mb-16 text-center md:mb-20">
-          <h2 className="text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl">
+        <div className="text-center max-w-[640px] mx-auto mb-16">
+          <h2 className="text-[2rem] font-semibold tracking-tight text-charcoal mb-4">
             Where are you?
           </h2>
         </div>
 
-        <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {personaData.map((persona) => (
-            <Link
+            <article
               key={persona.title}
-              href={persona.href}
-              className="group block"
+              className="bg-white border border-stone rounded-[10px] p-10 transition-all duration-150 hover:border-fuchsia hover:-translate-y-1"
             >
-              <div
-                className="
-                  h-full rounded-[10px] border border-stone bg-white p-8
-                  transition-all duration-300 ease-out
-                  hover:-translate-y-1 hover:border-fuchsia hover:shadow-lg
-                "
+              <h3 className="text-xl font-semibold text-fuchsia mb-2">
+                {persona.title}
+              </h3>
+              <p className="text-sm text-charcoal/70 mb-6">
+                {persona.description}
+              </p>
+              <Link
+                href={persona.href}
+                className="text-sm font-medium text-charcoal inline-flex items-center group"
               >
-                {/* Card title */}
-                <h3 className="mb-4 text-2xl font-semibold text-fuchsia">
-                  {persona.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mb-6 text-base leading-relaxed text-charcoal/70">
-                  {persona.description}
-                </p>
-
-                {/* CTA */}
-                <div className="text-fuchsia transition-colors group-hover:text-fuchsia/80">
-                  <span className="font-medium">That's me →</span>
-                </div>
-              </div>
-            </Link>
+                That&apos;s me
+                <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </article>
           ))}
         </div>
       </div>

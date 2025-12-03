@@ -1,23 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="bg-charcoal py-32 px-6 md:px-12 lg:px-24">
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="mb-6 text-5xl font-semibold text-white md:text-6xl lg:text-7xl">
+    <section className="bg-charcoal py-24 text-center">
+      <div className="container mx-auto px-6 lg:px-8">
+        <h2 className="text-[2rem] font-semibold tracking-tight text-white mb-4">
           Your time is now.
         </h2>
-
-        <p className="mb-10 text-xl text-white/60 md:text-2xl">
-          Find out what&rsquo;s blocking you — and what unlocks it. 15 minutes. Free. No commitment.
+        <p className="text-white/60 max-w-[480px] mx-auto mb-10">
+          Find out what&apos;s blocking you — and what unlocks it.
+          15 minutes. Free. No commitment.
         </p>
-
-        <Link href="/questionnaire">
-          <Button variant="primary" size="lg" className="bg-fuchsia px-10 py-4 text-xl">
-            Get Your Reckoning — Free
-          </Button>
+        <Link
+          href="/questionnaire"
+          className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
+        >
+          Get Your Reckoning — Free
         </Link>
       </div>
     </section>

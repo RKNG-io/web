@@ -1,106 +1,91 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerLinks = {
-    services: [
-      { label: 'Launcher', href: '#launcher' },
-      { label: 'Builder', href: '#builder' },
-      { label: 'Architect', href: '#architect' },
-      { label: 'All services', href: '#services' },
-    ],
-    company: [
-      { label: 'About', href: '#about' },
-      { label: 'Contact', href: '#contact' },
-    ],
-    contact: [
-      { label: 'hello@rkng.io', href: 'mailto:hello@rkng.io' },
-    ],
-  };
-
   return (
-    <footer className="bg-ink px-6 py-16 text-white md:px-12 lg:px-24">
-      <div className="mx-auto max-w-7xl">
-        {/* Main footer grid */}
-        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand column */}
-          <div className="space-y-4">
-            <div className="relative mb-3 inline-block">
-              <span className="text-2xl font-semibold">Reckoning</span>
-              <span
-                className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-sm"
-                style={{ background: 'linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%)' }}
-              />
-            </div>
-            <p className="text-sm leading-relaxed text-white/70">
-              Unblock. Unlock. Unleash. Your business. Your way.
+    <footer className="bg-ink text-white/60 py-16">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Main footer content */}
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-16">
+          {/* Brand */}
+          <div className="max-w-[280px]">
+            <Link href="/" className="text-xl font-semibold text-white mb-4 block">
+              Reckoning
+            </Link>
+            <p className="text-sm text-white/50">
+              Unblock. Unlock. Unleash.<br />
+              Your business. Your way.
             </p>
           </div>
 
-          {/* Services column */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/90">
-              Services
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </a>
+          {/* Links */}
+          <div className="flex flex-wrap gap-16">
+            {/* Services */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/services?package=launcher" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Launcher
+                  </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+                <li>
+                  <Link href="/services?package=builder" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Builder
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services?package=architect" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Architect
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="text-sm text-white/50 hover:text-white transition-colors">
+                    All services
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Company column */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/90">
-              Company
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </a>
+            {/* Company */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">
+                    About
+                  </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+                <li>
+                  <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Contact column */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/90">
-              Contact
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.contact.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {link.label}
+            {/* Contact */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">Contact</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="mailto:hello@rkng.io" className="text-sm text-white/50 hover:text-white transition-colors">
+                    hello@rkng.io
                   </a>
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-8">
-          <p className="text-center text-sm text-white/60">
-            &copy; Reckoning
-          </p>
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-2 text-xs text-white/40">
+          <span>© Reckoning</span>
+          <span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            {' · '}
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+          </span>
         </div>
       </div>
     </footer>

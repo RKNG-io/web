@@ -1,6 +1,14 @@
+import React from 'react';
 import Link from 'next/link';
 
-const packages = [
+interface Package {
+  name: string;
+  description: string;
+  features: string[];
+  price: string;
+}
+
+const packages: Package[] = [
   {
     name: 'Launcher',
     description: 'Everything you need to go from idea to taking money.',
@@ -25,7 +33,7 @@ const packages = [
   },
   {
     name: 'Architect',
-    description: 'Operations that don\'t depend on you.',
+    description: "Operations that don't depend on you.",
     features: [
       'AI-powered workflows',
       'Client communications',
@@ -36,74 +44,77 @@ const packages = [
   },
 ];
 
-export default function Packages() {
+const Packages: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 lg:py-24">
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-medium uppercase tracking-wide text-stone-500">
-            When you're ready
+    <section className="py-24" id="support">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Section header */}
+        <div className="text-center max-w-[640px] mx-auto mb-16">
+          <p className="text-xs uppercase tracking-[0.15em] text-fuchsia font-medium mb-2">
+            When you&apos;re ready
           </p>
-          <h2 className="mb-4 text-3xl font-bold text-stone-900 lg:text-4xl">
+          <h2 className="text-[2rem] font-semibold tracking-tight text-charcoal mb-4">
             Support if you want it
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-stone-600">
-            Some people take their Reckoning and run with it. Others want help
-            building what comes next. Both paths work.
+        </div>
+
+        {/* Intro */}
+        <div className="max-w-[500px] mx-auto mb-16 text-center">
+          <p className="text-charcoal/70">
+            Some people take their Reckoning and run with it. Others want help building what comes next.
+            Both paths work.
           </p>
         </div>
 
-        {/* Package Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Packages grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {packages.map((pkg) => (
-            <div
+            <article
               key={pkg.name}
-              className="flex flex-col rounded-[10px] border border-stone-300 bg-white p-8"
+              className="bg-white border border-stone rounded-[10px] p-10 flex flex-col"
             >
-              {/* Package Name */}
-              <h3 className="mb-2 text-2xl font-bold text-stone-900">
+              <h3 className="text-xl font-semibold text-charcoal mb-2">
                 {pkg.name}
               </h3>
-
-              {/* Description */}
-              <p className="mb-6 text-stone-600">{pkg.description}</p>
-
-              {/* Features List */}
-              <ul className="mb-8 flex-grow space-y-3">
+              <p className="text-sm text-charcoal/60 mb-6">
+                {pkg.description}
+              </p>
+              <ul className="flex-1 mb-6">
                 {pkg.features.map((feature, index) => (
                   <li
                     key={index}
-                    className="border-b border-stone-200 pb-3 text-stone-700 last:border-0"
+                    className="text-sm text-charcoal/70 py-2 border-b border-stone last:border-b-0"
                   >
                     {feature}
                   </li>
                 ))}
               </ul>
-
-              {/* Price */}
-              <p className="mb-4 text-lg font-medium text-stone-500">
+              <p className="text-sm text-charcoal/50 mb-4">
                 {pkg.price}
               </p>
-
-              {/* CTA Button */}
-              <button className="rounded border border-stone-900 bg-transparent px-6 py-2.5 font-medium text-stone-900 transition-colors hover:bg-stone-900 hover:text-white">
+              <Link
+                href={`/services?package=${pkg.name.toLowerCase()}`}
+                className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-transparent border-2 border-charcoal text-charcoal font-medium transition-transform hover:-translate-y-0.5"
+              >
                 Learn more
-              </button>
-            </div>
+              </Link>
+            </article>
           ))}
         </div>
 
-        {/* Bottom Link */}
-        <div className="mt-12 text-center">
+        {/* Browse all services */}
+        <div className="mt-10 text-center">
           <Link
             href="/services"
-            className="inline-block rounded border border-stone-400 bg-transparent px-8 py-3 font-medium text-stone-700 transition-colors hover:border-stone-900 hover:text-stone-900"
+            className="text-charcoal font-medium inline-flex items-center group"
           >
-            Browse all services →
+            Browse all services
+            <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Packages;
