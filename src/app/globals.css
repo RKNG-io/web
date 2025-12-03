@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary */
+  --charcoal: #2d2926;
+  --ice: #F2F6F9;
+
+  /* Accents */
+  --fuchsia: #D14BA8;
+  --mint: #B6E2D3;
+  --blue: #A8C3D1;
+
+  /* Extended */
+  --ink: #1a1a1a;
+  --stone: #E5E7E9;
+  --fuchsia-dark: #a33a85;
+  --fuchsia-light: #e066bb;
+  --mint-light: #d4efe6;
+  --blue-light: #c5d8e3;
+
+  /* Semantic */
+  --success: #2A7F78;
+  --warning: #C3B273;
+  --error: #c45d5d;
+
+  /* Backgrounds */
+  --background: var(--ice);
+  --foreground: var(--charcoal);
 }
 
 @theme inline {
+  /* Colours */
+  --color-charcoal: var(--charcoal);
+  --color-ice: var(--ice);
+  --color-fuchsia: var(--fuchsia);
+  --color-mint: var(--mint);
+  --color-blue: var(--blue);
+  --color-ink: var(--ink);
+  --color-stone: var(--stone);
+  --color-fuchsia-dark: var(--fuchsia-dark);
+  --color-fuchsia-light: var(--fuchsia-light);
+  --color-mint-light: var(--mint-light);
+  --color-blue-light: var(--blue-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Fonts */
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-source-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--charcoal);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--fuchsia);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--fuchsia);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Questionnaire specific styles */
+.welcome-text {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.welcome-text strong {
+  color: var(--charcoal);
+}
+
+.time-estimate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ice);
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.time-estimate::before {
+  content: '⏱';
+  font-size: 1rem;
 }

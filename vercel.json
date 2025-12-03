@@ -1,0 +1,7 @@
+{
+  "framework": "nextjs",
+  "regions": ["lhr1"],
+  "env": {
+    "ANTHROPIC_API_KEY": "@anthropic-api-key"
+  }
+}

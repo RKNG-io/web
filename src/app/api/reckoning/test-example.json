@@ -1,0 +1,42 @@
+{
+  "persona": "leaper",
+  "businessType": "coaching",
+  "businessName": "Mindful Growth Coaching",
+  "answers": {
+    "name": "Sarah",
+    "business_description": "Life coaching for career transitions",
+    "delivery_mode": "online",
+    "vision_life": "Work from home, set my own schedule, choose clients I'm passionate about helping",
+    "who_they_help": "Mid-career professionals feeling stuck or unfulfilled in their current roles",
+    "why_now": "Been thinking about this for 2 years. Certified last year. Ready to make the leap.",
+    "business_stage": "Pre-launch, have 2 test clients who are loving it",
+    "whats_in_place": [
+      "Website draft (not published)",
+      "Basic branding and logo",
+      "Social media accounts set up",
+      "Coaching certification"
+    ],
+    "client_acquisition": "Word of mouth from friends and former colleagues",
+    "website_feeling": "Looks amateur and doesn't reflect my expertise",
+    "whats_missing": [
+      "Proper booking system",
+      "Payment processing",
+      "Email marketing setup",
+      "Professional contracts"
+    ],
+    "time_wasters": "Constantly second-guessing my website copy and design. Watching too many YouTube tutorials instead of taking action.",
+    "blockers": [
+      "Fear of not being good enough",
+      "Overwhelmed by all the tech",
+      "Don't know where to start"
+    ],
+    "core_fear": "No one will want this",
+    "support_system": "Supportive partner, but doing this alone business-wise",
+    "timeline": "Want to launch properly in 3 months",
+    "time_available": "10-15 hours per week (evenings and weekends)",
+    "budget": "£300-500 to start, can invest more once I'm making money",
+    "one_year_vision": "Working full-time in my business, serving 10-15 clients per month, making £4-5k monthly income",
+    "one_thing": "Get my website launched and start taking bookings confidently",
+    "anything_else": "I keep comparing myself to other coaches who seem so polished and established. I know I'm good at what I do, but I'm scared of putting myself out there."
+  }
+}
