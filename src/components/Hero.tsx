@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                 Get Your Reckoning — Free
               </Link>
               <Link
-                href="/start/website"
+                href="/start/choose"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-transparent border-2 border-white text-white font-medium transition-transform hover:-translate-y-0.5"
               >
                 I know what I need
