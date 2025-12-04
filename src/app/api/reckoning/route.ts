@@ -1,218 +1,198 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
-import type { PersonaType, ReckoningReport } from '@/types';
-import { BASE_SYSTEM_PROMPT, OUTPUT_SCHEMA_INSTRUCTIONS } from '@/prompts/base';
-import { getPersonaPrompt } from '@/prompts/personas';
+import { buildPrompt } from '@/lib/prompts/builder';
+import { calculateConfidence } from '@/lib/validation/confidence';
+import { generateReportPdf } from '@/lib/pdf/generator';
+import { sendReportReadyEmail } from '@/lib/email/send';
+import { 
+  createReckoning, 
+  getReckoningByToken, 
+  updateReckoningReport,
+  getSubmissionById,
+} from '@/lib/db';
+import { generateToken } from '@/lib/utils';
+import type { ReckoningReport, QuestionnaireSubmission } from '@/types/report';
 
-// Validation schemas
-const VALID_PERSONAS: PersonaType[] = ['launcher', 'builder', 'architect'];
+const MAX_ATTEMPTS = 3;
 
-interface ReckoningRequestBody {
-  answers: Record<string, string | string[]>;
-  persona: PersonaType;
-  businessType?: string;
-  businessName?: string;
-}
-
-/**
- * Format questionnaire answers as context for the AI
- */
-function formatAnswersContext(answers: Record<string, string | string[]>): string {
-  const lines: string[] = ['# Questionnaire Responses\n'];
-
-  for (const [key, value] of Object.entries(answers)) {
-    const label = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-
-    if (Array.isArray(value)) {
-      lines.push(`**${label}:**`);
-      value.forEach(item => lines.push(`- ${item}`));
-      lines.push('');
-    } else {
-      lines.push(`**${label}:** ${value}\n`);
-    }
-  }
-
-  return lines.join('\n');
-}
-
-/**
- * Validate request body
- */
-function validateRequestBody(body: unknown): { valid: true; data: ReckoningRequestBody } | { valid: false; error: string } {
-  if (!body || typeof body !== 'object') {
-    return { valid: false, error: 'Request body must be a JSON object' };
-  }
-
-  const data = body as Partial<ReckoningRequestBody>;
-
-  if (!data.answers || typeof data.answers !== 'object') {
-    return { valid: false, error: 'Missing or invalid "answers" field' };
-  }
-
-  if (!data.persona || !VALID_PERSONAS.includes(data.persona)) {
-    return { valid: false, error: `Invalid persona. Must be one of: ${VALID_PERSONAS.join(', ')}` };
-  }
-
-  return { valid: true, data: data as ReckoningRequestBody };
-}
-
-/**
- * POST /api/reckoning
- * Generate a personalised Reckoning report using Claude
- */
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
-    // Parse and validate request body
     const body = await request.json();
-    const validation = validateRequestBody(body);
+    const { submissionId, regenerate, previousReckoningId } = body;
 
-    if (!validation.valid) {
+    if (!submissionId) {
       return NextResponse.json(
-        { error: validation.error },
+        { error: 'submissionId is required' },
         { status: 400 }
       );
     }
 
-    const { answers, persona, businessType, businessName } = validation.data;
-
-    // Check for API key
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
-      console.error('ANTHROPIC_API_KEY not configured');
+    // Fetch submission from database
+    const submission = await getSubmissionById(submissionId);
+    
+    if (!submission) {
       return NextResponse.json(
-        { error: 'API configuration error' },
-        { status: 500 }
+        { error: 'Submission not found' },
+        { status: 404 }
       );
     }
-
-    // Initialize Anthropic client
-    const anthropic = new Anthropic({
-      apiKey,
-    });
 
     // Build the prompt
-    const systemPrompt = BASE_SYSTEM_PROMPT;
-    const personaPrompt = getPersonaPrompt(persona);
-    const answersContext = formatAnswersContext(answers);
+    const { systemPrompt, userMessage } = buildPrompt(submission as QuestionnaireSubmission);
 
-    const userPrompt = `${personaPrompt}
+    // Initialize Anthropic client
+    const anthropic = new Anthropic();
 
-${answersContext}
+    let report: ReckoningReport | null = null;
+    let attempts = 0;
+    let lastError: string | null = null;
 
-${businessType ? `\n**Business Type:** ${businessType}` : ''}
-${businessName ? `**Business Name:** ${businessName}` : ''}
+    // Retry loop
+    while (attempts < MAX_ATTEMPTS) {
+      attempts++;
 
-${OUTPUT_SCHEMA_INSTRUCTIONS}
+      try {
+        const response = await anthropic.messages.create({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 8000,
+          system: systemPrompt,
+          messages: [{ role: 'user', content: userMessage }],
+        });
 
-Generate a comprehensive Reckoning report based on the questionnaire responses above. Return ONLY valid JSON matching the ReckoningReport structure. Do not include any markdown formatting or code blocks — just raw JSON.`;
+        const content = response.content[0];
+        if (content.type !== 'text') {
+          throw new Error('Unexpected response type from Claude');
+        }
 
-    console.log('Generating report for persona:', persona);
+        // Parse JSON response
+        // Handle potential markdown code blocks
+        let jsonText = content.text.trim();
+        if (jsonText.startsWith('```')) {
+          jsonText = jsonText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+        }
 
-    // Call Claude API
-    const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 4096,
-      temperature: 1,
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: userPrompt,
-        },
-      ],
-    });
+        report = JSON.parse(jsonText) as ReckoningReport;
 
-    // Extract response content
-    const content = message.content[0];
-    if (content.type !== 'text') {
-      throw new Error('Unexpected response type from Claude API');
-    }
+        // Validate and calculate confidence
+        const confidence = calculateConfidence(report, submission as QuestionnaireSubmission);
 
-    // Parse the JSON response
-    let report: ReckoningReport;
-    try {
-      // Remove potential markdown code blocks if present
-      let jsonText = content.text.trim();
-      if (jsonText.startsWith('```')) {
-        jsonText = jsonText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '');
+        if (confidence.score === 0 && attempts < MAX_ATTEMPTS) {
+          // Hard failure — retry
+          console.log(`Attempt ${attempts} failed validation:`, confidence.flags);
+          lastError = confidence.flags.join('; ');
+          continue;
+        }
+
+        // Generate share token
+        const shareToken = regenerate && previousReckoningId 
+          ? (await getReckoningByToken(previousReckoningId))?.token || generateShareToken()
+          : generateShareToken();
+
+        // Store in database
+        const reckoning = await createReckoning(
+          shareToken,
+          report.meta.persona,
+          submission.answers as Record<string, unknown>,
+          submission.answers.name as string,
+          submission.email
+        );
+
+        // Update with report data
+        await updateReckoningReport(
+          shareToken,
+          report as unknown as Record<string, unknown>,
+          confidence.score
+        );
+
+        // If auto-approved, generate PDF and send email
+        if (confidence.autoApprove) {
+          try {
+            // Generate PDF (async, don't wait)
+            generateReportPdf(
+              report,
+              report.recipient.name,
+              { includeServices: true }
+            ).catch(err => console.error('PDF generation failed:', err));
+
+            // Send email
+            await sendReportReadyEmail({
+              name: report.recipient.name,
+              email: submission.email,
+              reportUrl: `${process.env.NEXT_PUBLIC_URL}/reckoning/${shareToken}`,
+            });
+          } catch (emailError) {
+            console.error('Email/PDF failed:', emailError);
+            // Don't fail the request for email issues
+          }
+        } else {
+          // Queue for admin review
+          await notifyAdminPendingReview(shareToken, confidence.flags);
+        }
+
+        return NextResponse.json({
+          success: true,
+          reckoningId: reckoning.id,
+          shareToken,
+          status: confidence.autoApprove ? 'ready' : 'pending_review',
+          confidence: confidence.score,
+          autoApproved: confidence.autoApprove,
+          flags: confidence.flags,
+        });
+
+      } catch (parseError) {
+        console.error(`Attempt ${attempts} parse error:`, parseError);
+        lastError = parseError instanceof Error ? parseError.message : 'Parse error';
+        
+        if (attempts >= MAX_ATTEMPTS) {
+          // Store failed attempt
+          const failToken = generateShareToken();
+          await createReckoning(
+            failToken,
+            submission.persona,
+            submission.answers as Record<string, unknown>,
+            submission.answers.name as string,
+            submission.email
+          );
+          
+          // Mark as failed with error log
+          // TODO: Add error_log column update
+
+          return NextResponse.json(
+            { 
+              error: 'Generation failed after maximum attempts',
+              lastError,
+            },
+            { status: 500 }
+          );
+        }
       }
-
-      report = JSON.parse(jsonText);
-    } catch (parseError) {
-      console.error('Failed to parse Claude response as JSON:', parseError);
-      console.error('Raw response:', content.text);
-      return NextResponse.json(
-        {
-          error: 'Failed to parse report data',
-          details: parseError instanceof Error ? parseError.message : 'Unknown error'
-        },
-        { status: 500 }
-      );
     }
 
-    // Add metadata if missing
-    if (!report.meta) {
-      report.meta = {
-        persona,
-        name: businessName || 'Unknown',
-        businessType: businessType || 'Unknown',
-        generatedDate: new Date().toISOString(),
-      };
-    } else {
-      // Ensure metadata is complete
-      report.meta.persona = persona;
-      report.meta.generatedDate = report.meta.generatedDate || new Date().toISOString();
-      if (businessName) report.meta.name = businessName;
-      if (businessType) report.meta.businessType = businessType;
-    }
-
-    // Return the generated report
-    return NextResponse.json({
-      success: true,
-      report,
-      usage: {
-        inputTokens: message.usage.input_tokens,
-        outputTokens: message.usage.output_tokens,
-      },
-    });
+    return NextResponse.json(
+      { error: 'Generation failed', lastError },
+      { status: 500 }
+    );
 
   } catch (error) {
-    console.error('Error generating Reckoning report:', error);
-
-    // Handle Anthropic API errors
-    if (error instanceof Anthropic.APIError) {
-      return NextResponse.json(
-        {
-          error: 'Claude API error',
-          message: error.message,
-          status: error.status,
-        },
-        { status: error.status || 500 }
-      );
-    }
-
-    // Handle other errors
+    console.error('Reckoning API error:', error);
     return NextResponse.json(
-      {
-        error: 'Internal server error',
-        message: error instanceof Error ? error.message : 'Unknown error',
-      },
+      { error: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }
 }
 
-/**
- * OPTIONS /api/reckoning
- * Handle CORS preflight
- */
-export async function OPTIONS() {
-  return NextResponse.json(
-    {},
-    {
-      headers: {
-        'Allow': 'POST, OPTIONS',
-      },
-    }
-  );
+function generateShareToken(): string {
+  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let token = 'rk_';
+  for (let i = 0; i < 12; i++) {
+    token += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return token;
+}
+
+async function notifyAdminPendingReview(reckoningId: string, flags: string[]): Promise<void> {
+  // TODO: Implement admin notification
+  // Could use Resend, Slack webhook, etc.
+  console.log(`Report ${reckoningId} needs review. Flags:`, flags);
 }

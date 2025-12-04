@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { PERSONAS, type Persona } from '@/data/persona-questions';
 
 export type QuestionnaireStep = 'persona' | 'questions' | 'submitting' | 'complete';
@@ -12,7 +12,31 @@ export interface QuestionnaireState {
   answers: Record<string, string | string[]>;
 }
 
+interface SavedProgress {
+  state: QuestionnaireState;
+  savedAt: number;
+  version: number;
+}
+
 const STORAGE_KEY = 'reckoning_progress';
+const STORAGE_VERSION = 1;
+const EXPIRY_HOURS = 72; // Progress expires after 72 hours
+
+function isValidSavedProgress(data: unknown): data is SavedProgress {
+  if (!data || typeof data !== 'object') return false;
+  const obj = data as Record<string, unknown>;
+  return (
+    typeof obj.savedAt === 'number' &&
+    typeof obj.version === 'number' &&
+    obj.state !== undefined &&
+    typeof (obj.state as Record<string, unknown>).step === 'string'
+  );
+}
+
+function isExpired(savedAt: number): boolean {
+  const expiryMs = EXPIRY_HOURS * 60 * 60 * 1000;
+  return Date.now() - savedAt > expiryMs;
+}
 
 export function useQuestionnaire() {
   const [state, setState] = useState<QuestionnaireState>({
@@ -21,24 +45,57 @@ export function useQuestionnaire() {
     questionIndex: 0,
     answers: {}
   });
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [hasSavedProgress, setHasSavedProgress] = useState(false);
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount (SSR-safe)
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
         const parsed = JSON.parse(saved);
-        setState(parsed);
-      } catch (e) {
-        console.error('Could not parse saved state:', e);
+
+        // Handle legacy format (direct state object)
+        if (parsed && !parsed.version && parsed.step) {
+          // Migrate old format
+          const migrated: SavedProgress = {
+            state: parsed,
+            savedAt: Date.now(),
+            version: STORAGE_VERSION
+          };
+          setState(migrated.state);
+          setHasSavedProgress(Object.keys(migrated.state.answers).length > 0);
+        } else if (isValidSavedProgress(parsed)) {
+          // Check if expired
+          if (isExpired(parsed.savedAt)) {
+            localStorage.removeItem(STORAGE_KEY);
+          } else if (parsed.version === STORAGE_VERSION) {
+            setState(parsed.state);
+            setHasSavedProgress(Object.keys(parsed.state.answers).length > 0);
+          }
+        }
       }
+    } catch (e) {
+      console.error('Could not parse saved state:', e);
+      localStorage.removeItem(STORAGE_KEY);
     }
+
+    setIsHydrated(true);
   }, []);
 
-  // Save to localStorage whenever state changes
+  // Save to localStorage whenever state changes (after hydration)
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [state]);
+    if (!isHydrated || typeof window === 'undefined') return;
+
+    const progress: SavedProgress = {
+      state,
+      savedAt: Date.now(),
+      version: STORAGE_VERSION
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  }, [state, isHydrated]);
 
   const selectPersona = (persona: string) => {
     setState(prev => ({ ...prev, persona }));
@@ -117,6 +174,8 @@ export function useQuestionnaire() {
 
   return {
     state,
+    isHydrated,
+    hasSavedProgress,
     selectPersona,
     startQuestions,
     setAnswer,

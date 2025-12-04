@@ -12,17 +12,29 @@ function QuestionnaireContent() {
   const searchParams = useSearchParams();
   const {
     state,
+    isHydrated,
+    hasSavedProgress,
     selectPersona,
     startQuestions,
     setAnswer,
     nextQuestion,
     goBack,
     hasAnswer,
+    reset,
     getCurrentQuestion,
     getProgress
   } = useQuestionnaire();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [showResumePrompt, setShowResumePrompt] = useState(false);
+
+  // Show resume prompt if returning with saved progress
+  useEffect(() => {
+    if (isHydrated && hasSavedProgress && state.step !== 'persona') {
+      setShowResumePrompt(true);
+    }
+  }, [isHydrated, hasSavedProgress, state.step]);
 
   // Check for persona in URL params on mount
   useEffect(() => {
@@ -37,7 +49,7 @@ function QuestionnaireContent() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/reckoning', {
+      const response = await fetch('/api/questionnaire/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -45,26 +57,89 @@ function QuestionnaireContent() {
         body: JSON.stringify({
           persona: state.persona,
           answers: state.answers,
-          completedAt: new Date().toISOString()
         })
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit questionnaire');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit questionnaire');
       }
 
       const data = await response.json();
 
       // Redirect to the reckoning result page
-      if (data.id) {
-        router.push(`/reckoning/${data.id}`);
+      if (data.token) {
+        // Clear localStorage since submission is complete
+        localStorage.removeItem('reckoning_progress');
+        router.push(`/reckoning/${data.token}`);
+      } else {
+        throw new Error('No token returned');
       }
     } catch (error) {
       console.error('Error submitting questionnaire:', error);
       setIsSubmitting(false);
-      alert('There was an error submitting your questionnaire. Please try again.');
+      setSubmitError(error instanceof Error ? error.message : 'Something went wrong on our end.');
     }
   };
+
+  // Show loading state while hydrating to prevent flash
+  if (!isHydrated) {
+    return (
+      <div className="min-h-screen bg-ice py-8 px-4 flex items-center justify-center">
+        <div className="text-charcoal/60">Loading...</div>
+      </div>
+    );
+  }
+
+  // Show resume prompt for returning users
+  if (showResumePrompt) {
+    const progress = getProgress();
+    const personaName = state.persona ? PERSONAS[state.persona]?.name : '';
+
+    return (
+      <div className="min-h-screen bg-ice py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+          <header className="text-center py-8 mb-8">
+            <h1 className="text-3xl font-semibold tracking-tight text-charcoal mb-2">
+              Reckoning
+            </h1>
+            <p className="text-sm text-charcoal/60">Your time is now</p>
+          </header>
+
+          <div className="bg-white rounded-lg p-6 md:p-10 shadow-lg">
+            <div className="text-xs uppercase tracking-wider text-blue font-medium mb-4">
+              Welcome back
+            </div>
+            <h2 className="text-2xl font-semibold mb-3 text-charcoal">
+              You have progress saved
+            </h2>
+            <p className="text-charcoal/60 mb-6">
+              You were {progress.current} of {progress.total} questions through as a{' '}
+              <span className="font-medium text-charcoal">{personaName}</span>.
+            </p>
+
+            <div className="flex flex-col gap-3">
+              <button
+                onClick={() => setShowResumePrompt(false)}
+                className="w-full px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity"
+              >
+                Continue where I left off
+              </button>
+              <button
+                onClick={() => {
+                  reset();
+                  setShowResumePrompt(false);
+                }}
+                className="w-full px-6 py-3 rounded-lg bg-transparent border-2 border-charcoal/20 text-charcoal font-medium hover:border-charcoal/40 transition-colors"
+              >
+                Start fresh
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Render persona selector
   if (state.step === 'persona') {
@@ -80,11 +155,11 @@ function QuestionnaireContent() {
 
           <ProgressBar {...getProgress()} />
 
-          <div className="bg-white rounded-lg p-10 shadow-lg">
+          <div className="bg-white rounded-lg p-6 md:p-10 shadow-lg">
             <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
               Let's start
             </div>
-            <h2 className="text-2xl font-semibold mb-3 text-charcoal">
+            <h2 className="text-xl md:text-2xl font-semibold mb-3 text-charcoal">
               Which best describes where you are?
             </h2>
             <p className="text-charcoal/60 mb-8">
@@ -173,6 +248,51 @@ function QuestionnaireContent() {
     );
   }
 
+  // Error state
+  if (submitError) {
+    return (
+      <div className="min-h-screen bg-ice py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+          <header className="text-center py-8 mb-8">
+            <h1 className="text-3xl font-semibold tracking-tight text-charcoal mb-2">
+              Reckoning
+            </h1>
+            <p className="text-sm text-charcoal/60">Your time is now</p>
+          </header>
+
+          <div className="bg-white rounded-lg p-10 shadow-lg text-center">
+            <div className="w-16 h-16 bg-fuchsia/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">⚠️</span>
+            </div>
+            <h2 className="text-2xl font-semibold mb-4 text-charcoal">
+              Something went wrong on our end
+            </h2>
+            <p className="text-charcoal/60 mb-8">
+              We&apos;ve noted what happened. You can try again, or we&apos;ll be in touch within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => {
+                  setSubmitError(null);
+                  handleSubmit();
+                }}
+                className="px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity"
+              >
+                Try again
+              </button>
+              <button
+                onClick={() => setSubmitError(null)}
+                className="px-6 py-3 rounded-lg bg-transparent border-2 border-charcoal text-charcoal font-medium hover:bg-charcoal/5 transition-colors"
+              >
+                Go back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Submitting state
   if (state.step === 'submitting' || isSubmitting) {
     return (
@@ -193,7 +313,7 @@ function QuestionnaireContent() {
               Preparing your Reckoning...
             </h2>
             <p className="text-charcoal/60">
-              We're analysing your answers and creating your personalised report.
+              We&apos;re analysing your answers and creating your personalised report.
               This takes about 30 seconds.
             </p>
           </div>

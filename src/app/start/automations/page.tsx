@@ -26,7 +26,9 @@ const initialFormData: FormData = {
 export default function AutomationsIntake() {
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const updateField = (field: keyof FormData, value: string | string[]) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -53,8 +55,39 @@ export default function AutomationsIntake() {
   };
 
   const handleSubmit = async () => {
-    console.log('Submitting:', formData);
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'automations',
+          answers: {
+            automateWhat: formData.automateWhat,
+            currentTools: formData.currentTools,
+            otherTools: formData.otherTools,
+            annoyingTask: formData.annoyingTask,
+          },
+          name: formData.name,
+          email: formData.email,
+          contactPreference: formData.contactPreference,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const automationOptions = [
@@ -242,13 +275,28 @@ export default function AutomationsIntake() {
         </div>
       </div>
 
+      {/* Error message */}
+      {error && (
+        <div className="container mx-auto px-6">
+          <div className="max-w-lg mx-auto p-4 bg-red-500/20 border border-red-500/40 rounded-lg text-center">
+            <p className="text-white">{error}</p>
+            <button
+              onClick={() => setError(null)}
+              className="text-sm text-white/60 hover:text-white mt-2"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Navigation */}
       <div className="container mx-auto px-6 py-8">
         <div className="flex justify-between items-center max-w-lg mx-auto">
           <button
             onClick={() => setStep((s) => Math.max(0, s - 1))}
             className={`text-white/60 hover:text-white transition-colors ${
-              step === 0 ? 'invisible' : ''
+              step === 0 || isSubmitting ? 'invisible' : ''
             }`}
           >
             ← Back
@@ -268,14 +316,14 @@ export default function AutomationsIntake() {
           ) : (
             <button
               onClick={handleSubmit}
-              disabled={!canProceed()}
+              disabled={!canProceed() || isSubmitting}
               className={`px-6 py-3 rounded-md font-medium transition-all ${
-                canProceed()
+                canProceed() && !isSubmitting
                   ? 'bg-fuchsia text-white hover:-translate-y-0.5'
                   : 'bg-white/10 text-white/40 cursor-not-allowed'
               }`}
             >
-              Submit
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           )}
         </div>

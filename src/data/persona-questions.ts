@@ -36,7 +36,7 @@ export const PERSONAS: Record<string, Persona> = {
         title: 'This is your moment.',
         content: `
           <p class="welcome-text">You're here because something in you knows it's time.</p>
-          <p class="welcome-text">The next few questions aren't a form — they're a conversation. Be honest. There are no wrong answers. Just you, telling the truth about where you are and where you want to be.</p>
+          <p class="welcome-text">Be honest with the next few questions. There are no wrong answers. Just you, telling the truth about where you are and where you want to be.</p>
           <div class="time-estimate">Takes about 8 minutes. Worth it.</div>
         `
       },
