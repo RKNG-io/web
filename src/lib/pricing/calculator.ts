@@ -29,11 +29,12 @@ interface PricingConfig {
 }
 
 const PRICING_CONFIG: PricingConfig = {
+  // À la carte discounts — conservative tiers
+  // Bundles are the way to get 20%+ savings
   bundleDiscounts: [
-    { minItems: 2, discount: 0.10 },   // 10% off 2+ items
-    { minItems: 4, discount: 0.15 },   // 15% off 4+ items
-    { minItems: 6, discount: 0.20 },   // 20% off 6+ items
-    { minItems: 8, discount: 0.25 },   // 25% off 8+ items
+    { minItems: 2, discount: 0.05 },   // 5% off 2+ items
+    { minItems: 4, discount: 0.10 },   // 10% off 4+ items
+    { minItems: 6, discount: 0.15 },   // 15% off 6+ items
   ],
   costOfInaction: {
     hourlyRate: 50,          // £50/hr assumed value

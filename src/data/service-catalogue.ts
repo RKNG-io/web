@@ -432,9 +432,9 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   },
   
   // ═══════════════════════════════════════════════════════════════
-  // FOUNDATIONS (legal-adjacent, not legal advice)
+  // LEGAL
   // ═══════════════════════════════════════════════════════════════
-
+  
   {
     id: 'contract_template',
     name: 'Contract Template',
@@ -444,7 +444,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: ['coaching', 'creative', 'professional'],
     deliveryType: 'done_for_you',
-    category: 'foundations',
+    category: 'legal',
     suggestedWith: [],
     requiredWith: [],
     popular: true,
@@ -462,7 +462,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
-    category: 'foundations',
+    category: 'legal',
     suggestedWith: ['website_single', 'website_multi'],
     requiredWith: [],
     popular: false,
@@ -480,7 +480,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: ['fitness', 'food'],
     deliveryType: 'done_for_you',
-    category: 'foundations',
+    category: 'legal',
     suggestedWith: [],
     requiredWith: [],
     popular: false,
@@ -488,7 +488,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 200
   },
-
+  
   // ═══════════════════════════════════════════════════════════════
   // VISIBILITY
   // ═══════════════════════════════════════════════════════════════
