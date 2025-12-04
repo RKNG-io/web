@@ -300,3 +300,69 @@ h1, h2, h3, h4, h5, h6 {
   content: '⏱';
   font-size: var(--text-base);
 }
+
+/* ============================================
+   Print / PDF Styles
+   ============================================ */
+
+@media print {
+  /* Ensure colours print correctly */
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide non-print elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Prevent page breaks inside sections */
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Better backgrounds in print */
+  .bg-charcoal {
+    background-color: var(--charcoal) !important;
+    color: var(--white) !important;
+  }
+
+  .bg-mint\/10 {
+    background-color: #e8f5f0 !important;
+  }
+
+  .bg-fuchsia\/10 {
+    background-color: #fdf2fa !important;
+  }
+
+  .bg-ice {
+    background-color: var(--ice) !important;
+  }
+
+  /* Ensure text colours are preserved */
+  .text-white {
+    color: var(--white) !important;
+  }
+
+  .text-charcoal {
+    color: var(--charcoal) !important;
+  }
+
+  /* Link styling in print */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Reduce margins for print */
+  main {
+    padding: 1rem !important;
+  }
+
+  /* Footer styling */
+  footer {
+    margin-top: 2rem !important;
+  }
+}
