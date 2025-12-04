@@ -265,10 +265,10 @@ function QuestionnaireContent() {
               <span className="text-2xl">⚠️</span>
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-charcoal">
-              Something went wrong on our end
+              That didn&apos;t work
             </h2>
             <p className="text-charcoal/60 mb-8">
-              We&apos;ve noted what happened. You can try again, or we&apos;ll be in touch within 24 hours.
+              Let&apos;s try again — or we&apos;ll sort it out and reach out within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -310,10 +310,10 @@ function QuestionnaireContent() {
               <div className="animate-spin text-3xl">⏱</div>
             </div>
             <h2 className="text-2xl font-semibold mb-4 text-charcoal">
-              Preparing your Reckoning...
+              Building your Reckoning...
             </h2>
             <p className="text-charcoal/60">
-              We&apos;re analysing your answers and creating your personalised report.
+              We&apos;re seeing what&apos;s in the way — and what unlocks it.
               This takes about 30 seconds.
             </p>
           </div>

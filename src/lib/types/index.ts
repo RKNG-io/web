@@ -91,8 +91,6 @@ export type ServiceCategory =
   | 'presence'      // Website, branding, email
   | 'operations'    // Booking, payments, CRM
   | 'automation'    // Email sequences, workflows
-  | 'foundations'   // Contracts, terms (legal-adjacent, not legal advice)
-  | 'legal'         // Legal document templates
   | 'visibility'    // SEO basics, Google Business
   | 'support';      // Retainers, ongoing
 

@@ -16,8 +16,6 @@ const CATEGORY_LABELS: Record<ServiceCategory, string> = {
   presence: 'Presence',
   operations: 'Operations',
   automation: 'Automation',
-  foundations: 'Foundations',
-  legal: 'Legal',
   visibility: 'Visibility',
   support: 'Support',
 };
@@ -32,7 +30,6 @@ const CATEGORIES: ServiceCategory[] = [
   'presence',
   'operations',
   'automation',
-  'foundations',
   'visibility',
   'support',
 ];

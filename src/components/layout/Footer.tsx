@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Company */}
+{/* Company - hidden until pages exist
             <div>
               <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
               <ul className="space-y-2">
@@ -63,6 +63,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+            */}
 
             {/* Contact */}
             <div>
@@ -81,11 +82,13 @@ const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-2 text-xs text-white/40">
           <span>© Reckoning</span>
+          {/* Privacy/Terms - hidden until pages exist
           <span>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             {' · '}
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
           </span>
+          */}
         </div>
       </div>
     </footer>

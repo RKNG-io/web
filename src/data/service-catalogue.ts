@@ -430,65 +430,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'low',
     agencyComparison: 250
   },
-  
-  // ═══════════════════════════════════════════════════════════════
-  // LEGAL
-  // ═══════════════════════════════════════════════════════════════
-  
-  {
-    id: 'contract_template',
-    name: 'Contract Template',
-    description: 'Professional service agreement customised to your business, with e-signature setup',
-    basePrice: 99,
-    timeEstimate: '2-3 days',
-    personas: ['launcher', 'builder'],
-    businessTypes: ['coaching', 'creative', 'professional'],
-    deliveryType: 'done_for_you',
-    category: 'legal',
-    suggestedWith: [],
-    requiredWith: [],
-    popular: true,
-    impact: 'high',
-    effort: 'low',
-    agencyComparison: 350
-  },
-  
-  {
-    id: 'terms_privacy',
-    name: 'Terms & Privacy Policy',
-    description: 'Website legal pages: Terms of Service and Privacy Policy, GDPR-ready',
-    basePrice: 79,
-    timeEstimate: '1-2 days',
-    personas: ['launcher', 'builder'],
-    businessTypes: [],
-    deliveryType: 'done_for_you',
-    category: 'legal',
-    suggestedWith: ['website_single', 'website_multi'],
-    requiredWith: [],
-    popular: false,
-    impact: 'medium',
-    effort: 'low',
-    agencyComparison: 250
-  },
-  
-  {
-    id: 'waiver_form',
-    name: 'Waiver / Consent Form',
-    description: 'Digital liability waiver or consent form with e-signature',
-    basePrice: 79,
-    timeEstimate: '1-2 days',
-    personas: ['launcher', 'builder'],
-    businessTypes: ['fitness', 'food'],
-    deliveryType: 'done_for_you',
-    category: 'legal',
-    suggestedWith: [],
-    requiredWith: [],
-    popular: false,
-    impact: 'medium',
-    effort: 'low',
-    agencyComparison: 200
-  },
-  
+
   // ═══════════════════════════════════════════════════════════════
   // VISIBILITY
   // ═══════════════════════════════════════════════════════════════

@@ -2,10 +2,28 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import {
+  Globe,
+  Calendar,
+  Smartphone,
+  Settings,
+  Rocket,
+  TrendingUp,
+} from 'lucide-react';
 import { useCart } from '@/components/services/CartContext';
 import { BUNDLES, Bundle } from '@/lib/data/bundles';
 import { SERVICE_CATALOGUE, getServicesByCategory } from '@/lib/data/service-catalogue';
 import type { ServiceItem, ServiceCategory } from '@/lib/types';
+
+// Map icon names to Lucide components
+const iconComponents: Record<string, React.ReactNode> = {
+  globe: <Globe className="w-8 h-8 text-fuchsia" />,
+  calendar: <Calendar className="w-8 h-8 text-fuchsia" />,
+  smartphone: <Smartphone className="w-8 h-8 text-fuchsia" />,
+  settings: <Settings className="w-8 h-8 text-fuchsia" />,
+  rocket: <Rocket className="w-8 h-8 text-fuchsia" />,
+  'trending-up': <TrendingUp className="w-8 h-8 text-fuchsia" />,
+};
 
 // ═══════════════════════════════════════════════════════════════
 // VERSION A: BUNDLE-FIRST
@@ -16,8 +34,6 @@ const CATEGORY_LABELS: Record<ServiceCategory, string> = {
   presence: 'Presence',
   operations: 'Operations',
   automation: 'Automation',
-  foundations: 'Foundations',
-  legal: 'Legal',
   visibility: 'Visibility',
   support: 'Support',
 };
@@ -26,7 +42,6 @@ const CATEGORIES: ServiceCategory[] = [
   'presence',
   'operations',
   'automation',
-  'foundations',
   'visibility',
   'support',
 ];
@@ -192,8 +207,8 @@ function BundleCard({ bundle, onAdd }: { bundle: Bundle; onAdd: () => void }) {
   return (
     <div className="bg-white rounded-xl p-6 border-2 border-fuchsia/20 hover:border-fuchsia/40 transition-colors">
       <div className="flex items-start justify-between mb-4">
-        <span className="text-3xl">{bundle.icon}</span>
-        <span className="px-2 py-1 bg-mint/20 text-mint text-xs font-medium rounded">
+        {iconComponents[bundle.icon] || <Settings className="w-8 h-8 text-fuchsia" />}
+        <span className="px-2 py-1 bg-mint text-charcoal text-xs font-medium rounded">
           Save £{bundle.savings}
         </span>
       </div>

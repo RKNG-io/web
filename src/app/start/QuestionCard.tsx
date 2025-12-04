@@ -198,7 +198,7 @@ export function QuestionCard({
           disabled={!canContinue}
           className="flex-1 px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-colors disabled:bg-stone disabled:text-charcoal/40 disabled:cursor-not-allowed"
         >
-          {isLastQuestion ? 'Complete →' : 'Continue →'}
+          {isLastQuestion ? 'Show Me What I Got →' : 'Continue →'}
         </button>
       </div>
     </div>
