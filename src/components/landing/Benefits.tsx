@@ -1,33 +1,41 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface Benefit {
   title: string;
+  slug: string;
   description: string;
 }
 
 const benefits: Benefit[] = [
   {
     title: 'Time',
+    slug: 'time',
     description: 'The hours you\'re losing to emails, invoices, and "I should probably sort that out."',
   },
   {
     title: 'Space',
+    slug: 'space',
     description: 'Mental, emotional, practical — room to think about your business, not just run it.',
   },
   {
     title: 'Presence',
+    slug: 'presence',
     description: 'Show up online in a way that feels like you — not performative, not exhausting.',
   },
   {
     title: 'Systems',
+    slug: 'systems',
     description: 'Automations that handle the repetitive stuff. Your voice. Your way. Without hiring.',
   },
   {
     title: 'Clarity',
+    slug: 'clarity',
     description: 'Know what\'s blocking you. Know what to do next. Just the next step — not the whole life plan.',
   },
   {
     title: 'Calm',
+    slug: 'calm',
     description: 'The quiet confidence that comes from knowing things are handled.',
   },
 ];
@@ -49,14 +57,21 @@ const Benefits: React.FC = () => {
         {/* Benefits grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {benefits.map((benefit) => (
-            <article key={benefit.title} className="p-6">
-              <h3 className="text-lg font-semibold text-charcoal mb-2">
+            <Link
+              key={benefit.title}
+              href={`/get/${benefit.slug}`}
+              className="block p-6 rounded-lg hover:bg-stone/30 transition-colors group"
+            >
+              <h3 className="text-lg font-semibold text-charcoal mb-2 group-hover:text-fuchsia transition-colors">
                 {benefit.title}
               </h3>
               <p className="text-sm text-charcoal/60">
                 {benefit.description}
               </p>
-            </article>
+              <span className="inline-block mt-3 text-sm text-fuchsia opacity-0 group-hover:opacity-100 transition-opacity">
+                Learn more →
+              </span>
+            </Link>
           ))}
         </div>
       </div>

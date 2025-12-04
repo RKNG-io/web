@@ -31,7 +31,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'What does this actually cost?',
     answer:
-      'The Reckoning is free. Services start from £399. No surprises, no upsells, no pressure.',
+      'The Reckoning is free. Services start from £49. No surprises, no upsells, no pressure.',
   },
 ];
 
