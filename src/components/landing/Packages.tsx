@@ -93,24 +93,26 @@ const Packages: React.FC = () => {
                 {pkg.price}
               </p>
               <Link
-                href={`/services?package=${pkg.name.toLowerCase()}`}
+                href="/start"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-transparent border-2 border-charcoal text-charcoal font-medium transition-transform hover:-translate-y-0.5"
               >
-                Learn more
+                Get started
               </Link>
             </article>
           ))}
         </div>
 
-        {/* Browse all services */}
+        {/* CTA */}
         <div className="mt-10 text-center">
-          <Link
-            href="/services"
-            className="text-charcoal font-medium inline-flex items-center group"
-          >
-            Browse all services
-            <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
-          </Link>
+          <p className="text-charcoal/60 text-sm">
+            Not sure which is right for you?{' '}
+            <Link
+              href="/start"
+              className="text-fuchsia font-medium hover:underline"
+            >
+              Get your Reckoning first
+            </Link>
+          </p>
         </div>
       </div>
     </section>

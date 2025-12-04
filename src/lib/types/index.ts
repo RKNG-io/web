@@ -87,11 +87,12 @@ export interface RegulatoryFlag {
 // SERVICES & PRICING
 // ═══════════════════════════════════════════════════════════════
 
-export type ServiceCategory = 
+export type ServiceCategory =
   | 'presence'      // Website, branding, email
   | 'operations'    // Booking, payments, CRM
   | 'automation'    // Email sequences, workflows
-  | 'legal'         // Contracts, terms
+  | 'foundations'   // Contracts, terms (legal-adjacent, not legal advice)
+  | 'legal'         // Legal document templates
   | 'visibility'    // SEO basics, Google Business
   | 'support';      // Retainers, ongoing
 
