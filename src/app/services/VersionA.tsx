@@ -110,6 +110,16 @@ export function ServicesVersionA() {
         </div>
       </section>
 
+      {/* Simple jobs note */}
+      <section className="py-8 px-6 border-t border-stone">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-charcoal/60">
+            Sometimes you just need a Linktree, or one small fix.{' '}
+            <span className="text-charcoal">That&apos;s fine too.</span>
+          </p>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="bg-charcoal text-white py-12 px-6">
         <div className="container mx-auto max-w-4xl text-center">
