@@ -38,7 +38,7 @@ const HowItWorks: React.FC = () => {
             How it works
           </p>
           <h2 className="text-[2rem] font-semibold tracking-tight text-white mb-4">
-            Three steps. No overwhelm.
+            The boring stuff can run itself.
           </h2>
         </div>
 
