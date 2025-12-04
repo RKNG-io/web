@@ -387,11 +387,11 @@ export const PERSONAS: Record<string, Persona> = {
         placeholder: "In 6 months, my business..."
       },
       {
-        id: 'help_needed',
+        id: 'typical_day',
         type: 'text',
-        question: "What's the thing you most need help with?",
-        subtext: 'One sentence.',
-        placeholder: "I most need help with..."
+        question: 'Walk me through a typical work day. What eats your time that shouldn\'t?',
+        subtext: 'The admin, the chasing, the things you do because there\'s no system.',
+        placeholder: "A typical day looks like... The things that eat my time are..."
       }
     ]
   },

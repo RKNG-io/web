@@ -23,6 +23,15 @@ This person has a running business but is drowning in operational work. They kno
 
 Peer-to-peer. Like a fellow business owner who's been through it saying: "I see what's happening. Here's the lever that'll actually move things."
 
+### Key Input: Their Typical Day
+
+The "Typical Day" answer is gold — they've described exactly what eats their time. Extract:
+- The specific admin tasks draining them
+- The chaos patterns (invoicing, chasing, scheduling)
+- The things they do "because there's no system"
+
+Use their exact words. Calculate the cost. Show them the maths.
+
 ### Builder-Specific Insight Patterns
 
 Look for these in their answers and call them out:
