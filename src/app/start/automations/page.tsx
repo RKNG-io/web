@@ -97,6 +97,7 @@ export default function AutomationsIntake() {
     { value: 'email', label: 'Email responses' },
     { value: 'social', label: 'Social media posting' },
     { value: 'admin', label: 'Data entry / admin' },
+    { value: 'other', label: 'Something else' },
   ];
 
   const toolOptions = [
@@ -105,6 +106,7 @@ export default function AutomationsIntake() {
     { value: 'xero', label: 'Xero / QuickBooks' },
     { value: 'calendly', label: 'Calendly / Acuity' },
     { value: 'mailchimp', label: 'Mailchimp / ConvertKit' },
+    { value: 'not-sure', label: 'Not sure / mix of things' },
   ];
 
   if (isSubmitted) {
@@ -256,17 +258,29 @@ export default function AutomationsIntake() {
                         : 'border-white/20 hover:border-white/40'
                     }`}
                   >
-                    <span className="text-white font-medium">Send me a quote</span>
+                    <span className="text-white font-medium">Send me a quote by email</span>
                   </button>
                   <button
-                    onClick={() => updateField('contactPreference', 'call')}
+                    onClick={() => updateField('contactPreference', 'whatsapp')}
                     className={`w-full p-4 rounded-lg border text-left transition-all ${
-                      formData.contactPreference === 'call'
+                      formData.contactPreference === 'whatsapp'
                         ? 'border-fuchsia bg-fuchsia/10'
                         : 'border-white/20 hover:border-white/40'
                     }`}
                   >
-                    <span className="text-white font-medium">Book a quick call to discuss</span>
+                    <span className="text-white font-medium">Chat on WhatsApp</span>
+                    <span className="block text-white/50 text-sm mt-1">Quick back-and-forth, sorted in minutes</span>
+                  </button>
+                  <button
+                    onClick={() => updateField('contactPreference', 'calendly')}
+                    className={`w-full p-4 rounded-lg border text-left transition-all ${
+                      formData.contactPreference === 'calendly'
+                        ? 'border-fuchsia bg-fuchsia/10'
+                        : 'border-white/20 hover:border-white/40'
+                    }`}
+                  >
+                    <span className="text-white font-medium">Book a 15-min call</span>
+                    <span className="block text-white/50 text-sm mt-1">Pick a time that suits you</span>
                   </button>
                 </div>
               </div>

@@ -12,7 +12,7 @@ const steps: Step[] = [
     number: '01',
     title: 'Tell us where you are',
     description:
-      "A 15-minute conversation (not a form). Your business, your goals, what feels like it's in the way.",
+      "Get it out of your head. Tell us what's slowing you down, and start your Reckoning.",
   },
   {
     number: '02',
