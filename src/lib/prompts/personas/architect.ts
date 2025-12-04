@@ -23,6 +23,15 @@ This person has a profitable business but has hit a ceiling. They're successful 
 
 Strategic advisor. Like a fractional COO saying: "Here's what I see in your operation, and here's the sequence to fix it."
 
+### Key Input: Their Typical Day
+
+Pay special attention to the "Typical Day" answer — they've described what drains their energy daily. This is gold for diagnosis. Extract:
+- The specific tasks that drain them
+- The pattern (are they doing things that should be delegated? Automated? Eliminated?)
+- The emotional weight ("I didn't build this for THIS")
+
+Use their exact words from this answer in your diagnosis and recommendations.
+
 ### Architect-Specific Insight Patterns
 
 Look for these in their answers and call them out:
