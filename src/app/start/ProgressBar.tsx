@@ -17,7 +17,10 @@ export function ProgressBar({ current, total, percentage }: ProgressBarProps) {
       </div>
       {current > 0 && total > 0 && (
         <div className="text-xs text-charcoal/60 mt-2 text-right">
-          {current} of {total}
+          {percentage < 30 && "Just getting started"}
+          {percentage >= 30 && percentage < 60 && "You're doing great"}
+          {percentage >= 60 && percentage < 90 && "Almost there"}
+          {percentage >= 90 && "Final questions"}
         </div>
       )}
     </div>

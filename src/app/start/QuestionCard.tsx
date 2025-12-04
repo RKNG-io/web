@@ -82,11 +82,7 @@ export function QuestionCard({
 
   return (
     <div className="bg-white rounded-lg p-10 shadow-lg flex flex-col min-h-[500px]">
-      {questionNumber && totalQuestions && (
-        <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
-          Question {questionNumber} of {totalQuestions - 1}
-        </div>
-      )}
+      {/* Progress shown in bar, not question numbers */}
 
       <h2 className="text-2xl font-semibold mb-3 leading-tight text-charcoal">
         {question.question}
@@ -198,7 +194,7 @@ export function QuestionCard({
           disabled={!canContinue}
           className="flex-1 px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-colors disabled:bg-stone disabled:text-charcoal/40 disabled:cursor-not-allowed"
         >
-          {isLastQuestion ? 'Show Me What I Got →' : 'Continue →'}
+          {isLastQuestion ? 'See My Reckoning →' : 'Continue →'}
         </button>
       </div>
     </div>

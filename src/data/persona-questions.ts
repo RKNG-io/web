@@ -37,15 +37,8 @@ export const PERSONAS: Record<string, Persona> = {
         content: `
           <p class="welcome-text">You're here because something in you knows it's time.</p>
           <p class="welcome-text">Be honest with the next few questions. There are no wrong answers. Just you, telling the truth about where you are and where you want to be.</p>
-          <div class="time-estimate">Takes about 8 minutes. Worth it.</div>
+          <div class="time-estimate">Takes 10-12 minutes. Worth it.</div>
         `
-      },
-      {
-        id: 'vision_life',
-        type: 'text',
-        question: 'What does your life look like when this business is working?',
-        subtext: "Don't overthink it. Morning routine, how your days feel, what you've let go of, what you've built.",
-        placeholder: "I wake up excited to work on my own thing. I have control over my schedule. I'm helping people who value what I do..."
       },
       {
         id: 'who_they_help',
@@ -129,9 +122,16 @@ export const PERSONAS: Record<string, Persona> = {
         options: [
           { value: 'proud', label: 'Proud — it represents me well' },
           { value: 'okay', label: 'It\'s okay but needs work' },
-          { value: 'embarrassed', label: 'Embarrassed — it\'s outdated or doesn\'t exist' },
+          { value: 'hesitant', label: 'Hesitant — it needs work' },
           { value: 'avoiding', label: 'I\'ve been avoiding thinking about it' }
         ]
+      },
+      {
+        id: 'vision_life',
+        type: 'text',
+        question: 'What does your life look like when this business is working?',
+        subtext: "Don't overthink it. Morning routine, how your days feel, what you've let go of.",
+        placeholder: "I wake up excited to work on my own thing. I have control over my schedule..."
       },
       {
         id: 'whats_missing',
@@ -165,6 +165,18 @@ export const PERSONAS: Record<string, Persona> = {
         ]
       },
       {
+        id: 'timeline',
+        type: 'single',
+        question: 'When do you want to be "live" — a real business that clients can find and pay?',
+        options: [
+          { value: 'already', label: 'Already am, just need to improve things' },
+          { value: 'month', label: 'Within the next month' },
+          { value: 'three_months', label: 'Within 3 months' },
+          { value: 'six_months', label: 'Within 6 months' },
+          { value: 'exploring', label: 'No fixed timeline — just exploring' }
+        ]
+      },
+      {
         id: 'core_fear',
         type: 'single',
         question: "What's the fear underneath the fear?",
@@ -177,18 +189,6 @@ export const PERSONAS: Record<string, Persona> = {
           { value: 'investment', label: "What if I invest and it doesn't pay off?" },
           { value: 'general', label: "I'm not sure — just a general anxiety" },
           { value: 'ready', label: "Honestly? I'm not that scared. I'm ready." }
-        ]
-      },
-      {
-        id: 'timeline',
-        type: 'single',
-        question: 'When do you want to be "live" — a real business that clients can find and pay?',
-        options: [
-          { value: 'already', label: 'Already am, just need to improve things' },
-          { value: 'month', label: 'Within the next month' },
-          { value: 'three_months', label: 'Within 3 months' },
-          { value: 'six_months', label: 'Within 6 months' },
-          { value: 'exploring', label: 'No fixed timeline — just exploring' }
         ]
       },
       {
@@ -206,14 +206,14 @@ export const PERSONAS: Record<string, Persona> = {
       {
         id: 'budget',
         type: 'single',
-        question: "What's your comfort zone for investing in getting set up properly?",
+        question: "What's your comfort zone for investing in getting set up?",
         options: [
-          { value: 'under_100', label: 'Under £100 — I need to do most of it myself' },
-          { value: '100_300', label: '£100-300 — I can invest a little' },
-          { value: '300_500', label: '£300-500 — I\'m ready to invest in doing this right' },
-          { value: '500_1000', label: '£500-1,000 — I want real help and I\'m committed' },
-          { value: 'over_1000', label: '£1,000+ — I want it done properly and I value my time' },
-          { value: 'unsure', label: "I'm not sure yet" }
+          { value: 'under_100', label: 'Under £100 — Bootstrap approach' },
+          { value: '100_300', label: '£100-300 — Selective investment' },
+          { value: '300_500', label: '£300-500 — Strategic setup' },
+          { value: '500_1000', label: '£500-1,000 — Comprehensive support' },
+          { value: 'over_1000', label: '£1,000+ — Full-service solution' },
+          { value: 'unsure', label: "Help me understand options" }
         ]
       },
       {
@@ -223,18 +223,11 @@ export const PERSONAS: Record<string, Persona> = {
         placeholder: "In one year, I want to have..."
       },
       {
-        id: 'one_thing',
-        type: 'text',
-        question: "What's the one thing you most want help with?",
-        subtext: 'Just one sentence.',
-        placeholder: "The thing I most need help with is..."
-      },
-      {
         id: 'anything_else',
         type: 'text',
-        question: 'Anything else you want me to know?',
-        subtext: 'Optional, but often valuable.',
-        placeholder: "Anything else on your mind...",
+        question: 'Anything else on your mind?',
+        subtext: 'Completely optional — only if something is burning.',
+        placeholder: "Anything else...",
         optional: true
       }
     ]
@@ -379,12 +372,12 @@ export const PERSONAS: Record<string, Persona> = {
         type: 'single',
         question: "What's your comfort zone for investing in getting this sorted?",
         options: [
-          { value: 'under_100', label: "Under £100 — I'll do most of it myself" },
-          { value: '100_300', label: '£100-300 — I can invest a bit' },
-          { value: '300_600', label: '£300-600 — I\'m ready to fix this properly' },
-          { value: '600_1000', label: '£600-1,000 — I want real help' },
-          { value: 'over_1000', label: '£1,000+ — just make it work, my time is worth more' },
-          { value: 'unsure', label: "I don't know yet — show me what's possible" }
+          { value: 'under_100', label: 'Under £100 — Bootstrap approach' },
+          { value: '100_300', label: '£100-300 — Selective fixes' },
+          { value: '300_600', label: '£300-600 — Proper setup' },
+          { value: '600_1000', label: '£600-1,000 — Comprehensive help' },
+          { value: 'over_1000', label: '£1,000+ — Full overhaul' },
+          { value: 'unsure', label: "Help me understand options" }
         ]
       },
       {
@@ -537,32 +530,20 @@ export const PERSONAS: Record<string, Persona> = {
         type: 'single',
         question: "What's your capacity to invest in fixing this?",
         options: [
-          { value: 'under_500', label: 'Under £500 — cautious, need to see value first' },
-          { value: '500_1500', label: '£500-£1,500 — ready if it\'s the right solution' },
-          { value: '1500_3000', label: '£1,500-£3,000 — serious about change' },
-          { value: '3000_5000', label: '£3,000-£5,000 — want comprehensive help' },
-          { value: 'over_5000', label: '£5,000+ — just fix it, my time is worth more' },
-          { value: 'unsure', label: "Not sure yet — depends what's possible" }
+          { value: 'under_500', label: 'Under £500 — Starting cautiously' },
+          { value: '500_1500', label: '£500-£1,500 — Targeted solutions' },
+          { value: '1500_3000', label: '£1,500-£3,000 — Serious investment' },
+          { value: '3000_5000', label: '£3,000-£5,000 — Comprehensive support' },
+          { value: 'over_5000', label: '£5,000+ — Full transformation' },
+          { value: 'unsure', label: "Help me understand options" }
         ]
       },
       {
-        id: 'one_thing',
+        id: 'typical_day',
         type: 'text',
-        question: 'If you could fix ONE thing in the next 30 days, what would make the biggest difference?',
-        placeholder: "The one thing that would make the biggest difference is..."
-      },
-      {
-        id: 'need_to_hear',
-        type: 'single',
-        question: 'What do you need to hear right now?',
-        options: [
-          { value: 'diagnosis', label: "Here's exactly what's broken and how to fix it" },
-          { value: 'normal', label: "You're not failing — this is normal" },
-          { value: 'easier', label: "It doesn't have to be this hard" },
-          { value: 'first_step', label: "Here's the first step — just one thing" },
-          { value: 'delegate', label: 'Someone else can do this for you' },
-          { value: 'value', label: "You've built something valuable — now protect it" }
-        ]
+        question: 'Walk me through a typical day. What drains your energy or time that you wish didn\'t?',
+        subtext: 'The tasks that make you think "this isn\'t what I built this for."',
+        placeholder: "A typical day looks like... The things that drain me are..."
       }
     ]
   }
