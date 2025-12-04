@@ -4,28 +4,34 @@ import Link from 'next/link';
 interface BlockedRow {
   blocked: string;
   unlocked: string;
+  outcomeSlug: string;
 }
 
 const rows: BlockedRow[] = [
   {
     blocked: "I don't know where to start",
     unlocked: 'A prioritised list of what actually matters',
+    outcomeSlug: 'clarity',
   },
   {
     blocked: 'Social media feels fake',
     unlocked: 'Permission to do it your way',
+    outcomeSlug: 'presence',
   },
   {
     blocked: "It's easier to do it myself",
     unlocked: 'Automation that sounds like you',
+    outcomeSlug: 'systems',
   },
   {
     blocked: 'Chasing invoices feels awkward',
     unlocked: 'Automation that follows up, reconciles, and gets you paid',
+    outcomeSlug: 'paid',
   },
   {
     blocked: 'I need to hire to scale',
     unlocked: 'Systems that run without headcount',
+    outcomeSlug: 'time',
   },
 ];
 
@@ -55,9 +61,10 @@ const BlockedUnlocked: React.FC = () => {
           {/* Blocked/Unlocked table */}
           <div className="space-y-4">
             {rows.map((row, index) => (
-              <div
+              <Link
                 key={index}
-                className="grid grid-cols-1 gap-6 p-6 bg-white rounded-lg border border-stone hover:border-fuchsia transition-colors md:grid-cols-2"
+                href={`/get/${row.outcomeSlug}`}
+                className="grid grid-cols-1 gap-6 p-6 bg-white rounded-lg border border-stone hover:border-fuchsia transition-colors md:grid-cols-2 group"
               >
                 {/* Blocked column */}
                 <div>
@@ -72,9 +79,11 @@ const BlockedUnlocked: React.FC = () => {
                   <p className="text-xs uppercase tracking-[0.1em] font-medium text-fuchsia mb-2">
                     Unlocked by
                   </p>
-                  <p className="text-sm text-charcoal font-medium">{row.unlocked}</p>
+                  <p className="text-sm text-charcoal font-medium group-hover:text-fuchsia transition-colors">
+                    {row.unlocked}
+                  </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

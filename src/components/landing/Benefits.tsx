@@ -29,6 +29,16 @@ const benefits: Benefit[] = [
     description: 'Automations that handle the repetitive stuff. Your voice. Your way. Without hiring.',
   },
   {
+    title: 'Clients',
+    slug: 'clients',
+    description: 'Enquiries that turn into work — without the awkward sales pitch.',
+  },
+  {
+    title: 'Paid',
+    slug: 'paid',
+    description: 'Money in. On time. Without chasing.',
+  },
+  {
     title: 'Clarity',
     slug: 'clarity',
     description: 'Know what\'s blocking you. Know what to do next. Just the next step — not the whole life plan.',
@@ -55,7 +65,7 @@ const Benefits: React.FC = () => {
         </div>
 
         {/* Benefits grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (
             <Link
               key={benefit.title}

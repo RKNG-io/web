@@ -41,7 +41,7 @@ export const BUNDLES: Bundle[] = [
     savingsPercent: 20,
     personas: ['launcher', 'builder'],
     popular: true,
-    icon: '🌐',
+    icon: 'globe',
     yourTimeSaved: 2,
     customerBenefit: 'Everything connects from day one — no half-finished presence'
   },
@@ -66,7 +66,7 @@ export const BUNDLES: Bundle[] = [
     savingsPercent: 23,
     personas: ['launcher', 'builder'],
     popular: true,
-    icon: '📅',
+    icon: 'calendar',
     yourTimeSaved: 2,
     customerBenefit: 'One seamless client journey instead of cobbled-together tools'
   },
@@ -90,7 +90,7 @@ export const BUNDLES: Bundle[] = [
     savingsPercent: 24,
     personas: ['launcher', 'builder', 'architect'],
     popular: true,
-    icon: '📱',
+    icon: 'smartphone',
     yourTimeSaved: 1.5,
     customerBenefit: 'Templates use your brand, content fits your calendar — all one system'
   },
@@ -114,7 +114,7 @@ export const BUNDLES: Bundle[] = [
     savingsPercent: 18,
     personas: ['builder', 'architect'],
     popular: false,
-    icon: '⚙️',
+    icon: 'settings',
     yourTimeSaved: 1.5,
     customerBenefit: 'All three touch client data — one integration, everything connected'
   },
@@ -126,22 +126,21 @@ export const BUNDLES: Bundle[] = [
     id: 'launch_ready',
     name: 'Launch Ready',
     tagline: 'Zero to taking bookings in a week',
-    description: 'Website, domain, email, booking, payments, and contract template. Everything a new business needs to look legit and get paid.',
+    description: 'Website, domain, email, booking, and payments. Everything a new business needs to look legit and get paid.',
     includes: [
       'website_single',    // £199
       'domain_setup',      // £49
       'email_pro',         // £49
       'booking_system',    // £99
       'payment_setup',     // £99
-      'contract_template'  // £99
     ],
-    alaCarteTotal: 594,
-    bundlePrice: 449,
-    savings: 145,
-    savingsPercent: 24,
+    alaCarteTotal: 495,
+    bundlePrice: 399,
+    savings: 96,
+    savingsPercent: 19,
     personas: ['launcher'],
     popular: true,
-    icon: '🚀',
+    icon: 'rocket',
     yourTimeSaved: 3,
     customerBenefit: 'One onboarding call, everything set up together, fully integrated'
   },
@@ -164,7 +163,7 @@ export const BUNDLES: Bundle[] = [
     savingsPercent: 18,
     personas: ['architect'],
     popular: true,
-    icon: '📈',
+    icon: 'trending-up',
     yourTimeSaved: 2,
     customerBenefit: 'Audit informs the sprint — no wasted effort fixing the wrong things'
   }
