@@ -27,7 +27,7 @@ export interface Persona {
 export const PERSONAS: Record<string, Persona> = {
   launcher: {
     id: 'launcher',
-    name: 'Launching',
+    name: 'Launcher',
     description: "You're ready to start but haven't fully launched yet",
     questions: [
       {
@@ -242,7 +242,7 @@ export const PERSONAS: Record<string, Persona> = {
 
   builder: {
     id: 'builder',
-    name: 'Building',
+    name: 'Builder',
     description: "You're making it work but everything is duct tape",
     questions: [
       {
@@ -405,7 +405,7 @@ export const PERSONAS: Record<string, Persona> = {
 
   architect: {
     id: 'architect',
-    name: 'Scaling',
+    name: 'Architect',
     description: "You've built something real but it's running you",
     questions: [
       {

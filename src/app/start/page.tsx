@@ -108,14 +108,14 @@ function QuestionnaireContent() {
 
           <div className="bg-white rounded-lg p-6 md:p-10 shadow-lg">
             <div className="text-xs uppercase tracking-wider text-blue font-medium mb-4">
-              Welcome back
+              Hey again
             </div>
             <h2 className="text-2xl font-semibold mb-3 text-charcoal">
-              You have progress saved
+              You&apos;re already on your way
             </h2>
             <p className="text-charcoal/60 mb-6">
-              You were {progress.current} of {progress.total} questions through as a{' '}
-              <span className="font-medium text-charcoal">{personaName}</span>.
+              You made it {progress.current} of {progress.total} questions into the{' '}
+              <span className="font-medium text-charcoal">{personaName}</span> questionnaire. Pick up where you left off?
             </p>
 
             <div className="flex flex-col gap-3">
@@ -123,7 +123,7 @@ function QuestionnaireContent() {
                 onClick={() => setShowResumePrompt(false)}
                 className="w-full px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity"
               >
-                Continue where I left off
+                Keep going
               </button>
               <button
                 onClick={() => {
@@ -132,7 +132,7 @@ function QuestionnaireContent() {
                 }}
                 className="w-full px-6 py-3 rounded-lg bg-transparent border-2 border-charcoal/20 text-charcoal font-medium hover:border-charcoal/40 transition-colors"
               >
-                Start fresh
+                Start over
               </button>
             </div>
           </div>
