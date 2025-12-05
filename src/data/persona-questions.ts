@@ -3,7 +3,7 @@
 
 export interface PersonaQuestion {
   id: string;
-  type: 'welcome' | 'single' | 'multi' | 'text' | 'contact';
+  type: 'welcome' | 'single' | 'multi' | 'text' | 'contact' | 'presence';
   question?: string;
   title?: string; // For welcome screens
   content?: string; // For welcome screens
@@ -231,6 +231,13 @@ export const PERSONAS: Record<string, Persona> = {
         optional: true
       },
       {
+        id: 'online_presence',
+        type: 'presence',
+        question: 'Where can we find you online?',
+        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        optional: true
+      },
+      {
         id: 'contact',
         type: 'contact',
         question: 'Where should we send your Reckoning?',
@@ -400,6 +407,13 @@ export const PERSONAS: Record<string, Persona> = {
         placeholder: "A typical day looks like... The things that eat my time are..."
       },
       {
+        id: 'online_presence',
+        type: 'presence',
+        question: 'Where can we find you online?',
+        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        optional: true
+      },
+      {
         id: 'contact',
         type: 'contact',
         question: 'Where should we send your Reckoning?',
@@ -556,6 +570,13 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'Walk me through a typical day. What drains your energy or time that you wish didn\'t?',
         subtext: 'The tasks that make you think "this isn\'t what I built this for."',
         placeholder: "A typical day looks like... The things that drain me are..."
+      },
+      {
+        id: 'online_presence',
+        type: 'presence',
+        question: 'Where can we find you online?',
+        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        optional: true
       },
       {
         id: 'contact',

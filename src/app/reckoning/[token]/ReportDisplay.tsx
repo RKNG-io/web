@@ -5,15 +5,40 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import type { ReckoningReport } from '@/types/report';
 
+interface OnlinePresence {
+  website?: string;
+  instagram?: string;
+  linkedin?: string;
+  other?: string;
+}
+
 interface ReportDisplayProps {
   report: ReckoningReport;
   name: string;
+  answers?: Record<string, string | string[]>;
 }
 
-export function ReportDisplay({ report, name }: ReportDisplayProps) {
+export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
   const params = useParams();
   const token = params.token as string;
   const [isDownloading, setIsDownloading] = useState(false);
+
+  // Parse online presence from answers
+  const getOnlinePresence = (): OnlinePresence | null => {
+    if (!answers?.online_presence) return null;
+    const presenceStr = answers.online_presence;
+    if (typeof presenceStr !== 'string') return null;
+    try {
+      const parsed = JSON.parse(presenceStr) as OnlinePresence;
+      // Check if any field has content
+      const hasContent = parsed.website || parsed.instagram || parsed.linkedin || parsed.other;
+      return hasContent ? parsed : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const onlinePresence = getOnlinePresence();
 
   const handleDownloadPDF = async () => {
     setIsDownloading(true);
@@ -322,6 +347,77 @@ export function ReportDisplay({ report, name }: ReportDisplayProps) {
                 Or take this report and run with it yourself — both paths work.
               </p>
             </div>
+          </section>
+        )}
+
+        {/* Presence Review Offer */}
+        {onlinePresence && (
+          <section className="bg-white rounded-[10px] p-6 md:p-10 mb-6 md:mb-8 border-2 border-mint">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 bg-mint/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl">🎁</span>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-charcoal mb-1">
+                  Free presence review included
+                </h2>
+                <p className="text-charcoal/60">
+                  You shared your online presence — we&apos;ll review it and include personalised feedback.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-ice rounded-lg p-4 mb-6">
+              <p className="text-sm font-medium text-charcoal mb-3">What you shared:</p>
+              <ul className="space-y-2 text-sm text-charcoal/70">
+                {onlinePresence.website && (
+                  <li className="flex items-center gap-2">
+                    <span className="text-mint">•</span>
+                    <span className="font-medium">Website:</span>
+                    <a
+                      href={onlinePresence.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-fuchsia hover:underline truncate"
+                    >
+                      {onlinePresence.website}
+                    </a>
+                  </li>
+                )}
+                {onlinePresence.instagram && (
+                  <li className="flex items-center gap-2">
+                    <span className="text-mint">•</span>
+                    <span className="font-medium">Instagram:</span>
+                    <span>{onlinePresence.instagram}</span>
+                  </li>
+                )}
+                {onlinePresence.linkedin && (
+                  <li className="flex items-center gap-2">
+                    <span className="text-mint">•</span>
+                    <span className="font-medium">LinkedIn:</span>
+                    <a
+                      href={onlinePresence.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-fuchsia hover:underline truncate"
+                    >
+                      {onlinePresence.linkedin}
+                    </a>
+                  </li>
+                )}
+                {onlinePresence.other && (
+                  <li className="flex items-center gap-2">
+                    <span className="text-mint">•</span>
+                    <span className="font-medium">Other:</span>
+                    <span>{onlinePresence.other}</span>
+                  </li>
+                )}
+              </ul>
+            </div>
+
+            <p className="text-sm text-charcoal/60">
+              We&apos;ll send your presence review to your email within 48 hours. No strings attached — it&apos;s our way of saying thanks for trying Reckoning.
+            </p>
           </section>
         )}
 

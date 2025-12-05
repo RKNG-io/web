@@ -67,14 +67,24 @@ export default async function ReckoningPage({ params }: PageProps) {
             Your report is being reviewed by our team. You'll receive an email once it's ready.
           </p>
         </div>
-        <ReportDisplay report={report} name={reckoning.name || 'there'} />
+        <ReportDisplay
+          report={report}
+          name={reckoning.name || 'there'}
+          answers={reckoning.answers as Record<string, string | string[]>}
+        />
       </div>
     );
   }
 
   // Ready to view
   if ((reckoning.status === 'ready' || reckoning.status === 'reviewed') && report) {
-    return <ReportDisplay report={report} name={reckoning.name || 'there'} />;
+    return (
+      <ReportDisplay
+        report={report}
+        name={reckoning.name || 'there'}
+        answers={reckoning.answers as Record<string, string | string[]>}
+      />
+    );
   }
 
   // Fallback

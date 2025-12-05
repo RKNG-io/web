@@ -181,6 +181,95 @@ export function QuestionCard({
         </div>
       )}
 
+      {/* Presence input */}
+      {question.type === 'presence' && (
+        <div className="mb-6 flex-1 space-y-4">
+          <div>
+            <label className="block text-sm text-charcoal/60 mb-1">Website</label>
+            <input
+              type="url"
+              className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+              placeholder="https://yoursite.com"
+              value={(() => {
+                if (typeof answer === 'string') {
+                  try { return JSON.parse(answer).website || ''; } catch { return ''; }
+                }
+                return '';
+              })()}
+              onChange={(e) => {
+                const current = typeof answer === 'string' ? (() => {
+                  try { return JSON.parse(answer); } catch { return {}; }
+                })() : {};
+                onAnswer(JSON.stringify({ ...current, website: e.target.value }));
+              }}
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-charcoal/60 mb-1">Instagram</label>
+            <input
+              type="text"
+              className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+              placeholder="@yourhandle"
+              value={(() => {
+                if (typeof answer === 'string') {
+                  try { return JSON.parse(answer).instagram || ''; } catch { return ''; }
+                }
+                return '';
+              })()}
+              onChange={(e) => {
+                const current = typeof answer === 'string' ? (() => {
+                  try { return JSON.parse(answer); } catch { return {}; }
+                })() : {};
+                onAnswer(JSON.stringify({ ...current, instagram: e.target.value }));
+              }}
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-charcoal/60 mb-1">LinkedIn</label>
+            <input
+              type="url"
+              className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+              placeholder="https://linkedin.com/in/you"
+              value={(() => {
+                if (typeof answer === 'string') {
+                  try { return JSON.parse(answer).linkedin || ''; } catch { return ''; }
+                }
+                return '';
+              })()}
+              onChange={(e) => {
+                const current = typeof answer === 'string' ? (() => {
+                  try { return JSON.parse(answer); } catch { return {}; }
+                })() : {};
+                onAnswer(JSON.stringify({ ...current, linkedin: e.target.value }));
+              }}
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-charcoal/60 mb-1">Other (TikTok, Facebook, etc.)</label>
+            <input
+              type="text"
+              className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+              placeholder="Any other links"
+              value={(() => {
+                if (typeof answer === 'string') {
+                  try { return JSON.parse(answer).other || ''; } catch { return ''; }
+                }
+                return '';
+              })()}
+              onChange={(e) => {
+                const current = typeof answer === 'string' ? (() => {
+                  try { return JSON.parse(answer); } catch { return {}; }
+                })() : {};
+                onAnswer(JSON.stringify({ ...current, other: e.target.value }));
+              }}
+            />
+          </div>
+          <p className="text-sm text-charcoal/50 mt-2">
+            Share any of these and we&apos;ll review your current presence as part of your Reckoning.
+          </p>
+        </div>
+      )}
+
       {/* Contact input */}
       {question.type === 'contact' && (
         <div className="mb-6 flex-1 space-y-4">
