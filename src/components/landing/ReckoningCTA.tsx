@@ -54,7 +54,7 @@ const ReckoningCTA: React.FC = () => {
 
           {/* Right column: Preview card */}
           <div className="flex items-center justify-center">
-            <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
+            <div className="w-full max-w-md rounded-[10px] bg-white p-8 border border-stone">
               {/* Card header */}
               <div className="mb-6 flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-fuchsia text-lg font-semibold text-white">

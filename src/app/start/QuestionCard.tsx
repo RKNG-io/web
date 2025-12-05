@@ -32,7 +32,7 @@ export function QuestionCard({
   // Welcome screen
   if (question.type === 'welcome') {
     return (
-      <div className="bg-white rounded-lg p-10 shadow-lg flex flex-col min-h-[500px]">
+      <div className="bg-white rounded-[10px] p-10 border border-stone flex flex-col min-h-[500px]">
         <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
           {personaName}
         </div>
@@ -81,7 +81,7 @@ export function QuestionCard({
   };
 
   return (
-    <div className="bg-white rounded-lg p-10 shadow-lg flex flex-col min-h-[500px]">
+    <div className="bg-white rounded-[10px] p-10 border border-stone flex flex-col min-h-[500px]">
       {/* Progress shown in bar, not question numbers */}
 
       <h2 className="text-2xl font-semibold mb-3 leading-tight text-charcoal">

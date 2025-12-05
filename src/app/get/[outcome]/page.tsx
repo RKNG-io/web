@@ -104,7 +104,7 @@ export default async function OutcomePage({ params }: PageProps) {
               {bundles.map((bundle) => bundle && (
                 <div
                   key={bundle.id}
-                  className="bg-white rounded-xl p-6 border-2 border-fuchsia/20 hover:border-fuchsia/40 transition-colors"
+                  className="bg-white rounded-[10px] p-6 border-2 border-fuchsia/20 hover:border-fuchsia/40 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-4">
                     {iconComponents[bundle.icon] || <Settings className="w-8 h-8 text-fuchsia" />}
@@ -161,7 +161,7 @@ export default async function OutcomePage({ params }: PageProps) {
               {services.map((service) => (
                 <div
                   key={service.id}
-                  className="bg-white rounded-lg p-5 hover:shadow-md transition-shadow"
+                  className="bg-white rounded-[10px] p-5 border border-stone hover:border-charcoal/30 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-semibold text-charcoal">

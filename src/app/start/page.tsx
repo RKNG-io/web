@@ -106,7 +106,7 @@ function QuestionnaireContent() {
             <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
-          <div className="bg-white rounded-lg p-6 md:p-10 shadow-lg">
+          <div className="bg-white rounded-[10px] p-6 md:p-10 border border-stone">
             <div className="text-xs uppercase tracking-wider text-blue font-medium mb-4">
               Hey again
             </div>
@@ -155,7 +155,7 @@ function QuestionnaireContent() {
 
           <ProgressBar {...getProgress()} />
 
-          <div className="bg-white rounded-lg p-6 md:p-10 shadow-lg">
+          <div className="bg-white rounded-[10px] p-6 md:p-10 border border-stone">
             <div className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
               Let's start
             </div>
@@ -260,7 +260,7 @@ function QuestionnaireContent() {
             <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
-          <div className="bg-white rounded-lg p-10 shadow-lg text-center">
+          <div className="bg-white rounded-[10px] p-10 border border-stone text-center">
             <div className="w-16 h-16 bg-fuchsia/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <span className="text-2xl">⚠️</span>
             </div>
@@ -305,7 +305,7 @@ function QuestionnaireContent() {
             <p className="text-sm text-charcoal/60">Your time is now</p>
           </header>
 
-          <div className="bg-white rounded-lg p-10 shadow-lg text-center">
+          <div className="bg-white rounded-[10px] p-10 border border-stone text-center">
             <div className="w-20 h-20 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
               <div className="animate-spin text-3xl">⏱</div>
             </div>

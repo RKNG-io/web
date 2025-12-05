@@ -19,7 +19,7 @@ function SuccessContent() {
   return (
     <div className="min-h-screen bg-ice flex items-center justify-center px-4">
       <div className="max-w-md w-full">
-        <div className="bg-white rounded-xl p-8 md:p-10 text-center shadow-lg">
+        <div className="bg-white rounded-[10px] p-8 md:p-10 text-center border border-stone">
           <div className="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-8 h-8 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -57,7 +57,7 @@ function SuccessContent() {
         </div>
 
         <p className="text-center text-sm text-charcoal/50 mt-6">
-          Questions? <a href="mailto:hello@rkng.com" className="text-fuchsia hover:underline">hello@rkng.com</a>
+          Questions? <a href="mailto:hello@rkng.io" className="text-fuchsia hover:underline">hello@rkng.io</a>
         </p>
       </div>
     </div>

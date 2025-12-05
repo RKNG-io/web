@@ -74,7 +74,7 @@ export function CartDrawer() {
       />
 
       {/* Drawer */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white z-50 shadow-2xl flex flex-col">
+      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white z-50 border-l border-stone flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-stone">
           <h2 className="text-xl font-semibold text-charcoal">
@@ -216,7 +216,7 @@ export function CartDrawer() {
 
             {/* Error message */}
             {checkoutError && (
-              <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700 mb-3">
+              <div className="p-3 bg-fuchsia/10 border border-fuchsia/30 rounded-lg text-sm text-fuchsia mb-3">
                 {checkoutError}
               </div>
             )}

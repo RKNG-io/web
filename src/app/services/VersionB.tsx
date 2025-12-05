@@ -126,7 +126,7 @@ export function ServicesVersionB() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="bg-white rounded-xl p-6 sticky top-24">
+            <div className="bg-white rounded-[10px] p-6 sticky top-24 border border-stone">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="font-semibold text-charcoal">Filters</h2>
                 {hasFilters && (
@@ -314,7 +314,7 @@ export function ServicesVersionB() {
 
 function ServiceCardB({ service, onAdd }: { service: ServiceItem; onAdd: () => void }) {
   return (
-    <div className="bg-white rounded-lg p-5 hover:shadow-md transition-shadow group">
+    <div className="bg-white rounded-[10px] p-5 border border-stone hover:border-charcoal/30 transition-colors group">
       <div className="flex items-start justify-between mb-2">
         <h3 className="font-semibold text-charcoal group-hover:text-fuchsia transition-colors">
           {service.name}

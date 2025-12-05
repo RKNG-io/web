@@ -147,7 +147,7 @@ export function ServicesVersionA() {
 
 function BundleCard({ bundle, onAdd }: { bundle: Bundle; onAdd: () => void }) {
   return (
-    <div className="bg-white rounded-xl p-6 border-2 border-fuchsia/20 hover:border-fuchsia/40 transition-colors">
+    <div className="bg-white rounded-[10px] p-6 border-2 border-fuchsia/20 hover:border-fuchsia/40 transition-colors">
       <div className="flex items-start justify-between mb-4">
         {iconComponents[bundle.icon] || <Settings className="w-8 h-8 text-fuchsia" />}
         <span className="px-2 py-1 bg-mint text-charcoal text-xs font-medium rounded">

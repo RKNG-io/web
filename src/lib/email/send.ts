@@ -94,8 +94,8 @@ export async function sendOrderConfirmationEmail(
       <p style="color: #666; margin-top: 24px;">We'll be in touch within 24 hours to kick things off.</p>
     </div>
     <div style="text-align: center; font-size: 14px; color: #666; padding: 20px;">
-      <p>Questions? Reply to this email or contact <a href="mailto:hello@rkng.com" style="color: #D14BA8;">hello@rkng.com</a></p>
-      <p>Reckoning | <a href="https://rkng.com" style="color: #D14BA8;">rkng.com</a></p>
+      <p>Questions? Reply to this email or contact <a href="mailto:hello@rkng.io" style="color: #D14BA8;">hello@rkng.io</a></p>
+      <p>Reckoning | <a href="https://rkng.io" style="color: #D14BA8;">rkng.io</a></p>
     </div>
   </div>
 </body>

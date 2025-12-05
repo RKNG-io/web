@@ -292,7 +292,7 @@ export default function AutomationsIntake() {
       {/* Error message */}
       {error && (
         <div className="container mx-auto px-6">
-          <div className="max-w-lg mx-auto p-4 bg-red-500/20 border border-red-500/40 rounded-lg text-center">
+          <div className="max-w-lg mx-auto p-4 bg-fuchsia/20 border border-fuchsia/40 rounded-lg text-center">
             <p className="text-white">{error}</p>
             <button
               onClick={() => setError(null)}

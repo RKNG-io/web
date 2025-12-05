@@ -345,7 +345,7 @@ export function ReportDisplay({ report, name }: ReportDisplayProps) {
             })}
           </p>
           <p className="mt-2">
-            Questions? <a href="mailto:hello@rkng.com" className="text-fuchsia hover:underline">hello@rkng.com</a>
+            Questions? <a href="mailto:hello@rkng.io" className="text-fuchsia hover:underline">hello@rkng.io</a>
           </p>
         </footer>
       </main>

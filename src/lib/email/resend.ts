@@ -1,8 +1,8 @@
 import { Resend } from 'resend';
 
 // Default sender
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Reckoning <hello@rkng.com>';
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@rkng.com';
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Reckoning <hello@rkng.io>';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@rkng.io';
 
 // Lazy-initialize Resend client (only when API key is available)
 let resend: Resend | null = null;
