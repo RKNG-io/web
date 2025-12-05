@@ -3,7 +3,7 @@
 
 export interface PersonaQuestion {
   id: string;
-  type: 'welcome' | 'single' | 'multi' | 'text';
+  type: 'welcome' | 'single' | 'multi' | 'text' | 'contact';
   question?: string;
   title?: string; // For welcome screens
   content?: string; // For welcome screens
@@ -229,6 +229,12 @@ export const PERSONAS: Record<string, Persona> = {
         subtext: 'Completely optional — only if something is burning.',
         placeholder: "Anything else...",
         optional: true
+      },
+      {
+        id: 'contact',
+        type: 'contact',
+        question: 'Where should we send your Reckoning?',
+        subtext: 'Your report will be ready in about 30 seconds.'
       }
     ]
   },
@@ -392,6 +398,12 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'Walk me through a typical work day. What eats your time that shouldn\'t?',
         subtext: 'The admin, the chasing, the things you do because there\'s no system.',
         placeholder: "A typical day looks like... The things that eat my time are..."
+      },
+      {
+        id: 'contact',
+        type: 'contact',
+        question: 'Where should we send your Reckoning?',
+        subtext: 'Your report will be ready in about 30 seconds.'
       }
     ]
   },
@@ -544,6 +556,12 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'Walk me through a typical day. What drains your energy or time that you wish didn\'t?',
         subtext: 'The tasks that make you think "this isn\'t what I built this for."',
         placeholder: "A typical day looks like... The things that drain me are..."
+      },
+      {
+        id: 'contact',
+        type: 'contact',
+        question: 'Where should we send your Reckoning?',
+        subtext: 'Your report will be ready in about 30 seconds.'
       }
     ]
   }

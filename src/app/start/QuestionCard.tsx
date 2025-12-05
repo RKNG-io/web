@@ -181,6 +181,56 @@ export function QuestionCard({
         </div>
       )}
 
+      {/* Contact input */}
+      {question.type === 'contact' && (
+        <div className="mb-6 flex-1 space-y-4">
+          <input
+            type="text"
+            className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+            placeholder="Your name"
+            value={(() => {
+              if (typeof answer === 'string') {
+                try {
+                  const parsed = JSON.parse(answer);
+                  return parsed.name || '';
+                } catch {
+                  return '';
+                }
+              }
+              return '';
+            })()}
+            onChange={(e) => {
+              const current = typeof answer === 'string' ? (() => {
+                try { return JSON.parse(answer); } catch { return {}; }
+              })() : {};
+              onAnswer(JSON.stringify({ ...current, name: e.target.value }));
+            }}
+          />
+          <input
+            type="email"
+            className="w-full p-4 border-2 border-stone rounded-lg focus:outline-none focus:border-fuchsia transition-colors"
+            placeholder="Your email"
+            value={(() => {
+              if (typeof answer === 'string') {
+                try {
+                  const parsed = JSON.parse(answer);
+                  return parsed.email || '';
+                } catch {
+                  return '';
+                }
+              }
+              return '';
+            })()}
+            onChange={(e) => {
+              const current = typeof answer === 'string' ? (() => {
+                try { return JSON.parse(answer); } catch { return {}; }
+              })() : {};
+              onAnswer(JSON.stringify({ ...current, email: e.target.value }));
+            }}
+          />
+        </div>
+      )}
+
       {/* Navigation buttons */}
       <div className="flex gap-4 mt-auto pt-6">
         <button

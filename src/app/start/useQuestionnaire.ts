@@ -137,7 +137,18 @@ export function useQuestionnaire() {
   const hasAnswer = (questionId: string): boolean => {
     const answer = state.answers[questionId];
     if (Array.isArray(answer)) return answer.length > 0;
-    if (typeof answer === 'string') return answer.trim().length > 0;
+    if (typeof answer === 'string') {
+      // Special handling for contact field (JSON with name and email)
+      if (questionId === 'contact') {
+        try {
+          const parsed = JSON.parse(answer);
+          return !!(parsed.name?.trim() && parsed.email?.trim());
+        } catch {
+          return false;
+        }
+      }
+      return answer.trim().length > 0;
+    }
     return !!answer;
   };
 

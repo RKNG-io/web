@@ -27,9 +27,26 @@ export async function POST(request: Request) {
       );
     }
 
-    // Extract name and email from answers
-    const name = answers.name as string || null;
-    const email = answers.email as string || null;
+    // Extract name and email from contact field (JSON string)
+    let name: string | null = null;
+    let email: string | null = null;
+
+    const contactField = answers.contact;
+    if (typeof contactField === 'string') {
+      try {
+        const parsed = JSON.parse(contactField);
+        name = parsed.name || null;
+        email = parsed.email || null;
+      } catch {
+        // Fall back to direct fields if contact parsing fails
+        name = answers.name as string || null;
+        email = answers.email as string || null;
+      }
+    } else {
+      // Legacy: direct name/email fields
+      name = answers.name as string || null;
+      email = answers.email as string || null;
+    }
 
     if (!email) {
       return NextResponse.json(
