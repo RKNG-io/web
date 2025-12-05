@@ -1,14 +1,22 @@
 import { Pool } from 'pg';
 
 // Database connection pool
-const pool = new Pool({
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  database: process.env.DB_NAME || 'reckoning',
-  user: process.env.DB_USER || 'liz',
-  password: process.env.DB_PASSWORD || 'localdev',
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-});
+// Supports DATABASE_URL or individual DB_* env vars
+const pool = new Pool(
+  process.env.DATABASE_URL
+    ? {
+        connectionString: process.env.DATABASE_URL,
+        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+      }
+    : {
+        host: process.env.DB_HOST || 'localhost',
+        port: parseInt(process.env.DB_PORT || '5432'),
+        database: process.env.DB_NAME || 'reckoning',
+        user: process.env.DB_USER || 'liz',
+        password: process.env.DB_PASSWORD || 'localdev',
+        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+      }
+);
 
 export async function query<T>(text: string, params?: unknown[]): Promise<T[]> {
   const client = await pool.connect();
@@ -44,6 +52,8 @@ export interface Reckoning {
   edited_by: string | null;
   generation_attempts: number;
   pdf_url: string | null;
+  pdf_status: 'pending' | 'generating' | 'ready' | 'failed' | 'skipped' | null;
+  pdf_error: string | null;
 }
 
 export interface QuestionnaireSubmission {
@@ -175,8 +185,19 @@ export async function setReckoningError(id: string, error: string): Promise<void
 
 export async function setReckoningPdfUrl(id: string, pdfUrl: string): Promise<void> {
   await query(
-    'UPDATE reckonings SET pdf_url = $1 WHERE id = $2',
-    [pdfUrl, id]
+    'UPDATE reckonings SET pdf_url = $1, pdf_status = $2 WHERE id = $3',
+    [pdfUrl, 'ready', id]
+  );
+}
+
+export async function setReckoningPdfStatus(
+  id: string,
+  status: 'pending' | 'generating' | 'ready' | 'failed' | 'skipped',
+  error?: string
+): Promise<void> {
+  await query(
+    'UPDATE reckonings SET pdf_status = $1, pdf_error = $2 WHERE id = $3',
+    [status, error || null, id]
   );
 }
 
