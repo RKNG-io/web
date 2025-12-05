@@ -34,8 +34,8 @@ const benefits: Benefit[] = [
     description: 'Enquiries that turn into work — without the awkward sales pitch.',
   },
   {
-    title: 'Paid',
-    slug: 'paid',
+    title: 'Cashflow',
+    slug: 'cashflow',
     description: 'Money in. On time. Without chasing.',
   },
   {

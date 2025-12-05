@@ -230,8 +230,8 @@ export default async function OutcomePage({ params }: PageProps) {
             <Link href="/get/clients" className="text-charcoal/60 hover:text-charcoal">
               Clients
             </Link>
-            <Link href="/get/paid" className="text-charcoal/60 hover:text-charcoal">
-              Paid
+            <Link href="/get/cashflow" className="text-charcoal/60 hover:text-charcoal">
+              Cashflow
             </Link>
             <Link href="/get/clarity" className="text-charcoal/60 hover:text-charcoal">
               Clarity

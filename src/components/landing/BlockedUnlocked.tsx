@@ -26,7 +26,7 @@ const rows: BlockedRow[] = [
   {
     blocked: 'Chasing invoices feels awkward',
     unlocked: 'Automation that follows up, reconciles, and gets you paid',
-    outcomeSlug: 'paid',
+    outcomeSlug: 'cashflow',
   },
   {
     blocked: 'I need to hire to scale',

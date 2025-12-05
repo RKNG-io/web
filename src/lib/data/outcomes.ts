@@ -137,9 +137,9 @@ export const OUTCOMES: Record<string, Outcome> = {
     ctaLink: '/start',
   },
 
-  paid: {
-    slug: 'paid',
-    title: 'Get Paid',
+  cashflow: {
+    slug: 'cashflow',
+    title: 'Cashflow',
     headline: 'Revenue that arrives smoothly and consistently',
     subhead: 'Invoicing, chasing, reconciliation — handled.',
     description: 'Chasing invoices is awkward. Forgetting to invoice is worse. These services automate the money side so you can focus on the work.',
