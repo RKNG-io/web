@@ -1,13 +1,36 @@
 'use client';
 
-import { Suspense } from 'react';
-import { CartProvider } from '@/components/services/CartContext';
+import { Suspense, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { CartProvider, useCart } from '@/components/services/CartContext';
 import { CartDrawer } from '@/components/services/CartDrawer';
 import { ServicesVersionA } from './VersionA';
+import { getBundleById } from '@/lib/data/bundles';
+
+function BundleAutoAdd() {
+  const searchParams = useSearchParams();
+  const { addBundle, openCart } = useCart();
+
+  useEffect(() => {
+    const bundleId = searchParams.get('bundle');
+    if (bundleId) {
+      const bundle = getBundleById(bundleId);
+      if (bundle) {
+        addBundle(bundle);
+        openCart();
+      }
+    }
+  }, [searchParams, addBundle, openCart]);
+
+  return null;
+}
 
 function ServicesContent() {
   return (
     <CartProvider>
+      <Suspense fallback={null}>
+        <BundleAutoAdd />
+      </Suspense>
       <ServicesVersionA />
       <CartDrawer />
     </CartProvider>

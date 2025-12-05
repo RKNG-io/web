@@ -1,50 +1,54 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { getBundleById, Bundle } from '@/lib/data/bundles';
+import { getServiceById } from '@/lib/data/service-catalogue';
 
-interface Package {
+interface PackageDisplay {
+  bundleId: string;
   name: string;
   description: string;
-  features: string[];
-  price: string;
 }
 
-const packages: Package[] = [
+// Map display names to actual bundles
+const packageConfig: PackageDisplay[] = [
   {
+    bundleId: 'launch_ready',
     name: 'Launcher',
     description: 'Everything you need to go from idea to taking money.',
-    features: [
-      'One-page website',
-      'Booking system',
-      'Payment setup',
-      'Basic online presence',
-    ],
-    price: 'From £399',
   },
   {
+    bundleId: 'get_booked',
     name: 'Builder',
     description: 'Systems that give you time back.',
-    features: [
-      'Workflow automation',
-      'Follow-up sequences',
-      'Invoicing setup',
-      'Content that sounds like you',
-    ],
-    price: 'From £599',
   },
   {
+    bundleId: 'scale_ready',
     name: 'Architect',
     description: "Operations that don't depend on you.",
-    features: [
-      'AI-powered workflows',
-      'Client communications',
-      'Reporting dashboards',
-      'Scale without headcount',
-    ],
-    price: 'From £999',
   },
 ];
 
+function getFeatureNames(bundle: Bundle): string[] {
+  return bundle.includes.map(serviceId => {
+    const service = getServiceById(serviceId);
+    return service?.name || serviceId;
+  });
+}
+
 const Packages: React.FC = () => {
+  // Get actual bundle data
+  const packages = packageConfig.map(config => {
+    const bundle = getBundleById(config.bundleId);
+    return {
+      ...config,
+      bundle,
+      features: bundle ? getFeatureNames(bundle) : [],
+      price: bundle ? `£${bundle.bundlePrice}` : '',
+    };
+  }).filter(pkg => pkg.bundle); // Only show packages with valid bundles
+
   return (
     <section className="py-24" id="support">
       <div className="container mx-auto px-6 lg:px-8">
@@ -70,7 +74,7 @@ const Packages: React.FC = () => {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {packages.map((pkg) => (
             <article
-              key={pkg.name}
+              key={pkg.bundleId}
               className="bg-white border border-stone rounded-[10px] p-10 flex flex-col"
             >
               <h3 className="text-xl font-semibold text-charcoal mb-2">
@@ -89,12 +93,19 @@ const Packages: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <p className="text-sm text-charcoal/50 mb-4">
-                {pkg.price}
-              </p>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-lg font-semibold text-charcoal">
+                  {pkg.price}
+                </span>
+                {pkg.bundle && (
+                  <span className="text-sm text-charcoal/40 line-through">
+                    £{pkg.bundle.alaCarteTotal}
+                  </span>
+                )}
+              </div>
               <Link
-                href="/start"
-                className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-transparent border-2 border-charcoal text-charcoal font-medium transition-transform hover:-translate-y-0.5"
+                href={`/services?bundle=${pkg.bundleId}`}
+                className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5"
               >
                 Get started
               </Link>

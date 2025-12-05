@@ -83,7 +83,7 @@ export function ServicesVersionA() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {BUNDLES.filter(b => b.popular).map(bundle => (
+            {BUNDLES.map(bundle => (
               <BundleCard
                 key={bundle.id}
                 bundle={bundle}
@@ -91,22 +91,6 @@ export function ServicesVersionA() {
               />
             ))}
           </div>
-
-          {/* Show remaining bundles */}
-          <details className="mt-8">
-            <summary className="text-center text-charcoal/60 cursor-pointer hover:text-charcoal transition-colors">
-              View all bundles ({BUNDLES.length})
-            </summary>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-              {BUNDLES.filter(b => !b.popular).map(bundle => (
-                <BundleCard
-                  key={bundle.id}
-                  bundle={bundle}
-                  onAdd={() => addBundle(bundle)}
-                />
-              ))}
-            </div>
-          </details>
         </div>
       </section>
 
