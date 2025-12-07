@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const benefits = [
     'Clarity on what\'s actually blocking you',
     'Prioritised next steps — not a 50-point plan',
-    'Systems that grow with you',
+    'Systems that don\'t break when you do',
     'Automations that sound like you',
   ];
 
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           {/* Left Column - Copy */}
           <div>
             <div className="text-[2.5rem] md:text-[3rem] font-semibold tracking-tight mb-2 leading-[1.1]">
-              Unblock. Unlock. Unleash.
+              Stop spinning. Start building.
             </div>
             <div className="text-2xl font-normal text-white/60 mb-10">
               Your business. Your way.

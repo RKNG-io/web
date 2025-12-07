@@ -12,8 +12,8 @@ const ReckoningCTA: React.FC = () => {
               Your Reckoning awaits
             </h2>
             <p className="text-lg text-charcoal/80 md:text-xl">
-              Get a free diagnostic that cuts through the noise and shows you exactly where you stand.
-              No fluff, no sales pitch — just honest clarity about your business and what comes next.
+              A free diagnostic that shows you exactly where you stand.
+              No fluff, no 50-point plan — just what's actually blocking you and what to do about it.
             </p>
 
             {/* Feature list */}
