@@ -316,18 +316,21 @@ function formatResult(result: TestResult): string {
   // Report summary
   const report = result.report!;
   lines.push(`\n📊 Report Summary:`);
-  lines.push(`  Headline: "${report.sections?.headline?.text?.slice(0, 60)}..."`);
+  lines.push(`  Headline: "${report.sections?.opening?.headline?.slice(0, 60)}..."`);
   lines.push(`  Sections: ${Object.keys(report.sections || {}).length}`);
 
-  if (report.recommendations?.bundles) {
-    lines.push(`  Bundles: ${report.recommendations.bundles.length}`);
-    report.recommendations.bundles.forEach(b => {
-      lines.push(`    • ${b.name}: £${b.total_price}`);
+  if (report.recommendations?.services) {
+    lines.push(`  Services: ${report.recommendations.services.length}`);
+    report.recommendations.services.slice(0, 3).forEach(s => {
+      lines.push(`    • ${s.service_name}: £${s.price_from}`);
     });
   }
 
-  if (report.action_items?.diy_actions) {
-    lines.push(`  DIY Actions: ${report.action_items.diy_actions.length}`);
+  if (report.action_items?.must_do) {
+    const totalActions = (report.action_items.must_do?.length || 0) +
+                         (report.action_items.should_do?.length || 0) +
+                         (report.action_items.could_do?.length || 0);
+    lines.push(`  Action Items: ${totalActions}`);
   }
 
   // Timings
@@ -510,12 +513,14 @@ async function main() {
       error: r.error,
       questionnaireAnswers: r.questionnaireAnswers,
       reportSections: r.report ? Object.keys(r.report.sections || {}) : null,
-      bundles: r.report?.recommendations?.bundles?.map(b => ({
-        name: b.name,
-        price: b.total_price,
-        services: b.services?.length || 0,
+      services: r.report?.recommendations?.services?.map(s => ({
+        name: s.service_name,
+        price: s.price_from,
+        priority: s.priority,
       })),
-      diyActionsCount: r.report?.action_items?.diy_actions?.length || 0,
+      actionItemsCount: (r.report?.action_items?.must_do?.length || 0) +
+                        (r.report?.action_items?.should_do?.length || 0) +
+                        (r.report?.action_items?.could_do?.length || 0),
     })),
   }, null, 2));
 

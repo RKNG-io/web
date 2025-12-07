@@ -1,0 +1,3112 @@
+{
+  "timestamp": "2025-12-07T19:26:37.938Z",
+  "model": "claude-sonnet-4-20250514",
+  "config": {
+    "personaFilter": null,
+    "personaTypeFilter": null,
+    "runsPerPersona": 20,
+    "totalPersonas": 3,
+    "totalRuns": 60
+  },
+  "summary": {
+    "successful": 49,
+    "failed": 11,
+    "autoApproved": 15,
+    "needsReview": 34,
+    "avgConfidence": 84
+  },
+  "results": [
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "87bd03be-40ed-4db7-a410-0bf2b768c8d1",
+      "token": "ebc1b2ab39e846f6",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"everything takes twice as long as it should becaus...\"",
+          "Quoted phrase not found in answers: \"half the trainers don't log properly...\"",
+          "Quoted phrase not found in answers: \"can't find their details from last week...\"",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 10053,
+        "generation": 50684,
+        "total": 60823
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am to prep classes, then spend ages trying to figure out who's booked what because half the trainers don't log properly. I'm constantly chasing people who no-showed yesterday, calling to reschedule, writing notes on random bits of paper that I lose. Someone calls wanting to join but I can't find their details from last week. I spend at least 2 hours a day on the phone sorting out booking mix-ups or trying to follow up with leads I've forgotten about. Then there's invoicing - some members pay monthly, some pay per session, and I'm manually tracking it all in a notebook. By the time I get home it's 8pm and I still haven't done the accounts or followed up with that corporate client who wanted team training. Everything takes twice as long as it should because I don't have proper systems.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "e3730a99-6951-4a1e-9858-ca5d8004c373",
+      "token": "cc22b913d95741bf",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"lose at least 2 hours every day just trying to fig...\"",
+          "Quoted phrase not found in answers: \"our booking system shows half the information and ...\"",
+          "Quoted phrase not found in answers: \"By evening I'm exhausted and there's a pile of pap...\"",
+          "Banned phrase found: \"you need to\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 10115,
+        "generation": 60012,
+        "total": 70186
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 7am and immediately start putting out fires. Someone's cancelled their PT session by text at 6:30am, I've got a new enquiry on Facebook that I meant to respond to yesterday but forgot, and the trainer who was supposed to open up hasn't shown. I spend the first hour calling people, moving sessions around, and trying to remember who owes what. Then I'm chasing members who haven't paid, manually checking who's supposed to be in today because our booking system shows half the information and I've got the rest written on sticky notes that are somewhere. I lose at least 2 hours every day just trying to figure out what's actually happening. By evening I'm exhausted and there's a pile of paperwork I'll deal with 'tomorrow' but never do.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "74ced007-fa9e-42b9-a314-231272ad2e30",
+      "token": "5ef3f7397ba54299",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"writing member details on sticky notes that I'll p...\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 11491,
+        "generation": 53785,
+        "total": 65343
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately there are three messages from members asking about class times I've already told them twice. Spend 20 minutes responding to the same questions. Then I realize Sarah the trainer never logged yesterday's sessions so I have no idea who to bill. Spend another 30 minutes trying to piece together who had sessions from random WhatsApp messages and scraps of paper. A potential new member calls but I'm dealing with a equipment issue so I say I'll call back - then forget completely. Lunch break is spent chasing unpaid invoices because I forgot to send half of them on time. Afternoon is three no-shows for personal training sessions that I could have rescheduled if I'd had any system to remind people. End the day writing member details on sticky notes that I'll probably lose by tomorrow. I know exactly what needs fixing but I'm too busy putting out fires to actually fix anything.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "73a6e6be-7240-40e3-a939-78d72e2c3c8f",
+      "token": "d91d6af86e9448f1",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"bits of paper everywhere with notes I can't read...\"",
+          "Cheerleader phrase: \"make it happen\" — should be direct, not saccharine"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11151,
+        "generation": 55034,
+        "total": 66246
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately start dealing with whatever crisis happened overnight - usually a trainer calling in sick or a member complaining about something. Then I'm fielding phone calls all morning from people wanting to book sessions, but half the time I can't find their details or remember what we discussed last time. I've got bits of paper everywhere with notes I can't read. Around lunchtime I realize I forgot to follow up with three leads from last week, and by the time I call them back they've joined somewhere else. Afternoons are spent chasing trainers to actually log their sessions properly, dealing with no-shows that I could have prevented if I'd sent reminders, and trying to figure out why our revenue is down when we should be doing better. I usually stay until 8pm catching up on invoicing that should have been done weeks ago. The worst part is I know most of this could be automated or systemized, but I never have time to actually set anything up properly.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "8b158df8-8973-4f9e-a1c6-7a5374b8135e",
+      "token": "47254b87528e45ff",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"at least 2 hours a day just trying to figure out w...\"",
+          "Quoted phrase not found in answers: \"scribble their number on whatever's handy, then ca...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 10280,
+        "generation": 57134,
+        "total": 67465
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and immediately start chasing no-shows from yesterday - calling people, sending texts, trying to fill last-minute gaps. Then I'm answering WhatsApp messages from members asking about class times that are literally posted on the wall. I spend at least 2 hours a day just trying to figure out who's booked what because my trainers write things down differently or forget to log sessions. I lose potential new members because I don't follow up - someone calls, I scribble their number on whatever's handy, then can't find it later. Invoicing is a nightmare - I do it monthly in one painful session, often forgetting charges. I'm constantly interrupted by members wanting to chat while I'm trying to do admin. By evening I'm knackered but still have a pile of paperwork I'll 'deal with tomorrow'. It's exhausting.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "4d29bf8c-182e-4617-b856-33048416b055",
+      "token": "2166f01a1c1e463d",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"I can't find my diary...\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 11024,
+        "generation": 54971,
+        "total": 66053
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and immediately start chasing no-shows from yesterday - calling people, sending texts. Then I'm dealing with walk-ins who want to book sessions but I can't find my diary so I'm scribbling on whatever paper I can find. Trainers keep asking me questions because they can't remember what they discussed with clients last week - nothing's written down properly. I spend ages trying to work out who owes what because some people pay cash, some by card, some are on direct debit that's set up wrong. By lunch I've got three Post-it notes with new member enquiries that I meant to call back but forgot. Afternoon is taken up with equipment issues, more scheduling chaos, and trying to chase up the trainer who forgot to log half their sessions again. I'll deal with the proper booking system later, I keep saying, but later never comes because something else is always on fire.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "bffa20e2-ff2d-4690-a3f3-7a7649cee2f3",
+      "token": "69b822cfb4f14541",
+      "confidence": {
+        "score": 92,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"staying until 9pm doing admin that should take 20 ...\"",
+          "Quoted phrase not found in answers: \"trying to match up payments with sessions because ...\"",
+          "Quoted phrase not found in answers: \"can't find their inquiry form from last week so I'...\"",
+          "Quoted phrase not found in answers: \"frantically trying to follow up with people who ha...\"",
+          "Banned phrase found: \"disrupt\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 9376,
+        "generation": 52280,
+        "total": 61698
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately start chasing no-shows from yesterday - calling people, sending texts. Then I'm checking who's booked today but half the trainers haven't logged their sessions properly so I'm calling them too. Spend ages trying to match up payments with sessions because everything's on different bits of paper. Someone calls wanting to join but I can't find their inquiry form from last week so I'm starting from scratch. Between classes I'm frantically trying to follow up with people who haven't been in for weeks but I've lost track of who I've already called. End up staying until 9pm doing admin that should take 20 minutes but takes hours because I can't find anything. Rinse and repeat.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "e2661800-14db-4d44-ba74-743b3b332581",
+      "token": "878acfd2d760442a",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"can't find half their numbers...\"",
+          "Quoted phrase not found in answers: \"tomorrow I'll start the same cycle again...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 10467,
+        "generation": 56368,
+        "total": 66895
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am thinking I'll catch up on admin before members arrive. Instead I'm dealing with a broken treadmill and a trainer who's called in sick. Spend an hour trying to reschedule his clients by calling each one individually because I can't find half their numbers. Then I'm writing follow-up notes on scraps of paper for people who missed their consultation last week - if I can remember who they were. Lunch break gets eaten up chasing a lead who inquired about membership three weeks ago but I forgot to call back. Afternoon is more of the same - equipment issues, trying to figure out which trainer logged what sessions, manually calculating what to pay them. I leave at 8pm having done zero marketing, zero proper admin, and tomorrow I'll start the same cycle again. The booking system just sits there unused because I never had time to set it up properly.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "4a5ea079-7fbf-4aac-bb23-215b65cfd442",
+      "token": "b7882e1c1ce640a9",
+      "confidence": {
+        "score": 93,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"scribble them on whatever's handy, then lose the p...\"",
+          "Quoted phrase not found in answers: \"there's a pile of admin I'll 'deal with tomorrow' ...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Only 0 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10794,
+        "generation": 61334,
+        "total": 72195
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and immediately start chasing no-shows from yesterday - calling people who didn't turn up, trying to reschedule. Then I'm scrambling through scraps of paper trying to find who booked what session today. Half the trainers forget to log their sessions properly so I'm constantly asking 'did Sarah actually show up Tuesday?' I spend ages on the phone chasing overdue payments because my invoicing is all over the place. New enquiries come in and I scribble them on whatever's handy, then lose the paper and they never hear back from me. I'm manually checking who's due for renewal, trying to remember who I haven't seen in weeks. By evening I'm exhausted and there's a pile of admin I'll 'deal with tomorrow' - which never happens. It's like I'm working IN the gym instead of ON the business.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "10b41303-a0bd-494e-96a5-55199eaf0604",
+      "token": "0b912463cb5f499e",
+      "confidence": {
+        "score": 96,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"writing tomorrow's chaos on more scraps of paper...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Only 0 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11257,
+        "generation": 57354,
+        "total": 68654
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "nervous",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately there's a pile of handwritten notes I've lost track of - people wanting to book sessions, complaints about equipment, membership queries. I spend the first hour trying to decipher my own writing and figure out what I was supposed to follow up on. Then it's constant interruptions - members asking questions, trainers not showing up or forgetting to log their sessions. I have a booking system but half the appointments are still written on sticky notes that fall off my desk. I spend ages chasing people who no-showed without calling, trying to remember which leads I never got back to, and manually working out trainer payments because nothing's properly tracked. By evening I'm writing tomorrow's chaos on more scraps of paper. I know I'm losing members and money because things fall through the cracks but I never have time to actually fix the systems.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "6fa7ea20-f9e0-4003-a8dc-9acec3a0963d",
+      "token": "fcaecc01c7554f09",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"rota's on my desk somewhere under a pile of papers...\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11436,
+        "generation": 55869,
+        "total": 67360
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am to prep for the morning rush. Spend first hour chasing yesterday's no-shows via text because I forgot to call them. Then it's constant interruptions - members asking about their PT sessions that weren't logged properly, trainers asking when they're working next week because the rota's on my desk somewhere under a pile of papers. I waste at least 2 hours every day trying to match up who paid what and when, because our booking system shows one thing but my bank shows another. Lunch is usually spent calling leads from last week that I wrote on a Post-it note and lost. Afternoons are fire-fighting - equipment broke, trainer called in sick, member wants to cancel but I can't find their contract. I stay until 8pm most nights just trying to catch up on admin that should take 10 minutes but takes an hour because nothing talks to anything else.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "2c7576b7-3fb3-4892-9584-d00ea1da3817",
+      "token": "e55b0dea1e944162",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"can't remember what I quoted them...\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11641,
+        "generation": 56817,
+        "total": 68555
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and there's already a pile of scraps of paper with member queries I wrote down yesterday. Spend an hour trying to figure out what they all mean. Check the booking system but half the trainers haven't logged their sessions so I have no idea who actually showed up. Three members call asking about their packages - I have to dig through different spreadsheets and my notepad to find their details. A lead from last week calls back and I can't remember what I quoted them. Spend 20 minutes looking for their info, probably lost it. Member cancels last minute, now I need to chase the trainer to tell them. Invoice a corporate client but realize I forgot to invoice them last month too. No-show for a consultation I completely forgot about because I wrote it on a sticky note that's now gone. End up staying until 8pm just trying to catch up on all the admin I should have done properly in the first place.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "06cc7fae-b195-400b-a720-8e258e2e1190",
+      "token": "57847feffb2f4ab9",
+      "confidence": {
+        "score": 92,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"30 minutes looking for yesterday's notes I wrote o...\"",
+          "Quoted phrase not found in answers: \"honestly can't remember who they all were or what ...\"",
+          "Quoted phrase not found in answers: \"half the trainers didn't log their sessions proper...\"",
+          "Quoted phrase not found in answers: \"It's exhausting...\"",
+          "Banned phrase found: \"you have to\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11216,
+        "generation": 57125,
+        "total": 68408
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "repeat",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am thinking I'll catch up on admin before members arrive. Spend 30 minutes looking for yesterday's notes I wrote on random bits of paper. Check the basic booking system but half the trainers didn't log their sessions properly so I have no idea who actually showed up. Get interrupted by walk-ins asking about membership while I'm trying to follow up with people who enquired last week - if I can remember who they were. By 9am I'm already behind. Lunch break gets eaten up chasing no-shows from this morning and trying to reschedule. End of day I'm manually updating spreadsheets, dealing with payment issues because our system is basic, and writing down notes about tomorrow that I'll probably lose. I know I should follow up with leads from last month but I honestly can't remember who they all were or what I promised them. It's exhausting.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "3df47d2e-b9b7-44b5-9978-aad15aa5820a",
+      "token": "f9695d9dd616405a",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 10-20 hrs/week available, but calculation uses 28 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10668,
+        "generation": 58180,
+        "total": 68996
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "God, where do I start? I get in at 6am and there's already three voicemails about class cancellations. Then I'm chasing trainers who didn't show up or forgot to log their sessions. I spend at least 2 hours a day just trying to figure out who's paid what - I've got payments on three different systems and half of them I write down on scraps of paper that I lose. Someone calls wanting to book a session and I have to rifle through my desk to find the trainer schedules. By lunch I've already forgotten to follow up with two people who came in for trials last week. Then there's the members who just vanish - no idea why they left, never got around to asking. I stay until 9pm most nights just trying to catch up on invoices and member renewals, but half the time I'm too tired to do it properly so I tell myself I'll sort it tomorrow. It's mental - I work 50+ hours but feel like I'm always behind.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "85271d27-ae0c-4c3b-bd64-40ec9f087638",
+      "token": "f48d3576abfa4f16",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 10-20 hrs/week available, but calculation uses 40 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10756,
+        "generation": 56297,
+        "total": 67109
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "God, where do I start? I get in at 6am to catch up on emails before the first class. Half the time I'm chasing members who no-showed their PT sessions - I write their names on sticky notes but lose them by lunch. I spend ages manually checking who's booked what because our system is a mess and the trainers don't log things properly. Then there's following up with leads - I have scraps of paper with phone numbers scattered everywhere, and by the time I call them it's too late. I waste hours doing invoices by hand, chasing late payments. I'll deal with updating the booking system later but later never comes. By 8pm I'm still here answering WhatsApp messages from members asking about classes. I know I should automate half of this stuff but when? I'm drowning in the day-to-day.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "63d1cef0-74fa-4764-bb47-9a1bcc7fff4e",
+      "token": "ed1f263537b9453b",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"lose at least 2 hours a day just trying to figure ...\"",
+          "Quoted phrase not found in answers: \"someone's cancelled their PT session via text at m...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11075,
+        "generation": 58871,
+        "total": 70000
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately start dealing with whatever crisis happened overnight - someone's cancelled their PT session via text at midnight, or a member is complaining about the booking system being down again. I spend the first hour trying to reschedule sessions, calling trainers who haven't shown up, and dealing with membership payments that bounced. Then I'm constantly interrupted - members asking questions, trainers needing help with the system they refuse to use properly, phone calls about memberships. I lose at least 2 hours a day just trying to figure out who's supposed to be training when because nothing gets logged properly. I write things on scraps of paper that I lose immediately. I spend another hour chasing up leads from last week that I forgot to follow up on, and by then half have probably joined somewhere else. The booking system crashes or someone books the wrong thing and I'm manually fixing it all. I leave at 8pm feeling like I've been fighting fires all day instead of actually growing the business.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "aaa38f7e-1fb8-420c-8d07-54a4062624f5",
+      "token": "353fe5bfd3f24764",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": []
+      },
+      "timings": {
+        "questionnaire": 10113,
+        "generation": 58927,
+        "total": 69108
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get to the gym at 6am and immediately start firefighting. Checking which trainer called in sick, dealing with members who can't find their booking confirmation emails because our system doesn't send them properly. I spend at least 2 hours a day on the phone chasing people who no-showed or trying to reschedule sessions. Then there's the paperwork - membership forms scattered everywhere, trainer session logs that are half-empty, invoices I meant to send last week but forgot. I'll get a lead inquiry and think 'I'll call them back after lunch' and then it's 8pm and I'm still here fixing the treadmill. By the time I get home I remember I never followed up with that potential corporate client from two weeks ago. It's exhausting because I know most of this could be automated but I never have time to actually set it up properly.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "3d8176ed-3123-4cb2-92c7-b8a550fd3860",
+      "token": "e2d111d2461e4511",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": []
+      },
+      "timings": {
+        "questionnaire": 9325,
+        "generation": 55102,
+        "total": 64538
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and immediately start putting out fires. Members calling because they can't book classes, trainers texting me because the system's down again. I spend at least 2 hours every morning just dealing with booking issues and chasing no-shows from yesterday. Then I'm manually entering payments, trying to remember who paid what, looking for scraps of paper where I wrote down new member details. Afternoons are spent calling people who haven't been in for weeks - if I can even remember who they are. I lose so much time just trying to find information I know I wrote down somewhere. By evening I'm exhausted and there's a pile of follow-ups I never got to. Rinse and repeat.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "8a38b40c-19fd-43ba-9c9f-16183a14adeb",
+      "token": "5127fab64ab74b27",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"trying to figure out who's training who today beca...\"",
+          "Quoted phrase not found in answers: \"I've got sticky notes everywhere with leads I need...\"",
+          "Quoted phrase not found in answers: \"at least 2 hours a day just trying to figure out w...\"",
+          "Quoted phrase not found in answers: \"By the time I actually get to focus on the busines...\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 10026,
+        "generation": 59119,
+        "total": 69188
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "processes",
+          "invoicing"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and spend the first hour trying to figure out who's training who today because half my trainers forgot to update the schedule. Then I'm chasing members who no-showed yesterday - calling them, texting, trying to reschedule. I've got sticky notes everywhere with leads I need to follow up on but half the phone numbers are illegible. Someone wants to cancel their membership but I can't find their contract. A trainer asks about their hours from last month and I'm digging through scraps of paper trying to piece together their sessions. I spend at least 2 hours a day just trying to figure out what's happening, who owes what, and what I forgot to do yesterday. By the time I actually get to focus on the business or train clients myself, it's afternoon and I'm already knackered.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "bf4f24b2-5911-4737-9792-aceaeff11c1b",
+      "token": "9058795bd4c0495c",
+      "confidence": {
+        "score": 95,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"scrambling to find yesterday's notes about who can...\"",
+          "Quoted phrase not found in answers: \"half the trainers don't log properly in the system...\"",
+          "Quoted phrase not found in answers: \"Lost three potential leads this week because I wro...\"",
+          "Banned phrase found: \"pain points\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 9541,
+        "generation": 53804,
+        "total": 63388
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am thinking I'll finally sort the admin before members arrive. Instead I'm scrambling to find yesterday's notes about who cancelled, manually checking who's booked today because half the trainers don't log properly in the system. Spend ages chasing no-shows by text - have their numbers written on random bits of paper. Lost three potential leads this week because I wrote their details down somewhere and can't find them. Between classes I'm dealing with payment issues - some people pay cash, some by bank transfer, some forgot entirely. End up staying until 9pm doing the books and still haven't followed up with people who came for trials. Rinse and repeat. It's mental.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "3e40e7a8-7237-4884-a103-d3a74d241b01",
+      "token": "18fb126665cc4687",
+      "confidence": {
+        "score": 99,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"it's the only hour in their week where they really...\"",
+          "Only 1 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10712,
+        "generation": 54230,
+        "total": 65038
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who feel stressed and disconnected from their bodies find peace and strength through yoga. My students are mostly women in their 20s-40s who come to class feeling tight and anxious, and they leave feeling calmer and more grounded. Some have told me it's the only hour in their week where they really breathe properly. A few have said yoga with me helped them through difficult times like job changes or relationship stuff.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "time",
+          "money",
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these beautiful websites and professional photos and I feel like I'm so far behind. I know I'm a good teacher because my students keep coming back, but I feel embarrassed when they ask about booking online or if I have a proper website. I just want something simple that works but every time I start looking at website builders or booking systems I get completely overwhelmed and end up closing my laptop.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "e70357d9-fad3-4422-80f6-420a1c22560a",
+      "token": "d7ff609ad1d54014",
+      "confidence": {
+        "score": 85,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"yoga is the only hour in their week that's just fo...\"",
+          "Quoted phrase not found in answers: \"I know I'm a good teacher, my students keep coming...\"",
+          "Quoted phrase not found in answers: \"turning it into a 'real business' feels scary...\"",
+          "Banned phrase found: \"you should\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Filler strength (echo, not insight): \"you know your\"",
+          "Filler strength (echo, not insight): \"you understand\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 11841,
+        "generation": 54536,
+        "total": 66421
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who are stressed and need to slow down and reconnect with their bodies. A lot of my students are busy mums or people with desk jobs who come to class feeling tight and anxious, and they leave feeling calmer and more grounded. Some have told me yoga is the only hour in their week that's just for them. I'm not trying to turn anyone into a pretzel - I just want them to feel better in their own skin.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I feel a bit embarrassed charging people properly - like I should just be grateful they show up! And I see other yoga teachers with these amazing websites and I compare myself constantly. I know I'm a good teacher, my students keep coming back, but turning it into a 'real business' feels scary. I don't want to mess up what I already have.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "cba04615-5d8a-4c4b-81d1-8a2edc66e8fb",
+      "token": "00b7d7fa08184698",
+      "confidence": {
+        "score": 96,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"I just want something simple that doesn't make me ...\"",
+          "Quoted phrase not found in answers: \"don't know where to start with the business side...\"",
+          "Only 1 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 9262,
+        "generation": 56266,
+        "total": 65592
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find calm and strength through yoga, especially those who are stressed from work or life changes. My students tell me they sleep better, feel more confident in their bodies, and have tools to manage anxiety. A lot of them come feeling disconnected from themselves and leave class feeling more grounded and peaceful.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "time",
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem to have everything figured out - beautiful websites, full classes, confident pricing. I feel like I'm behind and don't know where to start with the business side. I just want something simple that doesn't make me look unprofessional when I ask people to pay me properly.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "5cae2e32-9795-44aa-ba97-ef8b7b9bca44",
+      "token": "bbaeb941e1fe49e3",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 2-5 hrs/week available, but calculation uses 12 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10674,
+        "generation": 53037,
+        "total": 63999
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find peace and strength through yoga. My students are mostly women in their 30s and 40s who are stressed from work or life changes. They come to me feeling tight, anxious, or disconnected from their bodies, and leave feeling calmer and more grounded. Some have told me that my classes are the only hour in their week where they truly switch off. I focus on making yoga accessible - not intimidating like some fancy studios.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "time",
+          "money",
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers online who seem to have it all figured out. I worry that if I charge proper prices, people will think I'm not worth it. Sometimes I wonder if I should just keep it casual and not turn it into a 'real' business, but I really want to teach more and help more people. I just need someone to tell me what steps to take first because I get overwhelmed looking at everything I think I need to do.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "336caed8-6146-4658-a3bd-8a4cb4e04f19",
+      "token": "44bcc8a597ec4c2d",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"they're sleeping better, feeling more centered...\"",
+          "Banned phrase found: \"you need to\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 10604,
+        "generation": 54514,
+        "total": 65360
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people - mostly women in their 20s and 30s - find some peace in their crazy busy lives. A lot of my students come to me stressed from work or going through life changes, and after a few weeks they tell me they're sleeping better, feeling more centered, and actually looking forward to our sessions. It's not just about the physical poses - it's about having that hour where they can just breathe and be present.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "time",
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these beautiful websites and proper booking systems and I feel like such an amateur. I'm worried that if I charge proper prices, people will expect me to be more 'professional' than I feel ready for. Also, I have no idea about the legal stuff - do I need a business license? Insurance? It all feels overwhelming and I keep putting it off because I want to get it right the first time.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "3c469a95-631b-45f2-8c46-14bf581fcee6",
+      "token": "c5a220ba1e1a486b",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"I just want something simple that works - I don't ...\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11593,
+        "generation": 47254,
+        "total": 58953
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who are stressed and disconnected from their bodies find peace and strength through yoga. Most of my students are women in their 30s and 40s who work desk jobs and carry a lot of tension. After classes, they tell me they sleep better, feel less anxious, and actually look forward to moving their bodies instead of dreading exercise. Some have said it's the one hour in their week where they can just breathe and not think about their to-do lists.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga instructors with these beautiful websites and smooth booking systems, and I feel like such an amateur. I'm worried that if I don't get this sorted soon, my students will find someone more professional. But every time I try to research website builders or payment systems, I get overwhelmed and end up doing nothing. I just want something simple that works - I don't need it to be fancy, I just need it to not be embarrassing when I send someone the link.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "beba2c70-4757-4d74-9eb8-64b8512bb3cc",
+      "token": "3f727f5abd0d43c7",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"if I don't get this right, my students won't take ...\"",
+          "Banned phrase found: \"hustle\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 10223,
+        "generation": 52382,
+        "total": 62656
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find calm and strength in their bodies, especially those who are stressed or new to movement. My students often tell me they sleep better, feel less anxious, and are more confident in their bodies after practicing with me. I love working with beginners who think they're 'not flexible enough' for yoga - watching them discover what their body can do is amazing.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these beautiful websites and professional booking systems and I feel like such an amateur. I'm worried that if I don't get this right, my students won't take me seriously. But I'm also terrified of spending money on the wrong things - I'm not technical at all and I just need something simple that works.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "e2d0a881-d81b-4dc8-85b5-a8bf118ad953",
+      "token": "05f971399625495a",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 2-5 hrs/week available, but calculation uses 8 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10245,
+        "generation": 54381,
+        "total": 64709
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find calm and strength through yoga - mostly women in their 20s-40s who are stressed from work or life changes. After my classes, they tell me they feel more grounded, sleep better, and have tools to manage anxiety. Some have said it's the only hour in their week where they truly switch off. I love seeing people discover they're stronger than they thought, both physically and mentally.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "time",
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem to have it all figured out - gorgeous websites, professional photos, waiting lists. I know I'm a good teacher but I feel embarrassed asking people to pay me properly. Sometimes I wonder if I should just keep it as a side thing, but then I see how much my students get from the classes and I think maybe I'm meant to do this properly?",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "1c147f5a-df0c-4b3a-ae10-2dd0c58e0bd7",
+      "token": "124b6672ac284cce",
+      "confidence": {
+        "score": 96,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"feel like a bit of a fraud calling myself a 'busin...\"",
+          "Quoted phrase not found in answers: \"something simple that doesn't make me look amateur...\"",
+          "Only 1 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10418,
+        "generation": 49803,
+        "total": 60306
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help women in their 20s and 30s who are stressed and need to reconnect with their bodies. Most of them work desk jobs and come to class feeling tense and overwhelmed. After a few weeks with me, they sleep better, feel more confident in their bodies, and have this sense of calm they can carry into their day. One student told me yoga with me helped her through a really tough breakup - that meant everything to me.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "time",
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem to have it all figured out - beautiful websites, proper studios, hundreds of followers. I know I'm good at what I do because my students keep coming back and bringing friends, but I feel like a bit of a fraud calling myself a 'business owner' when I'm still taking payments via bank transfer and booking people through Instagram DMs. I just want something simple that doesn't make me look amateur.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "d8b8226e-f297-4ebd-9728-d6ee755e7589",
+      "token": "fcf748a437fa4717",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 2-5 hrs/week available, but calculation uses 10 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10882,
+        "generation": 56415,
+        "total": 67342
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people (mainly women in their 20s-40s) who are stressed and need to slow down and reconnect with themselves. Most of my students come to yoga feeling tight, anxious, or just overwhelmed by life. After a few classes they start sleeping better, feel more flexible, and have this sense of calm they didn't have before. Some tell me it's the only hour in their week that's just for them.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these gorgeous websites and polished Instagram feeds and I feel like such an amateur. I know I'm a good teacher - my students always tell me - but I'm just not technical at all. Sometimes I think I should just stick to the community centre classes but I really want to build something bigger. I just don't want to mess it up or look unprofessional.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "72bed339-c93f-4f8b-a5b4-ce6e9e571e0b",
+      "token": "3fc328bf0e0c4b1e",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"the one hour in their week that's just for them...\"",
+          "Banned phrase found: \"you need to\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 12660,
+        "generation": 60932,
+        "total": 73642
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people, mostly women in their 30s and 40s, find some peace in their busy lives through yoga. A lot of them come to me stressed from work or dealing with back pain from sitting at desks all day. After a few weeks with me, they tell me they're sleeping better and feeling more grounded. Some have said it's the one hour in their week that's just for them. I'm not trying to create Instagram yogis - I just want people to feel better in their bodies and minds.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these beautiful websites and professional photos and I feel like such an amateur. I know my students love my classes but I get so anxious about asking for money properly or putting myself out there online. Sometimes I wonder if I should just keep it casual, but then I think about how much I want to do this full-time and help more people. I just need someone to tell me what order to do things in!",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "8768744d-62ff-4d6a-92b1-f09d9a7605ad",
+      "token": "6a858cf58d3c489c",
+      "confidence": {
+        "score": 100,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"feel like a fraud calling myself a 'business owner...\"",
+          "Quoted phrase not found in answers: \"something simple that doesn't make me look amateur...\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11919,
+        "generation": 48337,
+        "total": 60307
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people, mostly women in their 30s and 40s, find some peace and movement in their busy lives. A lot of them are stressed from work or family stuff and haven't done anything physical in ages. After a few classes they tell me they feel calmer, sleep better, and actually look forward to something just for them. It's not about perfect poses - it's about feeling better in their own body.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these gorgeous websites and professional photos and I compare myself constantly. I know I'm a good teacher - my students tell me - but I feel like a fraud calling myself a 'business owner' when I'm still taking payments by bank transfer and using my personal Instagram. I just want something simple that doesn't make me look amateur, but every time I try to research it I get overwhelmed by all the options.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "3c3dcd04-ee0b-4e53-ab40-cf8a90385f60",
+      "token": "9dc6f3de76c54d53",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"feel like a fraud charging people when I'm still f...\""
+        ]
+      },
+      "timings": {
+        "questionnaire": 9866,
+        "generation": 56403,
+        "total": 66330
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help women (mostly 30s-50s) who feel stressed and disconnected from their bodies. They come to my classes feeling tight, anxious, or just exhausted from life. Through yoga, they learn to breathe properly again, find some peace in their week, and reconnect with themselves. Many tell me it's the only hour they have just for them. Some have said it's helped with their back pain or sleep, but really it's about giving them permission to slow down and be present.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem to have it all figured out with their beautiful websites and branded everything. I feel like a fraud charging people when I'm still figuring it out myself. Also, I'm not technical at all - even setting up my Instagram business account stressed me out! I just want something simple that works so I can focus on teaching, not wrestling with booking systems.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "e7460919-893f-47f5-bfae-e3f46dac7278",
+      "token": "09e96380f120457d",
+      "confidence": {
+        "score": 99,
+        "autoApprove": true,
+        "flags": [
+          "Quoted phrase not found in answers: \"something simple that doesn't make me look amateur...\"",
+          "Only 1 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11251,
+        "generation": 50962,
+        "total": 62530
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people, mainly women in their 30s and 40s, find calm and strength through yoga. Most of my students are stressed from work or life changes and they come to my classes feeling tense and overwhelmed. After a few weeks with me, they say they sleep better, feel more confident in their bodies, and have tools to manage stress. Some have told me my classes are the one hour in their week where they truly switch off from everything else.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "booking",
+          "payments",
+          "pricing"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem to have it all figured out - beautiful websites, waiting lists, retreats abroad. I know I'm good at what I do because my students keep coming back, but I feel embarrassed asking them to pay me properly or promote myself. I just want something simple that doesn't make me look amateur, but every time I research website builders or booking systems I get overwhelmed and give up.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "d428dd26-9899-4651-8a43-35115e26edeb",
+      "token": "41cf14225fa94b7e",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 2-5 hrs/week available, but calculation uses 10 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 9186,
+        "generation": 55395,
+        "total": 64651
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find peace and strength through yoga - mostly women in their 20s-40s who are stressed from work or life. They leave my classes feeling calmer, more connected to their bodies, and like they can handle whatever comes next. Some have told me it's the only hour in their week that feels truly theirs.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "priorities"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers with beautiful websites and proper businesses, and I feel like such an amateur. I just need someone to tell me what to do first because every time I try to figure it out myself, I get overwhelmed and end up scrolling Instagram instead.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "d7f1362b-d634-4955-b524-caa1e0294d7d",
+      "token": "bbafc8c530d54b53",
+      "confidence": {
+        "score": 93,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"the only hour in their week that's just for them...\"",
+          "Quoted phrase not found in answers: \"I just want something simple that makes me look li...\"",
+          "Banned phrase found: \"you need to\"",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 14000,
+        "generation": 51202,
+        "total": 65259
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who are stressed and need to reconnect with themselves. Most of my students are women in their 30s and 40s who work demanding jobs or are juggling family life. After my classes, they tell me they feel calmer, more grounded, and like they've actually done something good for themselves that day. Some have said it's the only hour in their week that's just for them.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "booking",
+          "payments",
+          "priorities"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers with these beautiful websites and professional booking systems and I feel like I'm so far behind. I have people asking me about classes but I'm embarrassed to send them to my chaotic Instagram DMs. I just want something simple that makes me look like I know what I'm doing, even though half the time I don't!",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "d7e43b73-466c-4443-8b02-ba6b2ae94ce3",
+      "token": "6951204283074f07",
+      "confidence": {
+        "score": 0,
+        "autoApprove": false,
+        "flags": [
+          "Hours inconsistency: They indicated 2-5 hrs/week available, but calculation uses 10 hrs/week."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11662,
+        "generation": 49838,
+        "total": 61565
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people, mostly women in their 20s-40s, find peace and strength through yoga. Some come because they're stressed from work, others want to get stronger or more flexible. A few have told me yoga is the only hour in their week where they actually breathe properly! They leave class feeling calmer and more connected to their bodies. I'm not claiming to change lives dramatically but I do think I help people feel a bit better about themselves.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "time",
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga teachers who seem so polished and professional online. Sometimes I feel like a fraud asking people to pay me when I'm still figuring it out myself. I just want something simple that works - I don't need fancy, I just need functional. Also, is it weird that I feel guilty charging more than £8 a class? I know I should but it feels awkward.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "18a3b52c-90c4-4536-8092-74904d9c7e2c",
+      "token": "f09b79e0c98f484f",
+      "confidence": {
+        "score": 93,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"the only hour in their week that's truly theirs...\"",
+          "Quoted phrase not found in answers: \"doesn't make me feel like a fraud when I ask peopl...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Only 0 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11259,
+        "generation": 53782,
+        "total": 65118
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people, mainly women, who are stressed and need to slow down and reconnect with their bodies. Most of my students are busy mums or office workers who come to class feeling tight and anxious, and they leave feeling calmer and more grounded. Some have told me it's the only hour in their week that's truly theirs. I'm not sure I'm explaining it right - I just know they keep coming back and seem happier.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments"
+        ],
+        "blockers": [
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep comparing myself to other yoga instructors who seem to have it all figured out with their fancy websites and retreat offerings. I just want something simple that works and doesn't make me feel like a fraud when I ask people to pay me properly. Also, I'm worried about the tax side of things - right now everything is so informal but I know I need to sort that out.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "befd0000-8f80-4c02-b3bc-d38716338b54",
+      "token": "3179eb7126df41be",
+      "confidence": {
+        "score": 90,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"the only hour in their week that's truly theirs...\"",
+          "Quoted phrase not found in answers: \"I worry that I'm not qualified enough even though ...\"",
+          "Banned phrase found: \"you need to\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 10477,
+        "generation": 51706,
+        "total": 62271
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who are stressed and disconnected from their bodies find peace and strength through yoga. My students are mostly women in their 30s and 40s who work desk jobs and feel tight, anxious, or just generally overwhelmed. After a few classes with me, they start sleeping better, feel more confident in their bodies, and have tools to manage stress. Some have told me it's the only hour in their week that's truly theirs.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "knowledge",
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "decent",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga teachers who seem so put-together and professional, and I compare myself to them constantly. I worry that I'm not qualified enough even though my students seem happy. Also, I feel weird about asking for money - like I should just be grateful people want to come to my classes. I know this is holding me back but I don't know how to get past it.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "8386e840-41a6-4d59-80e7-041b1b8662ff",
+      "token": "609a0015b4ef4bb3",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"the only hour in their week that's just for them...\"",
+          "Quoted phrase not found in answers: \"such an amateur with my Instagram DMs and awkward ...\"",
+          "Banned phrase found: \"you need to\"",
+          "Missing permission-giving language (expected at least 2 markers)"
+        ]
+      },
+      "timings": {
+        "questionnaire": 12099,
+        "generation": 54710,
+        "total": 66856
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people find balance and inner peace through yoga. Most of my students are stressed professionals or busy mums who come to class feeling tense and overwhelmed. After a session, they leave feeling calmer, more centred, and like they've given themselves permission to just breathe. Some tell me it's the only hour in their week that's just for them. I love seeing people discover they can actually do poses they thought were impossible - it builds confidence that goes beyond the mat.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "testimonials"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "part_replace",
+        "whats_missing": [
+          "professional",
+          "booking",
+          "payments",
+          "pricing"
+        ],
+        "blockers": [
+          "time",
+          "tech",
+          "perfectionism",
+          "confidence"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep seeing other yoga instructors with these beautiful websites and professional-looking class schedules, and I feel like such an amateur with my Instagram DMs and awkward 'can you just transfer me £12?' conversations. I know I'm a good teacher - my students keep coming back - but I feel embarrassed asking people to take me seriously as a business when I can't even figure out how to set up proper online booking. I just want something simple that makes me look legitimate without having to become a tech expert overnight.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "f9c57f35-9e85-451c-8c6b-be20b02c0844",
+      "token": "078478d9d7734ca5",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"we could take on twice the work if everything didn...\"",
+          "Quoted phrase not found in answers: \"can't risk a compliance breach or professional neg...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 12819,
+        "generation": 59487,
+        "total": 72346
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique commercial law firm providing corporate legal services to mid-market businesses, focusing on M&A, commercial contracts, and regulatory compliance.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "All compliance reviews would stop - I personally check every matter for AML/KYC compliance and regulatory issues. Associates would be stuck waiting for my approval on client advice and case strategy. New client onboarding would halt because I handle all the risk assessments. Court deadlines would be missed because I'm the only one who tracks all the critical dates across matters.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "I start at 7am reviewing every file that came in overnight - checking compliance, risk issues, making sure nothing slips through. Associates queue up outside my office by 9am with questions they should be able to answer themselves. I spend half my day reviewing their work because I can't risk a compliance breach or professional negligence claim. Every new client needs my personal sign-off on AML checks. I'm constantly interrupted to approve routine decisions that bog down into 20-minute discussions. By evening I'm doing the strategic work I should be doing during the day. The frustrating part is we could take on twice the work if everything didn't have to flow through me first.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "41a9accb-5a82-48b3-a1f7-5e11274a50d5",
+      "token": "050d9818b3994cdb",
+      "confidence": {
+        "score": 100,
+        "autoApprove": true,
+        "flags": [
+          "Missing permission-giving language (expected at least 2 markers)",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 15042,
+        "generation": 1270081,
+        "total": 1285194
+      },
+      "questionnaireAnswers": {
+        "business_description": "Boutique law firm providing corporate and commercial legal services to mid-market businesses and high-net-worth individuals.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "All matter reviews would stop - I personally check every piece of work for compliance and risk before it goes out. Associates would be paralysed waiting for approval on strategy decisions. AML/KYC processes would grind to a halt as I handle all the complex due diligence myself. New client acceptance decisions - I won't delegate that risk. Any unusual matters or precedents - the associates don't have the experience to handle them without my input.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "fixing",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "Start at 7:30 reviewing everything that came in overnight - every email, every document, every query needs my eyes on it before anything moves. Associates queue up at my door by 9am with questions they should be able to answer themselves, but I can't risk them getting it wrong. I spend 2-3 hours daily just reviewing their work for compliance issues and strategic errors. The AML checks alone eat up another hour - manually verifying sources of funds, reviewing beneficial ownership structures. Every new matter has to cross my desk for acceptance decisions because the regulatory risk is too high to delegate. By lunch I've barely touched my own fee-earning work. Afternoons are firefighting - client calls that 'only I can handle', reviewing contracts that are apparently 'too complex' for the associates, chasing up on matters that have stalled waiting for my input. I built this firm to practice law, not to be a one-man approval factory.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "e5014773-60c4-4b7f-bab3-66cde7551056",
+      "token": "df673658a409460a",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"Associates queue outside my door by 9am with matte...\"",
+          "Quoted phrase not found in answers: \"I'm the single point of failure for everything tha...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 12926,
+        "generation": 58112,
+        "total": 71104
+      },
+      "questionnaireAnswers": {
+        "business_description": "Boutique law firm providing commercial legal services to SMEs and individuals - three partners handling corporate, property, and litigation matters.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "Everything stops. All client matters require my final review for compliance - associates can't sign off anything. AML checks pile up because I personally verify every client. Partners can't make strategic decisions without me. New matter acceptance grinds to a halt because I assess all risk. The compliance calendar I maintain in my head means deadlines get missed. Essentially, I'm the single point of failure for everything that matters.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "health",
+          "peace",
+          "patience",
+          "joy"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "Start at 7:30 reviewing overnight emails and compliance alerts. Associates queue outside my door by 9am with matters they can't progress - each needs my review because our systems aren't robust enough to trust. I spend 2-3 hours daily on AML/KYC checks that should be systematized. Every client file crosses my desk for final approval. Lunch is usually reviewing risk assessments while eating at my desk. Afternoons are interrupted constantly - 'Tom, can you just look at this?' - because staff won't make decisions without me. I stay until 7pm catching up on actual legal work. Weekends reviewing matters that came in Friday. I built this firm to practice law, not to be a human approval system.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "6061d822-f301-469e-9acd-ed07b84a8c09",
+      "token": "eaa51a648a3b4989",
+      "confidence": {
+        "score": 100,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"questions about precedents and procedures that sho...\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11315,
+        "generation": 54584,
+        "total": 65952
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm providing commercial legal services to SME clients, specializing in corporate transactions, employment law, and regulatory compliance.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "All compliance reviews would stop - I personally review every client matter for AML/KYC compliance and risk. New matter approvals would grind to a halt since I'm the only one who signs off on conflict checks and engagement letters. The associates would be stuck waiting for my decisions on strategy and next steps for active cases. Client queries requiring judgment calls would pile up since the team only handles routine matters independently.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "quoting",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "I arrive to a queue of associates waiting for my approval on matters they could handle if we had proper systems. I spend 2-3 hours reviewing compliance documentation that should be automated. Every client onboarding requires my manual review of KYC checks. I'm constantly interrupted by questions about precedents and procedures that should be systematized. By afternoon, I'm firefighting client issues while trying to do actual legal work. I leave knowing tomorrow will be identical because everything depends on me personally reviewing and approving it.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "9769b36e-47bb-4ee5-938a-8b748d73cc24",
+      "token": "a169215444a74500",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"can't trust the process...\"",
+          "Banned phrase found: \"disrupt\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 11217,
+        "generation": 2487836,
+        "total": 2499192
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm providing commercial legal services to mid-market businesses, focusing on corporate transactions and regulatory compliance.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "Every matter review would stop - I personally check all compliance documentation, AML/KYC procedures, and risk assessments. Associates would be paralyzed waiting for my approval on client advice. New client onboarding would halt because I handle all conflict checks and engagement decisions. Any urgent client issues would go unresolved because staff won't make decisions without my sign-off.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "quoting",
+          "fixing"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "staff_questions",
+        "priority_outcome": "grow",
+        "typical_day": "I spend 2-3 hours daily reviewing every piece of work before it goes to clients - compliance checks, risk assessments, document reviews that associates should be able to handle but I can't trust the process. Constant interruptions from staff asking questions they should know the answers to. I'm manually checking AML documentation that should be systematized. I review every engagement letter, every conflict check, every billing decision. I built this firm to practice law at a strategic level, not to be a human approval machine for basic processes.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "dd853ddb-123b-42fb-bc05-4c037e72dede",
+      "token": "cd48b63e57244e05",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"I can't risk them getting compliance wrong...\"",
+          "Quoted phrase not found in answers: \"pricing every new matter personally because the as...\"",
+          "Banned phrase found: \"grind\"",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 14555,
+        "generation": 55984,
+        "total": 70584
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm specialising in commercial and corporate law for mid-market businesses, handling everything from M&A transactions to regulatory compliance.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "All compliance reviews would stop - I personally review every client matter for AML/KYC compliance and risk assessment. Associates would be stuck waiting for my sign-off on strategy decisions and client advice. New client onboarding would grind to a halt because I handle all the due diligence personally. Any complex legal queries from existing clients wouldn't get answered because the associates escalate everything to me.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "quoting",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "I start at 7:30 reviewing overnight emails and prioritising what needs my attention. By 9am I'm in back-to-back reviews - checking associates' work, approving client strategies, reviewing compliance documentation. Every client file crosses my desk before anything goes out. I spend hours on manual AML checks that should be systematised. Associates interrupt constantly with questions they should be able to handle themselves, but I can't risk them getting compliance wrong. I'm pricing every new matter personally because the associates don't understand our risk appetite. By 6pm I'm finally getting to my own legal work - the strategy and complex advisory that actually generates revenue. I leave around 8pm knowing tomorrow will be exactly the same. The worst part is knowing we could take on more lucrative matters if I could just trust the systems and delegate properly.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "ddf62541-0f0f-4369-a946-3fb6e44609a5",
+      "token": "d7a415f91907449c",
+      "confidence": {
+        "score": 100,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"I don't trust the systems to catch compliance issu...\"",
+          "Banned phrase found: \"disrupt\"",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 15448,
+        "generation": 788812,
+        "total": 804288
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm providing commercial legal services to SMEs and entrepreneurs - corporate transactions, employment law, commercial contracts.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "Every client matter would stall - I personally review all legal work for compliance and sign off on all advice. AML/KYC processes would stop completely as I handle all the checks. Associates can't make decisions on file strategy or settlement negotiations without my approval. New client intake would halt because I do all the risk assessments. Billing would be delayed as I review every time entry and invoice.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "fixing",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "Start at 7am reviewing overnight emails and compliance alerts. Associates queue up outside my office with files needing sign-off - can't progress without my review. Spend 2 hours on manual AML checks that should be systematic. Client calls interrupt constantly because they want 'the partner' not the associate. Review every piece of outgoing advice twice because I don't trust the systems to catch compliance issues. End up working until 8pm because everything got backed up waiting for my input. I built this firm to do sophisticated legal work, not to be a human bottleneck checking everything twice.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "a69bc968-a982-4010-b6ae-81e04e1e71e6",
+      "token": "20551bd2d8524bce",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 3414105
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "921593c3-9906-422a-90d8-cf79cfa20d36",
+      "token": "54778ed33e4748e3",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 3878891
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "9ce6771e-e929-498d-bc1f-72a36342be02",
+      "token": "68ef9a5813374048",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 1945043
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "79bf7405-3d13-4e3f-addd-e768ea240588",
+      "token": "2c3f14d081bc46da",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2789784
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "6e01f52c-af95-4c54-b6bd-ca047611fc72",
+      "token": "b2f35969915342d9",
+      "confidence": {
+        "score": 100,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"Associates constantly interrupt for decisions I've...\"",
+          "Quoted phrase not found in answers: \"I don't trust the process...\"",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 1660510,
+        "generation": 79729,
+        "total": 1740318
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm providing commercial legal services to SMEs and high-net-worth individuals, specialising in corporate transactions, property, and estate planning.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "All compliance reviews would stop - I personally check every AML/KYC file, review every client matter for risk, and approve all key decisions. Associates would be stuck waiting for sign-offs on anything significant. New client onboarding would grind to a halt because I handle all the compliance checks myself. The partners would need to step in on cases they're not fully briefed on.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "fixing"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace"
+        ],
+        "time_sink": "manual_processes",
+        "priority_outcome": "grow",
+        "typical_day": "I spend 2-3 hours daily on compliance reviews that should be systematised - checking AML documentation, reviewing client files for regulatory issues, manually cross-referencing sanctions lists. Associates constantly interrupt for decisions I've already made on similar matters before. I'm reviewing contracts and documents that junior staff should handle but I don't trust the process. The worst part is spending time on basic KYC checks and file reviews instead of actually practising law and growing client relationships.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "dbb8be2e-8fa3-4833-98c9-777b9166b7ff",
+      "token": "d71254807a7e49b0",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2690615
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "1cb5065a-aafa-4b8a-a1f1-6d1383985482",
+      "token": "79539cb3ebcb46c2",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2757311
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "159dc78f-0fd6-4acc-9f65-40af917ba120",
+      "token": "1c2f0d78956644f0",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2699043
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "fc2a8a03-4a44-455e-b688-ce6c30f40850",
+      "token": "954fff70304247a1",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2737016
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "b328c3b2-2154-494c-9ed7-404bfb38bb27",
+      "token": "24d2f9c5c6ea4838",
+      "confidence": {
+        "score": 100,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"associates can't progress matters without my sign-...\"",
+          "Quoted phrase not found in answers: \"I've seen too many near-misses when I've tried to ...\"",
+          "No core services for null business found. Consider: website, payment, client."
+        ]
+      },
+      "timings": {
+        "questionnaire": 1010750,
+        "generation": 295066,
+        "total": 1305889
+      },
+      "questionnaireAnswers": {
+        "business_description": "We're a boutique law firm providing corporate and commercial legal services to mid-market businesses, with particular expertise in M&A and compliance matters.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "Everything stops. All compliance reviews pile up - I personally check every AML/KYC process and client onboarding. Associates can't progress matters without my sign-off on strategy and risk assessments. New business enquiries go unanswered because I handle all initial consultations. Court deadlines get missed because I review every filing. The partners would have to turn away new clients because there's no one else who understands our risk framework well enough to make judgment calls.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "quoting",
+          "enquiries",
+          "fixing"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "manual_processes",
+        "priority_outcome": "grow",
+        "typical_day": "I spend 2-3 hours each morning reviewing compliance documents that associates should be able to handle - KYC checks, risk assessments, client onboarding forms. Then there's constant interruptions from staff asking questions about matters they've worked on before. I have to personally review every letter that goes out, every court filing, every client advice because I've seen too many near-misses when I've tried to delegate. Afternoons are spent on actual legal work, but I'm constantly pulled into 'quick questions' that aren't quick. I end most days doing admin work that should be systematized - updating case management systems manually, chasing missing documents, reviewing invoices. The worst part is I know we're turning away good clients because I don't have bandwidth to do proper intake consultations.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "b2493a02-3d4f-4fdd-9cb7-cdfabd02ed3f",
+      "token": "db7129e0dddc4f42",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 3620652
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "bb41e0c4-d476-4ad1-be87-34f54346a21d",
+      "token": "9f3cdda2cac74c55",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 3334207
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "c678e2e5-0dbe-4a3a-b7b7-6551b777fc85",
+      "token": "34c7ff23bdd74216",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 2705955
+      },
+      "error": "Request timed out.",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    }
+  ]
+}
