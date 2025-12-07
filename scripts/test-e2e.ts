@@ -316,7 +316,7 @@ function formatResult(result: TestResult): string {
   // Report summary
   const report = result.report!;
   lines.push(`\n📊 Report Summary:`);
-  lines.push(`  Headline: "${report.sections?.headline?.text?.slice(0, 60)}..."`);
+  lines.push(`  Headline: "${report.sections?.opening?.headline?.slice(0, 60)}..."`);
   lines.push(`  Sections: ${Object.keys(report.sections || {}).length}`);
 
   if (report.recommendations?.bundles) {
