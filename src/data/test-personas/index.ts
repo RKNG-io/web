@@ -291,7 +291,7 @@ export const NADINE: TestPersona = {
     'Understand how e-commerce works'
   ],
   thinks: [
-    "People love my candles — how do I actually sell them?",
+    "People love my candles  - how do I actually sell them?",
     "What's the right platform?"
   ],
   feels: ['Proud but overwhelmed'],

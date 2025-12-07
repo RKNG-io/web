@@ -260,7 +260,7 @@ export default function WebsiteIntake() {
                 >
                   <span className="text-white font-medium">{opt.label}</span>
                   {opt.desc && (
-                    <span className="text-white/50 ml-2">— {opt.desc}</span>
+                    <span className="text-white/50 ml-2"> - {opt.desc}</span>
                   )}
                 </button>
               ))}

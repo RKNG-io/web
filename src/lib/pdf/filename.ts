@@ -1,4 +1,4 @@
-// PDF filename generation — human-readable names instead of tokens
+// PDF filename generation  - human-readable names instead of tokens
 
 /**
  * Generate a human-readable PDF filename

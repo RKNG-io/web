@@ -64,7 +64,7 @@ export function intakeConfirmationEmail(data: IntakeConfirmationData): string {
         <p style="margin-bottom: 0;">${nextStep}</p>
       </div>
       <p>In the meantime, if you've got questions or want to add more details, just reply to this email.</p>
-      <p>— The Reckoning team</p>
+      <p> - The Reckoning team</p>
     </div>
     <div class="footer">
       <p>Reckoning | <a href="https://rkng.com" style="color: ${BRAND_COLOURS.fuchsia};">rkng.com</a></p>

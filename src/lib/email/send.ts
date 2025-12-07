@@ -66,7 +66,7 @@ export async function sendOrderConfirmationEmail(
   const { name, email, orderId, items, total } = data;
 
   const itemsHtml = items
-    .map((item) => `<li style="padding: 8px 0; border-bottom: 1px solid #F2F6F9;">${item.name} — £${item.price}</li>`)
+    .map((item) => `<li style="padding: 8px 0; border-bottom: 1px solid #F2F6F9;">${item.name}  - £${item.price}</li>`)
     .join('');
 
   const html = `

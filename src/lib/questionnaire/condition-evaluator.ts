@@ -64,14 +64,14 @@ export function evaluateCondition(condition: Condition, answers: Answers): boole
         }
         return answerValue.includes(condition.value as string);
       }
-      // Single answer — check if it's one of the condition values
+      // Single answer  - check if it's one of the condition values
       if (Array.isArray(condition.value)) {
         return condition.value.includes(answerValue as string);
       }
       return answerValue === condition.value;
 
     default:
-      // Unknown operator — default to true (show question)
+      // Unknown operator  - default to true (show question)
       return true;
   }
 }

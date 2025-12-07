@@ -14,7 +14,7 @@ import {
 } from '@/lib/db';
 import type { ReckoningReport, QuestionnaireSubmission, ConfidenceResult } from '@/types/report';
 
-// AI model — configurable via env var
+// AI model  - configurable via env var
 const AI_MODEL = process.env.AI_MODEL || 'claude-sonnet-4-20250514';
 const MAX_ATTEMPTS = 3;
 

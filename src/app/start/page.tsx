@@ -319,7 +319,7 @@ function QuestionnaireContent() {
               That didn&apos;t work
             </h2>
             <p className="text-charcoal/60 mb-8">
-              Let&apos;s try again — or we&apos;ll sort it out and reach out within 24 hours.
+              Let&apos;s try again  - or we&apos;ll sort it out and reach out within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -364,7 +364,7 @@ function QuestionnaireContent() {
               Building your Reckoning...
             </h2>
             <p className="text-charcoal/60">
-              We&apos;re seeing what&apos;s in the way — and what unlocks it.
+              We&apos;re seeing what&apos;s in the way  - and what unlocks it.
               This takes about 30 seconds.
             </p>
           </div>

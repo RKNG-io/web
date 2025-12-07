@@ -1,4 +1,4 @@
-// Brand voice validation — check for banned phrases and tone
+// Brand voice validation  - check for banned phrases and tone
 
 import type { ReckoningReport, ValidationResult } from '@/types/report';
 

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Hero: React.FC = () => {
   const benefits = [
     'Clarity on what\'s actually blocking you',
-    'Prioritised next steps — not a 50-point plan',
+    'Prioritised next steps  - not a 50-point plan',
     'Systems that don\'t break when you do',
     'Automations that sound like you',
   ];
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             </div>
             <p className="text-lg text-white/70 max-w-[500px] mb-6">
               You didn't start your business to drown in admin.<br />
-              You started it for the work — and the life you're building.
+              You started it for the work  - and the life you're building.
             </p>
             <p className="text-base text-white/50 max-w-[480px] mb-10">
               You don't need to overhaul a thing. Introduce automations that sound like you.
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
                 href="/start"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
               >
-                Get Your Reckoning — Free
+                Get Your Reckoning  - Free
               </Link>
               <Link
                 href="/start/choose"

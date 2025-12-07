@@ -75,7 +75,7 @@ export function ServicesVersionA() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold text-charcoal mb-2">
-              Bundles — best value
+              Bundles  - best value
             </h2>
             <p className="text-charcoal/60">
               Services that work better together, priced to match
@@ -117,7 +117,7 @@ export function ServicesVersionA() {
             Get your free Reckoning
           </Link>
           <p className="text-sm text-white/50 mt-3">
-            15 minutes to clarity — we&apos;ll tell you what&apos;s blocking you
+            15 minutes to clarity  - we&apos;ll tell you what&apos;s blocking you
           </p>
         </div>
       </section>

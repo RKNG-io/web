@@ -1,4 +1,4 @@
-// Confidence scoring — combine all validation results (v3 - buying intent + consistency)
+// Confidence scoring  - combine all validation results (v3 - buying intent + consistency)
 
 import type { ReckoningReport, QuestionnaireSubmission, ConfidenceResult } from '@/types/report';
 import { validateSchema } from './schema';
@@ -100,9 +100,9 @@ export function calculateConfidence(
     } else if (warning.includes('Hours mismatch') || warning.includes('rate mismatch')) {
       score -= 8; // Calculation inconsistency
     } else if (warning.includes('Budget not referenced')) {
-      score -= 3; // Minor — budget should be mentioned
+      score -= 3; // Minor  - budget should be mentioned
     } else if (warning.includes('completion_criteria')) {
-      score -= 2; // Minor — phases should have criteria
+      score -= 2; // Minor  - phases should have criteria
     } else {
       score -= 3; // Default deduction
     }
@@ -151,12 +151,12 @@ export function getConfidenceSummary(result: ConfidenceResult): string {
   }
 
   if (result.autoApprove) {
-    return `High confidence (${result.score}%) — auto-approved`;
+    return `High confidence (${result.score}%)  - auto-approved`;
   }
 
   if (result.score >= 70) {
-    return `Medium confidence (${result.score}%) — needs review. ${result.flags.length} issue(s)`;
+    return `Medium confidence (${result.score}%)  - needs review. ${result.flags.length} issue(s)`;
   }
 
-  return `Low confidence (${result.score}%) — needs review. ${result.flags.length} issue(s)`;
+  return `Low confidence (${result.score}%)  - needs review. ${result.flags.length} issue(s)`;
 }

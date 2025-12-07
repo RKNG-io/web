@@ -1,4 +1,4 @@
-// Consistency validation — ensure calculations use numbers from questionnaire answers
+// Consistency validation  - ensure calculations use numbers from questionnaire answers
 
 import type { ReckoningReport, QuestionnaireSubmission, ValidationResult } from '@/types/report';
 
@@ -86,7 +86,7 @@ export function validateConsistency(
   const answersNumbers = extractNumbersFromAnswers(submission.answers);
   const calc = report.sections.diagnosis?.cost_of_inaction?.calculation;
 
-  // Check hours consistency — use ranges when available
+  // Check hours consistency  - use ranges when available
   if (calc?.hours_per_week) {
     const calcHours = calc.hours_per_week;
 
@@ -102,7 +102,7 @@ export function validateConsistency(
           `but calculation uses ${calcHours} hrs/week.`
         );
       } else if (calcHours < toleranceMin && calcHours > 0) {
-        // Using less than stated — only warn, might be intentional
+        // Using less than stated  - only warn, might be intentional
         warnings.push(
           `Hours note: They indicated ${min}-${max} hrs/week, ` +
           `calculation uses ${calcHours}. This is fine if intentional.`
@@ -120,7 +120,7 @@ export function validateConsistency(
     }
   }
 
-  // Check hourly rate plausibility (only from free text — we don't ask for this directly)
+  // Check hourly rate plausibility (only from free text  - we don't ask for this directly)
   if (answersNumbers.hourlyRate && calc?.hourly_value) {
     const answerRate = answersNumbers.hourlyRate;
     const calcRate = calc.hourly_value;
@@ -133,7 +133,7 @@ export function validateConsistency(
     }
   }
 
-  // Note: Budget validation removed — asking about budget feels extractive
+  // Note: Budget validation removed  - asking about budget feels extractive
   // and doesn't improve report quality
 
   return {

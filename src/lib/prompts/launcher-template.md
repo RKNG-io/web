@@ -2,7 +2,7 @@
 
 ## Who You're Writing For
 
-Someone at a threshold. They have a dream — a business, a new chapter, a version of their life that's been waiting. They're not broken. They're not failures. They're just... ready.
+Someone at a threshold. They have a dream  - a business, a new chapter, a version of their life that's been waiting. They're not broken. They're not failures. They're just... ready.
 
 **Where they are:**
 - Still employed (full-time or part-time) or recently left
@@ -49,7 +49,7 @@ For Launchers, common blockers and unlocks:
 | Blocked by | Unlocked by |
 |------------|-------------|
 | "I don't know where to start" | A clear first step (just one) |
-| "I'm not ready yet" | Permission — you already are |
+| "I'm not ready yet" | Permission  - you already are |
 | "I need to check my employment contract" | 10 minutes with HR or a quick legal read |
 | "I don't have a website" | A one-page site (3 hours to build) |
 | "I can't take payments" | Stripe setup (1 hour) |
@@ -109,33 +109,33 @@ For Launchers, common blockers and unlocks:
   },
   
   "opening": {
-    "headline": "string — personal, powerful, uses their vision",
-    "reflection": "string — 2-3 sentences reflecting their dream back to them"
+    "headline": "string  - personal, powerful, uses their vision",
+    "reflection": "string  - 2-3 sentences reflecting their dream back to them"
   },
   
   "snapshot": {
-    "whereYouAre": "string — their current stage, no judgement, just clarity",
-    "whatsWorking": ["string array — things already in place, celebrated"],
-    "whatsBlocking": ["string array — gaps framed as moveable obstacles"]
+    "whereYouAre": "string  - their current stage, no judgement, just clarity",
+    "whatsWorking": ["string array  - things already in place, celebrated"],
+    "whatsBlocking": ["string array  - gaps framed as moveable obstacles"]
   },
   
   "diagnosis": {
-    "coreInsight": "string — the one thing they most need to hear",
-    "blockersReframed": "string — their fears, reframed as solvable",
-    "hiddenAdvantage": "string — something they have that they're undervaluing",
-    "theGap": "string — how small the gap actually is (be specific: hours, not weeks)"
+    "coreInsight": "string  - the one thing they most need to hear",
+    "blockersReframed": "string  - their fears, reframed as solvable",
+    "hiddenAdvantage": "string  - something they have that they're undervaluing",
+    "theGap": "string  - how small the gap actually is (be specific: hours, not weeks)"
   },
   
   "journeyMap": {
     "phase1": {
       "title": "Foundation (Days 1–7)",
-      "description": "string — what this phase accomplishes",
+      "description": "string  - what this phase accomplishes",
       "items": [
         {
           "task": "string",
-          "why": "string — why this matters",
-          "blocked": "string — what this unblocks",
-          "effort": "string — time estimate",
+          "why": "string  - why this matters",
+          "blocked": "string  - what this unblocks",
+          "effort": "string  - time estimate",
           "diyOrHelp": "diy | help | either"
         }
       ]
@@ -153,30 +153,30 @@ For Launchers, common blockers and unlocks:
   },
   
   "weightOfWaiting": {
-    "timeCost": "string — grounded in their timeline",
-    "moneyCost": "string — based on their situation",
-    "lifeCost": "string — emotional, referencing their vision"
+    "timeCost": "string  - grounded in their timeline",
+    "moneyCost": "string  - based on their situation",
+    "lifeCost": "string  - emotional, referencing their vision"
   },
   
   "yourInvestment": {
     "diyPath": {
-      "description": "string — what they can do themselves",
-      "estimatedTime": "string — total hours",
+      "description": "string  - what they can do themselves",
+      "estimatedTime": "string  - total hours",
       "toolsNeeded": ["string array"],
-      "honest": "string — honest assessment of whether this is realistic for them"
+      "honest": "string  - honest assessment of whether this is realistic for them"
     },
     "supportedPath": {
-      "description": "string — what help looks like",
+      "description": "string  - what help looks like",
       "recommended": "Launcher",
-      "estimatedInvestment": "string — aligned to their budget",
+      "estimatedInvestment": "string  - aligned to their budget",
       "whatYouGet": ["string array"],
-      "framing": "string — not a pitch, just clarity on the option"
+      "framing": "string  - not a pitch, just clarity on the option"
     }
   },
   
   "closing": {
-    "permission": "string — the thing they need to hear to start",
-    "oneNextStep": "string — THE single action, achievable today",
+    "permission": "string  - the thing they need to hear to start",
+    "oneNextStep": "string  - THE single action, achievable today",
     "signOff": "Your time is now."
   }
 }
@@ -191,8 +191,8 @@ Use their vision. If they said "I want to wake up excited about my work", headli
 
 ### 2. Snapshot > What's Working
 Find at least 2 things to celebrate:
-- "You already have paying clients — that's proof of concept"
-- "You know exactly who you want to help — that's clarity most people never find"
+- "You already have paying clients  - that's proof of concept"
+- "You know exactly who you want to help  - that's clarity most people never find"
 
 ### 3. Diagnosis > Core Insight
 Match to their core fear:
@@ -211,7 +211,7 @@ Be specific:
 ### 6. Weight of Waiting
 Be specific, not generic:
 - If timeline is "3 months": "Every month you wait is another month in a job you've outgrown"
-- If they lose 5 hours/week to confusion: "That's 60 hours over the next 3 months — time you could spend on actual clients"
+- If they lose 5 hours/week to confusion: "That's 60 hours over the next 3 months  - time you could spend on actual clients"
 
 ### 7. Both Paths
 Present DIY with genuine respect:
@@ -221,7 +221,7 @@ Present DIY with genuine respect:
 ### 8. One Next Step
 Concrete, achievable TODAY:
 - "Register your business name today"
-- "Send that first invoice — the one you've been putting off"
+- "Send that first invoice  - the one you've been putting off"
 - "Tell one person you trust: 'I'm doing this'"
 
 ---

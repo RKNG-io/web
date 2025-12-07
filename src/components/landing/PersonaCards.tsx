@@ -11,13 +11,13 @@ const personaData: PersonaCard[] = [
   {
     title: 'Launching',
     description:
-      'Still dreaming, planning, or just getting started. You need clarity on what actually matters — and permission to begin.',
+      'Still dreaming, planning, or just getting started. You need clarity on what actually matters  - and permission to begin.',
     href: '/start?persona=launcher',
   },
   {
     title: 'Building',
     description:
-      'Running, but doing everything yourself. Busy but stuck. You need systems that give you time back — without hiring.',
+      'Running, but doing everything yourself. Busy but stuck. You need systems that give you time back  - without hiring.',
     href: '/start?persona=builder',
   },
   {

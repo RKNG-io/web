@@ -55,7 +55,7 @@ export const PERSONAS: Record<string, Persona> = {
       {
         id: 'who_they_help',
         type: 'text',
-        question: 'Who do you help — and what changes for them?',
+        question: 'Who do you help  - and what changes for them?',
         subtext: 'Your clients, your people. What\'s different in their lives because of you?',
         placeholder: "I help people who are...",
         phase: 'warmup',
@@ -81,7 +81,7 @@ export const PERSONAS: Record<string, Persona> = {
         type: 'single',
         question: 'Will you work with clients online, in person, or both?',
         phase: 'context',
-        // Skip for e-commerce — they're selling products, not services
+        // Skip for e-commerce  - they're selling products, not services
         skipIf: { questionId: 'business_type', operator: 'equals', value: 'ecommerce' },
         options: [
           { value: 'online', label: 'Mostly online / remote' },
@@ -97,7 +97,7 @@ export const PERSONAS: Record<string, Persona> = {
         phase: 'context',
         options: [
           { value: 'waiting', label: "I've been thinking about this for years and I'm done waiting" },
-          { value: 'change', label: 'Something changed — job, life, realisation' },
+          { value: 'change', label: 'Something changed  - job, life, realisation' },
           { value: 'side_hustle', label: "I'm already doing this on the side and ready to go all in" },
           { value: 'exploring', label: "I'm not 100% sure it's 'now' but I'm exploring" }
         ]
@@ -149,9 +149,9 @@ export const PERSONAS: Record<string, Persona> = {
           ],
         },
         options: [
-          { value: 'proud', label: 'Proud — it represents me well' },
+          { value: 'proud', label: 'Proud  - it represents me well' },
           { value: 'okay', label: 'It\'s okay but needs work' },
-          { value: 'hesitant', label: 'Hesitant — it needs work' },
+          { value: 'hesitant', label: 'Hesitant  - it needs work' },
           { value: 'avoiding', label: 'I\'ve been avoiding thinking about it' }
         ]
       },
@@ -161,11 +161,11 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'What do you need this business to earn in the first year?',
         phase: 'practical',
         options: [
-          { value: 'side_income', label: 'Side income — £500-1k/month to start' },
-          { value: 'part_replace', label: 'Partial replacement — £1-2k/month' },
-          { value: 'full_replace', label: 'Full income replacement — £2-4k/month' },
-          { value: 'ambitious', label: 'Ambitious — £4k+/month' },
-          { value: 'unsure', label: "Not sure yet — depends on what's possible" }
+          { value: 'side_income', label: 'Side income  - £500-1k/month to start' },
+          { value: 'part_replace', label: 'Partial replacement  - £1-2k/month' },
+          { value: 'full_replace', label: 'Full income replacement  - £2-4k/month' },
+          { value: 'ambitious', label: 'Ambitious  - £4k+/month' },
+          { value: 'unsure', label: "Not sure yet  - depends on what's possible" }
         ]
       },
       {
@@ -191,27 +191,27 @@ export const PERSONAS: Record<string, Persona> = {
         question: "What's actually stopping you from being further along?",
         phase: 'blockers',
         options: [
-          { value: 'time', label: "Time — I'm still working another job" },
-          { value: 'money', label: "Money — I can't invest much yet" },
-          { value: 'knowledge', label: "Knowledge — I don't know the steps" },
-          { value: 'confidence', label: "Confidence — I'm not sure I'm ready" },
-          { value: 'tech', label: 'Tech — I find the tools overwhelming' },
-          { value: 'perfectionism', label: "Perfectionism — I keep waiting until it's 'right'" },
-          { value: 'fear', label: "Fear — what if it doesn't work?" },
-          { value: 'nothing', label: "Nothing specific — I just haven't done it" }
+          { value: 'time', label: "Time  - I'm still working another job" },
+          { value: 'money', label: "Money  - I can't invest much yet" },
+          { value: 'knowledge', label: "Knowledge  - I don't know the steps" },
+          { value: 'confidence', label: "Confidence  - I'm not sure I'm ready" },
+          { value: 'tech', label: 'Tech  - I find the tools overwhelming' },
+          { value: 'perfectionism', label: "Perfectionism  - I keep waiting until it's 'right'" },
+          { value: 'fear', label: "Fear  - what if it doesn't work?" },
+          { value: 'nothing', label: "Nothing specific  - I just haven't done it" }
         ]
       },
       {
         id: 'timeline',
         type: 'single',
-        question: 'When do you want to be "live" — a real business that clients can find and pay?',
+        question: 'When do you want to be "live"  - a real business that clients can find and pay?',
         phase: 'practical',
         options: [
           { value: 'already', label: 'Already am, just need to improve things' },
           { value: 'month', label: 'Within the next month' },
           { value: 'three_months', label: 'Within 3 months' },
           { value: 'six_months', label: 'Within 6 months' },
-          { value: 'exploring', label: 'No fixed timeline — just exploring' }
+          { value: 'exploring', label: 'No fixed timeline  - just exploring' }
         ]
       },
       {
@@ -225,7 +225,7 @@ export const PERSONAS: Record<string, Persona> = {
           { value: 'underpricing', label: "Pricing too low and getting stuck there" },
           { value: 'overcommit', label: "Taking on too much and burning out" },
           { value: 'wrong_thing', label: "Building the wrong thing entirely" },
-          { value: 'none', label: "I've thought through the risks — I'm ready" }
+          { value: 'none', label: "I've thought through the risks  - I'm ready" }
         ]
       },
       {
@@ -233,7 +233,7 @@ export const PERSONAS: Record<string, Persona> = {
         type: 'single',
         question: 'How much time can you realistically dedicate to building this each week?',
         phase: 'practical',
-        // Skip if they're already full-time — we already know the answer
+        // Skip if they're already full-time  - we already know the answer
         skipIf: { questionId: 'business_stage', operator: 'equals', value: 'full_time' },
         options: [
           { value: 'minimal', label: 'Less than 2 hours' },
@@ -249,11 +249,11 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'How will you get your first paying clients?',
         phase: 'practical',
         options: [
-          { value: 'network', label: 'People I already know — friends, family, contacts' },
+          { value: 'network', label: 'People I already know  - friends, family, contacts' },
           { value: 'referrals', label: 'Referrals from existing connections' },
           { value: 'social', label: 'Social media presence' },
-          { value: 'local', label: 'Local marketing — flyers, events, word of mouth' },
-          { value: 'online', label: 'Online marketing — SEO, ads, content' },
+          { value: 'local', label: 'Local marketing  - flyers, events, word of mouth' },
+          { value: 'online', label: 'Online marketing  - SEO, ads, content' },
           { value: 'no_idea', label: "Honestly? I don't know yet" }
         ]
       },
@@ -261,7 +261,7 @@ export const PERSONAS: Record<string, Persona> = {
         id: 'anything_else',
         type: 'text',
         question: 'Anything else on your mind?',
-        subtext: 'Completely optional — only if something is burning.',
+        subtext: 'Completely optional  - only if something is burning.',
         placeholder: "Anything else...",
         optional: true,
         phase: 'practical',
@@ -270,7 +270,7 @@ export const PERSONAS: Record<string, Persona> = {
         id: 'online_presence',
         type: 'presence',
         question: 'Where can we find you online?',
-        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        subtext: 'Optional  - if you share these, we\'ll include a free presence review in your Reckoning.',
         optional: true,
         phase: 'practical',
       },
@@ -296,7 +296,7 @@ export const PERSONAS: Record<string, Persona> = {
         content: `
           <p class="welcome-text">You didn't wait for permission. You figured it out, found clients, made it work.</p>
           <p class="welcome-text">But <strong>"working"</strong> and <strong>"working well"</strong> aren't the same thing.</p>
-          <p class="welcome-text">The next few questions are about getting honest — what's solid, what's duct tape, and what would actually make this feel like a business instead of a hustle.</p>
+          <p class="welcome-text">The next few questions are about getting honest  - what's solid, what's duct tape, and what would actually make this feel like a business instead of a hustle.</p>
           <div class="time-estimate">Takes about 10 minutes. No judgement.</div>
         `
       },
@@ -334,11 +334,11 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'What does income look like right now?',
         phase: 'context',
         options: [
-          { value: 'inconsistent', label: 'Inconsistent — some months good, some scary' },
+          { value: 'inconsistent', label: 'Inconsistent  - some months good, some scary' },
           { value: 'steady', label: 'Steady but modest (covers basics, not much more)' },
-          { value: 'comfortable', label: "Comfortable — I'm making it work" },
-          { value: 'good', label: "Good — but I'm working too hard for it" },
-          { value: 'great', label: 'Great — I just need better systems' }
+          { value: 'comfortable', label: "Comfortable  - I'm making it work" },
+          { value: 'good', label: "Good  - but I'm working too hard for it" },
+          { value: 'great', label: 'Great  - I just need better systems' }
         ]
       },
       {
@@ -362,10 +362,10 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'If a dream client landed on your website right now, how would you feel?',
         phase: 'reality',
         options: [
-          { value: 'great', label: 'Great — it represents me well' },
-          { value: 'fine', label: 'Fine — it does the job' },
-          { value: 'nervous', label: "Nervous — it's outdated or underwhelming" },
-          { value: 'horrified', label: "Horrified — please don't look at it" },
+          { value: 'great', label: 'Great  - it represents me well' },
+          { value: 'fine', label: 'Fine  - it does the job' },
+          { value: 'nervous', label: "Nervous  - it's outdated or underwhelming" },
+          { value: 'horrified', label: "Horrified  - please don't look at it" },
           { value: 'none', label: 'What website?' }
         ]
       },
@@ -376,15 +376,15 @@ export const PERSONAS: Record<string, Persona> = {
         subtext: 'Select all that apply. No judgement.',
         phase: 'reality',
         options: [
-          { value: 'pricing', label: 'My pricing — I make it up each time' },
-          { value: 'website', label: 'My website — outdated, embarrassing, or nonexistent' },
-          { value: 'contracts', label: "My contracts — inconsistent or I don't use them" },
-          { value: 'invoicing', label: 'My invoicing — manual, awkward, often late' },
-          { value: 'scheduling', label: 'My scheduling — back-and-forth emails, no system' },
-          { value: 'communication', label: 'My client communication — scattered everywhere' },
-          { value: 'portfolio', label: "My portfolio — doesn't show my best work" },
-          { value: 'boundaries', label: 'My boundaries — I say yes to everything' },
-          { value: 'processes', label: 'My processes — I reinvent the wheel every project' },
+          { value: 'pricing', label: 'My pricing  - I make it up each time' },
+          { value: 'website', label: 'My website  - outdated, embarrassing, or nonexistent' },
+          { value: 'contracts', label: "My contracts  - inconsistent or I don't use them" },
+          { value: 'invoicing', label: 'My invoicing  - manual, awkward, often late' },
+          { value: 'scheduling', label: 'My scheduling  - back-and-forth emails, no system' },
+          { value: 'communication', label: 'My client communication  - scattered everywhere' },
+          { value: 'portfolio', label: "My portfolio  - doesn't show my best work" },
+          { value: 'boundaries', label: 'My boundaries  - I say yes to everything' },
+          { value: 'processes', label: 'My processes  - I reinvent the wheel every project' },
           { value: 'all', label: 'Honestly? Most of it' }
         ]
       },
@@ -394,13 +394,13 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'What is the mess actually costing you?',
         phase: 'blockers',
         options: [
-          { value: 'money', label: 'Money — I underprice, forget to invoice, or lose leads' },
-          { value: 'time', label: 'Time — I waste hours on admin that should be automated' },
-          { value: 'energy', label: "Energy — I'm exhausted by the chaos" },
-          { value: 'reputation', label: 'Reputation — I look less professional than I am' },
-          { value: 'confidence', label: 'Confidence — I feel like a fraud' },
-          { value: 'opportunities', label: 'Opportunities — better clients go elsewhere' },
-          { value: 'sanity', label: "Sanity — I can't switch off, everything feels urgent" }
+          { value: 'money', label: 'Money  - I underprice, forget to invoice, or lose leads' },
+          { value: 'time', label: 'Time  - I waste hours on admin that should be automated' },
+          { value: 'energy', label: "Energy  - I'm exhausted by the chaos" },
+          { value: 'reputation', label: 'Reputation  - I look less professional than I am' },
+          { value: 'confidence', label: 'Confidence  - I feel like a fraud' },
+          { value: 'opportunities', label: 'Opportunities  - better clients go elsewhere' },
+          { value: 'sanity', label: "Sanity  - I can't switch off, everything feels urgent" }
         ]
       },
       {
@@ -413,7 +413,7 @@ export const PERSONAS: Record<string, Persona> = {
           { value: '3_5', label: '3-5 hours' },
           { value: '5_10', label: '5-10 hours' },
           { value: 'over_10', label: '10+ hours' },
-          { value: 'constant', label: "I have no idea — it's constant background noise" }
+          { value: 'constant', label: "I have no idea  - it's constant background noise" }
         ]
       },
       {
@@ -429,7 +429,7 @@ export const PERSONAS: Record<string, Persona> = {
           { value: 'invoicing', label: 'Better invoicing and getting paid faster' },
           { value: 'crm', label: 'A way to manage clients without losing track' },
           { value: 'templates', label: "Templates and processes so I'm not starting from scratch" },
-          { value: 'boundaries', label: 'Boundaries — learning to say no' },
+          { value: 'boundaries', label: 'Boundaries  - learning to say no' },
           { value: 'whole_thing', label: 'Honestly, I need someone to look at the whole thing' }
         ]
       },
@@ -439,12 +439,12 @@ export const PERSONAS: Record<string, Persona> = {
         question: "What's your priority for the next 6 months?",
         phase: 'practical',
         options: [
-          { value: 'more_clients', label: 'Get more clients — I need more work' },
-          { value: 'better_clients', label: 'Get better clients — raise my rates' },
-          { value: 'less_chaos', label: 'Less chaos — systems so I stop firefighting' },
-          { value: 'hire', label: 'Hire help — I can\'t do it all myself' },
-          { value: 'passive', label: 'Passive income — products, courses, recurring revenue' },
-          { value: 'clarity', label: 'Clarity — I need to figure out what I actually want' }
+          { value: 'more_clients', label: 'Get more clients  - I need more work' },
+          { value: 'better_clients', label: 'Get better clients  - raise my rates' },
+          { value: 'less_chaos', label: 'Less chaos  - systems so I stop firefighting' },
+          { value: 'hire', label: 'Hire help  - I can\'t do it all myself' },
+          { value: 'passive', label: 'Passive income  - products, courses, recurring revenue' },
+          { value: 'clarity', label: 'Clarity  - I need to figure out what I actually want' }
         ]
       },
       {
@@ -459,7 +459,7 @@ export const PERSONAS: Record<string, Persona> = {
         id: 'online_presence',
         type: 'presence',
         question: 'Where can we find you online?',
-        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        subtext: 'Optional  - if you share these, we\'ll include a free presence review in your Reckoning.',
         optional: true,
         phase: 'practical',
       },
@@ -485,7 +485,7 @@ export const PERSONAS: Record<string, Persona> = {
         content: `
           <p class="welcome-text">Employees. Customers. Revenue. Responsibility.</p>
           <p class="welcome-text">But somewhere along the way, the thing you built started <strong>running you</strong>.</p>
-          <p class="welcome-text">This isn't about working harder. It's about building the systems that let you step back — and have it all keep working.</p>
+          <p class="welcome-text">This isn't about working harder. It's about building the systems that let you step back  - and have it all keep working.</p>
           <p class="welcome-text">These questions are direct. I need to understand what's actually happening, not the version you tell people at networking events.</p>
           <div class="time-estimate">Takes about 12 minutes. Could save you 10 hours a week.</div>
         `
@@ -552,7 +552,7 @@ export const PERSONAS: Record<string, Persona> = {
           { value: 'enquiries', label: 'Responding to enquiries' },
           { value: 'hr', label: 'Hiring / firing / HR issues' },
           { value: 'fixing', label: "Fixing things when they go wrong" },
-          { value: 'everything', label: "Everything — I'm the hub of the wheel" }
+          { value: 'everything', label: "Everything  - I'm the hub of the wheel" }
         ]
       },
       {
@@ -572,7 +572,7 @@ export const PERSONAS: Record<string, Persona> = {
       {
         id: 'last_holiday',
         type: 'single',
-        question: 'When did you last take a proper holiday — fully offline?',
+        question: 'When did you last take a proper holiday  - fully offline?',
         phase: 'blockers',
         options: [
           { value: 'recent', label: 'In the last 3 months' },
@@ -589,13 +589,13 @@ export const PERSONAS: Record<string, Persona> = {
         phase: 'blockers',
         options: [
           { value: 'family', label: 'Time with family / partner / kids' },
-          { value: 'health', label: 'Health — sleep, exercise, stress' },
-          { value: 'friendships', label: "Friendships — I've disappeared" },
-          { value: 'hobbies', label: 'Hobbies — things I used to enjoy' },
-          { value: 'peace', label: "Mental peace — I can't switch off" },
-          { value: 'patience', label: "Patience — I'm shorter with people I love" },
-          { value: 'joy', label: 'Joy — I built this to be free, not trapped' },
-          { value: 'okay', label: "Nothing major — I'm managing okay" }
+          { value: 'health', label: 'Health  - sleep, exercise, stress' },
+          { value: 'friendships', label: "Friendships  - I've disappeared" },
+          { value: 'hobbies', label: 'Hobbies  - things I used to enjoy' },
+          { value: 'peace', label: "Mental peace  - I can't switch off" },
+          { value: 'patience', label: "Patience  - I'm shorter with people I love" },
+          { value: 'joy', label: 'Joy  - I built this to be free, not trapped' },
+          { value: 'okay', label: "Nothing major  - I'm managing okay" }
         ]
       },
       {
@@ -604,12 +604,12 @@ export const PERSONAS: Record<string, Persona> = {
         question: "What's the single biggest time sink you want to eliminate?",
         phase: 'blockers',
         options: [
-          { value: 'admin', label: 'Admin — emails, paperwork, scheduling' },
-          { value: 'staff_questions', label: 'Staff questions — things they should handle' },
-          { value: 'customer_issues', label: 'Customer issues — complaints, queries, exceptions' },
-          { value: 'manual_processes', label: 'Manual processes — things that should be automated' },
-          { value: 'firefighting', label: 'Firefighting — fixing problems instead of preventing them' },
-          { value: 'everything', label: 'Everything runs through me — I am the bottleneck' }
+          { value: 'admin', label: 'Admin  - emails, paperwork, scheduling' },
+          { value: 'staff_questions', label: 'Staff questions  - things they should handle' },
+          { value: 'customer_issues', label: 'Customer issues  - complaints, queries, exceptions' },
+          { value: 'manual_processes', label: 'Manual processes  - things that should be automated' },
+          { value: 'firefighting', label: 'Firefighting  - fixing problems instead of preventing them' },
+          { value: 'everything', label: 'Everything runs through me  - I am the bottleneck' }
         ]
       },
       {
@@ -638,7 +638,7 @@ export const PERSONAS: Record<string, Persona> = {
         id: 'online_presence',
         type: 'presence',
         question: 'Where can we find you online?',
-        subtext: 'Optional — if you share these, we\'ll include a free presence review in your Reckoning.',
+        subtext: 'Optional  - if you share these, we\'ll include a free presence review in your Reckoning.',
         optional: true,
         phase: 'practical',
       },

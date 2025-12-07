@@ -13,7 +13,7 @@ const ReckoningCTA: React.FC = () => {
             </h2>
             <p className="text-lg text-charcoal/80 md:text-xl">
               A free diagnostic that shows you exactly where you stand.
-              No fluff, no 50-point plan — just what's actually blocking you and what to do about it.
+              No fluff, no 50-point plan  - just what's actually blocking you and what to do about it.
             </p>
 
             {/* Feature list */}
@@ -47,7 +47,7 @@ const ReckoningCTA: React.FC = () => {
 
             <div className="pt-4">
               <Button variant="secondary" size="lg">
-                Get Your Reckoning — Free
+                Get Your Reckoning  - Free
               </Button>
             </div>
           </div>

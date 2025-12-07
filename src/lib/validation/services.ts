@@ -1,4 +1,4 @@
-// Services validation — ensure recommended services exist and prices match
+// Services validation  - ensure recommended services exist and prices match
 
 import type { ReckoningReport, ValidationResult } from '@/types/report';
 import { services } from '@/data/services-adapter';
@@ -16,7 +16,7 @@ export function validateServices(report: ReckoningReport): ValidationResult {
   for (const rec of recommendedServices) {
     // Check if service exists
     if (!validServiceIds.has(rec.service_id)) {
-      errors.push(`Invalid service_id: "${rec.service_id}" — not in catalogue`);
+      errors.push(`Invalid service_id: "${rec.service_id}"  - not in catalogue`);
       continue;
     }
     

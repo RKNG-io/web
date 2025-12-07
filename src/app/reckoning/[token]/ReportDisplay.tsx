@@ -430,7 +430,7 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
                   Free presence review included
                 </h2>
                 <p className="text-charcoal/60">
-                  You shared your online presence — we&apos;ll review it and include personalised feedback.
+                  You shared your online presence  - we&apos;ll review it and include personalised feedback.
                 </p>
               </div>
             </div>
@@ -484,7 +484,7 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
             </div>
 
             <p className="text-sm text-charcoal/60">
-              We&apos;ll send your presence review to your email within 48 hours. No strings attached — it&apos;s our way of saying thanks for trying Reckoning.
+              We&apos;ll send your presence review to your email within 48 hours. No strings attached  - it&apos;s our way of saying thanks for trying Reckoning.
             </p>
           </section>
         )}

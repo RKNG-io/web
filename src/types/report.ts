@@ -1,4 +1,4 @@
-// Report types — matches Claude output schema exactly
+// Report types  - matches Claude output schema exactly
 
 export interface ReckoningReport {
   version: "1.0";
@@ -27,16 +27,16 @@ export interface ReckoningReport {
     closing: ClosingSection;
   };
   
-  // Action items — comprehensive list of everything they need to do
+  // Action items  - comprehensive list of everything they need to do
   action_items: ActionItems;
 
-  // Legacy — kept for backward compatibility
+  // Legacy  - kept for backward compatibility
   recommendations: {
     services: ServiceRecommendation[];
     package: "launcher" | "builder" | "architect" | null;
   };
 
-  // For validation — echo back key inputs
+  // For validation  - echo back key inputs
   input_echo: {
     name: string;
     persona: string;
@@ -140,7 +140,7 @@ export interface ServiceRecommendation {
   purchase_type?: "instant" | "quote" | "retainer";
 }
 
-// Action Items — comprehensive list of everything they need to do
+// Action Items  - comprehensive list of everything they need to do
 export interface ActionItems {
   must_do: ActionItem[];   // Priority 1: Regulatory/legal or critical blockers
   should_do: ActionItem[]; // Priority 2: Important for growth

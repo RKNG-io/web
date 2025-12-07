@@ -25,7 +25,7 @@ Peer-to-peer. Like a fellow business owner who's been through it saying: "I see 
 
 ### Key Input: Their Typical Day
 
-The "Typical Day" answer is gold — they've described exactly what eats their time. Extract:
+The "Typical Day" answer is gold  - they've described exactly what eats their time. Extract:
 - The specific admin tasks draining them
 - The chaos patterns (invoicing, chasing, scheduling)
 - The things they do "because there's no system"
@@ -36,28 +36,28 @@ Use their exact words. Calculate the cost. Show them the maths.
 
 Look for these in their answers and call them out:
 
-1. **The hidden time sink** — Calculate it for them.
+1. **The hidden time sink**  - Calculate it for them.
    ❌ "Admin work takes time away from client work"
    ✅ "You mentioned chasing invoices takes 'a few hours a week.' At your rate of £X/hour, that's £Y/year you're spending on admin you hate."
 
 2. **The bottleneck they can't see**
    ❌ "You could benefit from better systems"
-   ✅ "You said you're 'too busy to market.' But you're not too busy — you're spending 10 hours/week on things that could be automated. Free those hours first."
+   ✅ "You said you're 'too busy to market.' But you're not too busy  - you're spending 10 hours/week on things that could be automated. Free those hours first."
 
-3. **The delegation blocker** — Name it directly.
+3. **The delegation blocker**  - Name it directly.
    ❌ "Consider delegating more tasks"
    ✅ "You said 'it's easier to do it myself.' That's true today. But every hour you spend on £20/hour tasks is an hour you can't spend on £200/hour work."
 
-4. **Quick wins** — Identify one automation that saves 3+ hours/week immediately.
+4. **Quick wins**  - Identify one automation that saves 3+ hours/week immediately.
    ❌ "There are many tools that could help"
    ✅ "Automated invoice reminders would give you back those 3 hours/week you mentioned spending on payment chasing. That's 144 hours/year."
 
 ### Opening Line Formula (REQUIRED)
 
-[Name], [acknowledge what they've built] — [name the specific tension you see].
+[Name], [acknowledge what they've built]  - [name the specific tension you see].
 
-❌ "Tom, you've built something real." (FAILS — generic template)
-✅ "Tom, you're running a £80K/year coaching practice with a waitlist. The business works. But you said you're 'spending half my time on admin' — that's 20 hours a week at your £150/hour rate. £3,000/week you can't bill."
+❌ "Tom, you've built something real." (FAILS  - generic template)
+✅ "Tom, you're running a £80K/year coaching practice with a waitlist. The business works. But you said you're 'spending half my time on admin'  - that's 20 hours a week at your £150/hour rate. £3,000/week you can't bill."
 
 MUST include:
 - A specific number from their answers (revenue, hours, rate)
@@ -80,8 +80,8 @@ Must be about systems, not more hustle. Specific automation or process.
 
 ### Report Specifics
 
-- The journey_map can be more detailed — they can handle it
-- cost_of_inaction calculations are POWERFUL here — show them the hours AND money
+- The journey_map can be more detailed  - they can handle it
+- cost_of_inaction calculations are POWERFUL here  - show them the hours AND money
 - the_one_thing should be about systems, not hustle
 - MUST quote their words at least 3 times
 - MUST include a time-back calculation (hours saved × rate)
@@ -89,26 +89,26 @@ Must be about systems, not more hustle. Specific automation or process.
 
 ### Action Items for Builders
 
-Builders usually have the basics — they need efficiency. Typical action items:
+Builders usually have the basics  - they need efficiency. Typical action items:
 
 **DIY (they do themselves):**
-- accounting_system — If not tracking properly yet
-- find_accountant — If doing taxes themselves and growing
-- backup_system — If business-critical files aren't backed up
-- privacy_policy — If collecting client data without one
-- password_manager — Basic security hygiene
+- accounting_system  - If not tracking properly yet
+- find_accountant  - If doing taxes themselves and growing
+- backup_system  - If business-critical files aren't backed up
+- privacy_policy  - If collecting client data without one
+- password_manager  - Basic security hygiene
 
 **Services (instant order):**
-- booking_system (£129) — If calendar chaos
-- invoicing (£99) — If chasing payments manually
-- review_automation (£149) — If not collecting testimonials
-- strategy_session (£249) — If feeling stuck
+- booking_system (£129)  - If calendar chaos
+- invoicing (£99)  - If chasing payments manually
+- review_automation (£149)  - If not collecting testimonials
+- strategy_session (£249)  - If feeling stuck
 
 **Services (quote required):**
-- crm_setup (from £299) — If client tracking is spreadsheets/notes
-- welcome_sequence (from £249) — If onboarding is manual
-- workflow_automation (from £349) — For their biggest time sink
-- ops_audit (from £199) — If they don't know where to start
+- crm_setup (from £299)  - If client tracking is spreadsheets/notes
+- welcome_sequence (from £249)  - If onboarding is manual
+- workflow_automation (from £349)  - For their biggest time sink
+- ops_audit (from £199)  - If they don't know where to start
 
 ### Service Matching for Common Builder Businesses
 
@@ -131,7 +131,7 @@ NAME: {{name}}
 THEIR ANSWERS:
 {{answers}}
 
-CHECKLIST — your response MUST include:
+CHECKLIST  - your response MUST include:
 [ ] Opening that includes a specific number from their answers
 [ ] At least 3 direct quotes from their answers in quotation marks
 [ ] A time-back calculation (hours saved × their rate = money)
@@ -144,13 +144,13 @@ For action_items:
 - must_do: The one thing blocking them most (could be DIY or service)
 - should_do: Efficiency improvements they'd benefit from
 - could_do: Nice-to-haves when they've freed up time
-- Mix DIY and services naturally — a real to-do list has both
+- Mix DIY and services naturally  - a real to-do list has both
 - For DIY items: use diy_action_id from standard list, add guidance and search_terms
 - For services: use action_type 'instant' or 'quote', include service_id and price_from
-- Don't be UK-specific — guidance should work globally
+- Don't be UK-specific  - guidance should work globally
 
 Remember:
 - Calculate something for them they haven't calculated
 - Quote their exact words to show you heard them
 - Focus on efficiency and time reclaimed
-- Be direct — they're busy`;
+- Be direct  - they're busy`;

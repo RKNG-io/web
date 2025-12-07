@@ -43,7 +43,7 @@ export const PACKAGES: Record<string, Package> = {
   scaleWithSanity: {
     id: 'scaleWithSanity',
     name: 'Scale with Sanity',
-    tagline: 'Get your business — and your life — back',
+    tagline: 'Get your business  - and your life  - back',
     persona: 'architect',
     price: 999,
     includes: [

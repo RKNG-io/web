@@ -18,7 +18,7 @@ const steps: Step[] = [
     number: '02',
     title: 'Get your Reckoning',
     description:
-      'Not a 50-point action plan. Just what matters now. Small shifts that compound — starting with one.',
+      'Not a 50-point action plan. Just what matters now. Small shifts that compound  - starting with one.',
   },
   {
     number: '03',
@@ -65,7 +65,7 @@ const HowItWorks: React.FC = () => {
             href="/start"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
           >
-            Get Your Reckoning — Free
+            Get Your Reckoning  - Free
           </Link>
         </div>
       </div>

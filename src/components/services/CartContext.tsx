@@ -59,7 +59,7 @@ interface CartContextType {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// DISCOUNT TIERS (à la carte only — bundles have fixed prices)
+// DISCOUNT TIERS (à la carte only  - bundles have fixed prices)
 // ═══════════════════════════════════════════════════════════════
 
 const DISCOUNT_TIERS = [

@@ -1,4 +1,4 @@
-// Input echo validation — ensure report uses actual user answers
+// Input echo validation  - ensure report uses actual user answers
 
 import type { ReckoningReport, QuestionnaireSubmission, ValidationResult } from '@/types/report';
 import { extractUserName } from '@/lib/prompts/builder';

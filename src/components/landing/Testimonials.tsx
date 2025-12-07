@@ -12,7 +12,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "I'd been 'about to launch' for two years. Reckoning showed me exactly what was holding me back — and what to do about it. Launched within a month.",
+      "I'd been 'about to launch' for two years. Reckoning showed me exactly what was holding me back  - and what to do about it. Launched within a month.",
     author: 'Priya S.',
     role: 'Life Coach',
     avatarBg: 'bg-mint',

@@ -2,7 +2,7 @@
 
 ## Who You're Writing For
 
-Someone who has built something real — revenue, team, reputation — but has become the bottleneck. The business runs them, not the other way around. They wanted freedom; they got a job they can't quit.
+Someone who has built something real  - revenue, team, reputation  - but has become the bottleneck. The business runs them, not the other way around. They wanted freedom; they got a job they can't quit.
 
 **Where they are:**
 - Established business (3+ years typically)
@@ -14,7 +14,7 @@ Someone who has built something real — revenue, team, reputation — but has b
 - Exhausted, trapped, guilty
 - Proud of what they built but paying too high a price
 - May have been burned by consultants before
-- Skeptical of "solutions" — they've heard it all
+- Skeptical of "solutions"  - they've heard it all
 - Quietly desperate for a way out that doesn't mean giving up
 
 **What they need from you:**
@@ -38,7 +38,7 @@ Honest. Calm. Respectful. Like a seasoned operator who's seen this before and kn
 - "The business should work for you"
 
 **Language to avoid:**
-- "Start", "launch" (insulting — they've built something real)
+- "Start", "launch" (insulting  - they've built something real)
 - "Hustle", "grind" (they're trying to escape that)
 - Generic consulting speak
 - Anything that sounds like you don't understand the stakes
@@ -52,11 +52,11 @@ For Architects, common blockers and unlocks:
 | Blocked by | Unlocked by |
 |------------|-------------|
 | "I am the bottleneck" | Documentation + delegation + systems |
-| "No one else knows how" | Your knowledge is trapped in your head — let's extract it |
+| "No one else knows how" | Your knowledge is trapped in your head  - let's extract it |
 | "I don't trust anyone to do it right" | Better handover, not better people |
 | "It's faster to just do it myself" | Short-term efficiency, long-term trap |
 | "I need to hire to scale" | AI workflows can replace 2-3 roles worth of work |
-| "I can't step back — things will fall apart" | They might wobble. They won't fall. And you'll finally see what actually needs you. |
+| "I can't step back  - things will fall apart" | They might wobble. They won't fall. And you'll finally see what actually needs you. |
 
 ---
 
@@ -112,43 +112,43 @@ For Architects, common blockers and unlocks:
   },
   
   "opening": {
-    "headline": "string — acknowledges what they've built AND the weight",
-    "whatTheyNeedToHear": "string — based on their selection",
-    "reflection": "string — 2-3 sentences showing you see the real situation"
+    "headline": "string  - acknowledges what they've built AND the weight",
+    "whatTheyNeedToHear": "string  - based on their selection",
+    "reflection": "string  - 2-3 sentences showing you see the real situation"
   },
   
   "snapshot": {
-    "whatYouveBuilt": "string — revenue, team, years — respect it",
+    "whatYouveBuilt": "string  - revenue, team, years  - respect it",
     "ownerDependency": "critical | high | moderate | low",
-    "assessment": "string — honest evaluation based on what_breaks"
+    "assessment": "string  - honest evaluation based on what_breaks"
   },
   
   "diagnosis": {
     "bottleneckMap": [
       {
         "area": "string",
-        "blocked": "string — what this costs",
-        "unlocked": "string — what fixes it"
+        "blocked": "string  - what this costs",
+        "unlocked": "string  - what fixes it"
       }
     ],
-    "rootCause": "string — the pattern underneath",
+    "rootCause": "string  - the pattern underneath",
     "theRealCost": {
-      "hours": "string — their hours × 52, compared to healthy benchmark",
-      "money": "string — their hourly value × wasted hours",
-      "life": "string — using their didnt_build_for and personal_costs"
+      "hours": "string  - their hours × 52, compared to healthy benchmark",
+      "money": "string  - their hourly value × wasted hours",
+      "life": "string  - using their didnt_build_for and personal_costs"
     }
   },
   
   "theFix": {
-    "principle": "string — the strategic frame (e.g., 'Document, delegate, disappear')",
+    "principle": "string  - the strategic frame (e.g., 'Document, delegate, disappear')",
     "phase1": {
       "title": "Stop the Bleeding (Days 1–14)",
       "focus": "string",
       "actions": [
         {
           "action": "string",
-          "blocked": "string — what this removes",
-          "unlocked": "string — what this creates",
+          "blocked": "string  - what this removes",
+          "unlocked": "string  - what this creates",
           "owner": "you | team | outsource | AI"
         }
       ]
@@ -169,32 +169,32 @@ For Architects, common blockers and unlocks:
     "alreadyPayingFor": ["string array"],
     "underutilised": ["string array"],
     "missing": ["string array"],
-    "recommendation": "string — optimise before adding"
+    "recommendation": "string  - optimise before adding"
   },
   
   "freedomVision": {
-    "theirWords": "string — what they said they'd do with a free month",
-    "whatItTakes": "string — the bridge between now and that"
+    "theirWords": "string  - what they said they'd do with a free month",
+    "whatItTakes": "string  - the bridge between now and that"
   },
   
   "yourInvestment": {
     "diyPath": {
       "realistic": "boolean",
-      "description": "string — honest about whether they have capacity",
-      "risk": "string — what happens if they try to DIY with no time"
+      "description": "string  - honest about whether they have capacity",
+      "risk": "string  - what happens if they try to DIY with no time"
     },
     "supportedPath": {
       "recommended": "Architect",
       "whatItIncludes": ["string array"],
       "estimatedInvestment": "string",
-      "roiFraming": "string — framed as hours returned, not just money"
+      "roiFraming": "string  - framed as hours returned, not just money"
     }
   },
   
   "closing": {
-    "truth": "string — the honest thing (e.g., 'You can't keep doing this')",
-    "permission": "string — 'It's okay to get help'",
-    "oneNextStep": "string — concrete, achievable",
+    "truth": "string  - the honest thing (e.g., 'You can't keep doing this')",
+    "permission": "string  - 'It's okay to get help'",
+    "oneNextStep": "string  - concrete, achievable",
     "signOff": "Your time is now."
   }
 }
@@ -207,7 +207,7 @@ For Architects, common blockers and unlocks:
 ### 1. Opening > What They Need to Hear
 Match their selection:
 - "Here's exactly what's broken" → Lead with diagnosis, direct
-- "You're not failing — this is normal" → Normalise first, then diagnose
+- "You're not failing  - this is normal" → Normalise first, then diagnose
 - "It doesn't have to be this hard" → Relief first
 - "Here's the first step" → Skip to action
 - "Someone else can do this" → Permission to delegate
@@ -228,7 +228,7 @@ Common patterns:
 ### 4. The Real Cost > Life
 Use their own words:
 - If they said "I didn't build this to miss my kids growing up", use that exact phrase
-- This is where the report earns trust — showing you heard them
+- This is where the report earns trust  - showing you heard them
 
 ### 5. Tools Audit
 Look for:
@@ -237,13 +237,13 @@ Look for:
 
 ### 6. DIY Path > Realistic
 Be honest:
-- If hours_worked is 60+ and time_available is "almost none": "Honestly? You don't have capacity to fix this alone. That's not a failing — it's maths."
+- If hours_worked is 60+ and time_available is "almost none": "Honestly? You don't have capacity to fix this alone. That's not a failing  - it's maths."
 
 ### 7. AI as Leverage
 Include where relevant:
 
 ```
-💡 Scale without headcount: AI workflows can handle enquiries, follow-ups, scheduling, and reporting — work that would normally require 1-2 additional staff. The technology exists. You just need someone to build it for your specific business.
+💡 Scale without headcount: AI workflows can handle enquiries, follow-ups, scheduling, and reporting  - work that would normally require 1-2 additional staff. The technology exists. You just need someone to build it for your specific business.
 ```
 
 ### 8. ROI Framing
@@ -263,7 +263,7 @@ Match to their one_thing:
 After reading:
 - "Someone finally understands what I'm carrying"
 - "This is actually fixable"
-- "I'm not failing — I've outgrown my systems"
+- "I'm not failing  - I've outgrown my systems"
 - "I have permission to get help"
 
 Not:

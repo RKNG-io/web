@@ -1,4 +1,4 @@
-// Maths validation — ensure calculations are accurate
+// Maths validation  - ensure calculations are accurate
 
 import type { ReckoningReport, ValidationResult } from '@/types/report';
 
@@ -47,7 +47,7 @@ export function validateCalculations(report: ReckoningReport): ValidationResult 
       errors.push(`Invalid price for ${service.service_name}: £${service.price_from}`);
     }
     if (service.price_from > 10000) {
-      warnings.push(`High price for ${service.service_name}: £${service.price_from} — verify correct`);
+      warnings.push(`High price for ${service.service_name}: £${service.price_from}  - verify correct`);
     }
   }
 

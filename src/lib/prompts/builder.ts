@@ -1,4 +1,4 @@
-// Prompt builder — construct prompts from persona + answers
+// Prompt builder  - construct prompts from persona + answers
 
 import { baseSystemPrompt } from './base';
 import { REPORT_JSON_SCHEMA } from '../validation/schema';
@@ -112,7 +112,7 @@ function formatKey(key: string): string {
 }
 
 /**
- * Extract user name from answers — handles both direct name field
+ * Extract user name from answers  - handles both direct name field
  * and the new contact JSON field format
  */
 export function extractUserName(answers: Record<string, unknown>): string {

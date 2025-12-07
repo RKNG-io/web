@@ -186,7 +186,7 @@ function ReportPreview({ report }: { report: ReckoningReport }) {
           {report.sections.journey_map.phases.map((phase) => (
             <div key={phase.number} className="border border-stone rounded p-3">
               <p className="font-medium text-charcoal">Phase {phase.number}: {phase.title}</p>
-              <p className="text-xs text-charcoal/60">{phase.duration} — {phase.focus}</p>
+              <p className="text-xs text-charcoal/60">{phase.duration}  - {phase.focus}</p>
               <ul className="mt-2 text-sm text-charcoal/70 list-disc list-inside">
                 {phase.tasks.map((t, i) => (
                   <li key={i}>
@@ -222,7 +222,7 @@ function ReportPreview({ report }: { report: ReckoningReport }) {
             <p className="font-medium mb-1">Supported Path</p>
             <p className="text-charcoal/70">{report.sections.next_step.supported_path.description}</p>
             <p className="text-fuchsia text-xs mt-1">
-              {report.sections.next_step.supported_path.recommended_service} — from £{report.sections.next_step.supported_path.price_from}
+              {report.sections.next_step.supported_path.recommended_service}  - from £{report.sections.next_step.supported_path.price_from}
             </p>
           </div>
         </div>

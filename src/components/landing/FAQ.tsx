@@ -9,19 +9,19 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "I'm still employed — can I even start a business?",
+    question: "I'm still employed  - can I even start a business?",
     answer:
       "Probably. Most contracts don't ban side work, but some require disclosure. Your Reckoning will flag this if it applies to you.",
   },
   {
     question: "I don't have time for a big overhaul",
     answer:
-      "We don't do overhauls. We do one thing at a time. Small shifts that compound — that's how businesses actually change.",
+      "We don't do overhauls. We do one thing at a time. Small shifts that compound  - that's how businesses actually change.",
   },
   {
     question: 'Will automation sound robotic?',
     answer:
-      "Not ours. We build systems trained on your voice — your tone, your words. What goes out sounds like you wrote it.",
+      "Not ours. We build systems trained on your voice  - your tone, your words. What goes out sounds like you wrote it.",
   },
   {
     question: 'What if I just want to DIY everything?',

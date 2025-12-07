@@ -33,7 +33,7 @@ export const BUSINESS_TYPE_TO_INDUSTRY: Record<string, IndustryKey> = {
   va: 'professional',
 };
 
-// Industry-specific questions — max 2-3 per industry to keep it focused
+// Industry-specific questions  - max 2-3 per industry to keep it focused
 export const INDUSTRY_QUESTIONS: Record<IndustryKey, PersonaQuestion[]> = {
   fitness: [
     {
@@ -70,7 +70,7 @@ export const INDUSTRY_QUESTIONS: Record<IndustryKey, PersonaQuestion[]> = {
         ],
       },
       options: [
-        { value: 'nothing', label: 'Nothing — they just drop off' },
+        { value: 'nothing', label: 'Nothing  - they just drop off' },
         { value: 'manual', label: 'I text them when I remember' },
         { value: 'system', label: 'I have a follow-up system' },
       ],
@@ -142,9 +142,9 @@ export const INDUSTRY_QUESTIONS: Record<IndustryKey, PersonaQuestion[]> = {
         ],
       },
       options: [
-        { value: 'no', label: "No — didn't know I could" },
+        { value: 'no', label: "No  - didn't know I could" },
         { value: 'manual', label: 'Sometimes manually' },
-        { value: 'automated', label: 'Yes — automated emails' },
+        { value: 'automated', label: 'Yes  - automated emails' },
       ],
     },
   ],
@@ -162,7 +162,7 @@ export const INDUSTRY_QUESTIONS: Record<IndustryKey, PersonaQuestion[]> = {
         { value: 'content', label: 'My content (social/blog)' },
         { value: 'referral', label: 'Word of mouth only' },
         { value: 'website', label: 'Website + enquiry form' },
-        { value: 'nothing', label: "Nothing specific — they just reach out" },
+        { value: 'nothing', label: "Nothing specific  - they just reach out" },
       ],
     },
   ],
@@ -176,7 +176,7 @@ export const INDUSTRY_QUESTIONS: Record<IndustryKey, PersonaQuestion[]> = {
       phase: 'reality',
       showIf: { questionId: 'business_type', operator: 'equals', value: 'therapy' },
       options: [
-        { value: 'yes', label: 'Yes — fully registered' },
+        { value: 'yes', label: 'Yes  - fully registered' },
         { value: 'in_progress', label: 'Working towards it' },
         { value: 'no', label: 'Not required for my modality' },
         { value: 'unsure', label: "Not sure what's needed" },

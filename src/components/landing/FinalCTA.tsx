@@ -9,14 +9,14 @@ const FinalCTA: React.FC = () => {
           Your time is now.
         </h2>
         <p className="text-white/60 max-w-[480px] mx-auto mb-10">
-          Find out what&apos;s blocking you — and what unlocks it.
+          Find out what&apos;s blocking you  - and what unlocks it.
           15 minutes. Free. No commitment.
         </p>
         <Link
           href="/start"
           className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
         >
-          Get Your Reckoning — Free
+          Get Your Reckoning  - Free
         </Link>
       </div>
     </section>

@@ -154,7 +154,7 @@ export default async function OutcomePage({ params }: PageProps) {
               Individual services
             </h2>
             <p className="text-charcoal/60 text-center mb-10">
-              Pick what you need — add 2+ for 5% off, 4+ for 10% off
+              Pick what you need  - add 2+ for 5% off, 4+ for 10% off
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

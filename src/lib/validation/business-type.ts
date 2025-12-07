@@ -1,4 +1,4 @@
-// Business type matching validation — ensures services match the business
+// Business type matching validation  - ensures services match the business
 
 import type { ReckoningReport, QuestionnaireSubmission } from '@/types/report';
 
@@ -80,7 +80,7 @@ const BUSINESS_TYPE_MAP: Record<string, BusinessTypeServices> = {
 };
 
 // Default config for 'other' or unrecognised business types
-// Permissive — only flags obviously wrong services, doesn't require specific ones
+// Permissive  - only flags obviously wrong services, doesn't require specific ones
 const DEFAULT_BUSINESS_TYPE: BusinessTypeServices = {
   keywords: [],
   relevant: ['website', 'payment', 'client', 'booking', 'invoice', 'project'],

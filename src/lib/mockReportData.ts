@@ -13,7 +13,7 @@ export const mockReport: ReckoningReport = {
   generatedAt: new Date().toISOString(),
   personaName: 'The Rebuilder',
   openingMessage:
-    'You\'ve been here before. You know what failure feels like, and you\'re not willing to repeat it. This time, you want to build something that lasts—with the right support, the right strategy, and the clarity to see it through.',
+    'You\'ve been here before. You know what failure feels like, and you\'re not willing to repeat it. This time, you want to build something that lasts -with the right support, the right strategy, and the clarity to see it through.',
 
   snapshot: {
     currentState:
@@ -235,5 +235,5 @@ export const mockReport: ReckoningReport = {
 
   packageName: 'Rebuilder Track',
   packageDescription:
-    'You\'ve been through the fire. Now it\'s time to build something that lasts. This track is designed specifically for entrepreneurs rebuilding after setbacks—with the strategic clarity, operational foundation, and support you need to succeed.',
+    'You\'ve been through the fire. Now it\'s time to build something that lasts. This track is designed specifically for entrepreneurs rebuilding after setbacks -with the strategic clarity, operational foundation, and support you need to succeed.',
 };

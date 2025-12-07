@@ -2,13 +2,13 @@
 
 ## Who You're Writing For
 
-Someone already running a business — freelancing, taking clients, making money — but everything is held together with duct tape. They've proven they can do it. Now they need systems that let them breathe.
+Someone already running a business  - freelancing, taking clients, making money  - but everything is held together with duct tape. They've proven they can do it. Now they need systems that let them breathe.
 
 **Where they are:**
 - Business is running (1-5 years typically)
 - Doing everything themselves
 - Making money but working too hard for it
-- No real systems — just muscle memory and hustle
+- No real systems  - just muscle memory and hustle
 
 **How they feel:**
 - Proud but precarious
@@ -40,7 +40,7 @@ Direct. Respectful. Validating. Like a peer who's been there and won't waste the
 **Language to avoid:**
 - "Start", "launch", "dream" (they're past that)
 - Anything that sounds like they're beginners
-- Condescension about the duct tape — it got them here
+- Condescension about the duct tape  - it got them here
 
 ---
 
@@ -53,7 +53,7 @@ For Builders, common blockers and unlocks:
 | "It's easier to just do it myself" | Systems that take 2 hours to set up, save 2 hours every week |
 | "I don't have time to set up systems" | The irony: you don't have time because you don't have systems |
 | "Chasing invoices feels awkward" | Automation that follows up so you don't have to |
-| "My website looks amateur" | A refresh (not a rebuild) — 1 week, not 1 month |
+| "My website looks amateur" | A refresh (not a rebuild)  - 1 week, not 1 month |
 | "I keep forgetting to follow up" | Automated sequences that sound like you |
 | "I'm doing 3 people's jobs" | Systems that handle the repetitive parts |
 
@@ -108,33 +108,33 @@ For Builders, common blockers and unlocks:
   },
   
   "opening": {
-    "headline": "string — acknowledges what they've built",
-    "reflection": "string — 2-3 sentences validating their journey"
+    "headline": "string  - acknowledges what they've built",
+    "reflection": "string  - 2-3 sentences validating their journey"
   },
   
   "snapshot": {
-    "whatYouveBuilt": "string — respect the hustle, name specifics",
-    "whatsWorking": ["string array — things to keep/protect"],
-    "whatsBlocking": ["string array — duct tape areas, framed as fixable"]
+    "whatYouveBuilt": "string  - respect the hustle, name specifics",
+    "whatsWorking": ["string array  - things to keep/protect"],
+    "whatsBlocking": ["string array  - duct tape areas, framed as fixable"]
   },
   
   "diagnosis": {
-    "pattern": "string — the thread connecting their problems",
-    "theRealCost": "string — calculated from hours_lost + money_lost",
-    "quickWins": ["string array — 2-3 things fixable in days, not weeks"],
-    "theShift": "string — from [current state] to [upgraded state]"
+    "pattern": "string  - the thread connecting their problems",
+    "theRealCost": "string  - calculated from hours_lost + money_lost",
+    "quickWins": ["string array  - 2-3 things fixable in days, not weeks"],
+    "theShift": "string  - from [current state] to [upgraded state]"
   },
   
   "theUpgrade": {
     "beforeAfter": {
-      "before": "string — their current reality (use their words)",
-      "after": "string — their stated professional_vision"
+      "before": "string  - their current reality (use their words)",
+      "after": "string  - their stated professional_vision"
     },
     "priorityFixes": [
       {
         "area": "string",
-        "blocked": "string — what this is costing them",
-        "unlocked": "string — what changes when fixed",
+        "blocked": "string  - what this is costing them",
+        "unlocked": "string  - what changes when fixed",
         "effort": "low | medium | high",
         "impact": "low | medium | high",
         "diyOrHelp": "diy | help | either"
@@ -143,30 +143,30 @@ For Builders, common blockers and unlocks:
   },
   
   "weightOfWaiting": {
-    "time": "string — hours/week × 52 = X hours/year",
-    "money": "string — undercharging, late invoices, lost leads",
-    "energy": "string — the tax on creativity and joy",
-    "reputation": "string — gap between how good they are and how good they look"
+    "time": "string  - hours/week × 52 = X hours/year",
+    "money": "string  - undercharging, late invoices, lost leads",
+    "energy": "string  - the tax on creativity and joy",
+    "reputation": "string  - gap between how good they are and how good they look"
   },
   
   "yourInvestment": {
     "diyPath": {
-      "description": "string — what they can do themselves",
-      "estimatedTime": "string — total hours",
+      "description": "string  - what they can do themselves",
+      "estimatedTime": "string  - total hours",
       "toolsNeeded": ["string array"],
-      "honest": "string — realistic assessment"
+      "honest": "string  - realistic assessment"
     },
     "supportedPath": {
-      "description": "string — what help looks like",
+      "description": "string  - what help looks like",
       "recommended": "Builder",
       "estimatedInvestment": "string",
-      "roiFraming": "string — e.g., 'pays for itself in 6 weeks of time saved'"
+      "roiFraming": "string  - e.g., 'pays for itself in 6 weeks of time saved'"
     }
   },
   
   "closing": {
-    "validation": "string — you've already done the hard part",
-    "oneNextStep": "string — concrete, achievable this week",
+    "validation": "string  - you've already done the hard part",
+    "oneNextStep": "string  - concrete, achievable this week",
     "signOff": "Time to upgrade."
   }
 }
@@ -186,14 +186,14 @@ Look for the thread:
 
 ### 3. Diagnosis > The Real Cost
 Do the maths:
-- If they lose 5 hours/week: "That's 260 hours a year — six and a half working weeks"
+- If they lose 5 hours/week: "That's 260 hours a year  - six and a half working weeks"
 - If income is "feast or famine": "The stress alone is costing you creative capacity"
 
 ### 4. Quick Wins
 Must be achievable in days:
-- "Set up a Calendly link (2 hours) — never play email tennis again"
-- "Create one contract template (3 hours) — use it for every client"
-- "Raise your prices by 20% for the next enquiry (5 minutes) — see what happens"
+- "Set up a Calendly link (2 hours)  - never play email tennis again"
+- "Create one contract template (3 hours)  - use it for every client"
+- "Raise your prices by 20% for the next enquiry (5 minutes)  - see what happens"
 
 ### 5. Priority Fixes
 Sort by effort/impact matrix. Lead with low effort / high impact.
@@ -211,7 +211,7 @@ Always connect investment to time/money saved:
 Concrete and achievable this week:
 - "Send that overdue invoice today"
 - "Block 2 hours Saturday to update your portfolio"
-- "Raise your rate for the next enquiry — just try it"
+- "Raise your rate for the next enquiry  - just try it"
 
 ---
 
@@ -230,7 +230,7 @@ If they mention chasing invoices or awkward payment conversations:
 After reading:
 - "Finally, someone gets it"
 - "I can fix this without starting over"
-- "The duct tape got me here — now I can upgrade"
+- "The duct tape got me here  - now I can upgrade"
 - "I'm not unprofessional, I just need systems"
 
 Not:

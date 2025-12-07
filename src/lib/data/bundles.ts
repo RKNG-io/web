@@ -1,5 +1,5 @@
 // data/bundles.ts
-// Synergy bundles — services that work better together
+// Synergy bundles  - services that work better together
 
 import { PersonaType } from '../types';
 
@@ -22,7 +22,7 @@ export interface Bundle {
 
 export const BUNDLES: Bundle[] = [
   // ═══════════════════════════════════════════════════════════════
-  // GET FOUND — Show up properly everywhere
+  // GET FOUND  - Show up properly everywhere
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'get_found',
@@ -43,17 +43,17 @@ export const BUNDLES: Bundle[] = [
     popular: true,
     icon: 'globe',
     yourTimeSaved: 2,
-    customerBenefit: 'Everything connects from day one — no half-finished presence'
+    customerBenefit: 'Everything connects from day one  - no half-finished presence'
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // GET BOOKED — From enquiry to client, automated
+  // GET BOOKED  - From enquiry to client, automated
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'get_booked',
     name: 'Get Booked',
     tagline: 'Enquiry to client, hands-free',
-    description: 'Booking system, payment setup, intake form, and welcome sequence. Clients book, pay, and get nurtured — while you sleep.',
+    description: 'Booking system, payment setup, intake form, and welcome sequence. Clients book, pay, and get nurtured  - while you sleep.',
     includes: [
       'booking_system',     // £99
       'payment_setup',      // £99
@@ -72,7 +72,7 @@ export const BUNDLES: Bundle[] = [
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // GET SOCIAL — Content engine, ready to run
+  // GET SOCIAL  - Content engine, ready to run
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'get_social',
@@ -92,11 +92,11 @@ export const BUNDLES: Bundle[] = [
     popular: true,
     icon: 'smartphone',
     yourTimeSaved: 1.5,
-    customerBenefit: 'Templates use your brand, content fits your calendar — all one system'
+    customerBenefit: 'Templates use your brand, content fits your calendar  - all one system'
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // GET SYSTEMATIC — Business ops that run themselves
+  // GET SYSTEMATIC  - Business ops that run themselves
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'get_systematic',
@@ -116,11 +116,11 @@ export const BUNDLES: Bundle[] = [
     popular: false,
     icon: 'settings',
     yourTimeSaved: 1.5,
-    customerBenefit: 'All three touch client data — one integration, everything connected'
+    customerBenefit: 'All three touch client data  - one integration, everything connected'
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // LAUNCH READY — Everything to go from zero to live
+  // LAUNCH READY  - Everything to go from zero to live
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'launch_ready',
@@ -146,7 +146,7 @@ export const BUNDLES: Bundle[] = [
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // SCALE READY — For architects hitting capacity
+  // SCALE READY  - For architects hitting capacity
   // ═══════════════════════════════════════════════════════════════
   {
     id: 'scale_ready',
@@ -165,7 +165,7 @@ export const BUNDLES: Bundle[] = [
     popular: true,
     icon: 'trending-up',
     yourTimeSaved: 2,
-    customerBenefit: 'Audit informs the sprint — no wasted effort fixing the wrong things'
+    customerBenefit: 'Audit informs the sprint  - no wasted effort fixing the wrong things'
   }
 ];
 

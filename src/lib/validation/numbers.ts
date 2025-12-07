@@ -1,4 +1,4 @@
-// Numbers validation — ensures report uses their specific numbers from free text
+// Numbers validation  - ensures report uses their specific numbers from free text
 
 import type { ReckoningReport, QuestionnaireSubmission } from '@/types/report';
 

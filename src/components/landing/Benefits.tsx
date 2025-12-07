@@ -16,12 +16,12 @@ const benefits: Benefit[] = [
   {
     title: 'Space',
     slug: 'space',
-    description: 'Mental, emotional, practical — room to think about your business, not just run it.',
+    description: 'Mental, emotional, practical  - room to think about your business, not just run it.',
   },
   {
     title: 'Presence',
     slug: 'presence',
-    description: 'Show up online in a way that feels like you — not performative, not exhausting.',
+    description: 'Show up online in a way that feels like you  - not performative, not exhausting.',
   },
   {
     title: 'Systems',
@@ -31,7 +31,7 @@ const benefits: Benefit[] = [
   {
     title: 'Clients',
     slug: 'clients',
-    description: 'Enquiries that turn into work — without the awkward sales pitch.',
+    description: 'Enquiries that turn into work  - without the awkward sales pitch.',
   },
   {
     title: 'Cashflow',
@@ -41,7 +41,7 @@ const benefits: Benefit[] = [
   {
     title: 'Clarity',
     slug: 'clarity',
-    description: 'Know what\'s blocking you. Know what to do next. Just the next step — not the whole life plan.',
+    description: 'Know what\'s blocking you. Know what to do next. Just the next step  - not the whole life plan.',
   },
   {
     title: 'Calm',

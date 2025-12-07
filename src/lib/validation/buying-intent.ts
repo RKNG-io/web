@@ -1,4 +1,4 @@
-// Buying intent validation — Launchers should suggest real money tests, not just "would you buy?"
+// Buying intent validation  - Launchers should suggest real money tests, not just "would you buy?"
 
 import type { ReckoningReport, ValidationResult } from '@/types/report';
 
@@ -63,7 +63,7 @@ export function validateBuyingIntent(report: ReckoningReport): ValidationResult 
   if (hasWeakValidation && !hasBuyingIntent) {
     warnings.push(
       'Only weak validation suggested ("would you buy", etc.). ' +
-      'Add a buying intent test — stated interest ≠ real demand.'
+      'Add a buying intent test  - stated interest ≠ real demand.'
     );
   }
 

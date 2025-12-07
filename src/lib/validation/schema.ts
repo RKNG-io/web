@@ -375,7 +375,7 @@ export function validateSchema(report: unknown): ValidationResult {
   
   // Action items validation (new structure)
   if (!r.action_items) {
-    warnings.push("Missing action_items — using legacy recommendations format");
+    warnings.push("Missing action_items  - using legacy recommendations format");
   } else {
     if (!r.action_items.must_do?.length) {
       errors.push("Must have at least 1 must_do action item");
@@ -402,7 +402,7 @@ export function validateSchema(report: unknown): ValidationResult {
   if (!r.recommendations?.services?.length) {
     errors.push("Must have at least 1 service recommendation");
   } else if (r.recommendations.services.length > 5) {
-    warnings.push("More than 5 service recommendations — consider trimming");
+    warnings.push("More than 5 service recommendations  - consider trimming");
   }
 
   return {

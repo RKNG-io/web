@@ -1,4 +1,4 @@
-// DIY Actions — things users need to do that Reckoning doesn't provide
+// DIY Actions  - things users need to do that Reckoning doesn't provide
 // These are recommended in reports but must be done by the user themselves
 // NO specific provider recommendations (liability/reputation risk)
 

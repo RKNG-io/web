@@ -1,4 +1,4 @@
-// Prompt builder v2 — OpenAI-optimised with strict schema enforcement
+// Prompt builder v2  - OpenAI-optimised with strict schema enforcement
 
 import { baseSystemPrompt } from './base';
 import { REPORT_JSON_SCHEMA } from '../validation/schema';
@@ -48,7 +48,7 @@ ${JSON.stringify(relevantServices, null, 2)}
 ## CRITICAL: Output Schema Requirements
 
 You MUST respond with valid JSON that EXACTLY matches the structure below.
-This is not optional — the response will fail validation if the structure differs.
+This is not optional  - the response will fail validation if the structure differs.
 
 IMPORTANT STRUCTURAL REQUIREMENTS:
 - Every section must be an OBJECT with the specified nested properties
@@ -105,7 +105,7 @@ ${formatAnswers(submission.answers)}
 
 Generate their Reckoning report based on these answers.
 
-CHECKLIST — your response MUST include:
+CHECKLIST  - your response MUST include:
 [ ] sections.opening.headline (string with their name)
 [ ] sections.opening.body (string paragraph)
 [ ] sections.snapshot.stage (string)

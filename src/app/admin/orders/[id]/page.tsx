@@ -17,7 +17,7 @@ function formatCurrency(cents: number): string {
 }
 
 function formatDate(date: Date | null): string {
-  if (!date) return '—';
+  if (!date) return '-';
   return new Intl.DateTimeFormat('en-AU', {
     day: 'numeric',
     month: 'short',
@@ -85,11 +85,11 @@ export default async function OrderDetailPage({ params }: PageProps) {
           <dl className="space-y-2">
             <div>
               <dt className="text-xs text-charcoal/60">Name</dt>
-              <dd className="text-charcoal">{order.customer_name || '—'}</dd>
+              <dd className="text-charcoal">{order.customer_name || '-'}</dd>
             </div>
             <div>
               <dt className="text-xs text-charcoal/60">Email</dt>
-              <dd className="text-charcoal">{order.customer_email || '—'}</dd>
+              <dd className="text-charcoal">{order.customer_email || '-'}</dd>
             </div>
           </dl>
         </div>

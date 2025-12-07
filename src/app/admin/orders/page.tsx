@@ -117,10 +117,10 @@ export default async function OrdersPage() {
                   </td>
                   <td className="px-4 py-3">
                     <div className="text-sm text-charcoal">
-                      {order.customer_name || '—'}
+                      {order.customer_name || '-'}
                     </div>
                     <div className="text-xs text-charcoal/60">
-                      {order.customer_email || '—'}
+                      {order.customer_email || '-'}
                     </div>
                   </td>
                   <td className="px-4 py-3">

@@ -12,7 +12,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'strategy_session',
     name: 'Strategy Session',
-    description: 'Two 45-minute sessions with structured guidance between. Clarity on what matters now — not a 50-point plan.',
+    description: 'Two 45-minute sessions with structured guidance between. Clarity on what matters now  - not a 50-point plan.',
     basePrice: 249,
     timeEstimate: '2 x 45 mins + async',
     personas: ['launcher', 'builder', 'architect'],
@@ -114,7 +114,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'email_pro',
     name: 'Professional Email',
-    description: 'you@yourbusiness.com — Google Workspace setup and configured',
+    description: 'you@yourbusiness.com  - Google Workspace setup and configured',
     basePrice: 49,
     timeEstimate: '1 day',
     personas: ['launcher', 'builder'],
@@ -236,7 +236,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'crm_setup',
     name: 'Simple CRM Setup',
-    description: 'Track clients, deals, follow-ups — without the complexity of enterprise tools',
+    description: 'Track clients, deals, follow-ups  - without the complexity of enterprise tools',
     basePrice: 149,
     timeEstimate: '3-5 days',
     personas: ['builder', 'architect'],
@@ -300,7 +300,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'welcome_sequence',
     name: 'Welcome Email Sequence',
-    description: '3-5 emails that turn new subscribers into clients — automatically',
+    description: '3-5 emails that turn new subscribers into clients  - automatically',
     basePrice: 149,
     timeEstimate: '3-5 days',
     personas: ['launcher', 'builder'],
@@ -421,7 +421,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'social_templates',
     name: 'Social Media Templates',
-    description: 'Branded Canva templates for posts, stories, and carousels — just swap the text and go',
+    description: 'Branded Canva templates for posts, stories, and carousels  - just swap the text and go',
     basePrice: 129,
     timeEstimate: '3-5 days',
     personas: ['launcher', 'builder'],
@@ -504,7 +504,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'seo_basics',
     name: 'SEO Foundations',
-    description: 'On-page SEO: titles, descriptions, structure — so Google understands your site',
+    description: 'On-page SEO: titles, descriptions, structure  - so Google understands your site',
     basePrice: 149,
     timeEstimate: '3-5 days',
     personas: ['builder', 'architect'],
@@ -605,7 +605,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'reporting_dashboard',
     name: 'Reporting Dashboard',
-    description: 'One view of your key numbers: revenue, bookings, performance — updated automatically',
+    description: 'One view of your key numbers: revenue, bookings, performance  - updated automatically',
     basePrice: 299,
     timeEstimate: '1 week',
     personas: ['architect'],
@@ -627,7 +627,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
 
   {
     id: 'retainer_lite',
-    name: 'Ongoing Support — Lite',
+    name: 'Ongoing Support  - Lite',
     description: 'Hosting, updates, email support, one small tweak per month',
     basePrice: 79,  // per month
     timeEstimate: 'Monthly',
@@ -646,7 +646,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
 
   {
     id: 'retainer_standard',
-    name: 'Ongoing Support — Standard',
+    name: 'Ongoing Support  - Standard',
     description: 'Everything in Lite + monthly check-in call, priority support, 2-3 tweaks per month',
     basePrice: 149,  // per month
     timeEstimate: 'Monthly',
@@ -665,7 +665,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
 
   {
     id: 'retainer_scale',
-    name: 'Ongoing Support — Scale',
+    name: 'Ongoing Support  - Scale',
     description: 'Strategic partner: quarterly planning, unlimited tweaks, new automations as you grow',
     basePrice: 299,  // per month
     timeEstimate: 'Monthly',

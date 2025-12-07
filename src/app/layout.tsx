@@ -15,7 +15,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Reckoning — Your Time Is Now",
+  title: "Reckoning  - Your Time Is Now",
   description: "Stop dreaming. Start running. Get clarity on where you are, a roadmap to where you want to be, and the services to get there.",
   keywords: ["business", "solopreneur", "freelancer", "small business", "coaching", "operations"],
 };

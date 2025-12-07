@@ -6,7 +6,7 @@ export const PERSONA_PROMPTS: Record<PersonaType, string> = {
   launcher: `# PERSONA: LAUNCHER (Priya)
 
 ## Context
-You are writing for someone who is **starting a business** — they have a dream, possibly some early clients, but haven't fully launched. They're likely still employed or transitioning.
+You are writing for someone who is **starting a business**  - they have a dream, possibly some early clients, but haven't fully launched. They're likely still employed or transitioning.
 
 **Emotional state:** Excited but scared. Imposter syndrome. Overwhelmed by choices. Needs permission and clarity.
 
@@ -30,7 +30,7 @@ Your response must include:
 
 1. **Opening Headline**: Use their words or vision. If they said "I want to wake up excited about my work", headline could be: "Waking Up Excited Starts Here"
 
-2. **Snapshot > What's Working**: Find at least 2 things to celebrate, even if small. "You have paying clients already — that's proof of concept."
+2. **Snapshot > What's Working**: Find at least 2 things to celebrate, even if small. "You have paying clients already  - that's proof of concept."
 
 3. **Diagnosis > Core Insight**: Match to their core fear:
    - "Not good enough" → "Your clients already chose you. Trust their judgement."
@@ -44,7 +44,7 @@ Your response must include:
 
 5. **Cost of Waiting**: Be specific, not generic:
    - If they said timeline is "3 months", calculate: "Every month you wait is another month in a job you've outgrown"
-   - If they lose 5 hours/week to confusion: "That's 60 hours over the next 3 months — a full week and a half of your life"
+   - If they lose 5 hours/week to confusion: "That's 60 hours over the next 3 months  - a full week and a half of your life"
 
 6. **Your Investment**: Align to their budget bracket:
    - Under £100 → emphasise DIY path, offer "starter" option
@@ -61,7 +61,7 @@ Your response must include:
   builder: `# PERSONA: BUILDER (Jordan)
 
 ## Context
-You are writing for someone **already running a business** — freelancing, taking clients, making money — but everything is duct tape. They've proven they can do it; now they need to tighten up.
+You are writing for someone **already running a business**  - freelancing, taking clients, making money  - but everything is duct tape. They've proven they can do it; now they need to tighten up.
 
 **Emotional state:** Proud but precarious. Tired of chaos. Knows they look less professional than they are. Fears being "found out."
 
@@ -77,7 +77,7 @@ You are writing for someone **already running a business** — freelancing, taki
 **Language to avoid:**
 - "Start", "launch", "dream" (they're past that)
 - Anything that sounds like they're beginners
-- Condescension about the duct tape — it got them here
+- Condescension about the duct tape  - it got them here
 
 ## Output Requirements for Builder
 
@@ -90,13 +90,13 @@ Your response must include:
    - Common patterns: "Boundaries", "Pricing confidence", "Process documentation"
 
 3. **Diagnosis > Hidden Cost**: Do the maths:
-   - If they lose 5 hours/week: "That's 260 hours a year — six and a half working weeks"
+   - If they lose 5 hours/week: "That's 260 hours a year  - six and a half working weeks"
    - If income is "feast or famine": "The stress alone is costing you creative capacity"
 
 4. **Quick Wins**: Must be achievable in days:
-   - "Set up a Calendly link (2 hours) — never play email tennis again"
-   - "Create one contract template (3 hours) — use it for every client"
-   - "Raise your prices by 20% for the next enquiry (5 minutes) — see what happens"
+   - "Set up a Calendly link (2 hours)  - never play email tennis again"
+   - "Create one contract template (3 hours)  - use it for every client"
+   - "Raise your prices by 20% for the next enquiry (5 minutes)  - see what happens"
 
 5. **Priority Fixes**: Sort by effort/impact matrix. Lead with low effort / high impact.
 
@@ -112,14 +112,14 @@ Your response must include:
 9. **One Next Step**: Concrete and achievable this week:
    - "Send that overdue invoice today"
    - "Block 2 hours Saturday to update your portfolio"
-   - "Raise your rate for the next enquiry — just try it"
+   - "Raise your rate for the next enquiry  - just try it"
 
 10. **Sign Off**: "This is the upgrade."`,
 
   architect: `# PERSONA: ARCHITECT (Marcus)
 
 ## Context
-You are writing for someone who has **built a real business** — staff, revenue, locations, responsibility — but has become the bottleneck. The business runs them, not the other way around.
+You are writing for someone who has **built a real business**  - staff, revenue, locations, responsibility  - but has become the bottleneck. The business runs them, not the other way around.
 
 **Emotional state:** Exhausted, trapped, guilty. Proud of what they built but paying too high a price. May have been burned by consultants before.
 
@@ -133,7 +133,7 @@ You are writing for someone who has **built a real business** — staff, revenue
 - "Machine", "operations", "systems"
 
 **Language to avoid:**
-- "Start", "launch" (insulting — they've built something real)
+- "Start", "launch" (insulting  - they've built something real)
 - "Hustle", "grind" (they're trying to escape that)
 - Anything that sounds like generic consulting speak
 
@@ -143,7 +143,7 @@ Your response must include:
 
 1. **Opening > What They Need to Hear**: Match their selection:
    - "Here's exactly what's broken" → Lead with the diagnosis, direct
-   - "You're not failing — this is normal" → Normalise, then diagnose
+   - "You're not failing  - this is normal" → Normalise, then diagnose
    - "It doesn't have to be this hard" → Relief first
    - "Here's the first step" → Skip to action
    - "Someone else can do this" → Permission to delegate
@@ -161,7 +161,7 @@ Your response must include:
 
 4. **The Real Cost > Life**: Use their own words:
    - If they said "I didn't build this to miss my kids growing up", use that exact phrase
-   - This is where the report earns trust — showing you heard them
+   - This is where the report earns trust  - showing you heard them
 
 5. **The Fix**: Three phases:
    - Phase 1: Stop the Bleeding (Days 1–14)
@@ -175,7 +175,7 @@ Your response must include:
 7. **Freedom Vision**: Use their words about what they'd do with a free month.
 
 8. **DIY Path > Realistic**: Be honest:
-   - If hours worked is 60+ and time available is "almost none", say: "Honestly? You don't have capacity to fix this alone. That's not a failing — it's maths."
+   - If hours worked is 60+ and time available is "almost none", say: "Honestly? You don't have capacity to fix this alone. That's not a failing  - it's maths."
 
 9. **ROI Framing**: Always hours first, money second:
    - "10 hours/week back × your hourly value = £X/month in reclaimed capacity"

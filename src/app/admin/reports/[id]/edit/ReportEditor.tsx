@@ -270,7 +270,7 @@ export function ReportEditor({ reckoningId, initialReport }: ReportEditorProps) 
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-charcoal mb-2">The One Thing — Action</label>
+            <label className="block text-sm font-medium text-charcoal mb-2">The One Thing  - Action</label>
             <input
               type="text"
               value={report.sections.next_step.the_one_thing.action}

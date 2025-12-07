@@ -1,4 +1,4 @@
-// Quoted phrases validation — ensures report uses their actual words
+// Quoted phrases validation  - ensures report uses their actual words
 
 import type { ReckoningReport, QuestionnaireSubmission } from '@/types/report';
 

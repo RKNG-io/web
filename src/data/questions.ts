@@ -17,7 +17,7 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
         { questionId: 'business_type', operator: 'equals', value: 'food' }
       ],
       options: [
-        { value: 'yes', label: 'Yes — Level 2 or higher' },
+        { value: 'yes', label: 'Yes  - Level 2 or higher' },
         { value: 'no', label: 'Not yet' },
         { value: 'unsure', label: "I'm not sure what I need" }
       ],
@@ -33,11 +33,11 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
       options: [
         {
           value: 'home_registered',
-          label: 'Home kitchen — registered with council'
+          label: 'Home kitchen  - registered with council'
         },
         {
           value: 'home_not_registered',
-          label: 'Home kitchen — not yet registered',
+          label: 'Home kitchen  - not yet registered',
           triggers: [
             { action: 'setFlag', target: 'needs_kitchen_registration' }
           ]
@@ -108,8 +108,8 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
         { questionId: 'business_type', operator: 'equals', value: 'fitness' }
       ],
       options: [
-        { value: 'yes_both', label: 'Yes — public liability + professional indemnity' },
-        { value: 'yes_partial', label: 'Yes — but not sure if it covers everything' },
+        { value: 'yes_both', label: 'Yes  - public liability + professional indemnity' },
+        { value: 'yes_partial', label: 'Yes  - but not sure if it covers everything' },
         { value: 'no', label: 'Not yet' }
       ],
       required: true
@@ -142,7 +142,7 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
         { questionId: 'business_type', operator: 'equals', value: 'therapy' }
       ],
       options: [
-        { value: 'yes', label: 'Yes — regular supervision' },
+        { value: 'yes', label: 'Yes  - regular supervision' },
         { value: 'arranging', label: 'Currently arranging' },
         { value: 'no', label: 'Not yet' }
       ],
@@ -159,8 +159,8 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
         { questionId: 'business_type', operator: 'equals', value: 'creative' }
       ],
       options: [
-        { value: 'yes_good', label: 'Yes — and I\'m proud of it' },
-        { value: 'yes_outdated', label: 'Yes — but it\'s outdated' },
+        { value: 'yes_good', label: 'Yes  - and I\'m proud of it' },
+        { value: 'yes_outdated', label: 'Yes  - but it\'s outdated' },
         { value: 'partial', label: 'Some work collected, not properly displayed' },
         { value: 'no', label: 'Not yet' }
       ],
@@ -175,10 +175,10 @@ export const BUSINESS_TYPE_QUESTIONS: Record<string, Question[]> = {
         { questionId: 'duct_tape_areas', operator: 'includes', value: 'contracts' }
       ],
       options: [
-        { value: 'yes_bad', label: 'Yes — it was awful' },
-        { value: 'yes_minor', label: 'Yes — but managed to handle it' },
-        { value: 'no_lucky', label: 'No — been lucky so far' },
-        { value: 'no_contracts', label: 'No — I already use solid contracts' }
+        { value: 'yes_bad', label: 'Yes  - it was awful' },
+        { value: 'yes_minor', label: 'Yes  - but managed to handle it' },
+        { value: 'no_lucky', label: 'No  - been lucky so far' },
+        { value: 'no_contracts', label: 'No  - I already use solid contracts' }
       ],
       required: false
     }

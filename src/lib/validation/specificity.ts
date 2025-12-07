@@ -1,4 +1,4 @@
-// Specificity validation — catches generic content that should be specific
+// Specificity validation  - catches generic content that should be specific
 
 import type { ReckoningReport } from '@/types/report';
 
@@ -107,14 +107,14 @@ export function validateSpecificity(report: ReckoningReport): ValidationResult {
   );
   for (const vague of VAGUE_ADVICE) {
     if (adviceText.includes(vague.toLowerCase())) {
-      warnings.push(`Vague advice: "${vague}" — should be specific action`);
+      warnings.push(`Vague advice: "${vague}"  - should be specific action`);
     }
   }
 
   // Check for cheerleader phrases
   for (const cheerleader of CHEERLEADER_PHRASES) {
     if (reportText.includes(cheerleader.toLowerCase())) {
-      warnings.push(`Cheerleader phrase: "${cheerleader}" — should be direct, not saccharine`);
+      warnings.push(`Cheerleader phrase: "${cheerleader}"  - should be direct, not saccharine`);
     }
   }
 

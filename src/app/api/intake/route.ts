@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
     // Send confirmation email to user
     sendEmail({
       to: body.email.toLowerCase().trim(),
-      subject: `Got it — we'll be in touch soon`,
+      subject: `Got it  - we'll be in touch soon`,
       html: intakeConfirmationEmail({
         name: body.name.trim(),
         type: body.type,
