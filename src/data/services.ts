@@ -12,7 +12,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'strategy_session',
     name: 'Strategy Session',
-    description: 'Two 45-minute sessions with structured guidance between. Get clarity on priorities, systems, and next steps — tailored to where you are.',
+    description: 'Two 45-minute sessions with structured guidance between. Clarity on what matters now — not a 50-point plan.',
     basePrice: 249,
     timeEstimate: '2 x 45 mins + async',
     personas: ['launcher', 'builder', 'architect'],
@@ -56,7 +56,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'website_multi',
     name: 'Multi-Page Website',
-    description: 'Full site: Home, About, Services, Contact, Blog-ready. Built to grow with you.',
+    description: 'Full site: Home, About, Services, Contact, Blog-ready. Add pages when you need them.',
     basePrice: 399,
     timeEstimate: '1-2 weeks',
     personas: ['launcher', 'builder', 'architect'],
@@ -300,7 +300,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'welcome_sequence',
     name: 'Welcome Email Sequence',
-    description: '3-5 emails that nurture new subscribers or clients automatically',
+    description: '3-5 emails that turn new subscribers into clients — automatically',
     basePrice: 149,
     timeEstimate: '3-5 days',
     personas: ['launcher', 'builder'],
@@ -320,7 +320,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'email_capture',
     name: 'Email List Setup',
-    description: 'Lead magnet delivery, signup forms, list management — ready to grow your audience',
+    description: 'Lead magnet delivery, signup forms, list management. Build your list properly.',
     basePrice: 99,
     timeEstimate: '2-3 days',
     personas: ['launcher', 'builder'],
@@ -359,7 +359,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'workflow_automation',
     name: 'Custom Workflow Automation',
-    description: 'Connect your tools: when X happens, do Y. Tailored to your business.',
+    description: 'Connect your tools: when X happens, do Y. Built for how you actually work.',
     basePrice: 199,
     timeEstimate: '1 week',
     personas: ['builder', 'architect'],
@@ -394,13 +394,13 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     effort: 'medium',
     agencyComparison: 800,
     timeSavedPerMonth: 6,
-    revenuePotential: 'Consistent visibility without the daily scramble'
+    revenuePotential: 'Show up consistently without scrambling daily'
   },
 
   {
     id: 'content_bank',
     name: 'Content Bank & Calendar',
-    description: '30 days of post ideas tailored to your business, organised in a calendar you can reuse and adapt',
+    description: '30 days of post ideas for your business, organised in a calendar you can reuse',
     basePrice: 149,
     timeEstimate: '3-5 days',
     personas: ['launcher', 'builder'],

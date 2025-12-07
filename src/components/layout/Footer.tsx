@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
               Reckoning
             </Link>
             <p className="text-sm text-white/50">
-              Unblock. Unlock. Unleash.<br />
-              Your business. Your way.
+              The work you love.<br />
+              Without the chaos.
             </p>
           </div>
 

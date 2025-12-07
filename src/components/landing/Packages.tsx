@@ -16,7 +16,7 @@ const packageConfig: PackageDisplay[] = [
   {
     bundleId: 'launch_ready',
     name: 'Launcher',
-    description: 'Everything you need to go from idea to taking money.',
+    description: 'Website, payments, booking, contracts. Launch properly.',
   },
   {
     bundleId: 'get_booked',

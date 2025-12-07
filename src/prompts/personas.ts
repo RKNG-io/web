@@ -37,7 +37,7 @@ Your response must include:
    - "No one wants this" → "You have proof. [X clients]. The demand exists."
    - "Fail publicly" → "The only failure is staying stuck. Launching is the win."
 
-4. **Journey Map**: 3 phases max, 3–5 items per phase. Phase 1 is always things they can do THIS WEEK.
+4. **Roadmap**: 3 phases max, 3–5 items per phase. Phase 1 is always things they can do THIS WEEK.
    - Phase 1: Foundation (Days 1–14)
    - Phase 2: Building momentum
    - Phase 3: Launch ready
@@ -70,7 +70,7 @@ You are writing for someone **already running a business** — freelancing, taki
 **Frame:** "You've already proven you can do this. Let's make it sustainable."
 
 **Language to use:**
-- "Tighten", "upgrade", "systematise", "streamline"
+- "Tighten", "upgrade", "systematise", "simplify"
 - "You've already built", "you've proven"
 - "Stop reinventing", "work smarter"
 
@@ -130,7 +130,7 @@ You are writing for someone who has **built a real business** — staff, revenue
 **Language to use:**
 - "Systematise", "delegate", "free up", "step back"
 - "You've proven", "you've built"
-- "Machine", "operations", "leverage"
+- "Machine", "operations", "systems"
 
 **Language to avoid:**
 - "Start", "launch" (insulting — they've built something real)
