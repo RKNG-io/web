@@ -66,12 +66,13 @@ export const PERSONAS: Record<string, Persona> = {
         question: 'What kind of business are you building?',
         phase: 'context',
         options: [
-          { value: 'coaching', label: 'Coaching', description: 'Life, business, career, health coaching' },
-          { value: 'creative', label: 'Creative Services', description: 'Design, photography, video, writing' },
-          { value: 'fitness', label: 'Fitness / Wellness', description: 'Personal training, yoga, nutrition' },
-          { value: 'food', label: 'Food / Meal Prep', description: 'Catering, meal prep, baking' },
+          { value: 'coaching', label: 'Coaching / Consulting', description: 'Life, business, career, health coaching' },
+          { value: 'creative', label: 'Creative Services', description: 'Design, photography, video, copywriting' },
+          { value: 'fitness', label: 'Fitness / Wellness', description: 'Personal training, yoga, nutrition, massage' },
+          { value: 'food', label: 'Food / Hospitality', description: 'Catering, meal prep, baking, cafe' },
           { value: 'therapy', label: 'Therapy / Counselling', description: 'Clinical or therapeutic services' },
-          { value: 'professional', label: 'Professional Services', description: 'VA, bookkeeping, consulting' },
+          { value: 'professional', label: 'Professional Services', description: 'Bookkeeping, VA, legal, HR' },
+          { value: 'trades', label: 'Trades / Local Services', description: 'Plumber, electrician, barber, salon' },
           { value: 'ecommerce', label: 'Products / E-commerce', description: 'Physical or digital products' },
           { value: 'other', label: 'Something else', description: "We'll ask you to describe it" }
         ]
@@ -319,13 +320,15 @@ export const PERSONAS: Record<string, Persona> = {
         question: "What's your business?",
         phase: 'context',
         options: [
-          { value: 'design', label: 'Design / creative services' },
-          { value: 'photography', label: 'Photography / videography' },
-          { value: 'copywriting', label: 'Copywriting / content' },
-          { value: 'web_dev', label: 'Web development' },
-          { value: 'marketing', label: 'Marketing / social media' },
-          { value: 'coaching', label: 'Coaching / consulting' },
-          { value: 'other', label: 'Other' }
+          { value: 'coaching', label: 'Coaching / Consulting', description: 'Life, business, career, health coaching' },
+          { value: 'creative', label: 'Creative Services', description: 'Design, photography, video, copywriting' },
+          { value: 'fitness', label: 'Fitness / Wellness', description: 'Personal training, yoga, nutrition, massage' },
+          { value: 'food', label: 'Food / Hospitality', description: 'Catering, meal prep, baking, cafe' },
+          { value: 'therapy', label: 'Therapy / Counselling', description: 'Clinical or therapeutic services' },
+          { value: 'professional', label: 'Professional Services', description: 'Bookkeeping, VA, legal, HR' },
+          { value: 'trades', label: 'Trades / Local Services', description: 'Plumber, electrician, barber, salon' },
+          { value: 'ecommerce', label: 'Products / E-commerce', description: 'Physical or digital products' },
+          { value: 'other', label: 'Something else', description: "We'll ask you to describe it" }
         ]
       },
       {

@@ -634,7 +634,7 @@ export const YUSUF: TestPersona = {
   id: 'yusuf',
   name: 'Yusuf',
   reckoningPersona: 'builder',
-  businessType: 'other',
+  businessType: 'trades',
   background: 'Owns a barbershop with 3 chairs. Losing money from no-shows. Books via phone and forgets follow-ups.',
   realGoals: [
     'Reduce no-shows',

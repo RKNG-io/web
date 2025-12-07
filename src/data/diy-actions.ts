@@ -97,7 +97,7 @@ export const DIY_ACTIONS: DIYAction[] = [
     description: 'Covers you if a client or member of the public is injured or their property is damaged because of your business.',
     why: 'Protects you from potentially business-ending claims. Often required to rent premises or work with certain clients.',
     personas: ['launcher', 'builder'],
-    businessTypes: ['fitness', 'therapy', 'food', 'teaching'],
+    businessTypes: ['fitness', 'therapy', 'food', 'trades'],
     regulatory: true,
     priority: 1,
     guidance: 'Search for public liability insurance for your specific industry. Get quotes from multiple providers.',

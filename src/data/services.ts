@@ -160,7 +160,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     basePrice: 99,
     timeEstimate: '2-3 days',
     personas: ['launcher', 'builder', 'architect'],
-    businessTypes: ['coaching', 'creative', 'fitness', 'professional', 'therapy', 'teaching'],
+    businessTypes: ['coaching', 'creative', 'fitness', 'professional', 'therapy', 'trades'],
     deliveryType: 'done_for_you',
     purchaseType: 'instant',
     category: 'operations',

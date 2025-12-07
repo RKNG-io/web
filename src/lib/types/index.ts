@@ -7,15 +7,15 @@
 
 export type PersonaType = 'launcher' | 'builder' | 'architect';
 
-export type BusinessCategory = 
-  | 'coaching' 
-  | 'creative' 
-  | 'food' 
-  | 'fitness' 
-  | 'professional' 
-  | 'ecommerce' 
+export type BusinessCategory =
+  | 'coaching'
+  | 'creative'
+  | 'food'
+  | 'fitness'
+  | 'professional'
+  | 'ecommerce'
   | 'therapy'
-  | 'teaching'
+  | 'trades'
   | 'other';
 
 export type DeliveryMode = 'online' | 'in_person' | 'both';
