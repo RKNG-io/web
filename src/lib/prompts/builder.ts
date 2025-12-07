@@ -22,7 +22,10 @@ export interface BuiltPrompt {
 export function buildPrompt(submission: QuestionnaireSubmission): BuiltPrompt {
   const persona = submission.persona;
   const personaPrompt = personaPrompts[persona];
-  
+
+  // Extract name from contact field or direct name field
+  const userName = extractUserName(submission.answers);
+
   // Get active services for this persona
   const relevantServices = services
     .filter(s => s.status === 'active')
@@ -72,7 +75,7 @@ ${formatAnswers(submission.answers)}
 
 Generate their Reckoning report based on these answers. Remember to:
 
-1. Use their name (${submission.answers.name || 'the user'}) in the opening headline
+1. Use their name (${userName || 'the user'}) in the opening headline
 2. Quote their exact words at least 2-3 times in quoted_phrases
 3. Match recommendations to their specific blockers
 4. Keep all calculations accurate
@@ -106,4 +109,30 @@ function formatKey(key: string): string {
   return key
     .replace(/_/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+/**
+ * Extract user name from answers — handles both direct name field
+ * and the new contact JSON field format
+ */
+export function extractUserName(answers: Record<string, unknown>): string {
+  // Try direct name field first
+  if (typeof answers.name === 'string' && answers.name.trim()) {
+    return answers.name.trim();
+  }
+
+  // Try contact field (JSON string with name and email)
+  const contactField = answers.contact;
+  if (typeof contactField === 'string') {
+    try {
+      const parsed = JSON.parse(contactField);
+      if (parsed.name && typeof parsed.name === 'string') {
+        return parsed.name.trim();
+      }
+    } catch {
+      // Not valid JSON, ignore
+    }
+  }
+
+  return '';
 }

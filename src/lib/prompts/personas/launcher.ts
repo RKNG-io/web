@@ -76,8 +76,31 @@ Must be completable in <1 week, with no budget required.
 - The one_thing in next_step should be genuinely ONE thing
 - diy_path should be specific and achievable this week
 - MUST quote their words at least 3 times
-- MUST reference their budget if they gave one
 - Keep calculations simple or omit if data is sparse
+
+### Action Items for Launchers
+
+Launchers need basics first. Typical must_do items:
+
+**DIY (they do themselves):**
+- register_business — If not registered yet
+- business_bank_account — Keep finances separate from day one
+- public_liability_insurance — If client-facing (food, fitness, therapy, teaching)
+- food_safety_cert — If food business
+- fitness_qualifications — If fitness business
+- therapy_registration — If therapy business
+- set_prices — They need to research and set pricing
+- privacy_policy — If collecting any personal data
+
+**Services (instant order):**
+- domain_setup (£49) — Get their .com
+- payment_setup (£79) — Accept payments
+- booking_system (£129) — If appointment-based
+- email_capture (£79) — Start building list
+
+**Services (quote required):**
+- website_single (from £349) — Simple one-page site
+- intake_form (£99) — Custom client intake
 
 ### Service Matching for Common Launcher Businesses
 
@@ -134,13 +157,21 @@ THEIR ANSWERS:
 CHECKLIST — your response MUST include:
 [ ] Opening that quotes or references something specific they said (NOT "you're closer than you think")
 [ ] At least 3 direct quotes from their answers in quotation marks
-[ ] Their budget/timeline/hours referenced and addressed
+[ ] Their timeline/hours referenced and addressed
 [ ] A diagnosis that reveals insight (not just echoes their blocker)
 [ ] A next step that's completable THIS WEEK with no budget
-[ ] Services that match their business type
+[ ] action_items with a mix of DIY tasks AND services (not all services!)
 [ ] No banned phrases (cheerleader language, generic advice)
 [ ] At least ONE buying intent validation step (deposit, pre-order, landing page test) — NOT just "would you buy?"
 [ ] Each phase in journey_map has a completion_criteria (what does "done" look like?)
+
+For action_items:
+- must_do should include regulatory basics (register business, insurance if client-facing)
+- Mix DIY and services naturally — a real to-do list has both
+- For DIY items: use diy_action_id from standard list, add guidance and search_terms
+- For services: use action_type 'instant' or 'quote', include service_id and price_from
+- Don't be UK-specific — guidance should work globally
+- Never recommend specific banks or insurance providers
 
 Remember:
 - Quote their exact words to show you heard them

@@ -4,6 +4,9 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import type { ReckoningReport } from '@/types/report';
+import { services } from '@/data/services-adapter';
+import { useCart } from '@/components/services/CartContext';
+import { getServiceById } from '@/lib/data/service-catalogue';
 
 interface OnlinePresence {
   website?: string;
@@ -22,6 +25,29 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
   const params = useParams();
   const token = params.token as string;
   const [isDownloading, setIsDownloading] = useState(false);
+  const { addService, addMultipleServices, isInCart, openCart } = useCart();
+
+  // Handle adding a single service to cart
+  const handleAddService = (serviceId: string) => {
+    const service = getServiceById(serviceId);
+    if (service) {
+      addService(service);
+    }
+  };
+
+  // Handle adding all Priority 1 recommendations to cart
+  const handleAddPriority1ToCart = () => {
+    const priority1Services = report.recommendations.services
+      .filter(rec => rec.priority === 1)
+      .map(rec => getServiceById(rec.service_id))
+      .filter((s): s is NonNullable<typeof s> => s !== undefined);
+
+    if (priority1Services.length > 0) {
+      addMultipleServices(priority1Services);
+    } else {
+      openCart();
+    }
+  };
 
   // Parse online presence from answers
   const getOnlinePresence = (): OnlinePresence | null => {
@@ -39,6 +65,12 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
   };
 
   const onlinePresence = getOnlinePresence();
+
+  // Look up human-readable service name from service_id
+  const getServiceName = (serviceId: string): string => {
+    const service = services.find(s => s.id === serviceId);
+    return service?.name || serviceId;
+  };
 
   const handleDownloadPDF = async () => {
     setIsDownloading(true);
@@ -130,11 +162,14 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
                 <span className="w-6 h-6 bg-fuchsia/10 rounded-full flex items-center justify-center text-xs">!</span>
                 What's blocking you
               </h4>
-              <ul className="space-y-3">
-                {report.sections.snapshot.blockers.map((blocker, i) => (
-                  <li key={i} className="text-charcoal/70 pl-8 relative">
-                    <span className="absolute left-0 text-fuchsia">•</span>
-                    {blocker}
+              <ul className="space-y-4">
+                {report.sections.snapshot.blockers.map((blockerItem, i) => (
+                  <li key={i} className="pl-6 relative border-l-2 border-fuchsia/30">
+                    <p className="font-medium text-charcoal mb-1">{blockerItem.blocker}</p>
+                    <p className="text-sm text-charcoal/60 mb-2">{blockerItem.why_blocked}</p>
+                    <p className="text-sm text-mint">
+                      <span className="font-medium">Unlock:</span> {blockerItem.unlock}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -292,7 +327,7 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
               </p>
               <div className="bg-fuchsia/5 rounded p-4">
                 <p className="font-medium text-charcoal">
-                  {report.sections.next_step.supported_path.recommended_service}
+                  {report.sections.next_step.supported_path.recommended_service || getServiceName(report.sections.next_step.supported_path.service_id)}
                 </p>
                 <p className="text-sm text-charcoal/60">
                   From £{report.sections.next_step.supported_path.price_from}
@@ -306,47 +341,80 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
         {report.recommendations.services.length > 0 && (
           <section className="bg-white rounded-[10px] p-6 md:p-10 mb-6 md:mb-8">
             <h2 className="text-xs uppercase tracking-wider text-fuchsia font-medium mb-4">
-              Recommended for you
+              Your personalised roadmap
             </h2>
             <div className="space-y-4">
-              {report.recommendations.services.map((service) => (
-                <div 
-                  key={service.service_id} 
-                  className={`border rounded-lg p-6 flex items-start justify-between ${
-                    service.priority === 1 ? 'border-fuchsia' : 'border-stone'
-                  }`}
-                >
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium ${
-                        service.priority === 1 ? 'bg-fuchsia text-white' :
-                        service.priority === 2 ? 'bg-charcoal/20 text-charcoal' :
-                        'bg-stone text-charcoal/60'
-                      }`}>
-                        {service.priority}
-                      </span>
-                      <h3 className="font-medium text-charcoal">{service.service_name}</h3>
+              {report.recommendations.services.map((service) => {
+                const inCart = isInCart(service.service_id);
+                return (
+                  <div
+                    key={service.service_id}
+                    className={`border rounded-lg p-4 md:p-6 ${
+                      service.priority === 1 ? 'border-fuchsia bg-fuchsia/5' : 'border-stone'
+                    }`}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium ${
+                            service.priority === 1 ? 'bg-fuchsia text-white' :
+                            service.priority === 2 ? 'bg-charcoal/20 text-charcoal' :
+                            'bg-stone text-charcoal/60'
+                          }`}>
+                            {service.priority}
+                          </span>
+                          <h3 className="font-medium text-charcoal">{service.service_name}</h3>
+                        </div>
+                        <p className="text-sm text-charcoal/60 ml-9 mb-4">{(service as any).why_recommended || service.relevance}</p>
+
+                        {/* Add to cart button */}
+                        <button
+                          onClick={() => handleAddService(service.service_id)}
+                          disabled={inCart}
+                          aria-label={`Add ${service.service_name} to cart, £${service.price_from}, Priority ${service.priority} recommendation`}
+                          className={`ml-9 ${
+                            inCart
+                              ? 'px-4 py-2 bg-mint/20 text-mint rounded-md cursor-default'
+                              : service.priority === 1
+                              ? 'px-4 py-2 bg-fuchsia text-white rounded-md hover:bg-fuchsia/90 transition-colors'
+                              : service.priority === 2
+                              ? 'px-4 py-2 border border-fuchsia text-fuchsia rounded-md hover:bg-fuchsia/5 transition-colors'
+                              : 'px-4 py-2 text-charcoal/60 hover:text-charcoal hover:underline transition-colors'
+                          }`}
+                        >
+                          {inCart ? 'In cart' : 'Add to cart'}
+                        </button>
+                      </div>
+
+                      <div className="flex items-center justify-between md:flex-col md:items-end md:text-right gap-4 ml-9 md:ml-0">
+                        <p className="font-medium text-charcoal">From £{service.price_from}</p>
+                      </div>
                     </div>
-                    <p className="text-sm text-charcoal/60 ml-9">{service.relevance}</p>
                   </div>
-                  <div className="text-right">
-                    <p className="font-medium text-charcoal">From £{service.price_from}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
-            <div className="mt-8 text-center">
-              <Link
-                href="/start/choose"
-                className="inline-flex px-8 py-3 rounded-md bg-fuchsia text-white font-medium hover:bg-fuchsia/90 transition-colors"
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
+              {/* Primary CTA - Add Priority 1 */}
+              <button
+                onClick={handleAddPriority1ToCart}
+                className="px-8 py-3 rounded-md bg-fuchsia text-white font-medium hover:bg-fuchsia/90 transition-colors"
               >
-                Get started with support
+                Add essentials to cart
+              </button>
+
+              {/* Secondary CTA - Browse all */}
+              <Link
+                href="/start/services"
+                className="px-8 py-3 rounded-md border-2 border-fuchsia text-fuchsia font-medium hover:bg-fuchsia/5 transition-colors"
+              >
+                Browse all services
               </Link>
-              <p className="text-sm text-charcoal/50 mt-3">
-                Or take this report and run with it yourself — both paths work.
-              </p>
             </div>
+            <p className="text-sm text-charcoal/50 mt-4 text-center">
+              Add individual services above, or browse the full catalogue. Both paths work.
+            </p>
           </section>
         )}
 

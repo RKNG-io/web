@@ -81,12 +81,36 @@ Must be strategic, not tactical. About building systems, not doing tasks.
 ### Report Specifics
 
 - The journey_map should be strategic — phase 1 is foundation, phase 2 is systems, phase 3 is scale
-- Recommend higher-tier services — they can afford it and need it
 - cost_of_inaction should focus on OPPORTUNITY cost, not just hours
 - the_one_thing should be strategic, not tactical
 - MUST quote their words at least 3 times
 - MUST include an opportunity cost calculation (what they COULD earn if freed up)
 - diy_path should acknowledge the time investment required to DIY
+
+### Action Items for Architects
+
+Architects need strategic leverage, not basics. Typical action items:
+
+**DIY (they do themselves):**
+- find_accountant — If not already working with one who understands their scale
+- professional_indemnity — If giving advice without proper coverage
+- backup_system — Business-critical systems need backup
+- privacy_policy — Compliance at scale matters
+
+**Services (instant order):**
+- strategy_session (£249) — If stuck on where to start
+- review_automation (£149) — If not capturing testimonials systematically
+
+**Services (quote required):**
+- ops_audit (from £199) — Find the real bottleneck
+- ops_sprint (from £499) — Solve multiple issues at once
+- process_documentation (from £299) — Get SOPs out of their head
+- reporting_dashboard (from £399) — See business metrics without manual work
+- workflow_automation (from £349) — Remove manual touchpoints
+
+**Retainers (ongoing support):**
+- retainer_standard (£449/mo) — Ongoing ops support
+- retainer_scale (£799/mo) — Full fractional ops support
 
 ### Service Matching for Common Architect Challenges
 
@@ -112,8 +136,17 @@ CHECKLIST — your response MUST include:
 [ ] An opportunity cost calculation (what they could earn if freed up)
 [ ] A diagnosis that names a strategic constraint
 [ ] A next step that's about building systems, not doing tasks
-[ ] Higher-tier services that match their sophistication level
+[ ] action_items with strategic recommendations (mix of DIY and services)
 [ ] No banned phrases (basic advice, generic templates)
+
+For action_items:
+- must_do: The strategic constraint blocking their next level
+- should_do: Systems that give leverage
+- could_do: Optimisations for when foundation is solid
+- Mix DIY and services — they can afford help but don't need everything done for them
+- For DIY items: use diy_action_id from standard list, add guidance and search_terms
+- For services: use action_type 'instant', 'quote', or include retainer options
+- Don't be UK-specific — guidance should work globally
 
 Remember:
 - They're sophisticated — match their level

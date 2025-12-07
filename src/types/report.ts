@@ -27,11 +27,15 @@ export interface ReckoningReport {
     closing: ClosingSection;
   };
   
+  // Action items — comprehensive list of everything they need to do
+  action_items: ActionItems;
+
+  // Legacy — kept for backward compatibility
   recommendations: {
     services: ServiceRecommendation[];
     package: "launcher" | "builder" | "architect" | null;
   };
-  
+
   // For validation — echo back key inputs
   input_echo: {
     name: string;
@@ -47,11 +51,17 @@ export interface OpeningSection {
   body: string;
 }
 
+export interface SnapshotBlocker {
+  blocker: string;
+  why_blocked: string;
+  unlock: string;
+}
+
 export interface SnapshotSection {
   stage: string;
   stage_description: string;
   strengths: string[];
-  blockers: string[];
+  blockers: SnapshotBlocker[];
 }
 
 export interface DiagnosisSection {
@@ -127,6 +137,29 @@ export interface ServiceRecommendation {
   relevance: string;
   priority: 1 | 2 | 3;
   price_from: number;
+  purchase_type?: "instant" | "quote" | "retainer";
+}
+
+// Action Items — comprehensive list of everything they need to do
+export interface ActionItems {
+  must_do: ActionItem[];   // Priority 1: Regulatory/legal or critical blockers
+  should_do: ActionItem[]; // Priority 2: Important for growth
+  could_do: ActionItem[];  // Priority 3: Nice-to-have
+}
+
+export interface ActionItem {
+  title: string;
+  description: string;
+  action_type: "diy" | "instant" | "quote";
+
+  // For DIY actions
+  diy_action_id?: string;     // ID from DIY_ACTIONS
+  guidance?: string;          // How to approach this
+  search_terms?: string[];    // Suggested search terms
+
+  // For service actions
+  service_id?: string;        // ID from SERVICE_CATALOGUE
+  price_from?: number;        // Starting price
 }
 
 // Validation result type

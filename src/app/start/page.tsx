@@ -6,6 +6,7 @@ import { PERSONAS } from '@/data/persona-questions';
 import { useQuestionnaire } from './useQuestionnaire';
 import { ProgressBar } from './ProgressBar';
 import { QuestionCard } from './QuestionCard';
+import { BackConfirmModal } from './BackConfirmModal';
 
 function QuestionnaireContent() {
   const router = useRouter();
@@ -14,20 +15,28 @@ function QuestionnaireContent() {
     state,
     isHydrated,
     hasSavedProgress,
+    filteredQuestions,
     selectPersona,
     startQuestions,
     setAnswer,
+    clearDependentAnswers,
     nextQuestion,
     goBack,
     hasAnswer,
     reset,
     getCurrentQuestion,
-    getProgress
+    getProgress,
+    getAnsweredDependents,
   } = useQuestionnaire();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [showResumePrompt, setShowResumePrompt] = useState(false);
+  const [backConfirm, setBackConfirm] = useState<{
+    show: boolean;
+    affectedCount: number;
+    questionId: string | null;
+  }>({ show: false, affectedCount: 0, questionId: null });
 
   // Show resume prompt if returning with saved progress
   useEffect(() => {
@@ -208,7 +217,8 @@ function QuestionnaireContent() {
 
     const isWelcome = question.type === 'welcome';
     const canContinue = question.optional || hasAnswer(question.id);
-    const isLastQuestion = state.questionIndex === persona.questions.length - 1;
+    // Use filteredQuestions length for accurate "last question" check
+    const isLastQuestion = state.questionIndex === filteredQuestions.length - 1;
 
     const handleNext = () => {
       if (isLastQuestion) {
@@ -216,6 +226,40 @@ function QuestionnaireContent() {
       } else {
         nextQuestion();
       }
+    };
+
+    // Check if going back would invalidate dependent answers
+    const handleBack = () => {
+      // Get the previous question to check its dependents
+      if (state.questionIndex > 0) {
+        const prevQuestion = filteredQuestions[state.questionIndex - 1];
+        if (prevQuestion) {
+          const answeredDependents = getAnsweredDependents(prevQuestion.id);
+          if (answeredDependents.length > 0) {
+            // Show confirmation modal
+            setBackConfirm({
+              show: true,
+              affectedCount: answeredDependents.length,
+              questionId: prevQuestion.id,
+            });
+            return;
+          }
+        }
+      }
+      // No dependents affected, just go back
+      goBack();
+    };
+
+    const handleBackConfirm = () => {
+      if (backConfirm.questionId) {
+        clearDependentAnswers(backConfirm.questionId);
+      }
+      setBackConfirm({ show: false, affectedCount: 0, questionId: null });
+      goBack();
+    };
+
+    const handleBackCancel = () => {
+      setBackConfirm({ show: false, affectedCount: 0, questionId: null });
     };
 
     return (
@@ -235,15 +279,22 @@ function QuestionnaireContent() {
             answer={state.answers[question.id]}
             onAnswer={(value) => setAnswer(question.id, value)}
             onNext={handleNext}
-            onBack={goBack}
+            onBack={handleBack}
             canContinue={canContinue}
             isFirstQuestion={state.questionIndex === 0}
             isLastQuestion={isLastQuestion}
             questionNumber={isWelcome ? undefined : state.questionIndex}
-            totalQuestions={isWelcome ? undefined : persona.questions.length}
+            totalQuestions={isWelcome ? undefined : filteredQuestions.length}
             personaName={persona.name}
           />
         </div>
+
+        <BackConfirmModal
+          isOpen={backConfirm.show}
+          affectedCount={backConfirm.affectedCount}
+          onConfirm={handleBackConfirm}
+          onCancel={handleBackCancel}
+        />
       </div>
     );
   }

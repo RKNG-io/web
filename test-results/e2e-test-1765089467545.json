@@ -1,0 +1,74 @@
+{
+  "timestamp": "2025-12-07T06:37:47.571Z",
+  "model": "claude-sonnet-4-20250514",
+  "config": {
+    "personaFilter": null,
+    "personaTypeFilter": null,
+    "runsPerPersona": 1,
+    "totalPersonas": 3,
+    "totalRuns": 3
+  },
+  "summary": {
+    "successful": 0,
+    "failed": 3,
+    "autoApproved": 0,
+    "needsReview": 0,
+    "avgConfidence": 0
+  },
+  "results": [
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "fb51518b-1ae6-4b14-a4fc-901c2a47eea9",
+      "token": "aaa33b4471d54380",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 63522
+      },
+      "error": "column \"updated_at\" of relation \"reckonings\" does not exist",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "4359e689-a83a-4603-9415-b29a2912af2a",
+      "token": "ac338126f87e461d",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 68221
+      },
+      "error": "column \"updated_at\" of relation \"reckonings\" does not exist",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "7edf9636-14f4-41e2-bff4-2c259a98eed2",
+      "token": "f6f292392e0b4fa3",
+      "confidence": null,
+      "timings": {
+        "questionnaire": 0,
+        "generation": 0,
+        "total": 72505
+      },
+      "error": "column \"updated_at\" of relation \"reckonings\" does not exist",
+      "questionnaireAnswers": {},
+      "reportSections": null,
+      "diyActionsCount": 0
+    }
+  ]
+}

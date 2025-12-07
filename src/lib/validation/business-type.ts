@@ -15,54 +15,96 @@ interface BusinessTypeServices {
 }
 
 const BUSINESS_TYPE_MAP: Record<string, BusinessTypeServices> = {
+  // Launcher persona types
+  'coaching': {
+    keywords: ['coach', 'coaching', 'mentor', 'consultant', 'life coach', 'business coach'],
+    relevant: ['booking', 'calendar', 'intake', 'payment', 'email', 'website', 'client', 'discovery'],
+    irrelevant: ['ordering', 'delivery', 'inventory', 'shipping', 'e-commerce', 'store']
+  },
+  'therapy': {
+    keywords: ['therapy', 'therapist', 'counsell', 'counselor', 'psycho', 'mental health'],
+    relevant: ['booking', 'calendar', 'intake', 'payment', 'website', 'client', 'notes', 'consent'],
+    irrelevant: ['ordering', 'delivery', 'inventory', 'shipping', 'e-commerce', 'store', 'social']
+  },
+  'fitness': {
+    keywords: ['fitness', 'personal train', 'yoga', 'pilates', 'nutrition', 'wellness', 'pt'],
+    relevant: ['booking', 'calendar', 'payment', 'website', 'client', 'retention', 'scheduling'],
+    irrelevant: ['ordering', 'delivery', 'inventory', 'e-commerce', 'store']
+  },
   'food': {
     keywords: ['food', 'meal', 'prep', 'catering', 'restaurant', 'bakery', 'chef', 'cook', 'kitchen'],
     relevant: ['ordering', 'payment', 'delivery', 'menu', 'website', 'food-photography'],
     irrelevant: ['client-intake', 'booking-system', 'course', 'membership', 'calendar']
   },
-  'coaching': {
-    keywords: ['coach', 'coaching', 'therapy', 'therapist', 'counsell', 'mentor', 'consultant'],
-    relevant: ['booking', 'calendar', 'intake', 'payment', 'email', 'website', 'client'],
-    irrelevant: ['ordering', 'delivery', 'inventory', 'shipping', 'e-commerce', 'store']
-  },
-  'freelance': {
-    keywords: ['freelance', 'designer', 'developer', 'writer', 'photographer', 'creative', 'agency'],
+  'creative': {
+    keywords: ['creative', 'design', 'designer', 'photography', 'photographer', 'video', 'writing', 'artist'],
     relevant: ['portfolio', 'website', 'inquiry', 'invoice', 'contract', 'payment', 'project'],
     irrelevant: ['booking-calendar', 'delivery', 'membership', 'inventory', 'shipping']
   },
+  'professional': {
+    keywords: ['professional', 'va', 'virtual assistant', 'bookkeep', 'admin', 'consult'],
+    relevant: ['website', 'inquiry', 'invoice', 'contract', 'payment', 'project', 'client'],
+    irrelevant: ['ordering', 'delivery', 'inventory', 'shipping', 'e-commerce']
+  },
   'ecommerce': {
-    keywords: ['e-commerce', 'ecommerce', 'shop', 'store', 'product', 'sell online', 'retail'],
-    relevant: ['store', 'payment', 'inventory', 'shipping', 'product', 'website'],
+    keywords: ['e-commerce', 'ecommerce', 'shop', 'store', 'product', 'sell online', 'retail', 'etsy', 'shopify'],
+    relevant: ['store', 'payment', 'inventory', 'shipping', 'product', 'website', 'abandoned-cart'],
     irrelevant: ['booking', 'intake', 'calendar', 'client-management']
   },
-  'service': {
-    keywords: ['service', 'cleaner', 'plumber', 'tradesperson', 'handyman', 'local business'],
-    relevant: ['booking', 'invoice', 'website', 'reviews', 'payment', 'calendar'],
-    irrelevant: ['e-commerce', 'inventory', 'shipping', 'course']
+  // Builder persona types
+  'design': {
+    keywords: ['design', 'graphic', 'brand', 'logo', 'visual'],
+    relevant: ['portfolio', 'website', 'inquiry', 'invoice', 'contract', 'payment', 'project'],
+    irrelevant: ['booking-calendar', 'delivery', 'membership', 'inventory']
   },
-  'membership': {
-    keywords: ['membership', 'community', 'subscription', 'club', 'network', 'circle'],
-    relevant: ['community', 'payment', 'subscription', 'email', 'website', 'landing'],
-    irrelevant: ['delivery', 'inventory', 'shipping', 'physical']
+  'photography': {
+    keywords: ['photo', 'videograph', 'film', 'shoot'],
+    relevant: ['portfolio', 'website', 'booking', 'invoice', 'contract', 'gallery', 'delivery'],
+    irrelevant: ['inventory', 'shipping', 'membership', 'e-commerce']
   },
-  'course': {
-    keywords: ['course', 'training', 'education', 'teach', 'workshop', 'online course'],
-    relevant: ['landing', 'email', 'payment', 'course-platform', 'website'],
-    irrelevant: ['delivery', 'inventory', 'shipping', 'booking-calendar']
-  }
+  'copywriting': {
+    keywords: ['copy', 'content', 'writer', 'writing', 'blog'],
+    relevant: ['portfolio', 'website', 'inquiry', 'invoice', 'contract', 'project'],
+    irrelevant: ['booking-calendar', 'delivery', 'inventory', 'shipping']
+  },
+  'web_dev': {
+    keywords: ['web dev', 'developer', 'code', 'programming', 'software'],
+    relevant: ['portfolio', 'website', 'inquiry', 'invoice', 'contract', 'project', 'github'],
+    irrelevant: ['booking-calendar', 'delivery', 'inventory', 'shipping']
+  },
+  'marketing': {
+    keywords: ['marketing', 'social media', 'ads', 'seo', 'digital'],
+    relevant: ['website', 'inquiry', 'invoice', 'contract', 'project', 'analytics', 'reporting'],
+    irrelevant: ['booking-calendar', 'delivery', 'inventory', 'shipping']
+  },
+};
+
+// Default config for 'other' or unrecognised business types
+// Permissive — only flags obviously wrong services, doesn't require specific ones
+const DEFAULT_BUSINESS_TYPE: BusinessTypeServices = {
+  keywords: [],
+  relevant: ['website', 'payment', 'client', 'booking', 'invoice', 'project'],
+  irrelevant: [] // No hard restrictions for unknown business types
 };
 
 function detectBusinessType(submission: QuestionnaireSubmission, report: ReckoningReport): string | null {
-  // Gather text to search
+  // First, check if business_type is directly answered (new questionnaire format)
+  const businessTypeAnswer = submission.answers.business_type;
+  if (typeof businessTypeAnswer === 'string' && BUSINESS_TYPE_MAP[businessTypeAnswer]) {
+    return businessTypeAnswer;
+  }
+
+  // Fallback: search through text for keywords (handles 'other' and legacy formats)
   const searchText = [
     submission.answers.business_idea,
     submission.answers.what_are_you_building,
-    submission.answers.business_type,
     submission.answers.describe_your_business,
+    submission.answers.who_they_help,
+    submission.answers.business_description,
     report.recipient?.business_type,
   ].filter(Boolean).join(' ').toLowerCase();
 
-  // Find matching business type
+  // Find matching business type via keywords
   for (const [type, config] of Object.entries(BUSINESS_TYPE_MAP)) {
     for (const keyword of config.keywords) {
       if (searchText.includes(keyword)) {
@@ -84,14 +126,10 @@ export function validateBusinessTypeMatch(
   // Detect business type
   const businessType = detectBusinessType(submission, report);
 
-  if (!businessType) {
-    warnings.push(
-      `Business type not recognised from answers. Manual review recommended for service relevance.`
-    );
-    return { valid: true, errors, warnings };
-  }
-
-  const typeConfig = BUSINESS_TYPE_MAP[businessType];
+  // Use detected type config, or fall back to permissive default
+  const typeConfig = businessType
+    ? BUSINESS_TYPE_MAP[businessType]
+    : DEFAULT_BUSINESS_TYPE;
 
   // Check recommended services
   const services = report.recommendations?.services || [];

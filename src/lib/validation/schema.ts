@@ -6,7 +6,7 @@ import type { ReckoningReport, ValidationResult } from '@/types/report';
 export const REPORT_JSON_SCHEMA = {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["version", "generated_at", "meta", "recipient", "sections", "recommendations", "input_echo"],
+  "required": ["version", "generated_at", "meta", "recipient", "sections", "action_items", "recommendations", "input_echo"],
   "properties": {
     "version": { "const": "1.0" },
     "generated_at": { "type": "string", "format": "date-time" },
@@ -183,9 +183,77 @@ export const REPORT_JSON_SCHEMA = {
         }
       }
     },
+    "action_items": {
+      "type": "object",
+      "required": ["must_do", "should_do", "could_do"],
+      "description": "All actions they need to take, including DIY tasks and services",
+      "properties": {
+        "must_do": {
+          "type": "array",
+          "description": "Priority 1: Regulatory/legal requirements or critical blockers",
+          "items": {
+            "type": "object",
+            "required": ["title", "description", "action_type"],
+            "properties": {
+              "title": { "type": "string" },
+              "description": { "type": "string", "description": "Why they need this" },
+              "action_type": { "enum": ["diy", "instant", "quote"] },
+              "diy_action_id": { "type": "string", "description": "ID from DIY_ACTIONS if action_type is diy" },
+              "service_id": { "type": "string", "description": "ID from SERVICE_CATALOGUE if action_type is instant/quote" },
+              "price_from": { "type": "number", "description": "Starting price if service" },
+              "guidance": { "type": "string", "description": "How to approach this (for DIY)" },
+              "search_terms": { "type": "array", "items": { "type": "string" }, "description": "Suggested search terms (for DIY)" }
+            }
+          },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "should_do": {
+          "type": "array",
+          "description": "Priority 2: Important for growth but not blocking",
+          "items": {
+            "type": "object",
+            "required": ["title", "description", "action_type"],
+            "properties": {
+              "title": { "type": "string" },
+              "description": { "type": "string" },
+              "action_type": { "enum": ["diy", "instant", "quote"] },
+              "diy_action_id": { "type": "string" },
+              "service_id": { "type": "string" },
+              "price_from": { "type": "number" },
+              "guidance": { "type": "string" },
+              "search_terms": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "minItems": 0,
+          "maxItems": 5
+        },
+        "could_do": {
+          "type": "array",
+          "description": "Priority 3: Nice-to-have, do when ready",
+          "items": {
+            "type": "object",
+            "required": ["title", "description", "action_type"],
+            "properties": {
+              "title": { "type": "string" },
+              "description": { "type": "string" },
+              "action_type": { "enum": ["diy", "instant", "quote"] },
+              "diy_action_id": { "type": "string" },
+              "service_id": { "type": "string" },
+              "price_from": { "type": "number" },
+              "guidance": { "type": "string" },
+              "search_terms": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "minItems": 0,
+          "maxItems": 3
+        }
+      }
+    },
     "recommendations": {
       "type": "object",
       "required": ["services", "package"],
+      "description": "DEPRECATED: Use action_items instead. Kept for backward compatibility.",
       "properties": {
         "services": {
           "type": "array",
@@ -199,7 +267,8 @@ export const REPORT_JSON_SCHEMA = {
               "service_name": { "type": "string" },
               "why_recommended": { "type": "string" },
               "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
-              "price_from": { "type": "number" }
+              "price_from": { "type": "number" },
+              "purchase_type": { "enum": ["instant", "quote", "retainer"], "description": "How to purchase this service" }
             }
           }
         },
@@ -304,13 +373,38 @@ export function validateSchema(report: unknown): ValidationResult {
     }
   }
   
-  // At least 1 service recommendation
+  // Action items validation (new structure)
+  if (!r.action_items) {
+    warnings.push("Missing action_items — using legacy recommendations format");
+  } else {
+    if (!r.action_items.must_do?.length) {
+      errors.push("Must have at least 1 must_do action item");
+    }
+
+    // Validate action_type consistency
+    const allItems = [
+      ...(r.action_items.must_do || []),
+      ...(r.action_items.should_do || []),
+      ...(r.action_items.could_do || [])
+    ];
+
+    for (const item of allItems) {
+      if (item.action_type === 'diy' && !item.diy_action_id && !item.guidance) {
+        warnings.push(`DIY action "${item.title}" missing diy_action_id or guidance`);
+      }
+      if ((item.action_type === 'instant' || item.action_type === 'quote') && !item.service_id) {
+        errors.push(`Service action "${item.title}" missing service_id`);
+      }
+    }
+  }
+
+  // At least 1 service recommendation (backward compatibility)
   if (!r.recommendations?.services?.length) {
     errors.push("Must have at least 1 service recommendation");
   } else if (r.recommendations.services.length > 5) {
     warnings.push("More than 5 service recommendations — consider trimming");
   }
-  
+
   return {
     valid: errors.length === 0,
     errors,

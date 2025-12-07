@@ -81,12 +81,34 @@ Must be about systems, not more hustle. Specific automation or process.
 ### Report Specifics
 
 - The journey_map can be more detailed — they can handle it
-- Recommend 3-4 services that specifically address their bottlenecks
 - cost_of_inaction calculations are POWERFUL here — show them the hours AND money
 - the_one_thing should be about systems, not hustle
 - MUST quote their words at least 3 times
 - MUST include a time-back calculation (hours saved × rate)
 - diy_path should acknowledge they can build this themselves if they want
+
+### Action Items for Builders
+
+Builders usually have the basics — they need efficiency. Typical action items:
+
+**DIY (they do themselves):**
+- accounting_system — If not tracking properly yet
+- find_accountant — If doing taxes themselves and growing
+- backup_system — If business-critical files aren't backed up
+- privacy_policy — If collecting client data without one
+- password_manager — Basic security hygiene
+
+**Services (instant order):**
+- booking_system (£129) — If calendar chaos
+- invoicing (£99) — If chasing payments manually
+- review_automation (£149) — If not collecting testimonials
+- strategy_session (£249) — If feeling stuck
+
+**Services (quote required):**
+- crm_setup (from £299) — If client tracking is spreadsheets/notes
+- welcome_sequence (from £249) — If onboarding is manual
+- workflow_automation (from £349) — For their biggest time sink
+- ops_audit (from £199) — If they don't know where to start
 
 ### Service Matching for Common Builder Businesses
 
@@ -115,8 +137,17 @@ CHECKLIST — your response MUST include:
 [ ] A time-back calculation (hours saved × their rate = money)
 [ ] A diagnosis that shows them maths they haven't done
 [ ] A next step that's about systems, not hustle
-[ ] Services that address their specific bottleneck
+[ ] action_items with a mix of DIY tasks AND services
 [ ] No banned phrases (generic advice, cheerleader language)
+
+For action_items:
+- must_do: The one thing blocking them most (could be DIY or service)
+- should_do: Efficiency improvements they'd benefit from
+- could_do: Nice-to-haves when they've freed up time
+- Mix DIY and services naturally — a real to-do list has both
+- For DIY items: use diy_action_id from standard list, add guidance and search_terms
+- For services: use action_type 'instant' or 'quote', include service_id and price_from
+- Don't be UK-specific — guidance should work globally
 
 Remember:
 - Calculate something for them they haven't calculated

@@ -32,11 +32,15 @@ interface CartContextType {
   // Actions
   addService: (service: ServiceItem) => void;
   addBundle: (bundle: Bundle) => void;
+  addMultipleServices: (services: ServiceItem[]) => void;
   removeItem: (id: string) => void;
   clearCart: () => void;
   toggleCart: () => void;
   openCart: () => void;
   closeCart: () => void;
+
+  // Helpers
+  isInCart: (serviceId: string) => boolean;
 
   // Computed
   subtotal: number;
@@ -173,6 +177,45 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setState(prev => ({ ...prev, isOpen: false }));
   }, []);
 
+  const addMultipleServices = useCallback((services: ServiceItem[]) => {
+    setState(prev => {
+      let newItems = [...prev.items];
+
+      for (const service of services) {
+        // Check if already in cart
+        const existing = newItems.find(i => i.id === service.id && i.type === 'service');
+        if (existing) continue;
+
+        // Check if this service is part of a bundle already in cart
+        const bundleWithService = newItems.find(
+          i => i.type === 'bundle' && i.serviceIds?.includes(service.id)
+        );
+        if (bundleWithService) continue;
+
+        newItems.push({
+          type: 'service',
+          id: service.id,
+          name: service.name,
+          price: service.basePrice,
+          quantity: 1,
+        });
+      }
+
+      return {
+        ...prev,
+        items: newItems,
+        isOpen: true,
+      };
+    });
+  }, []);
+
+  const isInCart = useCallback((serviceId: string): boolean => {
+    return state.items.some(
+      i => (i.type === 'service' && i.id === serviceId) ||
+           (i.type === 'bundle' && i.serviceIds?.includes(serviceId))
+    );
+  }, [state.items]);
+
   // ─────────────────────────────────────────
   // COMPUTED VALUES
   // ─────────────────────────────────────────
@@ -241,11 +284,13 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     isOpen: state.isOpen,
     addService,
     addBundle,
+    addMultipleServices,
     removeItem,
     clearCart,
     toggleCart,
     openCart,
     closeCart,
+    isInCart,
     ...computed,
   };
 

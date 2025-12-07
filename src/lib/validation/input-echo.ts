@@ -1,6 +1,7 @@
 // Input echo validation — ensure report uses actual user answers
 
 import type { ReckoningReport, QuestionnaireSubmission, ValidationResult } from '@/types/report';
+import { extractUserName } from '@/lib/prompts/builder';
 
 export function validateInputEcho(
   report: ReckoningReport,
@@ -8,9 +9,9 @@ export function validateInputEcho(
 ): ValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
-  
-  // Name must match
-  const submittedName = String(submission.answers.name || '').toLowerCase().trim();
+
+  // Extract name from answers (handles contact JSON field)
+  const submittedName = extractUserName(submission.answers).toLowerCase().trim();
   const reportName = (report.recipient?.name || '').toLowerCase().trim();
 
   if (submittedName && submittedName !== reportName) {
@@ -27,8 +28,9 @@ export function validateInputEcho(
 
   // Input echo name must match (if input_echo exists)
   if (report.input_echo) {
-    if ((report.input_echo.name || '').toLowerCase() !== submittedName) {
-      errors.push(`Input echo name mismatch`);
+    const inputEchoName = (report.input_echo.name || '').toLowerCase().trim();
+    if (submittedName && inputEchoName !== submittedName) {
+      errors.push(`Input echo name mismatch: expected "${submittedName}", got "${inputEchoName}"`);
     }
 
     // Input echo persona must match

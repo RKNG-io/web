@@ -96,6 +96,8 @@ export type ServiceCategory =
 
 export type DeliveryType = 'diy_resource' | 'done_with_you' | 'done_for_you';
 
+export type PurchaseType = 'instant' | 'quote' | 'retainer';
+
 export interface ServiceItem {
   id: string;
   name: string;
@@ -111,7 +113,8 @@ export interface ServiceItem {
   
   // Delivery
   deliveryType: DeliveryType;
-  
+  purchaseType: PurchaseType;          // instant = order now, quote = needs scoping, retainer = ongoing
+
   // Bundling
   category: ServiceCategory;
   suggestedWith: string[];              // IDs of complementary services

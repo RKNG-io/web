@@ -1,9 +1,33 @@
 // data/service-catalogue.ts
 // Complete service catalogue with pricing and metadata
 
-import { ServiceItem } from '../types';
+import { ServiceItem } from '../lib/types';
 
 export const SERVICE_CATALOGUE: ServiceItem[] = [
+
+  // ═══════════════════════════════════════════════════════════════
+  // STRATEGY
+  // ═══════════════════════════════════════════════════════════════
+
+  {
+    id: 'strategy_session',
+    name: 'Strategy Session',
+    description: 'Two 45-minute sessions with structured guidance between. Get clarity on priorities, systems, and next steps — tailored to where you are.',
+    basePrice: 249,
+    timeEstimate: '2 x 45 mins + async',
+    personas: ['launcher', 'builder', 'architect'],
+    businessTypes: [],
+    deliveryType: 'done_with_you',
+    purchaseType: 'instant',
+    category: 'support',
+    suggestedWith: [],
+    requiredWith: [],
+    popular: true,
+    impact: 'high',
+    effort: 'low',
+    agencyComparison: 500,
+    revenuePotential: 'Clarity that saves months of wrong turns'
+  },
 
   // ═══════════════════════════════════════════════════════════════
   // PRESENCE
@@ -18,6 +42,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'presence',
     suggestedWith: ['domain_setup', 'email_pro'],
     requiredWith: [],
@@ -37,6 +62,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'presence',
     suggestedWith: ['domain_setup', 'email_pro', 'seo_basics'],
     requiredWith: [],
@@ -56,6 +82,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'presence',
     suggestedWith: ['seo_basics'],
     requiredWith: [],
@@ -68,12 +95,13 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   {
     id: 'domain_setup',
     name: 'Domain & Hosting Setup',
-    description: 'Your own .com (or .co.uk), properly configured, SSL secured',
+    description: 'Your own .com (or local equivalent), properly configured, SSL secured',
     basePrice: 49,
     timeEstimate: '1-2 days',
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'presence',
     suggestedWith: ['email_pro'],
     requiredWith: [],
@@ -92,6 +120,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'presence',
     suggestedWith: ['domain_setup'],
     requiredWith: [],
@@ -110,6 +139,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'presence',
     suggestedWith: [],
     requiredWith: [],
@@ -132,6 +162,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: ['coaching', 'creative', 'fitness', 'professional', 'therapy', 'teaching'],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'operations',
     suggestedWith: ['intake_form'],
     requiredWith: [],
@@ -152,6 +183,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'operations',
     suggestedWith: ['invoicing'],
     requiredWith: [],
@@ -171,6 +203,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'operations',
     suggestedWith: ['payment_setup'],
     requiredWith: [],
@@ -190,6 +223,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: ['coaching', 'creative', 'professional', 'therapy'],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'operations',
     suggestedWith: ['booking_system'],
     requiredWith: [],
@@ -208,6 +242,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: [],
     requiredWith: [],
@@ -227,6 +262,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: ['food'],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: ['payment_setup'],
     requiredWith: [],
@@ -246,6 +282,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: ['fitness'],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: ['payment_setup'],
     requiredWith: [],
@@ -269,6 +306,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'automation',
     suggestedWith: ['email_capture'],
     requiredWith: [],
@@ -288,6 +326,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'automation',
     suggestedWith: ['welcome_sequence'],
     requiredWith: [],
@@ -306,6 +345,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'automation',
     suggestedWith: [],
     requiredWith: [],
@@ -325,6 +365,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'automation',
     suggestedWith: [],
     requiredWith: [],
@@ -344,6 +385,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_with_you',
+    purchaseType: 'quote',
     category: 'automation',
     suggestedWith: ['content_bank', 'social_templates'],
     requiredWith: [],
@@ -364,6 +406,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'automation',
     suggestedWith: ['social_media_setup'],
     requiredWith: [],
@@ -384,6 +427,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'automation',
     suggestedWith: ['social_media_setup', 'content_bank'],
     requiredWith: [],
@@ -404,6 +448,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_with_you',
+    purchaseType: 'instant',
     category: 'automation',
     suggestedWith: ['social_media_setup'],
     requiredWith: [],
@@ -422,6 +467,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'automation',
     suggestedWith: ['social_media_setup', 'social_training'],
     requiredWith: [],
@@ -444,6 +490,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'instant',
     category: 'visibility',
     suggestedWith: ['review_automation'],
     requiredWith: [],
@@ -463,6 +510,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'visibility',
     suggestedWith: ['website_multi'],
     requiredWith: [],
@@ -481,6 +529,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'visibility',
     suggestedWith: ['google_business'],
     requiredWith: [],
@@ -491,7 +540,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
   },
 
   // ═══════════════════════════════════════════════════════════════
-  // SCALE WITH SANITY (Overwhelmed-specific)
+  // SCALE WITH SANITY (Architect-specific)
   // ═══════════════════════════════════════════════════════════════
 
   {
@@ -503,6 +552,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: ['ops_sprint'],
     requiredWith: [],
@@ -521,6 +571,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: [],
     requiredWith: ['ops_audit'],
@@ -540,6 +591,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_with_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: [],
     requiredWith: [],
@@ -559,6 +611,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'quote',
     category: 'operations',
     suggestedWith: [],
     requiredWith: [],
@@ -581,6 +634,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['launcher', 'builder'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'retainer',
     category: 'support',
     suggestedWith: [],
     requiredWith: [],
@@ -599,6 +653,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['builder', 'architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'retainer',
     category: 'support',
     suggestedWith: [],
     requiredWith: [],
@@ -617,6 +672,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
     personas: ['architect'],
     businessTypes: [],
     deliveryType: 'done_for_you',
+    purchaseType: 'retainer',
     category: 'support',
     suggestedWith: [],
     requiredWith: [],
@@ -629,7 +685,7 @@ export const SERVICE_CATALOGUE: ServiceItem[] = [
 
 // Helper function to get services by persona
 export function getServicesForPersona(persona: string): ServiceItem[] {
-  return SERVICE_CATALOGUE.filter(s => s.personas.includes(persona as any));
+  return SERVICE_CATALOGUE.filter(s => s.personas.includes(persona as 'launcher' | 'builder' | 'architect'));
 }
 
 // Helper function to get services by category
@@ -640,4 +696,9 @@ export function getServicesByCategory(category: string): ServiceItem[] {
 // Helper function to get service by ID
 export function getServiceById(id: string): ServiceItem | undefined {
   return SERVICE_CATALOGUE.find(s => s.id === id);
+}
+
+// Helper function to get services by purchase type
+export function getServicesByPurchaseType(purchaseType: 'instant' | 'quote' | 'retainer'): ServiceItem[] {
+  return SERVICE_CATALOGUE.filter(s => s.purchaseType === purchaseType);
 }

@@ -1,0 +1,200 @@
+{
+  "timestamp": "2025-12-07T06:41:55.007Z",
+  "model": "claude-sonnet-4-20250514",
+  "config": {
+    "personaFilter": null,
+    "personaTypeFilter": null,
+    "runsPerPersona": 1,
+    "totalPersonas": 3,
+    "totalRuns": 3
+  },
+  "summary": {
+    "successful": 3,
+    "failed": 0,
+    "autoApproved": 0,
+    "needsReview": 3,
+    "avgConfidence": 94
+  },
+  "results": [
+    {
+      "personaId": "tom",
+      "personaName": "Tom",
+      "personaType": "architect",
+      "businessType": "professional",
+      "reckoningId": "a5ad0a8b-e342-4c4f-a9aa-e92131f71adc",
+      "token": "ca26e88ca9134efe",
+      "confidence": {
+        "score": 98,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"standard engagement letters I've seen 100 times...\"",
+          "Quoted phrase not found in answers: \"I'm the reason we can't take on more profitable wo...\"",
+          "Banned phrase found: \"you need to\"",
+          "No core services for professional business found. Consider: website, inquiry, invoice."
+        ]
+      },
+      "timings": {
+        "questionnaire": 12813,
+        "generation": 64807,
+        "total": 77677
+      },
+      "questionnaireAnswers": {
+        "business_description": "Boutique law firm providing commercial and corporate legal services to SMEs and mid-market clients across various sectors.",
+        "team_size": "4_10",
+        "revenue": "500k_1m",
+        "what_breaks": "Everything stops. New matters can't be opened because I need to approve all AML/KYC checks. Associates can't progress cases without my sign-off on strategy and compliance. Client communications get delayed because I review all substantive correspondence. Fee arrangements stall because I approve all engagement letters. The practice management system updates would pile up because I'm the only one who reviews conflicts and maintains client files to our standards.",
+        "bottleneck_areas": [
+          "decisions",
+          "questions",
+          "quoting",
+          "everything"
+        ],
+        "hours_worked": "50_60",
+        "last_holiday": "over_year",
+        "personal_costs": [
+          "family",
+          "health",
+          "peace",
+          "patience"
+        ],
+        "time_sink": "everything",
+        "priority_outcome": "grow",
+        "typical_day": "Start at 7:30 reviewing overnight emails and prioritising what needs my input. Associates queue up for decisions on case strategy, settlement authority, or compliance questions they should know. I'm manually checking every new client against sanctions lists and reviewing KYC documents that should be systematised. Spend 2-3 hours on client work that actually requires partner-level input, then get pulled into reviewing associate work, approving standard engagement letters I've seen 100 times, and double-checking time entries. End the day at 7pm knowing I'm the reason we can't take on more profitable work because everything waits for my review.",
+        "contact": "{\"name\":\"Tom\",\"email\":\"tom@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "ella",
+      "personaName": "Ella",
+      "personaType": "launcher",
+      "businessType": "fitness",
+      "reckoningId": "b5214a59-6e62-48d6-8601-ca8d90b5abf7",
+      "token": "6c73cdcbb2c84610",
+      "confidence": {
+        "score": 90,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"I know I'm a good teacher - my students keep comin...\"",
+          "Quoted phrase not found in answers: \"I keep looking at other yoga teachers online and f...\"",
+          "Banned phrase found: \"you're leaving money on the table\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Only 0 quoted phrases verified in original answers. Quotes may be paraphrased or fabricated."
+        ]
+      },
+      "timings": {
+        "questionnaire": 10874,
+        "generation": 53620,
+        "total": 64543
+      },
+      "questionnaireAnswers": {
+        "who_they_help": "I help people who are stressed and disconnected from their bodies find peace and strength through yoga. Most of my students are women in their 30s and 40s who come to me feeling tight from desk jobs or overwhelmed by life. After working with me, they tell me they sleep better, feel more confident in their bodies, and have tools to manage stress. Some have even said yoga with me helped them through difficult times like divorce or job changes.",
+        "business_type": "fitness",
+        "delivery_mode": "in_person",
+        "why_now": [
+          "waiting",
+          "side_hustle"
+        ],
+        "business_stage": "regular",
+        "whats_in_place": [
+          "social",
+          "insurance"
+        ],
+        "website_feeling": "avoiding",
+        "income_goal": "full_replace",
+        "whats_missing": [
+          "professional",
+          "pricing",
+          "booking",
+          "payments",
+          "manual"
+        ],
+        "blockers": [
+          "confidence",
+          "tech",
+          "perfectionism"
+        ],
+        "timeline": "three_months",
+        "biggest_risk": "not_ready",
+        "time_available": "some",
+        "first_clients": "network",
+        "anything_else": "I keep looking at other yoga teachers online and feeling like I'll never be as polished as them. I know I'm a good teacher - my students keep coming back and bringing friends - but I feel embarrassed asking people to book through a proper system or pay proper prices. I just need someone to tell me exactly what steps to take because I get overwhelmed by all the options and end up doing nothing.",
+        "contact": "{\"name\":\"Ella\",\"email\":\"ella@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    },
+    {
+      "personaId": "amy",
+      "personaName": "Amy",
+      "personaType": "builder",
+      "businessType": "fitness",
+      "reckoningId": "ce201ad2-7853-480d-b21a-595cbb9aa362",
+      "token": "32f82a324ef24aa4",
+      "confidence": {
+        "score": 95,
+        "autoApprove": false,
+        "flags": [
+          "Quoted phrase not found in answers: \"writing down new enquiries on whatever paper I can...\"",
+          "Banned phrase found: \"you need to\"",
+          "Banned phrase found: \"pain points\"",
+          "Missing permission-giving language (expected at least 2 markers)",
+          "Closing message may not be encouraging enough"
+        ]
+      },
+      "timings": {
+        "questionnaire": 11661,
+        "generation": 58084,
+        "total": 69774
+      },
+      "questionnaireAnswers": {
+        "duration": "over_5",
+        "business_type": "other",
+        "income_situation": "good",
+        "client_source": "referrals",
+        "website_feeling": "fine",
+        "duct_tape": [
+          "scheduling",
+          "communication",
+          "invoicing",
+          "processes"
+        ],
+        "costs": [
+          "time",
+          "energy",
+          "money",
+          "sanity"
+        ],
+        "hours_lost": "over_10",
+        "one_thing": "crm",
+        "growth_goal": "less_chaos",
+        "typical_day": "I get in at 6am and immediately start chasing no-shows from yesterday - calling members who didn't turn up, trying to reschedule. Then I'm manually writing down new enquiries on whatever paper I can find, which I'll probably lose by lunch. I spend ages going back and forth with people trying to book sessions because our booking system is rubbish and half the trainers don't even use it properly. I'm constantly checking if trainers have actually logged their sessions, chasing invoices that should have gone out weeks ago, and trying to remember which member said what about their goals. By 2pm I've got three different notebooks with different information and I'm already behind on everything. The phone rings constantly with people asking about availability and I'm checking three different systems to give them an answer. I'll deal with the accounting later, I'll update the member database later, I'll follow up with that lead later - except later never comes and things just pile up.",
+        "contact": "{\"name\":\"Amy\",\"email\":\"amy@test.reckoning.dev\"}"
+      },
+      "reportSections": [
+        "opening",
+        "snapshot",
+        "diagnosis",
+        "journey_map",
+        "next_step",
+        "closing"
+      ],
+      "diyActionsCount": 0
+    }
+  ]
+}

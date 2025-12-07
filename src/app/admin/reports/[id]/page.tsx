@@ -153,7 +153,7 @@ function ReportPreview({ report }: { report: ReckoningReport }) {
           <div>
             <p className="text-xs uppercase text-fuchsia mb-1">Blockers</p>
             <ul className="text-sm text-charcoal/70 list-disc list-inside">
-              {report.sections.snapshot.blockers.map((b, i) => <li key={i}>{b}</li>)}
+              {report.sections.snapshot.blockers.map((b, i) => <li key={i}>{b.blocker}</li>)}
             </ul>
           </div>
         </div>

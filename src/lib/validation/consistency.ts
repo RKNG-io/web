@@ -5,11 +5,29 @@ import type { ReckoningReport, QuestionnaireSubmission, ValidationResult } from 
 interface ExtractedNumbers {
   hoursPerWeek: number | null;
   hourlyRate: number | null;
-  budget: number | null;
+  hoursRange: { min: number; max: number } | null;
 }
+
+// Map option values to numeric ranges
+const TIME_AVAILABLE_MAP: Record<string, { min: number; max: number }> = {
+  'minimal': { min: 0, max: 2 },
+  'some': { min: 2, max: 5 },
+  'decent': { min: 5, max: 10 },
+  'serious': { min: 10, max: 20 },
+  'full_time': { min: 30, max: 50 },
+};
+
+const HOURS_LOST_MAP: Record<string, { min: number; max: number }> = {
+  '1_2': { min: 1, max: 2 },
+  '3_5': { min: 3, max: 5 },
+  '5_10': { min: 5, max: 10 },
+  'over_10': { min: 10, max: 20 },
+  'constant': { min: 15, max: 40 },
+};
 
 /**
  * Extract numeric values from questionnaire answers
+ * Handles both legacy raw numbers and new option-value format
  */
 export function extractNumbersFromAnswers(
   answers: Record<string, unknown>
@@ -17,37 +35,25 @@ export function extractNumbersFromAnswers(
   const result: ExtractedNumbers = {
     hoursPerWeek: null,
     hourlyRate: null,
-    budget: null,
+    hoursRange: null,
   };
 
-  // Common field names for hours
-  const hoursFields = ['hours_per_week', 'weekly_hours', 'time_available', 'hours_available', 'hours'];
-  for (const field of hoursFields) {
-    if (answers[field]) {
-      const match = String(answers[field]).match(/(\d+)/);
-      if (match) result.hoursPerWeek = parseInt(match[1]);
-    }
+  // Handle time_available option values
+  const timeAvailable = answers.time_available;
+  if (typeof timeAvailable === 'string' && TIME_AVAILABLE_MAP[timeAvailable]) {
+    result.hoursRange = TIME_AVAILABLE_MAP[timeAvailable];
+    result.hoursPerWeek = Math.round((result.hoursRange.min + result.hoursRange.max) / 2);
   }
 
-  // Common field names for rate
-  const rateFields = ['hourly_rate', 'rate', 'charge_rate', 'value_per_hour'];
-  for (const field of rateFields) {
-    if (answers[field]) {
-      const match = String(answers[field]).match(/(\d+)/);
-      if (match) result.hourlyRate = parseInt(match[1]);
-    }
+  // Handle hours_lost option values (Builder persona)
+  const hoursLost = answers.hours_lost;
+  if (typeof hoursLost === 'string' && HOURS_LOST_MAP[hoursLost]) {
+    const range = HOURS_LOST_MAP[hoursLost];
+    // This is hours lost to admin, not total available
+    result.hoursRange = result.hoursRange || range;
   }
 
-  // Common field names for budget
-  const budgetFields = ['budget', 'investment', 'starting_budget', 'available_budget'];
-  for (const field of budgetFields) {
-    if (answers[field]) {
-      const match = String(answers[field]).match(/(\d+)/);
-      if (match) result.budget = parseInt(match[1]);
-    }
-  }
-
-  // Fallback: scan all string answers for patterns
+  // Legacy: try extracting raw numbers from text fields
   const allText = Object.values(answers)
     .filter(v => typeof v === 'string')
     .join(' ');
@@ -62,13 +68,6 @@ export function extractNumbersFromAnswers(
   const rateMatch = allText.match(/£(\d+)\s*(per|\/|an)\s*hour/i);
   if (rateMatch && !result.hourlyRate) {
     result.hourlyRate = parseInt(rateMatch[1]);
-  }
-
-  // "£2,000 budget" or "budget of £2000" or "around 2000 pounds"
-  const budgetMatch = allText.match(/£([\d,]+)\s*budget|budget\s*(?:of\s*)?£([\d,]+)|around\s*([\d,]+)\s*pounds?/i);
-  if (budgetMatch && !result.budget) {
-    const value = (budgetMatch[1] || budgetMatch[2] || budgetMatch[3]).replace(/,/g, '');
-    result.budget = parseInt(value);
   }
 
   return result;
@@ -87,31 +86,32 @@ export function validateConsistency(
   const answersNumbers = extractNumbersFromAnswers(submission.answers);
   const calc = report.sections.diagnosis?.cost_of_inaction?.calculation;
 
-  // Check hours consistency
-  if (answersNumbers.hoursPerWeek && calc?.hours_per_week) {
-    const answerHours = answersNumbers.hoursPerWeek;
+  // Check hours consistency — use ranges when available
+  if (calc?.hours_per_week) {
     const calcHours = calc.hours_per_week;
 
-    if (answerHours !== calcHours) {
-      // Allow if calc uses a subset (e.g., "admin hours" vs "total hours")
-      if (calcHours < answerHours) {
-        // Acceptable: using a portion of their time
-        // But should be explained in the narrative
-        const narrative = report.sections.diagnosis.cost_of_inaction.narrative.toLowerCase();
-        const hasExplanation = narrative.includes('admin') ||
-          narrative.includes('portion') ||
-          narrative.includes('some of') ||
-          narrative.includes('part of');
+    if (answersNumbers.hoursRange) {
+      const { min, max } = answersNumbers.hoursRange;
+      // Allow calc hours within range (with 20% tolerance)
+      const toleranceMin = Math.max(0, min * 0.8);
+      const toleranceMax = max * 1.2;
 
-        if (!hasExplanation) {
-          warnings.push(
-            `Hours mismatch: They said ${answerHours} hrs/week, ` +
-            `calculation uses ${calcHours} hrs/week. ` +
-            `If intentional, explain in the narrative.`
-          );
-        }
-      } else {
-        // Using MORE hours than they stated — likely error
+      if (calcHours > toleranceMax) {
+        errors.push(
+          `Hours inconsistency: They indicated ${min}-${max} hrs/week available, ` +
+          `but calculation uses ${calcHours} hrs/week.`
+        );
+      } else if (calcHours < toleranceMin && calcHours > 0) {
+        // Using less than stated — only warn, might be intentional
+        warnings.push(
+          `Hours note: They indicated ${min}-${max} hrs/week, ` +
+          `calculation uses ${calcHours}. This is fine if intentional.`
+        );
+      }
+    } else if (answersNumbers.hoursPerWeek) {
+      // Legacy exact match check
+      const answerHours = answersNumbers.hoursPerWeek;
+      if (calcHours > answerHours * 1.2) {
         errors.push(
           `Hours inconsistency: They said ${answerHours} hrs/week available, ` +
           `but calculation uses ${calcHours} hrs/week.`
@@ -120,12 +120,12 @@ export function validateConsistency(
     }
   }
 
-  // Check hourly rate plausibility
+  // Check hourly rate plausibility (only from free text — we don't ask for this directly)
   if (answersNumbers.hourlyRate && calc?.hourly_value) {
     const answerRate = answersNumbers.hourlyRate;
     const calcRate = calc.hourly_value;
 
-    if (Math.abs(answerRate - calcRate) > answerRate * 0.2) {
+    if (Math.abs(answerRate - calcRate) > answerRate * 0.3) {
       warnings.push(
         `Hourly rate mismatch: They indicated £${answerRate}/hr, ` +
         `calculation uses £${calcRate}/hr.`
@@ -133,24 +133,8 @@ export function validateConsistency(
     }
   }
 
-  // Check budget is referenced if provided
-  if (answersNumbers.budget) {
-    const reportText = JSON.stringify(report.sections).toLowerCase();
-    const budgetStr = answersNumbers.budget.toString();
-    const budgetFormatted = answersNumbers.budget.toLocaleString();
-
-    const budgetMentioned = reportText.includes(budgetStr) ||
-      reportText.includes(budgetFormatted) ||
-      reportText.includes(`£${budgetStr}`) ||
-      reportText.includes(`£${budgetFormatted}`);
-
-    if (!budgetMentioned) {
-      warnings.push(
-        `Budget not referenced: They mentioned £${budgetFormatted} budget, ` +
-        `but report doesn't use this number.`
-      );
-    }
-  }
+  // Note: Budget validation removed — asking about budget feels extractive
+  // and doesn't improve report quality
 
   return {
     valid: errors.length === 0,

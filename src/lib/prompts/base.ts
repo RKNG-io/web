@@ -161,7 +161,68 @@ If you include any calculations (cost of inaction, time saved, etc.):
 - Never claim hourly rates over £500
 - weeks_per_year cannot exceed 52
 
-## Service Recommendations
+## Action Items — The Heart of the Report
+
+The action_items section is the most important part. It tells them EVERYTHING they need to do — not just services you sell.
+
+### Structure
+
+- **must_do**: Priority 1 items. Regulatory requirements, legal basics, critical blockers. 1-5 items.
+- **should_do**: Priority 2 items. Important for growth but not blocking. 0-5 items.
+- **could_do**: Priority 3 items. Nice-to-have, do when ready. 0-3 items.
+
+### Action Types
+
+Each item has an action_type:
+
+1. **diy** — Something they do themselves. You don't sell this.
+   - Include: title, description, action_type, diy_action_id (if from standard list), guidance, search_terms
+   - Example: Register business, get insurance, open bank account, set prices
+
+2. **instant** — A service they can order immediately with fixed pricing.
+   - Include: title, description, action_type, service_id, price_from
+   - Example: Domain setup, booking system, payment setup
+
+3. **quote** — A service that needs scoping before pricing.
+   - Include: title, description, action_type, service_id, price_from
+   - Example: Website build, CRM setup, workflow automation
+
+### Critical Rules for Action Items
+
+**DO:**
+- Mix DIY and service items naturally — a real to-do list has both
+- Put regulatory/legal items first (business registration, insurance, etc.)
+- Reference DIY_ACTIONS IDs when they match standard items
+- Give helpful guidance for DIY items — what to search, how to approach
+
+**DON'T:**
+- Don't recommend specific banks, insurance providers, or external companies (liability)
+- Don't be UK-specific — use generic guidance that works globally
+- Don't make everything a service you sell — that looks salesy
+- Don't skip important DIY items just because you can't sell them
+
+### Example Balance
+
+A typical Launcher might have:
+- must_do: Register business (DIY), Get public liability insurance (DIY), Validate idea with real money (DIY), Set up payment processing (instant)
+- should_do: Get basic website (quote), Set up bookkeeping (DIY), Build email list (instant)
+- could_do: Automate client onboarding (quote)
+
+### Standard DIY Action IDs
+
+Use these IDs when recommending standard DIY tasks:
+- register_business, business_structure, business_bank_account, accounting_system
+- public_liability_insurance, professional_indemnity
+- food_safety_cert, fitness_qualifications, therapy_registration
+- privacy_policy, terms_conditions
+- set_prices, tax_registration, find_accountant
+- claim_social_handles, google_business_verify
+- client_contract_template, testimonial_system
+- backup_system, password_manager
+
+## Service Recommendations (Legacy)
+
+The recommendations section is kept for backward compatibility. Populate it with the same services from action_items.
 
 - Only recommend services from the provided catalogue
 - Match service_id exactly
@@ -169,6 +230,7 @@ If you include any calculations (cost of inaction, time saved, etc.):
 - Maximum 5 service recommendations
 - Priority 1 = most important for them right now
 - MUST match their business type
+- Include purchase_type: 'instant' | 'quote' | 'retainer'
 
 ## Output Format
 

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getReckoningByToken } from '@/lib/db';
-import { ReportDisplay } from './ReportDisplay';
+import { ReportWrapper } from './ReportWrapper';
 import { GeneratingState } from './GeneratingState';
 import type { ReckoningReport } from '@/types/report';
 
@@ -67,7 +67,7 @@ export default async function ReckoningPage({ params }: PageProps) {
             Your report is being reviewed by our team. You'll receive an email once it's ready.
           </p>
         </div>
-        <ReportDisplay
+        <ReportWrapper
           report={report}
           name={reckoning.name || 'there'}
           answers={reckoning.answers as Record<string, string | string[]>}
@@ -79,7 +79,7 @@ export default async function ReckoningPage({ params }: PageProps) {
   // Ready to view
   if ((reckoning.status === 'ready' || reckoning.status === 'reviewed') && report) {
     return (
-      <ReportDisplay
+      <ReportWrapper
         report={report}
         name={reckoning.name || 'there'}
         answers={reckoning.answers as Record<string, string | string[]>}

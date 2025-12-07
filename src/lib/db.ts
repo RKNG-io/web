@@ -318,4 +318,149 @@ export async function getIntakesByStatus(status: IntakeRequest['status']): Promi
   );
 }
 
+export async function getIntakeStats(): Promise<{
+  new: number;
+  quoted: number;
+  converted: number;
+  total: number;
+}> {
+  const [stats] = await query<{
+    new_count: string;
+    quoted: string;
+    converted: string;
+    total: string;
+  }>(`
+    SELECT
+      COUNT(*) FILTER (WHERE status = 'new') as new_count,
+      COUNT(*) FILTER (WHERE status = 'quoted') as quoted,
+      COUNT(*) FILTER (WHERE status = 'converted') as converted,
+      COUNT(*) as total
+    FROM intake_requests
+  `);
+
+  return {
+    new: parseInt(stats.new_count, 10),
+    quoted: parseInt(stats.quoted, 10),
+    converted: parseInt(stats.converted, 10),
+    total: parseInt(stats.total, 10),
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ORDERS
+// ═══════════════════════════════════════════════════════════════
+
+export interface Order {
+  id: string;
+  reckoning_id: string | null;
+  stripe_session_id: string | null;
+  stripe_payment_intent: string | null;
+  items: Array<{
+    id: string;
+    type: string;
+    name: string;
+    price: number;
+    serviceIds?: string[];
+  }>;
+  total_amount: number;
+  discount_amount: number;
+  status: 'pending' | 'paid' | 'fulfilled' | 'refunded';
+  created_at: Date;
+  paid_at: Date | null;
+  customer_email?: string;
+  customer_name?: string;
+}
+
+export async function createOrder(
+  items: Order['items'],
+  totalAmount: number,
+  discountAmount: number,
+  stripeSessionId?: string,
+  reckoningId?: string
+): Promise<Order> {
+  const [order] = await query<Order>(
+    `INSERT INTO orders (items, total_amount, discount_amount, stripe_session_id, reckoning_id, status)
+     VALUES ($1, $2, $3, $4, $5, 'pending')
+     RETURNING *`,
+    [JSON.stringify(items), totalAmount, discountAmount, stripeSessionId, reckoningId]
+  );
+  return order;
+}
+
+export async function getOrderById(id: string): Promise<Order | null> {
+  return queryOne<Order>(
+    'SELECT * FROM orders WHERE id = $1',
+    [id]
+  );
+}
+
+export async function getOrderByStripeSession(sessionId: string): Promise<Order | null> {
+  return queryOne<Order>(
+    'SELECT * FROM orders WHERE stripe_session_id = $1',
+    [sessionId]
+  );
+}
+
+export async function updateOrderStatus(
+  id: string,
+  status: Order['status'],
+  paymentIntent?: string
+): Promise<void> {
+  if (status === 'paid') {
+    await query(
+      `UPDATE orders SET status = $1, stripe_payment_intent = $2, paid_at = NOW() WHERE id = $3`,
+      [status, paymentIntent, id]
+    );
+  } else {
+    await query(
+      'UPDATE orders SET status = $1 WHERE id = $2',
+      [status, id]
+    );
+  }
+}
+
+export async function getRecentOrders(limit = 20): Promise<Order[]> {
+  return query<Order>(
+    `SELECT * FROM orders
+     ORDER BY created_at DESC
+     LIMIT $1`,
+    [limit]
+  );
+}
+
+export async function getOrdersByStatus(status: Order['status']): Promise<Order[]> {
+  return query<Order>(
+    'SELECT * FROM orders WHERE status = $1 ORDER BY created_at DESC',
+    [status]
+  );
+}
+
+export async function getOrderStats(): Promise<{
+  pending: number;
+  paid: number;
+  fulfilled: number;
+  totalRevenue: number;
+}> {
+  const [stats] = await query<{
+    pending: string;
+    paid: string;
+    fulfilled: string;
+    total_revenue: string;
+  }>(`
+    SELECT
+      COUNT(*) FILTER (WHERE status = 'pending') as pending,
+      COUNT(*) FILTER (WHERE status = 'paid') as paid,
+      COUNT(*) FILTER (WHERE status = 'fulfilled') as fulfilled,
+      COALESCE(SUM(total_amount) FILTER (WHERE status IN ('paid', 'fulfilled')), 0) as total_revenue
+    FROM orders
+  `);
+
+  return {
+    pending: parseInt(stats.pending, 10),
+    paid: parseInt(stats.paid, 10),
+    fulfilled: parseInt(stats.fulfilled, 10),
+    totalRevenue: parseInt(stats.total_revenue, 10),
+  };
+}
+
 export default pool;
