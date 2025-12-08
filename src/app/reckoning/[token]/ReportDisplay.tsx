@@ -406,7 +406,7 @@ export function ReportDisplay({ report, name, answers }: ReportDisplayProps) {
 
               {/* Secondary CTA - Browse all */}
               <Link
-                href="/start/services"
+                href="/services"
                 className="px-8 py-3 rounded-md border-2 border-fuchsia text-fuchsia font-medium hover:bg-fuchsia/5 transition-colors"
               >
                 Browse all services
