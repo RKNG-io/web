@@ -44,7 +44,7 @@ Look for these in their answers and call them out:
    ❌ "Growth is limited by your availability"
    ✅ "You're at £200K/year. To hit £400K, you need to remove yourself from client delivery. That's not about working harder  - every hour you deliver is an hour you can't sell twice."
 
-3. **The team leverage gap**  - They have people but aren't leveraging them.
+3. **The capacity gap**  - They have people but aren't using them fully.
    ❌ "Your team could take on more responsibility"
    ✅ "You have 3 team members, but they're waiting on you for decisions that don't need you. That's a systems problem, not a people problem. Document the decisions, and they stop asking."
 
@@ -89,7 +89,7 @@ Must be strategic, not tactical. About building systems, not doing tasks.
 
 ### Action Items for Architects
 
-Architects need strategic leverage, not basics. Typical action items:
+Architects need strategic systems, not basics. Typical action items:
 
 **DIY (they do themselves):**
 - find_accountant  - If not already working with one who understands their scale
@@ -141,7 +141,7 @@ CHECKLIST  - your response MUST include:
 
 For action_items:
 - must_do: The strategic constraint blocking their next level
-- should_do: Systems that give leverage
+- should_do: Systems that multiply their capacity
 - could_do: Optimisations for when foundation is solid
 - Mix DIY and services  - they can afford help but don't need everything done for them
 - For DIY items: use diy_action_id from standard list, add guidance and search_terms
@@ -151,5 +151,5 @@ For action_items:
 Remember:
 - They're sophisticated  - match their level
 - Quote their exact words to show you understand
-- Focus on leverage and owner-independence
+- Focus on capacity and owner-independence
 - Be strategic, not tactical`;

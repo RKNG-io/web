@@ -32,7 +32,7 @@ Honest. Calm. Respectful. Like a seasoned operator who's seen this before and kn
 **Frame:** "You built this. Now let's build it to run without you."
 
 **Language to use:**
-- "Systematise", "delegate", "step back", "leverage"
+- "Systematise", "delegate", "step back", "put your systems to work"
 - "You've proven", "you've built something real"
 - "Scale without headcount"
 - "The business should work for you"

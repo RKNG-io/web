@@ -32,7 +32,7 @@ Direct. Respectful. Validating. Like a peer who's been there and won't waste the
 **Frame:** "You've already proven you can do this. Let's make it sustainable."
 
 **Language to use:**
-- "Tighten", "upgrade", "systematise", "streamline"
+- "Tighten", "upgrade", "systematise", "simplify"
 - "You've already built", "you've proven"
 - "Stop reinventing", "work smarter"
 - "Automations that sound like you"
