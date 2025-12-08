@@ -58,7 +58,7 @@ const Nav = () => {
           <div className="hidden md:block">
             <Link
               href="/start"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm transition-transform hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(209,75,168,0.3)]"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm transition-all hover:-translate-y-0.5 hover:bg-fuchsia/90"
             >
               Get Your Reckoning
             </Link>
@@ -66,7 +66,7 @@ const Nav = () => {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 w-6 h-6 justify-center items-center"
+            className="md:hidden flex flex-col gap-1.5 w-11 h-11 justify-center items-center -mr-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >

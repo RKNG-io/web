@@ -130,7 +130,7 @@ function QuestionnaireContent() {
             <div className="flex flex-col gap-3">
               <button
                 onClick={() => setShowResumePrompt(false)}
-                className="w-full px-6 py-3 rounded-lg bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity"
+                className="w-full px-6 py-3 rounded-md bg-fuchsia text-white font-medium hover:opacity-90 transition-opacity"
               >
                 Keep going
               </button>
@@ -139,7 +139,7 @@ function QuestionnaireContent() {
                   reset();
                   setShowResumePrompt(false);
                 }}
-                className="w-full px-6 py-3 rounded-lg bg-transparent border-2 border-charcoal/20 text-charcoal font-medium hover:border-charcoal/40 transition-colors"
+                className="w-full px-6 py-3 rounded-md bg-transparent border-2 border-charcoal/20 text-charcoal font-medium hover:border-charcoal/40 transition-colors"
               >
                 Start over
               </button>

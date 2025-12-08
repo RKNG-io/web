@@ -25,23 +25,13 @@ const Footer: React.FC = () => {
               <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/services?package=launcher" className="text-sm text-white/50 hover:text-white transition-colors">
-                    Launcher
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services?package=builder" className="text-sm text-white/50 hover:text-white transition-colors">
-                    Builder
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services?package=architect" className="text-sm text-white/50 hover:text-white transition-colors">
-                    Architect
-                  </Link>
-                </li>
-                <li>
                   <Link href="/services" className="text-sm text-white/50 hover:text-white transition-colors">
-                    All services
+                    Browse services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/start" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Get your Reckoning
                   </Link>
                 </li>
               </ul>
