@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning PDF Preview — Sarah Chen (Comprehensive)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      --fuchsia: #D14BA8;
+      --mint: #B6E2D3;
+      --blue: #A8C3D1;
+      --ink: #1a1a1a;
+      --stone: #E5E7E9;
+      --mint-light: #d4efe6;
+      --warning-bg: #FFF8E6;
+      --warning-border: #E6C547;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: #555;
+      padding: 40px;
+      color: var(--ink);
+      font-size: 10pt;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: white;
+      margin: 0 auto 40px;
+      padding: 18mm;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .page.dark {
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .page.ice {
+      background: var(--ice);
+    }
+
+    /* Typography */
+    .label {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fuchsia);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .dark .label {
+      color: var(--mint);
+    }
+
+    h1 {
+      font-size: 32pt;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+
+    .dark h1 {
+      color: white;
+    }
+
+    h2 {
+      font-size: 22pt;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: rgba(26, 26, 26, 0.85);
+    }
+
+    .dark p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Cover */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: calc(297mm - 36mm);
+      position: relative;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(209, 75, 168, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cover h1 {
+      color: white;
+      font-size: 38pt;
+      margin-bottom: 6px;
+    }
+
+    .cover .subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 14pt;
+      margin-bottom: 32px;
+    }
+
+    .cover .accent-line {
+      width: 60px;
+      height: 3px;
+      background: var(--fuchsia);
+      margin: 0 auto 20px;
+    }
+
+    .cover .date {
+      color: rgba(255,255,255,0.5);
+      font-size: 10pt;
+    }
+
+    .cover .wordmark {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 16pt;
+      font-weight: 600;
+      color: white;
+      letter-spacing: -0.02em;
+    }
+
+    .cover .wordmark::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--fuchsia));
+      margin-top: 3px;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 6px;
+      padding: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      margin-bottom: 12px;
+    }
+
+    .card.accent-mint {
+      border-left: 3px solid var(--mint);
+      border-radius: 0 6px 6px 0;
+      box-shadow: none;
+      background: var(--ice);
+    }
+
+    .card.accent-fuchsia {
+      border-left: 3px solid var(--fuchsia);
+      border-radius: 0 6px 6px 0;
+      box-shadow: none;
+      background: var(--ice);
+    }
+
+    .card.warning {
+      background: var(--warning-bg);
+      border-left: 3px solid var(--warning-border);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .card.insight {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #3d3936 100%);
+      color: white;
+      border-left: 3px solid var(--fuchsia);
+    }
+
+    .card.insight p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0;
+    }
+
+    /* Pull Quote */
+    .pull-quote {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 14pt;
+      font-style: italic;
+      line-height: 1.4;
+      padding: 16px 20px;
+      border-left: 3px solid var(--fuchsia);
+      background: var(--mint-light);
+      margin: 16px 0;
+    }
+
+    /* Stats */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      background: var(--ice);
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .stat .stat-label {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(45, 41, 38, 0.5);
+      margin-bottom: 2px;
+    }
+
+    .stat .stat-value {
+      font-size: 14pt;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* Phase Overview */
+    .phase-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .phase-card {
+      background: var(--ice);
+      border-radius: 6px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .phase-card.active {
+      background: var(--fuchsia);
+      color: white;
+    }
+
+    .phase-card .phase-num {
+      font-size: 20pt;
+      font-weight: 700;
+      color: var(--fuchsia);
+      margin-bottom: 4px;
+    }
+
+    .phase-card.active .phase-num {
+      color: white;
+    }
+
+    .phase-card .phase-title {
+      font-weight: 600;
+      font-size: 11pt;
+      margin-bottom: 4px;
+    }
+
+    .phase-card .phase-time {
+      font-size: 9pt;
+      opacity: 0.7;
+    }
+
+    /* Checklist */
+    .checklist {
+      margin: 12px 0;
+    }
+
+    .checklist-item {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--stone);
+      align-items: flex-start;
+    }
+
+    .checklist-item:last-child {
+      border-bottom: none;
+    }
+
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--stone);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .checklist-content {
+      flex: 1;
+    }
+
+    .checklist-title {
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+    }
+
+    .checklist-desc {
+      font-size: 9pt;
+      color: rgba(26, 26, 26, 0.6);
+      margin-bottom: 0;
+    }
+
+    .checklist-link {
+      font-size: 8pt;
+      color: var(--fuchsia);
+      text-decoration: none;
+    }
+
+    /* Category Header */
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .category-header:first-child {
+      margin-top: 0;
+    }
+
+    .category-icon {
+      font-size: 16pt;
+    }
+
+    .category-title {
+      font-size: 13pt;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* Resource Table */
+    .resource-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 12px 0;
+    }
+
+    .resource-table th {
+      text-align: left;
+      padding: 8px;
+      background: var(--ice);
+      font-weight: 600;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .resource-table td {
+      padding: 8px;
+      border-bottom: 1px solid var(--stone);
+      vertical-align: top;
+    }
+
+    .resource-table a {
+      color: var(--fuchsia);
+      text-decoration: none;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 10pt;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--fuchsia);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--charcoal);
+      border: 2px solid var(--charcoal);
+    }
+
+    /* Path Forward */
+    .path-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .path-card {
+      background: var(--ice);
+      border-radius: 6px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .path-card h3 {
+      margin-top: 0;
+      font-size: 13pt;
+    }
+
+    .path-card ul {
+      text-align: left;
+      font-size: 9pt;
+      padding-left: 16px;
+      margin: 10px 0;
+    }
+
+    .path-card li {
+      margin-bottom: 4px;
+    }
+
+    /* Discovery Box */
+    .discovery-box {
+      background: var(--charcoal);
+      color: white;
+      border-radius: 6px;
+      padding: 16px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .discovery-box p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 12px;
+    }
+
+    /* Closing */
+    .closing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: calc(297mm - 36mm);
+    }
+
+    .closing h2 {
+      color: white;
+      font-size: 24pt;
+      margin-bottom: 8px;
+    }
+
+    .closing p {
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 24px;
+      max-width: 400px;
+    }
+
+    .closing .wordmark {
+      font-size: 18pt;
+      font-weight: 600;
+      color: white;
+      margin-top: 32px;
+    }
+
+    .closing .tagline {
+      font-size: 10pt;
+      color: rgba(255,255,255,0.3);
+      margin-top: 8px;
+    }
+
+    /* Compact Checklist Table */
+    .checklist-table {
+      width: 100%;
+      font-size: 8pt;
+      border-collapse: collapse;
+    }
+
+    .checklist-table th {
+      text-align: left;
+      padding: 6px;
+      background: var(--charcoal);
+      color: white;
+      font-weight: 500;
+    }
+
+    .checklist-table td {
+      padding: 5px 6px;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .checklist-table tr:nth-child(even) {
+      background: var(--ice);
+    }
+
+    .phase-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 7pt;
+      font-weight: 600;
+      background: var(--ice);
+    }
+
+    .phase-badge.p1 { background: var(--fuchsia); color: white; }
+    .phase-badge.p2 { background: var(--mint); color: var(--charcoal); }
+    .phase-badge.p3 { background: var(--blue); color: var(--charcoal); }
+
+    /* Two Column Layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Divider */
+    .divider {
+      height: 2px;
+      background: var(--fuchsia);
+      margin: 16px 0;
+      opacity: 0.2;
+    }
+
+    /* Small text */
+    .small {
+      font-size: 8pt;
+      color: rgba(26, 26, 26, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER -->
+  <div class="page dark">
+    <div class="cover">
+      <div class="label">Your Reckoning</div>
+      <h1>Sarah Chen</h1>
+      <div class="subtitle">Career Coach — Launching</div>
+      <div class="accent-line"></div>
+      <div class="date">Generated 15 January 2025</div>
+      <div class="wordmark">Reckoning</div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: THE MIRROR -->
+  <div class="page">
+    <div class="label">Your Reckoning</div>
+    <h2>We Heard You</h2>
+    
+    <div class="pull-quote">
+      "I've been helping friends with their careers for years. Everyone tells me I should charge for this. I'm finally ready to make it real."
+    </div>
+
+    <p>You're ready to launch. You've spent years building expertise as a career coach — informally, through word of mouth, alongside your day job. Now you want to make it official.</p>
+
+    <p>You have the skills. You have the experience. You have people who'd pay you today if you had a way to let them.</p>
+
+    <div class="divider"></div>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-label">Stage</div>
+        <div class="stat-value">Launching</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Business Type</div>
+        <div class="stat-value">Coaching</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Current Status</div>
+        <div class="stat-value">Employed</div>
+      </div>
+    </div>
+
+    <div class="card warning" style="margin-top: 20px;">
+      <h3 style="margin-top: 0; color: var(--charcoal);">⚠️ Still Employed?</h3>
+      <p style="margin-bottom: 0; font-size: 9pt;">Before you do anything else: <strong>read your employment contract</strong>. Look for clauses about outside work, non-compete restrictions, or disclosure requirements. If you need to inform your employer, do it in writing and keep a copy. This isn't about asking permission — it's about protecting yourself.</p>
+    </div>
+  </div>
+
+  <!-- PAGE 3: YOUR ROADMAP OVERVIEW -->
+  <div class="page">
+    <div class="label">The Roadmap</div>
+    <h2>Your Path to Launch</h2>
+    
+    <p>Starting a business has real steps. Here's everything you need to do — organised into phases so it's achievable, not overwhelming.</p>
+
+    <div class="phase-overview">
+      <div class="phase-card active">
+        <div class="phase-num">1</div>
+        <div class="phase-title">Foundation</div>
+        <div class="phase-time">This week</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">2</div>
+        <div class="phase-title">Operations</div>
+        <div class="phase-time">Weeks 2-4</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">3</div>
+        <div class="phase-title">Growth</div>
+        <div class="phase-time">Month 2+</div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 20px;">
+      <div>
+        <h3>Phase 1: Foundation</h3>
+        <p style="font-size: 9pt;">The legal and financial basics. Do these before you take money.</p>
+        <ul style="font-size: 9pt; padding-left: 16px; color: rgba(26,26,26,0.7);">
+          <li>Review employment contract</li>
+          <li>Register with HMRC</li>
+          <li>Set up payments</li>
+          <li>Open business bank account</li>
+          <li>Create client agreement</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Phase 2: Operations</h3>
+        <p style="font-size: 9pt;">The systems that let you work with clients smoothly.</p>
+        <ul style="font-size: 9pt; padding-left: 16px; color: rgba(26,26,26,0.7);">
+          <li>Set up online booking</li>
+          <li>Create website</li>
+          <li>Build intake process</li>
+          <li>Set up Google Business</li>
+          <li>Document your process</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <h3>Phase 3: Growth</h3>
+      <p style="font-size: 9pt;">Getting visible and building momentum.</p>
+      <ul style="font-size: 9pt; padding-left: 16px; color: rgba(26,26,26,0.7); display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+        <li>Tell your network</li>
+        <li>Set up email list</li>
+        <li>Create content plan</li>
+        <li>Ask for testimonials</li>
+        <li>Set up review automation</li>
+        <li>Identify referral partners</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 9pt; color: var(--fuchsia);">
+      <strong>60 checklist items total.</strong> See pages 8-9 for the complete list.
+    </p>
+  </div>
+
+  <!-- PAGE 4: PHASE 1 DETAIL -->
+  <div class="page">
+    <div class="label">Phase 1</div>
+    <h2>Foundation — This Week</h2>
+    
+    <p>These are the non-negotiables. The legal and financial basics that let you take money without worry.</p>
+
+    <div class="category-header">
+      <span class="category-icon">⚖️</span>
+      <span class="category-title">Legal</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Review your employment contract</div>
+          <div class="checklist-desc">Look for non-compete clauses, moonlighting restrictions, IP assignment, disclosure requirements.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Choose your business structure</div>
+          <div class="checklist-desc">Sole trader (simplest) or limited company (separate legal entity). Most start as sole traders.</div>
+          <a href="#" class="checklist-link">→ gov.uk/set-up-business</a>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Check if you need licenses or permits</div>
+          <div class="checklist-desc">Coaching: usually none. Financial advice: yes. Check to be sure.</div>
+          <a href="#" class="checklist-link">→ gov.uk/licence-finder</a>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Draft a simple client agreement</div>
+          <div class="checklist-desc">What you'll deliver, what they'll pay, cancellation terms. A clear email can work to start.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-header">
+      <span class="category-icon">📋</span>
+      <span class="category-title">Compliance</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Register with HMRC for Self Assessment</div>
+          <div class="checklist-desc">Required if you'll earn over £1,000/year. You'll receive a UTR within 10 working days.</div>
+          <a href="#" class="checklist-link">→ gov.uk/register-for-self-assessment</a>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up basic record-keeping</div>
+          <div class="checklist-desc">Keep invoices, receipts, bank statements for 5 years. A spreadsheet works.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Check GDPR requirements</div>
+          <div class="checklist-desc">If you collect client data: you need a privacy policy. ICO registration: £40/year.</div>
+          <a href="#" class="checklist-link">→ ico.org.uk/for-small-organisations</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 5: PHASE 1 CONTINUED (FINANCE) -->
+  <div class="page">
+    <div class="label">Phase 1 (continued)</div>
+    <h2>Foundation — Finance</h2>
+
+    <div class="category-header">
+      <span class="category-icon">💰</span>
+      <span class="category-title">Finance</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Open a business bank account</div>
+          <div class="checklist-desc">Not legally required for sole traders, but makes tax return much easier. Many offer free first year.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up a way to get paid</div>
+          <div class="checklist-desc">Options: Stripe, PayPal, GoCardless, bank transfer. Connect to your booking system if possible.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Decide your pricing</div>
+          <div class="checklist-desc">Research competitors. Calculate your costs + desired hourly rate. Start where you want to be.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Understand tax deadlines</div>
+          <div class="checklist-desc">Tax year: 6 April – 5 April. Self Assessment deadline: 31 January (online).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card insight" style="margin-top: 20px;">
+      <p style="font-size: 10pt; margin-bottom: 8px;"><strong>💡 The Hidden Benefit of Automated Payments</strong></p>
+      <p style="font-size: 9pt;">When payment is built into booking, you remove yourself from the money conversation entirely. No awkward "so about the invoice..." moments. No chasing. No wondering if they forgot.</p>
+      <p style="font-size: 9pt; margin-bottom: 0;">They book. They pay. You show up and do the work. For many people, eliminating that psychological weight is worth more than the hours saved.</p>
+    </div>
+
+    <div class="category-header">
+      <span class="category-icon">🌐</span>
+      <span class="category-title">Presence (Start Now)</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Register your domain name</div>
+          <div class="checklist-desc">Do this early. Good names get taken. sarahchencoaching.com is available (checked today).</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Claim your social handles</div>
+          <div class="checklist-desc">Even if you won't use them immediately, secure the username across platforms.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 6: PHASE 2 -->
+  <div class="page">
+    <div class="label">Phase 2</div>
+    <h2>Operations — Weeks 2-4</h2>
+    
+    <p>The systems that let you work with clients smoothly. Build once, use forever.</p>
+
+    <div class="category-header">
+      <span class="category-icon">⚙️</span>
+      <span class="category-title">Operations</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up online booking</div>
+          <div class="checklist-desc">Calendly (free tier), Cal.com, or Acuity. Link payment to booking so clients pay when they book.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Create client intake process</div>
+          <div class="checklist-desc">What info do you need before the first session? Questionnaire, contract, payment — automate the sequence.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Document your service delivery process</div>
+          <div class="checklist-desc">What's your framework? Write it down. Makes delivery consistent and takes thinking out of each session.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up invoicing</div>
+          <div class="checklist-desc">If not using payment-at-booking. Options: Wave (free), Xero, QuickBooks.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Create a simple client tracker</div>
+          <div class="checklist-desc">Even a spreadsheet: Name, contact, sessions booked, notes. Know who you're working with.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-header">
+      <span class="category-icon">🌐</span>
+      <span class="category-title">Presence</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Get a simple website live</div>
+          <div class="checklist-desc">One page is enough: who you help, how you help, book now. Carrd (£19/year), Squarespace, Framer.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up Google Business Profile</div>
+          <div class="checklist-desc">Free visibility when people search for coaching locally.</div>
+          <a href="#" class="checklist-link">→ google.com/business</a>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up professional email</div>
+          <div class="checklist-desc">sarah@sarahchencoaching.com looks better than a gmail address.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Create link-in-bio page</div>
+          <div class="checklist-desc">One link that shows booking, website, social — for Instagram/LinkedIn bio.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 7: PHASE 3 -->
+  <div class="page">
+    <div class="label">Phase 3</div>
+    <h2>Growth — Month 2+</h2>
+    
+    <p>You're set up. Now it's time to get visible and build momentum.</p>
+
+    <div class="category-header">
+      <span class="category-icon">📣</span>
+      <span class="category-title">Marketing</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Tell your network you're open for business</div>
+          <div class="checklist-desc">LinkedIn post. Personal emails to warm contacts. Your first clients come from people who already know you.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Create a simple content plan</div>
+          <div class="checklist-desc">What can you share that demonstrates expertise? 1-2 posts per week is enough to start.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up an email list</div>
+          <div class="checklist-desc">Mailchimp (free tier), ConvertKit, Buttondown. Even 10 subscribers is a start.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Ask for testimonials</div>
+          <div class="checklist-desc">After each engagement: "Would you write a few sentences about working together?"</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Set up review request automation</div>
+          <div class="checklist-desc">After session ends, email asks for Google review. Social proof compounds over time.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Identify referral partnerships</div>
+          <div class="checklist-desc">Who serves the same audience but offers different services? Recruiters, therapists, business coaches.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-header">
+      <span class="category-icon">⚖️</span>
+      <span class="category-title">Legal (Ongoing)</span>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Consider professional indemnity insurance</div>
+          <div class="checklist-desc">Covers you if a client claims your advice caused them harm. Typical cost: £100-300/year.</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-title">Create website terms and conditions</div>
+          <div class="checklist-desc">What are the rules for using your site and buying from you?</div>
+          <a href="#" class="checklist-link">→ gov.uk/online-and-distance-selling</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 8: THE FULL PICTURE -->
+  <div class="page ice">
+    <div class="label">The Full Picture</div>
+    <h2>Complete Checklist</h2>
+    
+    <p style="font-size: 9pt; margin-bottom: 12px;">Everything you need to do, organised by category. 60 items total across all phases.</p>
+
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">⚖️ Legal</th>
+          <th style="width: 15%;">Phase</th>
+          <th style="width: 10%;">Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Review employment contract</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Choose business structure</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Check licence requirements</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Draft client agreement</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Create website T&Cs</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Create privacy policy</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Get PI insurance</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+        <tr><td>Review IP ownership</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+      </tbody>
+    </table>
+
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">📋 Compliance</th>
+          <th style="width: 15%;">Phase</th>
+          <th style="width: 10%;">Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Register for Self Assessment</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Receive and store UTR</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Set up record-keeping</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Check ICO registration</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Create GDPR data process</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Set tax deadline reminders</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>File first Self Assessment</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+      </tbody>
+    </table>
+
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">💰 Finance</th>
+          <th style="width: 15%;">Phase</th>
+          <th style="width: 10%;">Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Open business bank account</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Set up payment processing</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Decide pricing</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Create invoice template</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Set up invoicing software</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Set aside tax percentage</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Consider accountant</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAGE 9: FULL PICTURE CONTINUED + RESOURCES -->
+  <div class="page ice">
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">⚙️ Operations</th>
+          <th style="width: 15%;">Phase</th>
+          <th style="width: 10%;">Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Set up online booking</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Link payments to booking</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Create intake questionnaire</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Document service process</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Set up client tracker</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Create session templates</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Set up confirmation emails</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Create follow-up sequences</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+      </tbody>
+    </table>
+
+    <table class="checklist-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">🌐 Presence</th>
+          <th style="width: 15%;">Phase</th>
+          <th style="width: 10%;">Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Register domain</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Set up professional email</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Claim social handles</td><td><span class="phase-badge p1">1</span></td><td>☐</td></tr>
+        <tr><td>Create website</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Set up Google Business</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Create link-in-bio</td><td><span class="phase-badge p2">2</span></td><td>☐</td></tr>
+        <tr><td>Get first testimonial live</td><td><span class="phase-badge p3">3</span></td><td>☐</td></tr>
+      </tbody>
+    </table>
+
+    <div class="label" style="margin-top: 20px;">Resources</div>
+    <h3 style="margin-top: 4px;">Free Tools & Official Guidance</h3>
+
+    <table class="resource-table">
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Set up a business (compare structures)</td><td><a href="#">gov.uk/set-up-business</a></td></tr>
+        <tr><td>Register as sole trader</td><td><a href="#">gov.uk/register-for-self-assessment</a></td></tr>
+        <tr><td>Check licence requirements</td><td><a href="#">gov.uk/licence-finder</a></td></tr>
+        <tr><td>GDPR for small business</td><td><a href="#">ico.org.uk/for-small-organisations</a></td></tr>
+        <tr><td>Free planning templates</td><td><a href="#">startuploans.co.uk/templates</a></td></tr>
+        <tr><td>EU business guidance</td><td><a href="#">europa.eu/youreurope/business</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAGE 10: PATH FORWARD -->
+  <div class="page">
+    <div class="label">Your Path Forward</div>
+    <h2>Two Ways to Move</h2>
+
+    <div class="path-grid">
+      <div class="path-card">
+        <h3>Do It Yourself</h3>
+        <p style="font-size: 9pt;">Your Reckoning is your roadmap. Follow it step by step.</p>
+        <ul>
+          <li>Interactive checklist in your dashboard</li>
+          <li>Resource guides for each step</li>
+          <li>Templates included</li>
+          <li>We'll check in at each phase milestone</li>
+        </ul>
+        <p style="font-weight: 500; font-size: 10pt; color: var(--charcoal);">You've got this.</p>
+        <a href="#" class="btn btn-secondary">Access your dashboard →</a>
+      </div>
+
+      <div class="path-card" style="background: var(--mint-light);">
+        <h3>Do It With Us</h3>
+        <p style="font-size: 9pt;">We handle the hard parts. You focus on clients.</p>
+        <ul>
+          <li><strong>Launchpad</strong> — from £399</li>
+          <li>Website + booking + payments + domain</li>
+          <li>Done in days, not weeks</li>
+          <li>You stay focused on your expertise</li>
+        </ul>
+        <p style="font-weight: 500; font-size: 10pt; color: var(--charcoal);">Or pick individual services from £79</p>
+        <a href="#" class="btn btn-primary">See your options →</a>
+      </div>
+    </div>
+
+    <div class="discovery-box">
+      <p style="font-size: 12pt; font-weight: 500; color: white; margin-bottom: 6px;">Not sure which path?</p>
+      <p style="font-size: 10pt;">Book a free 15-minute call. No pitch. Just clarity.</p>
+      <a href="#" class="btn btn-primary">Book a call →</a>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 9pt; text-align: center; color: rgba(26,26,26,0.5);">
+      60 items might feel like a lot. That's because starting a business <em>is</em> a lot.<br>
+      But broken into phases, it's achievable. And we're here if you want help.
+    </p>
+  </div>
+
+  <!-- PAGE 11: THE ONE THING -->
+  <div class="page dark">
+    <div class="closing">
+      <div class="label">Your One Next Step</div>
+      <h2>Register your domain name.</h2>
+      <p>sarahchencoaching.com is available. Claim it before someone else does. This takes 5 minutes and costs £10/year.</p>
+      <a href="#" class="btn btn-primary">Do this now →</a>
+      
+      <div style="width: 60px; height: 2px; background: var(--fuchsia); margin: 24px 0;"></div>
+      
+      <p style="font-size: 9pt; color: rgba(255,255,255,0.5);">
+        Questions? Reply to this email or <a href="#" style="color: var(--fuchsia);">book a call</a>
+      </p>
+
+      <div class="wordmark">Reckoning</div>
+      <div class="tagline">Your time is now.</div>
+    </div>
+  </div>
+
+</body>
+</html>

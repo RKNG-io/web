@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning — Brand Guidelines v1.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Primary */
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      
+      /* Accents */
+      --fuchsia: #D14BA8;
+      --mint: #B6E2D3;
+      --blue: #A8C3D1;
+      
+      /* Extended */
+      --ink: #1a1a1a;
+      --stone: #E5E7E9;
+      --fuchsia-dark: #a33a85;
+      --fuchsia-light: #e066bb;
+      --mint-light: #d4efe6;
+      --blue-light: #c5d8e3;
+      
+      /* Semantic */
+      --success: #2A7F78;
+      --warning: #C3B273;
+      --error: #c45d5d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: white;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* ==================== NAVIGATION ==================== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      background: var(--charcoal);
+      color: white;
+      padding: 2rem 1.5rem;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    nav .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    nav .nav-logo::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%);
+    }
+
+    nav .nav-subtitle {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.5;
+      margin-bottom: 2.5rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      margin-bottom: 0.15rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      display: block;
+      padding: 0.4rem 0;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    nav .nav-section {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      opacity: 0.4;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav .nav-section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    /* ==================== MAIN CONTENT ==================== */
+    main {
+      margin-left: 260px;
+      min-height: 100vh;
+    }
+
+    section {
+      padding: 5rem 4rem;
+      border-bottom: 1px solid var(--stone);
+      max-width: 1200px;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    .full-width {
+      max-width: none;
+    }
+
+    .section-number {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--fuchsia);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      color: var(--charcoal);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+      line-height: 1.3;
+      color: var(--charcoal);
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      margin-top: 2rem;
+      color: var(--charcoal);
+    }
+
+    p {
+      max-width: 620px;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .lead {
+      font-size: 1.125rem;
+      color: var(--charcoal);
+      max-width: 680px;
+    }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      background: var(--charcoal);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+      max-width: none;
+    }
+
+    .hero .section-number {
+      color: var(--mint);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+    }
+
+    .hero-wordmark {
+      font-size: 6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 3rem 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-wordmark::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%);
+      border-radius: 2px;
+    }
+
+    .hero-palette {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .hero-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    /* ==================== GRID LAYOUTS ==================== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    /* ==================== CARDS ==================== */
+    .card {
+      background: var(--ice);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .card.white {
+      background: white;
+      border: 1px solid var(--stone);
+    }
+
+    .card.dark {
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .card.mint {
+      background: var(--mint);
+    }
+
+    .card.blue {
+      background: var(--blue);
+    }
+
+    .card.fuchsia {
+      background: var(--fuchsia);
+      color: white;
+    }
+
+    .card-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.5;
+      margin-top: 1.25rem;
+    }
+
+    /* ==================== LOGO DISPLAYS ==================== */
+    .logo-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      border-radius: 10px;
+    }
+
+    .logo-display.large {
+      min-height: 280px;
+    }
+
+    .wordmark {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .wordmark.small {
+      font-size: 2rem;
+    }
+
+    .wordmark.with-rise {
+      position: relative;
+      display: inline-block;
+    }
+
+    .wordmark.with-rise::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%);
+      border-radius: 2px;
+    }
+
+    .wordmark.with-rise.on-light::after {
+      background: linear-gradient(90deg, transparent 0%, var(--fuchsia) 30%, var(--fuchsia) 100%);
+    }
+
+    /* ==================== LOCKUPS ==================== */
+    .lockup-stacked {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .lockup-stacked.left {
+      align-items: flex-start;
+    }
+
+    .lockup-inline {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .url-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      opacity: 0.5;
+    }
+
+    .divider {
+      width: 1px;
+      height: 1.5rem;
+      background: currentColor;
+      opacity: 0.3;
+      align-self: center;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* ==================== SHORT MARKS ==================== */
+    .short-mark {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .favicon-demo {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .app-icon-demo {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .social-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 2.25rem;
+    }
+
+    /* ==================== COLOUR SWATCHES ==================== */
+    .swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .swatch-color {
+      height: 100px;
+    }
+
+    .swatch-color.large {
+      height: 140px;
+    }
+
+    .swatch-info {
+      padding: 1rem;
+    }
+
+    .swatch-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .swatch-role {
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+
+    .swatch-codes {
+      font-size: 0.7rem;
+      color: #888;
+      font-family: monospace;
+    }
+
+    .swatch-codes span {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ==================== TYPOGRAPHY SPECIMENS ==================== */
+    .type-specimen {
+      margin: 2rem 0;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .type-specimen:last-child {
+      border-bottom: none;
+    }
+
+    .type-specimen .sample {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: var(--charcoal);
+    }
+
+    .type-specimen .details {
+      font-size: 0.7rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .type-scale {
+      margin: 2rem 0;
+    }
+
+    .type-scale-item {
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .type-scale-item:last-child {
+      border-bottom: none;
+    }
+
+    .type-scale-item .label {
+      width: 100px;
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .type-scale-item .specs {
+      width: 140px;
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      color: #aaa;
+      font-family: monospace;
+    }
+
+    .type-scale-item .example {
+      flex: 1;
+      color: var(--charcoal);
+    }
+
+    /* ==================== DON'TS ==================== */
+    .donts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .dont-item {
+      background: #fdf5f5;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .dont-item .demo {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .dont-item .label {
+      font-size: 0.75rem;
+      color: #b55;
+    }
+
+    .dont-x {
+      color: #b55;
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* ==================== APPLICATIONS ==================== */
+    .browser-frame {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .browser-bar {
+      background: #f5f5f5;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ddd;
+    }
+
+    .browser-url {
+      flex: 1;
+      background: white;
+      border-radius: 4px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+
+    .browser-content {
+      min-height: 300px;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .site-nav .nav-wordmark {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+    }
+
+    .site-nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .site-nav .nav-cta {
+      background: var(--charcoal);
+      color: white;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .site-hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .site-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      margin-top: 0;
+    }
+
+    .site-hero p {
+      color: #666;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .site-cta {
+      background: var(--fuchsia);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .site-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    /* Business card */
+    .business-card {
+      aspect-ratio: 1.75;
+      border-radius: 10px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 360px;
+    }
+
+    .business-card .biz-wordmark {
+      font-weight: 600;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .business-card .biz-details {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      line-height: 1.7;
+    }
+
+    /* Email signature */
+    .email-sig {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      max-width: 340px;
+      border-left: 3px solid var(--fuchsia);
+    }
+
+    .email-sig .sig-name {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--charcoal);
+    }
+
+    .email-sig .sig-role {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+
+    .email-sig .sig-url {
+      font-size: 0.85rem;
+      color: var(--fuchsia);
+      text-decoration: none;
+    }
+
+    /* Social mockups */
+    .social-post {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      max-width: 320px;
+    }
+
+    .social-post-image {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .social-post-footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #888;
+      border-top: 1px solid var(--stone);
+    }
+
+    /* ==================== VOICE EXAMPLES ==================== */
+    .voice-example {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .voice-do, .voice-dont {
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .voice-do {
+      background: var(--mint-light);
+      border-left: 3px solid var(--success);
+    }
+
+    .voice-dont {
+      background: #fdf5f5;
+      border-left: 3px solid #c55;
+    }
+
+    .voice-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .voice-do .voice-tag { color: var(--success); }
+    .voice-dont .voice-tag { color: #b55; }
+
+    .voice-do blockquote, .voice-dont blockquote {
+      font-style: italic;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ==================== USAGE GUIDE ==================== */
+    .usage-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    .usage-table th {
+      text-align: left;
+      padding: 1rem;
+      background: var(--ice);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+    }
+
+    .usage-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--stone);
+      vertical-align: top;
+    }
+
+    .usage-table .color-chip {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .guidelines-footer {
+      background: var(--charcoal);
+      color: white;
+      padding: 4rem;
+      text-align: center;
+      max-width: none;
+    }
+
+    .guidelines-footer .wordmark {
+      margin-bottom: 1rem;
+    }
+
+    .guidelines-footer p {
+      color: rgba(255,255,255,0.5);
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    /* ==================== UTILITIES ==================== */
+    .mt-2 { margin-top: 2rem; }
+    .mt-3 { margin-top: 3rem; }
+    .mb-2 { margin-bottom: 2rem; }
+    .text-center { text-align: center; }
+    .text-muted { color: #888; }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 1100px) {
+      nav {
+        display: none;
+      }
+      main {
+        margin-left: 0;
+      }
+      section {
+        padding: 3rem 2rem;
+      }
+      .grid-2, .grid-3, .grid-4, .grid-5, .donts-grid, .voice-example {
+        grid-template-columns: 1fr;
+      }
+      .hero-wordmark {
+        font-size: 3.5rem;
+      }
+      .type-scale-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .type-scale-item .label,
+      .type-scale-item .specs {
+        width: auto;
+      }
+    }
+
+    @media print {
+      nav { display: none; }
+      main { margin-left: 0; }
+      section { padding: 2rem 1rem; page-break-inside: avoid; }
+      .hero { min-height: auto; padding: 3rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav>
+    <div class="nav-logo">Reckoning</div>
+    <div class="nav-subtitle">Brand Guidelines v1.0</div>
+    <ul>
+      <li class="nav-section">Foundation</li>
+      <li><a href="#brand">Brand Essence</a></li>
+      <li><a href="#personality">Personality</a></li>
+      <li><a href="#voice">Voice & Tone</a></li>
+      
+      <li class="nav-section">Identity</li>
+      <li><a href="#logo">Primary Logo</a></li>
+      <li><a href="#lockups">Lockups</a></li>
+      <li><a href="#shortmarks">Short Marks</a></li>
+      <li><a href="#clearspace">Clear Space</a></li>
+      <li><a href="#donts">Misuse</a></li>
+      
+      <li class="nav-section">Design System</li>
+      <li><a href="#colour">Colour Palette</a></li>
+      <li><a href="#colour-usage">Colour Usage</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#type-scale">Type Scale</a></li>
+      
+      <li class="nav-section">Application</li>
+      <li><a href="#digital">Digital</a></li>
+      <li><a href="#print">Print & Social</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero full-width" id="top">
+      <div class="section-number">Brand Guidelines — Version 1.0</div>
+      <h1>Reckoning</h1>
+      <p>A visual identity system for the moment between dreaming and doing.</p>
+      <div class="hero-wordmark">Reckoning</div>
+      <div class="hero-palette">
+        <div class="hero-swatch" style="background: var(--charcoal);"></div>
+        <div class="hero-swatch" style="background: var(--ice);"></div>
+        <div class="hero-swatch" style="background: var(--fuchsia);"></div>
+        <div class="hero-swatch" style="background: var(--mint);"></div>
+        <div class="hero-swatch" style="background: var(--blue);"></div>
+      </div>
+    </section>
+
+    <!-- BRAND ESSENCE -->
+    <section id="brand">
+      <div class="section-number">01 — Foundation</div>
+      <h1>Brand Essence</h1>
+      <p class="lead">Reckoning helps solopreneurs and small business owners stop dreaming and start running. It's the bridge between the life you're living and the one you've been waiting to build.</p>
+      
+      <h2>The Name</h2>
+      <p>"Reckoning" is a moment of truth — when accounts are settled, clarity emerges, and decisions become real. It carries weight without heaviness, urgency without panic. It's both an assessment and a beginning.</p>
+      
+      <h2>Brand Promise</h2>
+      <p>We meet you where you are with clear-eyed diagnosis and prioritised action. No jargon, no upsells, no busywork. Just the next right step, delivered by people who understand systems.</p>
+      
+      <h2>Tagline</h2>
+      <div class="card dark mt-2" style="max-width: 320px;">
+        <div style="font-size: 1.5rem; font-weight: 500;">Your time is now.</div>
+      </div>
+
+      <h2>Brand Pillars</h2>
+      <div class="grid-3 mt-2">
+        <div class="card">
+          <h3 style="margin-top: 0; color: var(--fuchsia);">Clarity</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Cut through the noise. Know exactly where you stand and what to do next.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top: 0; color: var(--fuchsia);">Action</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">No more planning paralysis. Prioritised steps you can take today.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top: 0; color: var(--fuchsia);">Support</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">You're not alone. Expert help, transparently priced, when you need it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONALITY -->
+    <section id="personality">
+      <div class="section-number">02 — Foundation</div>
+      <h1>Brand Personality</h1>
+      <p class="lead">Reckoning feels like a trusted friend who's been where you're going — confident without ego, direct without coldness, energetic without chaos.</p>
+      
+      <div class="grid-2 mt-2">
+        <div class="card">
+          <h3 style="margin-top: 0;">We are</h3>
+          <p style="margin-bottom: 0;">Fresh · Optimistic · Approachable · Direct · Warm · Energetic · Supportive</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top: 0;">We are not</h3>
+          <p style="margin-bottom: 0;">Corporate · Pushy · Jargon-heavy · Slick · Chaotic · Cold · Intimidating</p>
+        </div>
+      </div>
+
+      <h2>Brand Tension</h2>
+      <p>We hold two truths at once: <strong>This is your moment</strong> — and <strong>you don't have to figure it out alone.</strong> The visual identity balances energy with calm, confidence with approachability, boldness with support.</p>
+
+      <h2>Emotional Journey</h2>
+      <div class="grid-3 mt-2">
+        <div class="card" style="background: var(--mint);">
+          <h3 style="margin-top: 0;">Before</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--charcoal);">Overwhelmed, uncertain, stuck in planning mode, doing everything alone.</p>
+        </div>
+        <div class="card fuchsia">
+          <h3 style="margin-top: 0;">During</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Clarity emerging, priorities becoming clear, feeling seen and understood.</p>
+        </div>
+        <div class="card" style="background: var(--blue);">
+          <h3 style="margin-top: 0;">After</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--charcoal);">Confident, focused, supported, moving forward with clear next steps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICE & TONE -->
+    <section id="voice">
+      <div class="section-number">03 — Foundation</div>
+      <h1>Voice & Tone</h1>
+      <p class="lead">We speak like a smart friend who happens to understand business operations — clear, direct, encouraging, never condescending.</p>
+      
+      <h2>Voice Principles</h2>
+      <div class="grid-3 mt-2">
+        <div class="card white">
+          <h3 style="margin-top: 0;">Clear over clever</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Say what you mean. No buzzwords, no hedging, no unnecessary complexity.</p>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Warm, not soft</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Kindness and directness aren't opposites. We care enough to be honest.</p>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Grounded optimism</h3>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">We believe in possibility without ignoring reality. Hope with a plan.</p>
+        </div>
+      </div>
+
+      <h2>Tone by Context</h2>
+      <table class="usage-table">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>Tone</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marketing / Home</td>
+            <td>Energetic, inviting</td>
+            <td>"Your time is now. Let's make it count."</td>
+          </tr>
+          <tr>
+            <td>Questionnaire</td>
+            <td>Warm, conversational</td>
+            <td>"Tell us about your business — no wrong answers."</td>
+          </tr>
+          <tr>
+            <td>Diagnosis / Report</td>
+            <td>Direct, supportive</td>
+            <td>"Here's what's costing you. Here's what to do about it."</td>
+          </tr>
+          <tr>
+            <td>Error / Empty state</td>
+            <td>Calm, helpful</td>
+            <td>"Something went wrong. Let's try that again."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="voice-example">
+        <div class="voice-do">
+          <div class="voice-tag">Do</div>
+          <blockquote>"You're doing three people's jobs. Let's fix that."</blockquote>
+        </div>
+        <div class="voice-dont">
+          <div class="voice-tag">Don't</div>
+          <blockquote>"Leverage our synergistic solutions to optimise your workflow efficiency."</blockquote>
+        </div>
+      </div>
+      <div class="voice-example">
+        <div class="voice-do">
+          <div class="voice-tag">Do</div>
+          <blockquote>"Ready when you are. No pressure."</blockquote>
+        </div>
+        <div class="voice-dont">
+          <div class="voice-tag">Don't</div>
+          <blockquote>"Act now! Limited time offer! Don't miss out!"</blockquote>
+        </div>
+      </div>
+      <div class="voice-example">
+        <div class="voice-do">
+          <div class="voice-tag">Do</div>
+          <blockquote>"This will take about 15 minutes. Worth it."</blockquote>
+        </div>
+        <div class="voice-dont">
+          <div class="voice-tag">Don't</div>
+          <blockquote>"Complete our comprehensive diagnostic assessment tool."</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMARY LOGO -->
+    <section id="logo">
+      <div class="section-number">04 — Identity</div>
+      <h1>Primary Logo</h1>
+      <p class="lead">The Reckoning wordmark is a pure typographic mark — confident enough to stand without symbols or embellishment. The rising line accent represents forward momentum.</p>
+      
+      <h2>Primary Wordmark</h2>
+      <p>Outfit Semibold (600), title case, with slightly tightened tracking (-0.02em). The rising line in Electric Fuchsia signals the moment of stepping through — from planning to action.</p>
+      
+      <div class="grid-2 mt-2">
+        <div class="logo-display card dark large">
+          <div class="lockup-stacked">
+            <div class="wordmark with-rise" style="color: white;">Reckoning</div>
+          </div>
+        </div>
+        <div class="logo-display large" style="background: var(--ice);">
+          <div class="lockup-stacked">
+            <div class="wordmark with-rise on-light" style="color: var(--charcoal);">Reckoning</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Wordmark Without Accent</h2>
+      <p>For small applications or contexts where the accent may not render clearly, use the clean wordmark.</p>
+      
+      <div class="grid-2 mt-2">
+        <div class="logo-display card" style="background: white; border: 1px solid var(--stone);">
+          <div class="wordmark" style="color: var(--charcoal);">Reckoning</div>
+        </div>
+        <div class="logo-display card dark">
+          <div class="wordmark" style="color: white;">Reckoning</div>
+        </div>
+      </div>
+
+      <h2>On Colour Backgrounds</h2>
+      <div class="grid-3 mt-2">
+        <div class="logo-display card fuchsia" style="min-height: 160px;">
+          <div class="wordmark small" style="color: white;">Reckoning</div>
+        </div>
+        <div class="logo-display card mint" style="min-height: 160px;">
+          <div class="wordmark small" style="color: var(--charcoal);">Reckoning</div>
+        </div>
+        <div class="logo-display card blue" style="min-height: 160px;">
+          <div class="wordmark small" style="color: var(--charcoal);">Reckoning</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCKUPS -->
+    <section id="lockups">
+      <div class="section-number">05 — Identity</div>
+      <h1>Lockups</h1>
+      <p class="lead">The wordmark pairs with the URL for complete brand identification. The URL always plays a supporting role — never competing with the wordmark.</p>
+      
+      <h2>Stacked Lockup (Primary)</h2>
+      <p>Use for hero sections, presentations, and anywhere the brand needs to anchor the space.</p>
+      <div class="grid-2 mt-2">
+        <div class="logo-display card dark large">
+          <div class="lockup-stacked">
+            <div class="wordmark with-rise" style="color: white;">Reckoning</div>
+            <div class="url-text" style="color: white; margin-top: 0.75rem;">rkng.com</div>
+          </div>
+        </div>
+        <div class="logo-display large" style="background: var(--ice);">
+          <div class="lockup-stacked">
+            <div class="wordmark with-rise on-light" style="color: var(--charcoal);">Reckoning</div>
+            <div class="url-text" style="color: var(--charcoal); margin-top: 0.75rem;">rkng.com</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Inline Lockup (Secondary)</h2>
+      <p>Use for navigation headers, footers, and horizontal layouts.</p>
+      <div class="card white mt-2" style="padding: 2.5rem;">
+        <div class="lockup-inline" style="justify-content: center;">
+          <span class="wordmark" style="font-size: 2rem; color: var(--charcoal);">Reckoning</span>
+          <span class="divider" style="background: var(--charcoal);"></span>
+          <span class="url-text" style="color: var(--charcoal);">rkng.com</span>
+        </div>
+      </div>
+
+      <h2>With Tagline</h2>
+      <div class="grid-2 mt-2">
+        <div class="logo-display card dark" style="min-height: 220px;">
+          <div class="lockup-stacked">
+            <div class="wordmark" style="color: white; font-size: 2.25rem;">Reckoning</div>
+            <div class="tagline" style="color: white; margin-top: 0.5rem;">Your time is now.</div>
+            <div class="url-text" style="color: white; font-size: 0.85rem; margin-top: 0.25rem;">rkng.com</div>
+          </div>
+        </div>
+        <div class="logo-display" style="background: var(--mint); min-height: 220px;">
+          <div class="lockup-stacked">
+            <div class="wordmark" style="color: var(--charcoal); font-size: 2.25rem;">Reckoning</div>
+            <div class="tagline" style="color: var(--charcoal); margin-top: 0.5rem;">Your time is now.</div>
+            <div class="url-text" style="color: var(--charcoal); font-size: 0.85rem; margin-top: 0.25rem;">rkng.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHORT MARKS -->
+    <section id="shortmarks">
+      <div class="section-number">06 — Identity</div>
+      <h1>Short Marks</h1>
+      <p class="lead">For constrained spaces — favicons, app icons, social avatars — the single letter "R" carries the brand. Use Outfit Bold (700) for legibility at small sizes.</p>
+      
+      <div class="grid-4 mt-2">
+        <div class="card white text-center" style="padding: 2rem;">
+          <div class="short-mark" style="color: var(--charcoal);">R</div>
+          <div class="card-label">Primary</div>
+        </div>
+        <div class="card dark text-center" style="padding: 2rem;">
+          <div class="short-mark" style="color: white;">R</div>
+          <div class="card-label">On dark</div>
+        </div>
+        <div class="card fuchsia text-center" style="padding: 2rem;">
+          <div class="short-mark" style="color: white;">R</div>
+          <div class="card-label">On fuchsia</div>
+        </div>
+        <div class="card mint text-center" style="padding: 2rem;">
+          <div class="short-mark" style="color: var(--charcoal);">R</div>
+          <div class="card-label">On mint</div>
+        </div>
+      </div>
+
+      <h2>Application Examples</h2>
+      <div class="grid-4 mt-2">
+        <div class="card white text-center" style="padding: 1.5rem;">
+          <div class="favicon-demo" style="background: var(--fuchsia); color: white; margin: 0 auto;">R</div>
+          <div class="card-label">Favicon 32px</div>
+        </div>
+        <div class="card white text-center" style="padding: 1.5rem;">
+          <div class="favicon-demo" style="background: var(--charcoal); color: white; margin: 0 auto;">R</div>
+          <div class="card-label">Favicon alt</div>
+        </div>
+        <div class="card white text-center" style="padding: 1.5rem;">
+          <div class="app-icon-demo" style="background: var(--charcoal); color: white; margin: 0 auto;">R</div>
+          <div class="card-label">App icon</div>
+        </div>
+        <div class="card white text-center" style="padding: 1.5rem;">
+          <div class="social-avatar" style="background: var(--fuchsia); color: white; margin: 0 auto; width: 56px; height: 56px; font-size: 1.5rem;">R</div>
+          <div class="card-label">Social avatar</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLEAR SPACE -->
+    <section id="clearspace">
+      <div class="section-number">07 — Identity</div>
+      <h1>Clear Space & Sizing</h1>
+      <p class="lead">The wordmark needs room to breathe. Minimum clear space equals the cap-height of the "R" on all sides.</p>
+      
+      <div class="card" style="padding: 3rem; margin: 2rem 0;">
+        <div class="text-center">
+          <div style="display: inline-block; padding: 2.5rem; background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(209, 75, 168, 0.08) 10px, rgba(209, 75, 168, 0.08) 20px); border: 2px dashed var(--fuchsia); border-radius: 8px;">
+            <div style="background: white; padding: 2rem; border-radius: 4px;">
+              <div class="wordmark" style="font-size: 2.5rem; color: var(--charcoal);">Reckoning</div>
+            </div>
+          </div>
+          <p class="text-muted" style="margin-top: 1.5rem; font-size: 0.85rem; max-width: none;">Shaded area = minimum clear space (cap-height of R)</p>
+        </div>
+      </div>
+
+      <h2>Minimum Sizes</h2>
+      <div class="grid-2 mt-2">
+        <div class="card white">
+          <h3 style="margin-top: 0;">Digital</h3>
+          <p style="margin-bottom: 0.5rem;">Wordmark: <strong>100px</strong> minimum width</p>
+          <p style="margin-bottom: 0.5rem;">Wordmark + URL: <strong>140px</strong> minimum width</p>
+          <p style="margin-bottom: 0;">Favicon: <strong>16px</strong> minimum</p>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Print</h3>
+          <p style="margin-bottom: 0.5rem;">Wordmark: <strong>25mm</strong> minimum width</p>
+          <p style="margin-bottom: 0.5rem;">Wordmark + URL: <strong>35mm</strong> minimum width</p>
+          <p style="margin-bottom: 0;">Short mark: <strong>6mm</strong> minimum</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISUSE -->
+    <section id="donts">
+      <div class="section-number">08 — Identity</div>
+      <h1>Logo Misuse</h1>
+      <p class="lead">Consistency builds recognition. Avoid these common mistakes to maintain brand integrity.</p>
+      
+      <div class="donts-grid mt-2">
+        <div class="dont-item">
+          <div class="demo">
+            <div style="font-family: Georgia, serif; font-size: 1.5rem; color: var(--charcoal);">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't change the typeface</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; letter-spacing: 0.2em; color: var(--charcoal);">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't alter the tracking</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; color: #ff6b6b;">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't use off-brand colours</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; text-transform: uppercase; color: var(--charcoal);">RECKONING</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't use all caps</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; transform: skewX(-10deg); color: var(--charcoal);">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't distort or skew</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); color: var(--charcoal);">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't add effects</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; background: linear-gradient(90deg, var(--fuchsia), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't use gradients on text</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; color: var(--charcoal); opacity: 0.4;">Reckoning</div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't reduce opacity</div>
+        </div>
+        <div class="dont-item">
+          <div class="demo">
+            <div class="wordmark" style="font-size: 1.5rem; color: var(--charcoal);">Reckoning<span style="color: var(--mint);">™</span></div>
+          </div>
+          <div class="dont-x">✕</div>
+          <div class="label">Don't add symbols</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOUR PALETTE -->
+    <section id="colour">
+      <div class="section-number">09 — Design System</div>
+      <h1>Colour Palette</h1>
+      <p class="lead">A fresh, optimistic palette that balances energy with calm. Fuchsia brings action, mint brings freshness, blue brings balance. Charcoal grounds it all.</p>
+      
+      <h2>Primary Palette</h2>
+      <div class="grid-2 mt-2">
+        <div class="swatch">
+          <div class="swatch-color large" style="background: var(--charcoal);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Charcoal</div>
+            <div class="swatch-role">Primary dark — text, headers, dark backgrounds</div>
+            <div class="swatch-codes">
+              <span>HEX #2d2926</span>
+              <span>RGB 45, 41, 38</span>
+              <span>HSL 26°, 8%, 16%</span>
+            </div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color large" style="background: var(--ice); border-bottom: 1px solid var(--stone);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ice</div>
+            <div class="swatch-role">Primary light — page backgrounds, cards</div>
+            <div class="swatch-codes">
+              <span>HEX #F2F6F9</span>
+              <span>RGB 242, 246, 249</span>
+              <span>HSL 206°, 33%, 96%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Accent Palette</h2>
+      <div class="grid-3 mt-2">
+        <div class="swatch">
+          <div class="swatch-color large" style="background: var(--fuchsia);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Electric Fuchsia</div>
+            <div class="swatch-role">Primary accent — CTAs, rising line, links</div>
+            <div class="swatch-codes">
+              <span>HEX #D14BA8</span>
+              <span>RGB 209, 75, 168</span>
+              <span>HSL 318°, 59%, 56%</span>
+            </div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color large" style="background: var(--mint);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Jelly Mint</div>
+            <div class="swatch-role">Fresh accent — sections, highlights, success</div>
+            <div class="swatch-codes">
+              <span>HEX #B6E2D3</span>
+              <span>RGB 182, 226, 211</span>
+              <span>HSL 160°, 43%, 80%</span>
+            </div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color large" style="background: var(--blue);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Blue Aura</div>
+            <div class="swatch-role">Calm accent — secondary, borders, balance</div>
+            <div class="swatch-codes">
+              <span>HEX #A8C3D1</span>
+              <span>RGB 168, 195, 209</span>
+              <span>HSL 200°, 32%, 74%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Extended Palette</h2>
+      <div class="grid-5 mt-2">
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--ink);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ink</div>
+            <div class="swatch-codes"><span>#1a1a1a</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--stone); border-bottom: 1px solid #ddd;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Stone</div>
+            <div class="swatch-codes"><span>#E5E7E9</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--fuchsia-dark);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Fuchsia Dark</div>
+            <div class="swatch-codes"><span>#a33a85</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--mint-light);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Mint Light</div>
+            <div class="swatch-codes"><span>#d4efe6</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--blue-light);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Blue Light</div>
+            <div class="swatch-codes"><span>#c5d8e3</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Semantic Colours</h2>
+      <div class="grid-3 mt-2">
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--success);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Success</div>
+            <div class="swatch-codes"><span>#2A7F78</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--warning);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Warning</div>
+            <div class="swatch-codes"><span>#C3B273</span></div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--error);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Error</div>
+            <div class="swatch-codes"><span>#c45d5d</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOUR USAGE -->
+    <section id="colour-usage">
+      <div class="section-number">10 — Design System</div>
+      <h1>Colour Usage</h1>
+      <p class="lead">Three accents need clear hierarchy. Use them intentionally — not all at once.</p>
+      
+      <h2>Colour Roles</h2>
+      <table class="usage-table">
+        <thead>
+          <tr>
+            <th>Colour</th>
+            <th>Role</th>
+            <th>Use For</th>
+            <th>Don't Use For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="color-chip" style="background: var(--fuchsia);"></span>Fuchsia</td>
+            <td>Action / Energy</td>
+            <td>Primary CTAs, rising line, links, key moments</td>
+            <td>Large backgrounds, body text</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--mint);"></span>Mint</td>
+            <td>Fresh / Optimism</td>
+            <td>Section backgrounds, highlights, success states, cards</td>
+            <td>CTAs, text, critical actions</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--blue);"></span>Blue</td>
+            <td>Calm / Balance</td>
+            <td>Secondary buttons, borders, disabled states, subtle backgrounds</td>
+            <td>Primary actions, headlines</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--charcoal);"></span>Charcoal</td>
+            <td>Foundation</td>
+            <td>Text, headers, dark sections, secondary buttons</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--ice); border: 1px solid #ddd;"></span>Ice</td>
+            <td>Canvas</td>
+            <td>Page backgrounds, cards, light sections</td>
+            <td>Text, buttons</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Ratio Guidelines</h2>
+      <div class="grid-3 mt-2">
+        <div class="card white">
+          <h3 style="margin-top: 0;">Typical Page</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>70%</strong> Charcoal + Ice (foundation)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>15%</strong> Mint or Blue (sections)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>15%</strong> Fuchsia (accents only)</p>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Hero Section</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>80%</strong> Charcoal background</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>15%</strong> White text</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>5%</strong> Fuchsia CTA + accent</p>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Feature Section</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>60%</strong> Mint background</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>35%</strong> Charcoal text</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>5%</strong> Fuchsia accents</p>
+        </div>
+      </div>
+
+      <h2>Avoid</h2>
+      <div class="grid-3 mt-2">
+        <div class="card" style="background: #fdf5f5; border-left: 3px solid #c55;">
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>Don't</strong> use all three accents in the same section</p>
+        </div>
+        <div class="card" style="background: #fdf5f5; border-left: 3px solid #c55;">
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>Don't</strong> use fuchsia for large background areas</p>
+        </div>
+        <div class="card" style="background: #fdf5f5; border-left: 3px solid #c55;">
+          <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>Don't</strong> place mint and blue directly adjacent</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section id="typography">
+      <div class="section-number">11 — Design System</div>
+      <h1>Typography</h1>
+      <p class="lead">Outfit is the brand typeface — geometric, confident, and warm. Source Serif 4 provides contrast for editorial moments.</p>
+      
+      <h2>Primary: Outfit</h2>
+      <p>A geometric sans-serif with softened terminals. Confident without being cold. Use for all UI, headlines, and body copy.</p>
+      <div class="type-specimen">
+        <div class="sample" style="font-weight: 600;">The quick brown fox jumps over the lazy dog</div>
+        <div class="details">Outfit Semibold 600 — Headlines, wordmark, emphasis</div>
+      </div>
+      <div class="type-specimen">
+        <div class="sample" style="font-weight: 500; font-size: 1.75rem;">The quick brown fox jumps over the lazy dog</div>
+        <div class="details">Outfit Medium 500 — Subheadings, buttons, navigation</div>
+      </div>
+      <div class="type-specimen">
+        <div class="sample" style="font-weight: 400; font-size: 1.25rem;">The quick brown fox jumps over the lazy dog</div>
+        <div class="details">Outfit Regular 400 — Body copy, paragraphs</div>
+      </div>
+
+      <h2>Secondary: Source Serif 4</h2>
+      <p>A variable serif with optical sizing. Use sparingly for editorial moments, pull quotes, or when you need gravitas.</p>
+      <div class="type-specimen">
+        <div class="sample" style="font-family: 'Source Serif 4', serif; font-weight: 500; font-size: 1.75rem;">"Your time is now."</div>
+        <div class="details">Source Serif 4 Medium — Pull quotes, testimonials</div>
+      </div>
+
+      <h2>Font Stack</h2>
+      <div class="card white mt-2" style="font-family: monospace; font-size: 0.85rem;">
+        <p style="margin-bottom: 0.5rem; max-width: none;"><strong>Primary:</strong> 'Outfit', system-ui, -apple-system, sans-serif</p>
+        <p style="margin-bottom: 0; max-width: none;"><strong>Secondary:</strong> 'Source Serif 4', Georgia, serif</p>
+      </div>
+    </section>
+
+    <!-- TYPE SCALE -->
+    <section id="type-scale">
+      <div class="section-number">12 — Design System</div>
+      <h1>Type Scale</h1>
+      <p class="lead">A harmonious scale based on a 1.25 ratio. Sizes shown for desktop — reduce by ~20% for mobile.</p>
+      
+      <div class="type-scale mt-2">
+        <div class="type-scale-item">
+          <div class="label">Display</div>
+          <div class="specs">48px / 600 / -0.02em</div>
+          <div class="example" style="font-size: 3rem; font-weight: 600; letter-spacing: -0.02em;">Your time is now</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">H1</div>
+          <div class="specs">40px / 600 / -0.02em</div>
+          <div class="example" style="font-size: 2.5rem; font-weight: 600; letter-spacing: -0.02em;">Page headline</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">H2</div>
+          <div class="specs">32px / 600 / -0.01em</div>
+          <div class="example" style="font-size: 2rem; font-weight: 600; letter-spacing: -0.01em;">Section title</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">H3</div>
+          <div class="specs">24px / 600 / 0</div>
+          <div class="example" style="font-size: 1.5rem; font-weight: 600;">Subsection heading</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">H4</div>
+          <div class="specs">20px / 600 / 0</div>
+          <div class="example" style="font-size: 1.25rem; font-weight: 600;">Card title</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">Body Large</div>
+          <div class="specs">18px / 400 / 0</div>
+          <div class="example" style="font-size: 1.125rem; font-weight: 400;">Lead paragraphs and introductions.</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">Body</div>
+          <div class="specs">16px / 400 / 0</div>
+          <div class="example" style="font-size: 1rem; font-weight: 400; color: #555;">Regular paragraph text for reading at length. Keep line length between 50–75 characters.</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">Body Small</div>
+          <div class="specs">14px / 400 / 0</div>
+          <div class="example" style="font-size: 0.875rem; font-weight: 400; color: #666;">Supporting text, captions, secondary information.</div>
+        </div>
+        <div class="type-scale-item">
+          <div class="label">Caption</div>
+          <div class="specs">12px / 500 / 0.05em</div>
+          <div class="example" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: #888;">Labels, metadata, overlines</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIGITAL APPLICATIONS -->
+    <section id="digital">
+      <div class="section-number">13 — Application</div>
+      <h1>Digital Applications</h1>
+      <p class="lead">How the brand lives on screen — website, email, and interface elements.</p>
+      
+      <h2>Website Hero</h2>
+      <div class="browser-frame mt-2">
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url">rkng.com</div>
+        </div>
+        <div class="browser-content" style="background: var(--charcoal);">
+          <div class="site-nav" style="background: var(--charcoal); border-bottom-color: rgba(255,255,255,0.1);">
+            <div class="nav-wordmark" style="color: white;">Reckoning</div>
+            <div class="nav-links" style="color: rgba(255,255,255,0.7);">
+              <span>How it works</span>
+              <span>Services</span>
+              <span>About</span>
+            </div>
+            <div class="nav-cta" style="background: var(--fuchsia);">Start</div>
+          </div>
+          <div class="site-hero" style="padding: 5rem 2rem;">
+            <h2 style="color: white; font-size: 3rem;">Stop dreaming.<br>Start running.</h2>
+            <p style="color: rgba(255,255,255,0.7);">Your personalised roadmap from chaos to clarity.</p>
+            <button class="site-cta">Get your Reckoning</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Content Section</h2>
+      <div class="browser-frame mt-2">
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url">rkng.com/how-it-works</div>
+        </div>
+        <div class="browser-content">
+          <div class="site-section" style="background: var(--mint);">
+            <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--charcoal); opacity: 0.6; margin-bottom: 0.5rem;">How it works</div>
+            <h2 style="color: var(--charcoal); margin: 0 0 0.5rem;">Three steps to clarity</h2>
+            <p style="color: var(--charcoal); opacity: 0.8; margin: 0 auto;">Complete questionnaire → Receive your Reckoning → Take action</p>
+          </div>
+          <div class="site-section" style="background: var(--ice);">
+            <h2 style="color: var(--charcoal); margin: 0 0 1rem;">Ready to start?</h2>
+            <button class="site-cta" style="background: var(--charcoal);">Get your Reckoning</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Navigation Example</h2>
+      <div class="card white mt-2" style="padding: 1rem 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="wordmark" style="font-size: 1.25rem; color: var(--charcoal);">Reckoning</div>
+          <div style="display: flex; gap: 2rem; font-size: 0.9rem; color: #888; align-items: center;">
+            <span>How it works</span>
+            <span>Services</span>
+            <span>About</span>
+            <span style="background: var(--charcoal); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500;">Start</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Button Styles</h2>
+      <div class="card mt-2" style="padding: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center;">
+        <button style="background: var(--fuchsia); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 500;">Primary CTA</button>
+        <button style="background: var(--charcoal); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 500;">Secondary</button>
+        <button style="background: white; color: var(--charcoal); border: 2px solid var(--charcoal); padding: calc(0.75rem - 2px) calc(1.5rem - 2px); border-radius: 6px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 500;">Outline</button>
+        <button style="background: var(--blue); color: var(--charcoal); border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 500;">Tertiary</button>
+      </div>
+
+      <h2>Email Signature</h2>
+      <div class="mt-2">
+        <div class="email-sig">
+          <div class="sig-name">Your Name</div>
+          <div class="sig-role">Founder, Reckoning</div>
+          <a href="#" class="sig-url">rkng.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINT & SOCIAL -->
+    <section id="print">
+      <div class="section-number">14 — Application</div>
+      <h1>Print & Social</h1>
+      <p class="lead">Physical touchpoints and social presence — always clean, always recognisable.</p>
+      
+      <h2>Business Cards</h2>
+      <div class="grid-2 mt-2">
+        <div class="business-card" style="background: var(--charcoal); color: white;">
+          <div class="biz-wordmark">Reckoning</div>
+          <div class="biz-details">
+            Your Name<br>
+            Founder<br><br>
+            hello@rkng.com<br>
+            rkng.com
+          </div>
+        </div>
+        <div class="business-card" style="background: var(--ice); color: var(--charcoal);">
+          <div class="biz-wordmark">Reckoning</div>
+          <div class="biz-details" style="color: #666;">
+            Your time is now.<br><br>
+            rkng.com
+          </div>
+        </div>
+      </div>
+
+      <h2>Social Media</h2>
+      <div class="grid-3 mt-2">
+        <div class="card white text-center" style="padding: 1.5rem;">
+          <div class="social-avatar" style="background: var(--fuchsia); color: white; margin: 0 auto 1rem;">R</div>
+          <div class="card-label" style="margin-top: 0;">Profile avatar</div>
+        </div>
+        
+        <div class="social-post" style="margin: 0 auto;">
+          <div class="social-post-image" style="background: var(--charcoal); color: white;">
+            <div class="wordmark" style="font-size: 2rem; margin-bottom: 0.5rem;">Reckoning</div>
+            <div style="font-size: 0.85rem; opacity: 0.7;">Your time is now.</div>
+          </div>
+          <div class="social-post-footer">Square post (1:1)</div>
+        </div>
+
+        <div class="social-post" style="margin: 0 auto;">
+          <div class="social-post-image" style="background: var(--mint); aspect-ratio: 1.91;">
+            <div class="wordmark" style="font-size: 1.5rem; color: var(--charcoal);">Reckoning</div>
+            <div style="font-size: 0.75rem; color: var(--charcoal); opacity: 0.6; margin-top: 0.25rem;">rkng.com</div>
+          </div>
+          <div class="social-post-footer">Link preview (1.91:1)</div>
+        </div>
+      </div>
+
+      <h2>Social Post on Accent</h2>
+      <div class="grid-3 mt-2">
+        <div class="social-post" style="margin: 0 auto;">
+          <div class="social-post-image" style="background: var(--fuchsia); color: white;">
+            <div class="wordmark" style="font-size: 1.75rem;">Reckoning</div>
+            <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem;">Your time is now.</div>
+          </div>
+        </div>
+        <div class="social-post" style="margin: 0 auto;">
+          <div class="social-post-image" style="background: var(--mint);">
+            <div class="wordmark" style="font-size: 1.75rem; color: var(--charcoal);">Reckoning</div>
+            <div style="font-size: 0.8rem; color: var(--charcoal); opacity: 0.7; margin-top: 0.5rem;">Your time is now.</div>
+          </div>
+        </div>
+        <div class="social-post" style="margin: 0 auto;">
+          <div class="social-post-image" style="background: var(--blue);">
+            <div class="wordmark" style="font-size: 1.75rem; color: var(--charcoal);">Reckoning</div>
+            <div style="font-size: 0.8rem; color: var(--charcoal); opacity: 0.7; margin-top: 0.5rem;">Your time is now.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESSIBILITY -->
+    <section id="accessibility">
+      <div class="section-number">15 — Application</div>
+      <h1>Accessibility</h1>
+      <p class="lead">Ensure the brand is usable by everyone. Follow WCAG 2.1 AA guidelines as a minimum.</p>
+      
+      <h2>Colour Contrast</h2>
+      <table class="usage-table">
+        <thead>
+          <tr>
+            <th>Combination</th>
+            <th>Ratio</th>
+            <th>WCAG AA</th>
+            <th>Use For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="color-chip" style="background: var(--charcoal);"></span>Charcoal on Ice</td>
+            <td>12.5:1</td>
+            <td style="color: var(--success);">✓ Pass</td>
+            <td>Body text, headers</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: white;"></span>White on Charcoal</td>
+            <td>12.5:1</td>
+            <td style="color: var(--success);">✓ Pass</td>
+            <td>Body text, headers</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: white;"></span>White on Fuchsia</td>
+            <td>4.6:1</td>
+            <td style="color: var(--success);">✓ Pass</td>
+            <td>Button text (large)</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--fuchsia);"></span>Fuchsia on Ice</td>
+            <td>4.1:1</td>
+            <td style="color: var(--warning);">~ Large text only</td>
+            <td>Links, large text, icons</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--charcoal);"></span>Charcoal on Mint</td>
+            <td>8.2:1</td>
+            <td style="color: var(--success);">✓ Pass</td>
+            <td>Text on mint sections</td>
+          </tr>
+          <tr>
+            <td><span class="color-chip" style="background: var(--charcoal);"></span>Charcoal on Blue</td>
+            <td>6.8:1</td>
+            <td style="color: var(--success);">✓ Pass</td>
+            <td>Text on blue sections</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Guidelines</h2>
+      <div class="grid-2 mt-2">
+        <div class="card white">
+          <h3 style="margin-top: 0;">Do</h3>
+          <ul style="font-size: 0.9rem; color: #555; padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.5rem;">Use Charcoal for body text</li>
+            <li style="margin-bottom: 0.5rem;">Ensure interactive elements have visible focus states</li>
+            <li style="margin-bottom: 0.5rem;">Provide text alternatives for images</li>
+            <li>Test with screen readers</li>
+          </ul>
+        </div>
+        <div class="card white">
+          <h3 style="margin-top: 0;">Don't</h3>
+          <ul style="font-size: 0.9rem; color: #555; padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.5rem;">Use Fuchsia for small body text</li>
+            <li style="margin-bottom: 0.5rem;">Rely on colour alone to convey information</li>
+            <li style="margin-bottom: 0.5rem;">Use Mint or Blue for text</li>
+            <li>Disable zoom or text scaling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="guidelines-footer full-width">
+      <div class="wordmark with-rise" style="font-size: 2.5rem; color: white;">Reckoning</div>
+      <p style="margin-top: 1.5rem;">Brand Guidelines v1.0 — 2025</p>
+      <p style="font-size: 0.85rem; margin-top: 0.5rem;">Questions? Reach out to hello@rkng.com</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

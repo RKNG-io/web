@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning — Unblock. Unlock. Unleash.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /*
+    ═══════════════════════════════════════════════════════════════
+    RECKONING — BRAND DESIGN SYSTEM
+    ═══════════════════════════════════════════════════════════════
+    
+    STRICT RULES:
+    - NO gradients on backgrounds
+    - NO generic shadows
+    - NO rounded corners > 10px (except buttons which use 6px)
+    - NO stock photo energy
+    - Outfit font ONLY
+    - Colors from brand palette ONLY
+    - Clean, confident, warm — not corporate
+    - Generous whitespace
+    - Typography-led hierarchy
+    
+    ═══════════════════════════════════════════════════════════════
+    */
+
+    :root {
+      /* Primary */
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      
+      /* Accents */
+      --fuchsia: #D14BA8;
+      --fuchsia-dark: #a33a85;
+      --mint: #B6E2D3;
+      --mint-light: #d4efe6;
+      --blue: #A8C3D1;
+      --blue-light: #c5d8e3;
+      
+      /* Extended */
+      --ink: #1a1a1a;
+      --stone: #E5E7E9;
+      --white: #ffffff;
+      
+      /* Semantic */
+      --success: #2A7F78;
+      --warning: #C3B273;
+      --error: #c45d5d;
+      
+      /* Spacing */
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2.5rem;
+      --space-xl: 4rem;
+      --space-2xl: 6rem;
+      
+      /* Type scale */
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: 1.125rem;
+      --text-xl: 1.25rem;
+      --text-2xl: 1.5rem;
+      --text-3xl: 2rem;
+      --text-4xl: 2.5rem;
+      --text-5xl: 3rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--white);
+      color: var(--charcoal);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       LAYOUT
+       ═══════════════════════════════════════════════════════════════ */
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .section-ice {
+      background: var(--ice);
+    }
+
+    .section-charcoal {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .section-mint {
+      background: var(--mint);
+      color: var(--charcoal);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TYPOGRAPHY
+       ═══════════════════════════════════════════════════════════════ */
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: var(--text-5xl);
+    }
+
+    h2 {
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    h3 {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-xs);
+    }
+
+    p {
+      color: #555;
+      max-width: 600px;
+    }
+
+    .section-charcoal p {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .text-muted {
+      color: #888;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .section-header p {
+      margin: 0 auto;
+    }
+
+    .overline {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--fuchsia);
+      font-weight: 500;
+      margin-bottom: var(--space-xs);
+    }
+
+    .section-charcoal .overline {
+      color: var(--mint);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BUTTONS
+       ═══════════════════════════════════════════════════════════════ */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-base);
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--fuchsia);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 4px 12px rgba(209, 75, 168, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--charcoal);
+      color: var(--charcoal);
+      padding: calc(0.875rem - 2px) calc(1.75rem - 2px);
+    }
+
+    .btn-outline-light {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--charcoal);
+      padding: 0.875rem 0;
+    }
+
+    .btn-ghost::after {
+      content: ' →';
+      transition: transform 0.15s ease;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover::after {
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════ */
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      gap: var(--space-md);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: var(--text-xl);
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+
+    .main-nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--charcoal);
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════════ */
+
+    .hero {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-2xl);
+      background: var(--charcoal);
+      color: var(--white);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .hero-tagline {
+      font-size: var(--text-4xl);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-xs);
+      line-height: 1.1;
+    }
+
+    .hero-tagline-sub {
+      font-size: var(--text-2xl);
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-copy {
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-message {
+      font-size: var(--text-base);
+      color: rgba(255,255,255,0.5);
+      max-width: 480px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: var(--white);
+      color: var(--charcoal);
+      border-radius: 10px;
+      padding: var(--space-lg);
+      max-width: 340px;
+    }
+
+    .hero-card h3 {
+      color: var(--charcoal);
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero-card li {
+      padding: var(--space-xs) 0;
+      color: #555;
+      font-size: var(--text-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xs);
+    }
+
+    .hero-card li::before {
+      content: '✓';
+      color: var(--fuchsia);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PERSONA CARDS
+       ═══════════════════════════════════════════════════════════════ */
+
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+
+    .persona-card {
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      padding: var(--space-lg);
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .persona-card:hover {
+      border-color: var(--fuchsia);
+      transform: translateY(-4px);
+    }
+
+    .persona-card h3 {
+      color: var(--fuchsia);
+      margin-bottom: var(--space-xs);
+    }
+
+    .persona-card p {
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .persona-card .btn-ghost {
+      font-size: var(--text-sm);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS
+       ═══════════════════════════════════════════════════════════════ */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .step {
+      position: relative;
+    }
+
+    .step-number {
+      font-size: var(--text-4xl);
+      font-weight: 700;
+      color: var(--fuchsia);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+
+    .step h3 {
+      color: var(--white);
+      margin-bottom: var(--space-xs);
+    }
+
+    .step p {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BENEFITS GRID
+       ═══════════════════════════════════════════════════════════════ */
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+
+    .benefit-card {
+      padding: var(--space-md);
+    }
+
+    .benefit-card h3 {
+      color: var(--charcoal);
+      font-size: var(--text-lg);
+    }
+
+    .benefit-card p {
+      font-size: var(--text-sm);
+      color: #666;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BLOCKED / UNLOCKED TABLE
+       ═══════════════════════════════════════════════════════════════ */
+
+    .blocked-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .blocked-intro {
+      margin-bottom: var(--space-xl);
+    }
+
+    .blocked-intro p {
+      font-size: var(--text-lg);
+      color: #555;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .blocked-table {
+      display: grid;
+      gap: var(--space-sm);
+    }
+
+    .blocked-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--stone);
+    }
+
+    .blocked-row:hover {
+      border-color: var(--fuchsia);
+    }
+
+    .blocked-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-xs);
+      font-weight: 500;
+    }
+
+    .blocked-by .blocked-label {
+      color: #999;
+    }
+
+    .unlocked-by .blocked-label {
+      color: var(--fuchsia);
+    }
+
+    .blocked-by p,
+    .unlocked-by p {
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    .blocked-by p {
+      color: #666;
+      font-style: italic;
+    }
+
+    .unlocked-by p {
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PACKAGES
+       ═══════════════════════════════════════════════════════════════ */
+
+    .packages-intro {
+      max-width: 500px;
+      margin: 0 auto var(--space-xl);
+      text-align: center;
+    }
+
+    .packages-intro p {
+      margin: 0 auto;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+
+    .package-card {
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card h3 {
+      color: var(--charcoal);
+    }
+
+    .package-card .package-desc {
+      font-size: var(--text-sm);
+      color: #666;
+      margin-bottom: var(--space-md);
+    }
+
+    .package-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-md);
+      flex: 1;
+    }
+
+    .package-features li {
+      font-size: var(--text-sm);
+      color: #555;
+      padding: var(--space-xs) 0;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .package-features li:last-child {
+      border-bottom: none;
+    }
+
+    .package-price {
+      font-size: var(--text-sm);
+      color: #888;
+      margin-bottom: var(--space-sm);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════════════ */
+
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item summary {
+      padding: var(--space-md) 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--charcoal);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: var(--text-xl);
+      color: var(--fuchsia);
+      font-weight: 300;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-item p {
+      padding: 0 0 var(--space-md);
+      font-size: var(--text-sm);
+      color: #666;
+      max-width: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════════════════════════════ */
+
+    .cta-section {
+      text-align: center;
+      padding: var(--space-2xl) 0;
+    }
+
+    .cta-section h2 {
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.6);
+      margin: 0 auto var(--space-lg);
+      max-width: 480px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ */
+
+    .site-footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.6);
+      padding: var(--space-xl) 0 var(--space-lg);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer-brand .logo {
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.5);
+      max-width: 280px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-xl);
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: var(--space-xs);
+    }
+
+    .footer-col a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: var(--text-sm);
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--white);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════════════ */
+
+    @media (max-width: 900px) {
+      :root {
+        --text-5xl: 2.5rem;
+        --text-4xl: 2rem;
+        --text-3xl: 1.75rem;
+      }
+
+      .hero-inner,
+      .persona-grid,
+      .steps-grid,
+      .benefits-grid,
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: calc(var(--space-xl) + 80px) 0 var(--space-xl);
+      }
+
+      .hero-card {
+        max-width: none;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .blocked-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Reckoning</a>
+      <nav class="main-nav">
+        <a href="#where-are-you">Where are you?</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#what-you-get">What you get</a>
+        <a href="#support">Services</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a href="#get-started" class="btn btn-primary">Get Your Reckoning</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="get-started">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-tagline">Unblock. Unlock. Unleash.</div>
+        <div class="hero-tagline-sub">Your business. Your way.</div>
+        <p class="hero-copy">
+          You didn't start your business to drown in admin.<br>
+          You started it for the work — and the life you're building.
+        </p>
+        <p class="hero-message">
+          You don't need to overhaul a thing. Introduce automations that sound like you. 
+          Build systems that let you grow without burning out.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Get Your Reckoning — Free</a>
+          <a href="#how-it-works" class="btn btn-outline btn-outline-light">How it works</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-card">
+          <h3>What you get</h3>
+          <ul>
+            <li>Clarity on what's actually blocking you</li>
+            <li>Prioritised next steps — not a 50-point plan</li>
+            <li>Systems that grow with you</li>
+            <li>Automations that sound like you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       WHERE ARE YOU?
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-ice" id="where-are-you">
+    <div class="container">
+      <div class="section-header">
+        <h2>Where are you?</h2>
+      </div>
+
+      <div class="persona-grid">
+        <article class="persona-card">
+          <h3>Launching</h3>
+          <p>
+            Still dreaming, planning, or just getting started. You need clarity on what 
+            actually matters — and permission to begin.
+          </p>
+          <a href="#" class="btn-ghost">That's me</a>
+        </article>
+
+        <article class="persona-card">
+          <h3>Building</h3>
+          <p>
+            Running, but doing everything yourself. Busy but stuck. You need systems 
+            that give you time back — without hiring.
+          </p>
+          <a href="#" class="btn-ghost">That's me</a>
+        </article>
+
+        <article class="persona-card">
+          <h3>Scaling</h3>
+          <p>
+            Successful, but capped. The business can't run without you. You need 
+            operations that free up space for what's next.
+          </p>
+          <a href="#" class="btn-ghost">That's me</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-charcoal" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="overline">How it works</div>
+        <h2>Three steps. No overwhelm.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step">
+          <div class="step-number">01</div>
+          <h3>Tell us where you are</h3>
+          <p>
+            A 15-minute conversation (not a form). Your business, your goals, 
+            what feels like it's in the way.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">02</div>
+          <h3>Get your Reckoning</h3>
+          <p>
+            Not a 50-point action plan. Just what matters now. 
+            Small shifts that compound — starting with one.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-number">03</div>
+          <h3>Take the next step</h3>
+          <p>
+            Just one. Then the next. Run with it yourself, or let us help.
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="#" class="btn btn-primary">Get Your Reckoning — Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       WHAT YOU GET
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="what-you-get">
+    <div class="container">
+      <div class="section-header">
+        <div class="overline">What you get</div>
+        <h2>Small shifts. Real difference.</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <h3>Time</h3>
+          <p>The hours you're losing to emails, invoices, and "I should probably sort that out."</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Space</h3>
+          <p>Mental, emotional, practical — room to think about your business, not just run it.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Presence</h3>
+          <p>Show up online in a way that feels like you — not performative, not exhausting.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Systems</h3>
+          <p>Automations that handle the repetitive stuff. Your voice. Your way. Without hiring.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Clarity</h3>
+          <p>Know what's blocking you. Know what to do next. Just the next step — not the whole life plan.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Calm</h3>
+          <p>The quiet confidence that comes from knowing things are handled.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       BLOCKED / UNLOCKED
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-ice" id="blocked">
+    <div class="container">
+      <div class="blocked-section">
+        <div class="blocked-intro">
+          <div class="overline text-center">The weight we lift</div>
+          <h2 class="text-center">You know the feeling</h2>
+          <p>
+            The constant context-switching. The background hum of things you haven't got to yet. 
+            More time on admin than on the work you actually love.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>That's not a character flaw. That's a systems problem.</strong><br>
+            And systems problems have systems solutions.
+          </p>
+        </div>
+
+        <div class="blocked-table">
+          <div class="blocked-row">
+            <div class="blocked-by">
+              <div class="blocked-label">Blocked by</div>
+              <p>"I don't know where to start"</p>
+            </div>
+            <div class="unlocked-by">
+              <div class="blocked-label">Unlocked by</div>
+              <p>A prioritised list of what actually matters</p>
+            </div>
+          </div>
+
+          <div class="blocked-row">
+            <div class="blocked-by">
+              <div class="blocked-label">Blocked by</div>
+              <p>"Social media feels fake"</p>
+            </div>
+            <div class="unlocked-by">
+              <div class="blocked-label">Unlocked by</div>
+              <p>Permission to do it your way</p>
+            </div>
+          </div>
+
+          <div class="blocked-row">
+            <div class="blocked-by">
+              <div class="blocked-label">Blocked by</div>
+              <p>"It's easier to do it myself"</p>
+            </div>
+            <div class="unlocked-by">
+              <div class="blocked-label">Unlocked by</div>
+              <p>Automation that sounds like you</p>
+            </div>
+          </div>
+
+          <div class="blocked-row">
+            <div class="blocked-by">
+              <div class="blocked-label">Blocked by</div>
+              <p>"Chasing invoices feels awkward"</p>
+            </div>
+            <div class="unlocked-by">
+              <div class="blocked-label">Unlocked by</div>
+              <p>Automation that follows up, reconciles, and gets you paid</p>
+            </div>
+          </div>
+
+          <div class="blocked-row">
+            <div class="blocked-by">
+              <div class="blocked-label">Blocked by</div>
+              <p>"I need to hire to scale"</p>
+            </div>
+            <div class="unlocked-by">
+              <div class="blocked-label">Unlocked by</div>
+              <p>Systems that run without headcount</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-xl);">
+          <a href="#" class="btn btn-primary">See what's blocking you</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SUPPORT / PACKAGES
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="section-header">
+        <div class="overline">When you're ready</div>
+        <h2>Support if you want it</h2>
+      </div>
+
+      <div class="packages-intro">
+        <p>
+          Some people take their Reckoning and run with it. Others want help building what comes next. 
+          Both paths work.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+        <article class="package-card">
+          <h3>Launcher</h3>
+          <p class="package-desc">Everything you need to go from idea to taking money.</p>
+          <ul class="package-features">
+            <li>One-page website</li>
+            <li>Booking system</li>
+            <li>Payment setup</li>
+            <li>Basic online presence</li>
+          </ul>
+          <div class="package-price">From £X</div>
+          <a href="#" class="btn btn-outline">Learn more</a>
+        </article>
+
+        <article class="package-card">
+          <h3>Builder</h3>
+          <p class="package-desc">Systems that give you time back.</p>
+          <ul class="package-features">
+            <li>Workflow automation</li>
+            <li>Follow-up sequences</li>
+            <li>Invoicing setup</li>
+            <li>Content that sounds like you</li>
+          </ul>
+          <div class="package-price">From £X</div>
+          <a href="#" class="btn btn-outline">Learn more</a>
+        </article>
+
+        <article class="package-card">
+          <h3>Architect</h3>
+          <p class="package-desc">Operations that don't depend on you.</p>
+          <ul class="package-features">
+            <li>AI-powered workflows</li>
+            <li>Client communications</li>
+            <li>Reporting dashboards</li>
+            <li>Scale without headcount</li>
+          </ul>
+          <div class="package-price">From £X</div>
+          <a href="#" class="btn btn-outline">Learn more</a>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-lg);">
+        <a href="#" class="btn-ghost">Browse all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-ice" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Questions?</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>I'm still employed — can I even start a business?</summary>
+          <p>
+            Probably. Most contracts don't ban side work, but some require disclosure. 
+            Your Reckoning will flag this if it applies to you.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>I don't have time for a big overhaul</summary>
+          <p>
+            We don't do overhauls. We do one thing at a time. Small shifts that compound — 
+            that's how businesses actually change.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Will automation sound robotic?</summary>
+          <p>
+            Not ours. We build systems trained on your voice — your tone, your words. 
+            What goes out sounds like you wrote it.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if I just want to DIY everything?</summary>
+          <p>
+            Great. Your Reckoning gives you a clear starting point. Run with it. 
+            We're here if you get stuck.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does this actually cost?</summary>
+          <p>
+            The Reckoning is free. Services start from £X. No surprises, no upsells, no pressure.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-charcoal cta-section">
+    <div class="container">
+      <h2>Your time is now.</h2>
+      <p>
+        Find out what's blocking you — and what unlocks it. 
+        15 minutes. Free. No commitment.
+      </p>
+      <a href="#" class="btn btn-primary">Get Your Reckoning — Free</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="logo">Reckoning</a>
+          <p>Unblock. Unlock. Unleash.<br>Your business. Your way.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Launcher</a></li>
+              <li><a href="#">Builder</a></li>
+              <li><a href="#">Architect</a></li>
+              <li><a href="#">All services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3d1c8cdc48dc0ccce"><span class="__cf_email__" data-cfemail="cba3aea7a7a48bb9a0a5ace5a8a4a6">[email&#160;protected]</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Reckoning</span>
+        <span>
+   

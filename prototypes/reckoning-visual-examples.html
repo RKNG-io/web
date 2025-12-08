@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning – Visual Examples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      --fuchsia: #D14BA8;
+      --mint: #B6E2D3;
+      --blue: #A8C3D1;
+      --ink: #1a1a1a;
+      --stone: #E5E7E9;
+      --fuchsia-dark: #a33a85;
+      --mint-light: #d4efe6;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: #fafafa;
+      padding: 48px;
+      color: var(--charcoal);
+    }
+    
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      opacity: 0.6;
+      margin-bottom: 48px;
+    }
+    
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--fuchsia);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    
+    .card-row {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+    
+    /* ================================
+       QUOTE CARDS
+    ================================ */
+    
+    .quote-card {
+      width: 400px;
+      height: 400px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .quote-card.fuchsia {
+      background: var(--fuchsia);
+      color: white;
+    }
+    
+    .quote-card.dark {
+      background: var(--charcoal);
+      color: white;
+    }
+    
+    .quote-card.mint {
+      background: var(--mint);
+      color: var(--charcoal);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .quote-card .rising-line {
+      position: absolute;
+      bottom: 0;
+      left: 48px;
+      width: 4px;
+      height: 120px;
+      background: linear-gradient(to top, transparent, rgba(255,255,255,0.4));
+      border-radius: 2px;
+    }
+    
+    .quote-card .quote-text {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    
+    .quote-card .quote-text .subdued {
+      opacity: 0.8;
+    }
+    
+    .quote-card .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .quote-card .brand {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    
+    .quote-card .url {
+      font-size: 14px;
+      opacity: 0.6;
+      letter-spacing: 0.1em;
+    }
+    
+    .quote-card .label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--fuchsia);
+    }
+    
+    .quote-card.dark .label {
+      color: var(--fuchsia);
+    }
+    
+    .quote-card.dark .quote-text {
+      font-size: 28px;
+      line-height: 1.35;
+    }
+    
+    .quote-card.dark .underline {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--fuchsia));
+      border-radius: 2px;
+    }
+    
+    /* Mint stat card */
+    .quote-card.mint .big-number {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    
+    .quote-card.mint .caption {
+      font-size: 18px;
+      opacity: 0.7;
+      margin-bottom: 32px;
+    }
+    
+    .quote-card.mint .divider-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .quote-card.mint .divider-row .line {
+      width: 40px;
+      height: 2px;
+      background: var(--charcoal);
+      opacity: 0.3;
+    }
+    
+    .quote-card.mint .divider-row span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    /* ================================
+       BANNER CARD
+    ================================ */
+    
+    .banner-card {
+      width: 600px;
+      height: 315px;
+      background: var(--charcoal);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .banner-card .wordmark {
+      font-size: 48px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: -0.02em;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    
+    .banner-card .wordmark::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--fuchsia));
+      border-radius: 2px;
+    }
+    
+    .banner-card .tagline {
+      font-size: 24px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 24px;
+    }
+    
+    .banner-card .url {
+      position: absolute;
+      bottom: 48px;
+      right: 48px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+    }
+    
+    /* ================================
+       STAT CARD
+    ================================ */
+    
+    .stat-card {
+      width: 400px;
+      height: 400px;
+      background: var(--charcoal);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .stat-card .label {
+      font-size: 14px;
+      color: var(--mint);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    
+    .stat-card .big-number {
+      font-size: 72px;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    
+    .stat-card .description {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+    
+    .stat-card .calculation {
+      margin-top: 32px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    /* ================================
+       SIMPLE TEXT CARDS
+    ================================ */
+    
+    .simple-card {
+      width: 400px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+    
+    .simple-card.mint { background: var(--mint); }
+    .simple-card.fuchsia { background: var(--fuchsia); }
+    .simple-card.dark { background: var(--charcoal); }
+    
+    .simple-card .word {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-align: center;
+    }
+    
+    .simple-card.mint .word { color: var(--charcoal); }
+    .simple-card.fuchsia .word { color: white; }
+    .simple-card.dark .word { color: white; }
+    
+    /* ================================
+       UI PREVIEW CARDS
+    ================================ */
+    
+    .ui-card {
+      width: 400px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .ui-card.questionnaire {
+      height: 500px;
+    }
+    
+    .ui-card.checklist {
+      height: 500px;
+      background: var(--ice);
+      box-shadow: none;
+    }
+    
+    .progress-dots {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    
+    .progress-dots .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--stone);
+    }
+    
+    .progress-dots .dot.active {
+      background: var(--fuchsia);
+    }
+    
+    .ui-card .section-label {
+      font-size: 12px;
+      color: var(--charcoal);
+      opacity: 0.5;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    
+    .ui-card .question {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 32px;
+    }
+    
+    .ui-card .answer-box {
+      background: var(--ice);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 15px;
+      opacity: 0.7;
+      line-height: 1.6;
+      flex: 1;
+      border: 2px solid var(--stone);
+    }
+    
+    .ui-card .button-row {
+      margin-top: 24px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .ui-card .btn {
+      background: var(--fuchsia);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Checklist specific */
+    .checklist-header {
+      margin-bottom: 32px;
+    }
+    
+    .checklist-header .phase-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--fuchsia);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .checklist-header .phase-title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .checklist-item .checkbox {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 2px solid var(--charcoal);
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    
+    .checklist-item .checkbox.done {
+      background: var(--fuchsia);
+      border: none;
+    }
+    
+    .checklist-item .task {
+      flex: 1;
+      font-size: 15px;
+    }
+    
+    .checklist-item .task.done {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    
+    .checklist-item .priority {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    .checklist-item .priority.must {
+      color: var(--fuchsia);
+    }
+    
+    .checklist-item .priority.should {
+      color: var(--charcoal);
+      opacity: 0.5;
+    }
+    
+    .checklist-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--stone);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--charcoal);
+      opacity: 0.6;
+    }
+    
+    .checklist-footer .check {
+      color: #2A7F78;
+    }
+    
+    .checklist-footer span {
+      font-style: italic;
+    }
+    
+    /* ================================
+       JOURNEY SNIPPET
+    ================================ */
+    
+    .journey-card {
+      width: 500px;
+      background: var(--ice);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    
+    .journey-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--stone);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .journey-header .left {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    
+    .journey-header .phase {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--fuchsia);
+      letter-spacing: 0.1em;
+    }
+    
+    .journey-header .title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .journey-header .duration {
+      font-size: 13px;
+      opacity: 0.5;
+    }
+    
+    .journey-card .description {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+    
+    .journey-tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .journey-task {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .journey-task .checkbox {
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1.5px solid var(--charcoal);
+      background: white;
+      flex-shrink: 0;
+    }
+    
+    .journey-task .text {
+      flex: 1;
+      font-size: 14px;
+    }
+    
+    .journey-task .badge {
+      font-size: 9px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    .journey-task .badge.must {
+      background: rgba(209, 75, 168, 0.2);
+      color: var(--fuchsia);
+    }
+    
+    .journey-task .badge.should {
+      background: rgba(45, 41, 38, 0.1);
+      color: var(--charcoal);
+    }
+    
+    .journey-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+    
+    .journey-footer .check {
+      color: #2A7F78;
+    }
+    
+    .journey-footer span {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reckoning Visual Examples</h1>
+  <p class="subtitle">Light-touch graphics for social, web, and marketing</p>
+  
+  <!-- QUOTE CARDS -->
+  <h2 class="section-title">Quote Cards (1:1 Social)</h2>
+  <div class="card-row">
+    
+    <!-- Fuchsia quote -->
+    <div class="quote-card fuchsia">
+      <div class="rising-line"></div>
+      <div class="quote-text">
+        You're doing three people's jobs.<br>
+        <span class="subdued">Let's fix that.</span>
+      </div>
+      <div class="footer">
+        <span class="brand">Reckoning</span>
+        <span class="url">rkng.com</span>
+      </div>
+    </div>
+    
+    <!-- Dark quote -->
+    <div class="quote-card dark">
+      <div>
+        <div class="label">The truth</div>
+        <div class="quote-text">
+          Most people don't need more advice.<br><br>
+          They need permission to act on what they already know.
+        </div>
+      </div>
+      <div class="underline"></div>
+    </div>
+    
+    <!-- Mint stat -->
+    <div class="quote-card mint">
+      <div class="big-number">15 min</div>
+      <div class="caption">to complete the questionnaire</div>
+      <div class="divider-row">
+        <div class="line"></div>
+        <span>90 days of clarity</span>
+        <div class="line"></div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- BANNER -->
+  <h2 class="section-title">Banner / Link Preview (1.91:1)</h2>
+  <div class="card-row">
+    <div class="banner-card">
+      <div class="wordmark">Reckoning</div>
+      <div class="tagline">Your time is now.</div>
+      <div class="url">rkng.com</div>
+    </div>
+  </div>
+  
+  <!-- STAT CARD -->
+  <h2 class="section-title">Stat Cards</h2>
+  <div class="card-row">
+    <div class="stat-card">
+      <div class="label">The hidden cost</div>
+      <div class="big-number">£13,000</div>
+      <div class="description">
+        per year in time spent on<br>
+        tasks that could be automated
+      </div>
+      <div class="calculation">5 hrs/week × £50/hr × 52 weeks</div>
+    </div>
+  </div>
+  
+  <!-- SIMPLE TEXT -->
+  <h2 class="section-title">Simple Text Cards</h2>
+  <div class="card-row">
+    <div class="simple-card mint">
+      <div class="word">Clarity.</div>
+    </div>
+    <div class="simple-card fuchsia">
+      <div class="word">Action.</div>
+    </div>
+    <div class="simple-card dark">
+      <div class="word">Ready.</div>
+    </div>
+  </div>
+  
+  <!-- UI PREVIEWS -->
+  <h2 class="section-title">UI as Visual</h2>
+  <div class="card-row">
+    
+    <!-- Questionnaire -->
+    <div class="ui-card questionnaire">
+      <div class="progress-dots">
+        <div class="dot active"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="section-label">What you're building</div>
+      <div class="question">If this worked, what would your life look like in 12 months?</div>
+      <div class="answer-box">
+        I'd have consistent clients without chasing them, time to actually deliver great work, and maybe even take a holiday without everything falling apart...
+      </div>
+      <div class="button-row">
+        <button class="btn">Continue →</button>
+      </div>
+    </div>
+    
+    <!-- Checklist -->
+    <div class="ui-card checklist">
+      <div class="checklist-header">
+        <div class="phase-label">Phase 1</div>
+        <div class="phase-title">Demand Validation</div>
+      </div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checkbox done">✓</div>
+          <span class="task done">Survey 20 target customers</span>
+          <span class="priority must">must</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox done">✓</div>
+          <span class="task done">Create landing page</span>
+          <span class="priority must">must</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span class="task">Test 2-3 price points</span>
+          <span class="priority should">should</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span class="task">Get 3 people to pay £1 deposit</span>
+          <span class="priority should">should</span>
+        </div>
+      </div>
+      <div class="checklist-footer">
+        <span class="check">✓</span>
+        <span>Phase complete when: 3+ people have paid a deposit</span>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- JOURNEY SNIPPET -->
+  <h2 class="section-title">Journey Map Snippet</h2>
+  <div class="card-row">
+    <div class="journey-card">
+      <div class="journey-header">
+        <div class="left">
+          <span class="phase">PHASE 1</span>
+          <span class="title">Demand Validation</span>
+        </div>
+        <span class="duration">Weeks 1-3</span>
+      </div>
+      <div class="description">Prove people will pay before building anything</div>
+      <div class="journey-tasks">
+        <div class="journey-task">
+          <div class="checkbox"></div>
+          <span class="text">Survey 20 people in your target market</span>
+          <span class="badge must">● must</span>
+        </div>
+        <div class="journey-task">
+          <div class="checkbox"></div>
+          <span class="text">Create simple landing page</span>
+          <span class="badge must">● must</span>
+        </div>
+        <div class="journey-task">
+          <div class="checkbox"></div>
+          <span class="text">Get 3 people to put down a £1 deposit</span>
+          <span class="badge should">○ should</span>
+        </div>
+      </div>
+      <div class="journey-footer">
+        <span class="check">✓</span>
+        <span>Phase complete when: 3+ people have paid a deposit</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
