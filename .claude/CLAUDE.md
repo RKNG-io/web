@@ -1,17 +1,51 @@
 # Reckoning Web — Project Instructions
 
+## Before Starting Any Task
+
+1. **Read `.claude/agents/CURRENT-TASKS.md`** — Check what's in progress, avoid conflicts
+2. **Read `.claude/agents/SESSION-LOG.md`** — Recent context and patterns
+3. **Read `.claude/agents/DECISIONS.md`** — Architectural constraints
+4. **Skim `.claude/agents/FILE-MAP.md`** — Find files quickly
+
+For brand/tone context (if needed):
+- `docs/00-brand-voice.md` — Tone guidelines
+- `docs/00-PSYCHOLOGY-BRIEF.md` — Emotional vision
+- `docs/DESIGN-RULES.md` — Visual design rules
+
+## After Completing Work
+
+1. Update `SESSION-LOG.md` with what you did
+2. Move tasks in `CURRENT-TASKS.md`
+3. Update `FILE-MAP.md` if you added key files
+4. Update `DECISIONS.md` if you made architectural choices
+
+---
+
 ## Overview
+
 Next.js 14+ website for Reckoning — a business diagnostic platform for solopreneurs.
 
 ## Tech Stack
+
 - **Framework**: Next.js 14+ with App Router
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS
 - **Fonts**: Outfit (primary), Source Serif 4 (editorial)
 - **AI**: Claude API via @anthropic-ai/sdk
+- **Database**: PostgreSQL (`postgresql://liz:localdev@localhost:5432/reckoning`)
 - **Deployment**: Vercel
 
+## Strict Rules
+
+- **Outfit font ONLY**
+- **Brand colours ONLY** (see `tailwind.config.ts`)
+- **NO gradient backgrounds**
+- **NO generic shadows**
+- **Tokens in URLs** (not IDs) for public routes
+- **Lazy client initialization** — dev-friendly fallbacks when env vars missing
+
 ## Brand Colours (Tailwind)
+
 ```
 charcoal: #2d2926    — Primary dark, text, headers
 ice: #F2F6F9         — Page backgrounds, cards
@@ -29,102 +63,100 @@ error: #c45d5d
 ```
 
 ## Project Structure
+
 ```
 src/
 ├── app/                    # Next.js App Router pages
 │   ├── page.tsx            # Landing page
-│   ├── questionnaire/      # Questionnaire flow
+│   ├── start/              # Questionnaire & bypass intakes
 │   ├── services/           # Services catalogue
-│   ├── reckoning/[id]/     # Generated report view
-│   └── api/reckoning/      # AI generation endpoint
+│   ├── reckoning/[token]/  # Generated report view
+│   ├── admin/              # Admin dashboard
+│   └── api/
+│       ├── reckoning/      # AI generation endpoint
+│       ├── checkout/       # Stripe checkout
+│       └── webhooks/       # Stripe webhooks
 ├── components/             # React components
-│   ├── Nav.tsx
-│   ├── Hero.tsx
-│   ├── PersonaCards.tsx
-│   ├── HowItWorks.tsx
-│   ├── ReckoningCTA.tsx
-│   ├── ServiceExplorer.tsx
-│   ├── Testimonials.tsx
-│   ├── FinalCTA.tsx
-│   ├── Footer.tsx
-│   └── ui/                 # Reusable primitives
+│   ├── ui/                 # Reusable primitives
+│   └── services/           # Service-related components
 ├── data/                   # TypeScript data files
-│   ├── services.ts         # 48 services
-│   ├── questions.ts        # Question bank
-│   └── packages.ts         # Package definitions
 ├── lib/                    # Utilities
-│   ├── utils.ts
-│   └── pricing.ts
-├── prompts/                # AI prompt templates
-│   ├── base.ts
-│   └── personas.ts
+│   ├── db.ts               # Database queries
+│   ├── stripe.ts           # Stripe client
+│   ├── validation/         # Validation layers
+│   └── prompts/            # AI prompt templates
 └── types/                  # TypeScript types
-    └── index.ts
 ```
 
-## Source Files (Convert From)
-Existing HTML/TS files in `/Users/liz/Projects/Reckoning/reckoning 2/`:
-- `website/index.html` — Complete landing page
-- `examples/questionnaire-prototype.html` — Working questionnaire
-- `src/data/service-catalogue.ts` — 48 services
-- `src/data/question-bank.ts` — Question flows
-- `src/data/packages.ts` — Package definitions
-- `src/types/index.ts` — TypeScript types
-- `src/prompts/*.md` — AI prompt templates
-- `src/pricing/calculator.ts` — Bundle discount logic
+## Key Systems
 
-## Component Guidelines
+| System | Entry Point | Docs |
+|--------|-------------|------|
+| Report generation | `api/reckoning/generate/route.ts` | `docs/09-report-generation-system.md` |
+| Validation (10 layers) | `lib/validation/confidence.ts` | `.claude/agents/DECISIONS.md` |
+| Prompts | `lib/prompts/builder.ts` | See persona files in `lib/prompts/personas/` |
+| Services/Cart | `components/services/CartContext.tsx` | — |
+| Stripe checkout | `api/checkout/route.ts` | — |
+| Brand voice filter | `lib/validation/brand-voice.ts` | `docs/HUMANISER-CHANGES.md` |
 
-### Converting HTML to React
-1. Extract each section from index.html into its own component
-2. Convert inline styles to Tailwind classes
-3. Use the brand colour variables defined in tailwind.config.ts
-4. Preserve all hover/focus states
-5. Ensure responsive behaviour (check 1024px, 768px breakpoints)
+## Environment Variables
 
-### Styling Rules
+```env
+# Required for AI generation
+ANTHROPIC_API_KEY=
+
+# Database
+DATABASE_URL=postgresql://liz:localdev@localhost:5432/reckoning
+
+# Email (optional locally)
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+ADMIN_EMAIL=
+
+# Stripe (optional locally)
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_WEBHOOK_SECRET=
+```
+
+## Documentation
+
+| Folder | Purpose |
+|--------|---------|
+| `.claude/agents/` | **Shared agent context** — read before working |
+| `.claude/plans/` | Implementation plans for major features |
+| `docs/` | Specs, brand, copy, business strategy |
+| `docs/business/` | Automation OS catalogue, research |
+| `docs/personas/` | Persona definitions |
+| `docs/questionnaires/` | Question flow specs |
+
+## Implementation Plans
+
+| Plan | File | Status |
+|------|------|--------|
+| Website Builder | `.claude/plans/website-builder.md` | Planned |
+| Agent Observability | `.claude/plans/agent-observability.md` | Planned |
+| Appointment Bot | `.claude/plans/appointment-bot.md` | Draft |
+
+## Styling Rules
+
 - Use Tailwind exclusively — no CSS modules
 - Use semantic colour names: `bg-charcoal`, `text-fuchsia`, `bg-mint`
 - Button variants: primary (fuchsia), secondary (charcoal), outline, tertiary (blue)
 - Border radius: `rounded-lg` (10px) for cards, `rounded-md` (6px) for buttons
+- See `docs/DESIGN-RULES.md` for complete visual reference
 
-### Voice & Copy
+## Voice & Copy
+
 - Clear over clever
 - Warm, not soft
 - Grounded optimism
 - No buzzwords or jargon
-
-## Agent Instructions
-
-### For Component Building Agents
-When building a component:
-1. Read the corresponding section from `reckoning 2/website/index.html`
-2. Convert to React with TypeScript
-3. Use Tailwind classes matching the brand guidelines
-4. Export as default from the component file
-5. Include proper TypeScript types for all props
-
-### For Data Migration Agents
-When copying data files:
-1. Copy from `reckoning 2/src/data/` to `reckoning-web/src/data/`
-2. Adjust import paths as needed
-3. Ensure TypeScript types are properly exported
-
-### For API Route Agents
-When building the Reckoning API:
-1. Use @anthropic-ai/sdk
-2. Load prompts from src/prompts/
-3. Accept POST with { answers, persona }
-4. Return structured JSON report
-5. Handle errors gracefully
+- Run all copy through `lib/validation/brand-voice.ts` humaniser filter
 
 ## Testing
-- `npm run dev` — Start dev server
-- `npm run build` — Production build
-- `npm run lint` — ESLint check
 
-## Environment Variables
-```
-ANTHROPIC_API_KEY=     # Required for Reckoning generation
-NEXT_PUBLIC_SITE_URL=  # Production URL
-```
+- `pnpm dev` — Start dev server
+- `pnpm build` — Production build
+- `pnpm lint` — ESLint check
+- `pnpm test` — Run tests

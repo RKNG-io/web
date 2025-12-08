@@ -1,0 +1,38 @@
+Name/Username,Platform,Skill Category,Hourly Rate (GBP),Fixed Project Min,Fixed Project Max,Location,Country,Timezone,Experience Level,Years Experience,Profile URL,Jobs Completed,Success Rate %,Rating,Response Time,Notes,Source
+Market Average,Various,n8n,25,50,200,UK,UK,GMT,Entry,0-1,,,,,,"Entry-level n8n developers, basic workflow creation",YunoJuno/Upwork
+Market Average,Various,n8n,45,200,500,UK,UK,GMT,Mid,1-3,,,,,,"Mid-level, complex workflows and API integrations",YunoJuno/Upwork
+Market Average,Various,n8n,75,500,1500,UK,UK,GMT,Senior,3-5,,,,,,"Senior specialists, architecture and consulting",YunoJuno/Upwork
+Market Average,Various,n8n,100,1500,5000,UK,UK,GMT,Expert,5+,,,,,,"Certified experts, enterprise clients",Toptal
+Market Average,Upwork,n8n,28,,,Global,Various,Various,Entry,0-1,,,,,,Global Upwork average - convert from $35/hr,Upwork
+Market Average,Fiverr,n8n,20,10,100,Global,Various,Various,Entry,0-1,,,,,,Lower end gig pricing,Fiverr
+Market Average,Various,Zapier,30,75,300,UK,UK,GMT,Entry,0-1,,,,,,"Basic Zap creation, simple integrations",Upwork
+Market Average,Various,Zapier,50,300,800,UK,UK,GMT,Mid,1-3,,,,,,"Multi-step workflows, CRM integration",Upwork
+Market Average,Various,Zapier,80,800,2000,UK,UK,GMT,Senior,3-5,,,,,,"Complex automation, consulting",Upwork
+Market Average,Various,Zapier,120,2000,5000,UK,UK,GMT,Expert,5+,,,,,,"Enterprise, multiple platforms",Upwork
+Market Average,Upwork,Zapier,40,,,Global,Various,Various,Mid,1-3,,,,,,Global Upwork average $30-50/hr,Upwork
+Market Average,Fiverr,Zapier,15,15,100,Global,Various,Various,Entry,0-1,,,,,,"Entry gigs, simple automations",Fiverr
+Market Average,Various,Make,25,50,200,UK,UK,GMT,Entry,0-1,,,,,,"Basic scenarios, simple integrations",Fiverr/Make Community
+Market Average,Various,Make,50,200,600,UK,UK,GMT,Mid,1-3,,,,,,"Complex scenarios, multiple modules",Make Community
+Market Average,Various,Make,80,600,2000,UK,UK,GMT,Senior,3-5,,,,,,"Architecture, custom modules",Make Community
+Market Average,Various,Make,120,2000,5000,UK,UK,GMT,Expert,5+,,,,,,Certified Silver Partner minimum often £2500+,Upwork
+Market Average,Fiverr,Make,8,10,50,Global,Various,Various,Entry,0-1,,,,,,"Basic Fiverr gigs start at $10",Fiverr
+Market Average,Fiverr,Make,40,50,200,Global,Various,Various,Mid,1-3,,,,,,Pro sellers mid-range,Fiverr
+Market Average,Fiverr,Make,80,100,500,Global,Various,Various,Senior,3-5,,,,,,Higher-end Fiverr Pro,Fiverr
+Market Average,Various,General Automation,35,100,400,UK,UK,GMT,Entry,0-1,,,,,,"Basic workflow automation",IT Jobs Watch
+Market Average,Various,General Automation,69,400,1200,UK,UK,GMT,Mid,1-3,,,,,,UK median day rate £550 = ~£69/hr,IT Jobs Watch
+Market Average,Various,General Automation,100,1200,3000,UK,UK,GMT,Senior,3-5,,,,,,"Process automation consulting",Boardroom Advisors
+Market Average,Various,General Automation,150,3000,10000,UK,UK,GMT,Expert,5+,,,,,,"Enterprise automation, £100-500/hr range",Boardroom Advisors
+Market Average,North England,General Automation,56,,,UK,UK,GMT,Mid,1-3,,,,,,North England median £450/day,IT Jobs Watch
+Market Average,Various,Xero Integration,30,50,200,UK,UK,GMT,Entry,0-1,,,,,,"Basic Xero setup, bookkeeping",PeoplePerHour
+Market Average,Various,Xero Integration,50,200,600,UK,UK,GMT,Mid,1-3,,,,,,"API integrations, custom workflows",Upwork
+Market Average,Various,Xero Integration,80,600,2000,UK,UK,GMT,Senior,3-5,,,,,,"Complex integrations, multi-platform",Toptal
+Market Average,Various,Xero Integration,120,2000,5000,UK,UK,GMT,Expert,5+,,,,,,"Enterprise, HMRC MTD compliance",Toptal
+Market Average,Various,FreeAgent Integration,45,150,500,UK,UK,GMT,Mid,1-3,,,,,,"Similar to Xero, UK-focused tool",Estimate based on Xero
+Market Average,Various,FreeAgent Integration,75,500,1500,UK,UK,GMT,Senior,3-5,,,,,,"Complex integrations",Estimate based on Xero
+Market Average,Various,AI Automation,80,200,800,UK,UK,GMT,Entry,0-1,,,,,,"Junior AI consultant $100-150/hr",Orient Software
+Market Average,Various,AI Automation,125,800,2500,UK,UK,GMT,Mid,1-3,,,,,,"AI workflow consultant up to $180/hr",Stack Expert
+Market Average,Various,AI Automation,200,2500,8000,UK,UK,GMT,Senior,3-5,,,,,,"Senior AI consultant $250-350/hr",Orient Software
+Market Average,Various,AI Automation,350,8000,25000,UK,UK,GMT,Expert,5+,,,,,,"Top AI consultants $300-500+/hr",Orient Software
+Market Average,Various,Prompt Engineering,60,100,400,UK,UK,GMT,Entry,0-1,,,,,,"Basic prompt work $75/hr",Stack Expert
+Market Average,Various,Prompt Engineering,100,400,1500,UK,UK,GMT,Mid,1-3,,,,,,"Prompt engineering consulting $75-150/hr",Stack Expert
+Market Average,Various,Prompt Engineering,150,1500,5000,UK,UK,GMT,Senior,3-5,,,,,,"Advanced prompt engineering, fine-tuning",Stack Expert
