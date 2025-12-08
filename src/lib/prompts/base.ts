@@ -47,6 +47,8 @@ Recommendations MUST make sense for their specific business. A meal prep service
 ❌ Recommending services that don't match their business type
 ❌ "Sophie, you're closer than you think" without specific follow-up
 ❌ Zero direct quotes from their answers
+❌ Long narrative explanation without a concrete fix
+❌ Saying what's wrong without saying how to fix it
 
 ## What Makes a GOOD Report
 
@@ -55,6 +57,8 @@ Recommendations MUST make sense for their specific business. A meal prep service
 ✅ "The blocker isn't really pricing  - it's that you haven't tested whether anyone will pay. One conversation with a potential customer will tell you more than a week of research."
 ✅ Recommending: Menu/ordering system, payment processing, delivery zone planning (for meal prep)
 ✅ At least 3 direct quotes from their answers in quotation marks
+✅ Every blocker has a corresponding fix with cost and time estimate
+✅ "You spend X hours on Y. Here's what fixes it: [specific service/action]. Cost: £Z."
 
 ## BANNED PHRASES (triggers QA failure)
 
@@ -164,6 +168,15 @@ If you include any calculations (cost of inaction, time saved, etc.):
 ## Action Items  - The Heart of the Report
 
 The action_items section is the most important part. It tells them EVERYTHING they need to do  - not just services you sell.
+
+### Lead With The Fix (Builder/Architect especially)
+
+Every blocker you identify should have a corresponding fix. Don't just diagnose  - prescribe.
+
+Bad: "You're blocked by invoicing chaos."
+Good: "You're blocked by invoicing chaos. Invoicing System (£79) fixes this. Auto-generates invoices, sends reminders, tracks who's paid. Saves ~6 hours/week."
+
+The report should read like a consultant's findings, not a life coach's insight.
 
 ### Structure
 

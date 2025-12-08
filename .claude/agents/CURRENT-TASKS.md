@@ -18,8 +18,6 @@ Active work being done by agents. Update this when starting/completing tasks to 
 |------|----------|--------------|-------|
 | PDF generation implementation | **CRITICAL** | None | `src/lib/pdf/generator.ts` is stubs only |
 | Stripe webhook handler | **HIGH** | Stripe account | `src/app/api/webhooks/stripe/route.ts` |
-| Admin authentication | **HIGH** | None | No middleware protecting `/admin` routes |
-| Choose services page version | **HIGH** | None | A or B - pick one, delete other |
 
 ---
 
@@ -72,6 +70,10 @@ Plan: `.claude/plans/website-builder.md`
 
 | Task | Completed | Agent |
 |------|-----------|-------|
+| Admin authentication middleware | 2025-12-08 | Claude |
+| Services page version choice (VersionA only) | 2025-12-08 | Claude |
+| UX consistency sweep (buttons, shadows, tap targets) | 2025-12-08 | Claude |
+| À la carte business model update | 2025-12-08 | Claude |
 | Report Quality System v3 (presentation/validation) | 2025-12-04 | Claude |
 | CLAUDE.md rewrite | 2025-12-04 | Claude |
 | Report Quality System v2 | 2025-12-04 | Claude |

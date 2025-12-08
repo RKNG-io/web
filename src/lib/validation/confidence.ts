@@ -12,6 +12,7 @@ import { validateBusinessTypeMatch } from './business-type';
 import { validateNumbersUsed } from './numbers';
 import { validateBuyingIntent } from './buying-intent';
 import { validateConsistency } from './consistency';
+import { validateActionOriented } from './action-oriented';
 
 export function calculateConfidence(
   report: ReckoningReport,
@@ -31,6 +32,7 @@ export function calculateConfidence(
     numbersUsed: validateNumbersUsed(report, submission),
     buyingIntent: validateBuyingIntent(report),
     consistency: validateConsistency(report, submission),
+    actionOriented: validateActionOriented(report, submission),
   };
 
   // Also check ROI claims in the full report text
@@ -76,6 +78,7 @@ export function calculateConfidence(
     ...results.numbersUsed.warnings,
     ...results.buyingIntent.warnings,
     ...results.consistency.warnings,
+    ...results.actionOriented.warnings,
     ...roiValidation.warnings,
   ];
 
@@ -103,6 +106,12 @@ export function calculateConfidence(
       score -= 3; // Minor  - budget should be mentioned
     } else if (warning.includes('completion_criteria')) {
       score -= 2; // Minor  - phases should have criteria
+    } else if (warning.includes('too salesy')) {
+      score -= 5; // All services, no DIY
+    } else if (warning.includes('fix-oriented language')) {
+      score -= 5; // Builder/Architect diagnosis lacks fixes
+    } else if (warning.includes('missing price_from')) {
+      score -= 3; // Services should have prices
     } else {
       score -= 3; // Default deduction
     }

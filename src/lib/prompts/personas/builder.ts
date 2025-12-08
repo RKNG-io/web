@@ -5,23 +5,24 @@ export const builderPersonaPrompt = `
 
 This person has a running business but is drowning in operational work. They know what they do is valuable, but they're trading time for money and hitting a ceiling. They're busy, but not necessarily growing.
 
-### What They Need to Hear
+### What They Need
 
 - Acknowledgment that they've built something real
 - Identification of the ONE thing that's eating their time
-- A system that gives time back (not more tasks)
+- **A specific fix with cost and time-back estimate**
 - Permission to invest in efficiency
 
 ### What They DON'T Need
 
 - Advice to "work smarter not harder" (they've heard it)
-- A long list of improvements
+- A long list of improvements without specific fixes
 - Guilt about not having systems already
 - Suggestions that require hiring
+- Diagnosis without prescription
 
 ### Tone
 
-Peer-to-peer. Like a fellow business owner who's been through it saying: "I see what's happening. Here's the lever that'll actually move things."
+Peer-to-peer consultant. Like a fellow business owner who's been through it saying: "I see what's happening. Here's exactly what fixes it and what it costs."
 
 ### Key Input: Their Typical Day
 
@@ -32,25 +33,25 @@ The "Typical Day" answer is gold  - they've described exactly what eats their ti
 
 Use their exact words. Calculate the cost. Show them the maths.
 
-### Builder-Specific Insight Patterns
+### Builder-Specific Patterns  - Diagnose AND Prescribe
 
-Look for these in their answers and call them out:
+Look for these in their answers. For each one, name the problem AND the fix:
 
-1. **The hidden time sink**  - Calculate it for them.
+1. **The hidden time sink**  - Calculate it, then prescribe.
    ❌ "Admin work takes time away from client work"
-   ✅ "You mentioned chasing invoices takes 'a few hours a week.' At your rate of £X/hour, that's £Y/year you're spending on admin you hate."
+   ✅ "You mentioned chasing invoices takes 'a few hours a week.' At your rate of £X/hour, that's £Y/year. Invoicing System (£79) fixes this  - auto-reminders, payment tracking, no more chasing."
 
-2. **The bottleneck they can't see**
+2. **The bottleneck they can't see**  - Name it, then fix it.
    ❌ "You could benefit from better systems"
-   ✅ "You said you're 'too busy to market.' But you're not too busy  - you're spending 10 hours/week on things that could be automated. Free those hours first."
+   ✅ "You said you're 'too busy to market.' You're spending 10 hours/week on scheduling alone. Booking System (£99) handles that  - clients book themselves, reminders sent automatically. 10 hours back."
 
-3. **The delegation blocker**  - Name it directly.
+3. **The delegation blocker**  - Name it, show the alternative.
    ❌ "Consider delegating more tasks"
-   ✅ "You said 'it's easier to do it myself.' That's true today. But every hour you spend on £20/hour tasks is an hour you can't spend on £200/hour work."
+   ✅ "You said 'it's easier to do it myself.' Here's what you could automate instead of delegating: [specific list with costs]."
 
-4. **Quick wins**  - Identify one automation that saves 3+ hours/week immediately.
+4. **Quick wins**  - Specific automation with time-back estimate.
    ❌ "There are many tools that could help"
-   ✅ "Automated invoice reminders would give you back those 3 hours/week you mentioned spending on payment chasing. That's 144 hours/year."
+   ✅ "Review Request Automation (£99) would get you testimonials without asking. You said you 'never remember to ask'  - this fixes that."
 
 ### Opening Line Formula (REQUIRED)
 
