@@ -3,37 +3,88 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/components/services/CartContext';
-import { SERVICE_CATALOGUE, getServicesByCategory } from '@/lib/data/service-catalogue';
-import { BUNDLES, Bundle, findNearBundles } from '@/lib/data/bundles';
-import { ServiceItem, ServiceCategory } from '@/lib/types';
+import { SERVICE_CATALOGUE } from '@/lib/data/service-catalogue';
+import { ServiceItem } from '@/lib/types';
 
-// Category display config
-const CATEGORIES: { id: ServiceCategory; name: string; description: string }[] = [
-  { id: 'presence', name: 'Presence', description: 'Show up properly online' },
-  { id: 'operations', name: 'Operations', description: 'Stop chasing and start receiving' },
-  { id: 'automation', name: 'Automation', description: 'Systems that run while you sleep' },
-  { id: 'visibility', name: 'Visibility', description: 'Get found by the right people' },
-  { id: 'support', name: 'Support', description: 'Ongoing help when you need it' },
+// ═══════════════════════════════════════════════════════════════
+// PROBLEM-FIRST MAPPING
+// ═══════════════════════════════════════════════════════════════
+
+interface Problem {
+  id: string;
+  headline: string;
+  subhead: string;
+  serviceIds: string[];
+}
+
+const PROBLEMS: Problem[] = [
+  {
+    id: 'unprofessional',
+    headline: "I look unprofessional online",
+    subhead: "Show up properly with a real website, domain, and email",
+    serviceIds: ['website_single', 'website_multi', 'website_refresh', 'domain_setup', 'email_pro', 'link_hub'],
+  },
+  {
+    id: 'booking-payment',
+    headline: "Clients can't book or pay me easily",
+    subhead: "Stop the email tennis and get paid faster",
+    serviceIds: ['booking_system', 'payment_setup', 'intake_form', 'ordering_system', 'class_booking'],
+  },
+  {
+    id: 'admin-chaos',
+    headline: "I'm chasing invoices and drowning in admin",
+    subhead: "Systems that handle the boring stuff so you don't have to",
+    serviceIds: ['invoicing', 'crm_setup', 'workflow_automation', 'review_automation'],
+  },
+  {
+    id: 'social-exhausting',
+    headline: "I need to show up on social but it's exhausting",
+    subhead: "A system you can actually stick to",
+    serviceIds: ['social_media_setup', 'social_templates', 'content_bank', 'social_training', 'social_audit'],
+  },
+  {
+    id: 'cant-find-me',
+    headline: "People can't find me",
+    subhead: "Show up when they search for what you do",
+    serviceIds: ['google_business', 'seo_basics', 'multi_location', 'welcome_sequence', 'email_capture'],
+  },
+  {
+    id: 'bottleneck',
+    headline: "I'm the bottleneck and can't step back",
+    subhead: "Build operations that don't depend on you",
+    serviceIds: ['ops_audit', 'ops_sprint', 'process_documentation', 'reporting_dashboard'],
+  },
+  {
+    id: 'need-support',
+    headline: "I just need someone in my corner",
+    subhead: "Strategy, support, and someone who gets it",
+    serviceIds: ['strategy_session', 'retainer_lite', 'retainer_standard', 'retainer_scale'],
+  },
 ];
 
-export function ServicesVersionA() {
-  const { addService, addBundle, items, itemCount, openCart } = useCart();
-  const [activeCategory, setActiveCategory] = useState<ServiceCategory | 'all'>('all');
+// Helper to get services for a problem
+function getServicesForProblem(problem: Problem): ServiceItem[] {
+  return problem.serviceIds
+    .map(id => SERVICE_CATALOGUE.find(s => s.id === id))
+    .filter((s): s is ServiceItem => s !== undefined);
+}
 
-  // Get cart service IDs for bundle suggestions
-  // For services, the id is the service ID; for bundles, expand serviceIds
+// ═══════════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═══════════════════════════════════════════════════════════════
+
+export function ServicesVersionA() {
+  const { addService, items, itemCount, openCart } = useCart();
+  const [expandedProblem, setExpandedProblem] = useState<string | null>(null);
+
+  // Get cart service IDs
   const cartServiceIds = items.flatMap(item =>
     item.type === 'bundle' && item.serviceIds ? item.serviceIds : [item.id]
   );
-  const nearBundles = findNearBundles(cartServiceIds);
 
-  // Filter services by category
-  const displayedServices = activeCategory === 'all'
-    ? SERVICE_CATALOGUE.filter(s => s.purchaseType !== 'retainer')
-    : getServicesByCategory(activeCategory).filter(s => s.purchaseType !== 'retainer');
-
-  // Get retainers separately
-  const retainers = SERVICE_CATALOGUE.filter(s => s.purchaseType === 'retainer');
+  const toggleProblem = (problemId: string) => {
+    setExpandedProblem(expandedProblem === problemId ? null : problemId);
+  };
 
   return (
     <div className="min-h-screen bg-ice">
@@ -60,144 +111,144 @@ export function ServicesVersionA() {
       </header>
 
       {/* Hero */}
-      <section className="bg-charcoal text-white py-12 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-3">
-            Pick what you need
+      <section className="bg-charcoal text-white py-16 px-6">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4">
+            What&apos;s getting in your way?
           </h1>
-          <p className="text-lg text-white/70">
-            Fix one thing. Come back for the next.
+          <p className="text-lg text-white/70 mb-8">
+            Pick a problem. We&apos;ll show you what fixes it.
+          </p>
+          <p className="text-sm text-white/50">
+            Not sure? <Link href="/start" className="text-fuchsia hover:underline">Get your free Reckoning</Link> and we&apos;ll tell you exactly what&apos;s blocking you.
           </p>
         </div>
       </section>
 
-      {/* Category filter */}
-      <section className="bg-white border-b border-stone py-4 px-6 sticky top-[65px] z-30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex gap-2 overflow-x-auto pb-2 -mb-2">
-            <FilterButton
-              active={activeCategory === 'all'}
-              onClick={() => setActiveCategory('all')}
-            >
-              All
-            </FilterButton>
-            {CATEGORIES.map(cat => (
-              <FilterButton
-                key={cat.id}
-                active={activeCategory === cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-              >
-                {cat.name}
-              </FilterButton>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Problems List */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <div className="space-y-4">
+            {PROBLEMS.map((problem) => {
+              const isExpanded = expandedProblem === problem.id;
+              const services = getServicesForProblem(problem);
+              const addedCount = services.filter(s => cartServiceIds.includes(s.id)).length;
 
-      {/* Bundle suggestion (if cart has near-matches) */}
-      {nearBundles.length > 0 && (
-        <section className="bg-mint/30 border-b border-mint py-4 px-6">
-          <div className="container mx-auto max-w-6xl">
-            <div className="flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <p className="text-sm font-medium text-charcoal">
-                  Add {nearBundles[0].missing.length} more service{nearBundles[0].missing.length > 1 ? 's' : ''} to complete the{' '}
-                  <span className="text-fuchsia">{nearBundles[0].bundle.name}</span> bundle and save £{nearBundles[0].bundle.savings}
-                </p>
-              </div>
-              <button
-                onClick={() => addBundle(nearBundles[0].bundle)}
-                className="text-sm px-4 py-2 bg-fuchsia text-white rounded-md hover:bg-fuchsia/90 transition-colors"
-              >
-                Add bundle instead
-              </button>
-            </div>
-          </div>
-        </section>
-      )}
+              return (
+                <div
+                  key={problem.id}
+                  className="bg-white rounded-[10px] border border-stone overflow-hidden"
+                >
+                  {/* Problem Header - Clickable */}
+                  <button
+                    onClick={() => toggleProblem(problem.id)}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-ice/50 transition-colors"
+                  >
+                    <div>
+                      <h2 className="text-lg font-semibold text-charcoal">
+                        {problem.headline}
+                      </h2>
+                      <p className="text-sm text-charcoal/60 mt-1">
+                        {problem.subhead}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 ml-4">
+                      {addedCount > 0 && (
+                        <span className="text-xs bg-fuchsia/10 text-fuchsia px-2 py-1 rounded">
+                          {addedCount} added
+                        </span>
+                      )}
+                      <svg
+                        className={`w-5 h-5 text-charcoal/40 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </button>
 
-      {/* Services grid */}
-      <section className="py-10 px-6">
-        <div className="container mx-auto max-w-6xl">
-          {activeCategory !== 'all' && (
-            <div className="mb-8">
-              <h2 className="text-xl font-semibold text-charcoal">
-                {CATEGORIES.find(c => c.id === activeCategory)?.name}
-              </h2>
-              <p className="text-charcoal/60 text-sm">
-                {CATEGORIES.find(c => c.id === activeCategory)?.description}
-              </p>
-            </div>
-          )}
+                  {/* Expanded Services */}
+                  {isExpanded && (
+                    <div className="border-t border-stone bg-ice/30 px-6 py-5">
+                      <div className="space-y-3">
+                        {services.map((service) => {
+                          const inCart = cartServiceIds.includes(service.id);
+                          const isRetainer = service.purchaseType === 'retainer';
+                          const needsQuote = service.purchaseType === 'quote';
+                          const priceLabel = isRetainer
+                            ? `£${service.basePrice}/mo`
+                            : `${needsQuote ? 'From ' : ''}£${service.basePrice}`;
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {displayedServices.map(service => (
-              <ServiceCard
-                key={service.id}
-                service={service}
-                onAdd={() => addService(service)}
-                inCart={cartServiceIds.includes(service.id)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+                          return (
+                            <div
+                              key={service.id}
+                              className={`bg-white rounded-lg p-4 border ${inCart ? 'border-fuchsia' : 'border-stone'} transition-colors`}
+                            >
+                              <div className="flex items-start justify-between gap-4">
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <h3 className="font-medium text-charcoal">
+                                      {service.name}
+                                    </h3>
+                                    {service.popular && (
+                                      <span className="text-xs text-fuchsia">Popular</span>
+                                    )}
+                                  </div>
+                                  <p className="text-sm text-charcoal/60 mb-2">
+                                    {service.description}
+                                  </p>
+                                  <div className="flex items-center gap-4 text-xs text-charcoal/50">
+                                    <span>{service.timeEstimate}</span>
+                                    {service.timeSavedPerMonth && (
+                                      <span className="text-mint-dark">Saves ~{service.timeSavedPerMonth}hrs/month</span>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="flex flex-col items-end gap-2">
+                                  <span className="font-semibold text-charcoal whitespace-nowrap">
+                                    {priceLabel}
+                                  </span>
+                                  <button
+                                    onClick={() => addService(service)}
+                                    disabled={inCart}
+                                    className={`text-sm px-4 py-2 rounded-md font-medium transition-colors whitespace-nowrap ${
+                                      inCart
+                                        ? 'bg-stone text-charcoal/50 cursor-default'
+                                        : 'bg-fuchsia text-white hover:bg-fuchsia/90'
+                                    }`}
+                                  >
+                                    {inCart ? 'Added' : needsQuote ? 'Get quote' : 'Add'}
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
 
-      {/* Bundles section - positioned as "these work well together" */}
-      <section className="py-12 px-6 bg-white border-t border-stone">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-10">
-            <h2 className="text-xl font-semibold text-charcoal mb-2">
-              These work well together
-            </h2>
-            <p className="text-charcoal/60 text-sm">
-              Pre-made combinations with bundle pricing
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {BUNDLES.slice(0, 6).map(bundle => (
-              <BundleCard
-                key={bundle.id}
-                bundle={bundle}
-                onAdd={() => addBundle(bundle)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Retainers */}
-      <section className="py-12 px-6 border-t border-stone">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-10">
-            <h2 className="text-xl font-semibold text-charcoal mb-2">
-              Ongoing support
-            </h2>
-            <p className="text-charcoal/60 text-sm">
-              When you want someone in your corner month to month
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
-            {retainers.map(service => (
-              <ServiceCard
-                key={service.id}
-                service={service}
-                onAdd={() => addService(service)}
-                inCart={cartServiceIds.includes(service.id)}
-                isRetainer
-              />
-            ))}
+                      {/* Suggestion text */}
+                      <p className="text-xs text-charcoal/40 mt-4 text-center">
+                        Not sure which to pick? Start with what feels most urgent.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-charcoal text-white py-12 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-lg text-white/70 mb-4">
-            Not sure what you need?
+      <section className="bg-charcoal text-white py-16 px-6">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-semibold mb-3">
+            Still not sure?
+          </h2>
+          <p className="text-white/70 mb-6">
+            The Reckoning is a free diagnostic that tells you exactly what&apos;s blocking you  - and what to fix first.
           </p>
           <Link
             href="/start"
@@ -205,145 +256,11 @@ export function ServicesVersionA() {
           >
             Get your free Reckoning
           </Link>
-          <p className="text-sm text-white/50 mt-3">
-            15 minutes to clarity - we&apos;ll tell you what&apos;s blocking you
+          <p className="text-sm text-white/50 mt-4">
+            15 minutes to clarity. No sales call.
           </p>
         </div>
       </section>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// COMPONENTS
-// ═══════════════════════════════════════════════════════════════
-
-function FilterButton({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-4 py-2 text-sm rounded-md whitespace-nowrap transition-colors ${
-        active
-          ? 'bg-charcoal text-white'
-          : 'bg-ice text-charcoal hover:bg-stone'
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
-
-function ServiceCard({
-  service,
-  onAdd,
-  inCart,
-  isRetainer = false,
-}: {
-  service: ServiceItem;
-  onAdd: () => void;
-  inCart: boolean;
-  isRetainer?: boolean;
-}) {
-  const priceLabel = isRetainer ? `£${service.basePrice}/mo` : `£${service.basePrice}`;
-  const needsQuote = service.purchaseType === 'quote';
-
-  return (
-    <div className={`bg-white rounded-[10px] p-5 border ${inCart ? 'border-fuchsia' : 'border-stone'} transition-colors`}>
-      <div className="flex items-start justify-between mb-3">
-        <div>
-          <h3 className="font-semibold text-charcoal text-sm">
-            {service.name}
-          </h3>
-          {service.popular && (
-            <span className="text-xs text-fuchsia">Popular</span>
-          )}
-        </div>
-        <div className="text-right">
-          <span className="font-semibold text-charcoal">
-            {needsQuote ? 'From ' : ''}{priceLabel}
-          </span>
-          {service.agencyComparison > service.basePrice * 1.5 && (
-            <p className="text-xs text-charcoal/40 line-through">
-              Agency: £{service.agencyComparison}
-            </p>
-          )}
-        </div>
-      </div>
-
-      <p className="text-xs text-charcoal/70 mb-4 line-clamp-2">
-        {service.description}
-      </p>
-
-      <div className="flex items-center justify-between">
-        <span className="text-xs text-charcoal/50">
-          {service.timeEstimate}
-        </span>
-        <button
-          onClick={onAdd}
-          disabled={inCart}
-          className={`text-xs px-3 py-1.5 rounded-md font-medium transition-colors ${
-            inCart
-              ? 'bg-stone text-charcoal/50 cursor-default'
-              : 'bg-fuchsia text-white hover:bg-fuchsia/90'
-          }`}
-        >
-          {inCart ? 'Added' : needsQuote ? 'Get quote' : 'Add'}
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function BundleCard({
-  bundle,
-  onAdd,
-}: {
-  bundle: Bundle;
-  onAdd: () => void;
-}) {
-  return (
-    <div className="bg-ice rounded-[10px] p-5 border border-stone hover:border-fuchsia/40 transition-colors">
-      <div className="flex items-start justify-between mb-3">
-        <h3 className="font-semibold text-charcoal">
-          {bundle.name}
-        </h3>
-        <span className="px-2 py-0.5 bg-mint text-charcoal text-xs font-medium rounded">
-          Save £{bundle.savings}
-        </span>
-      </div>
-
-      <p className="text-xs text-charcoal/70 mb-3">
-        {bundle.tagline}
-      </p>
-
-      <p className="text-xs text-charcoal/50 mb-4">
-        {bundle.includes.length} services included
-      </p>
-
-      <div className="flex items-center justify-between">
-        <div>
-          <span className="font-semibold text-charcoal">
-            £{bundle.bundlePrice}
-          </span>
-          <span className="text-xs text-charcoal/40 line-through ml-2">
-            £{bundle.alaCarteTotal}
-          </span>
-        </div>
-        <button
-          onClick={onAdd}
-          className="text-xs px-3 py-1.5 rounded-md font-medium bg-charcoal text-white hover:bg-charcoal/90 transition-colors"
-        >
-          Add bundle
-        </button>
-      </div>
     </div>
   );
 }
