@@ -1,8 +1,8 @@
-# Social Media Services — Bespoke & Easy to Learn
+# Social Media Services  -  Bespoke & Easy to Learn
 
 ## Philosophy
 
-We don't "do social media for you" — we build you a **system you can run yourself**.
+We don't "do social media for you"  -  we build you a **system you can run yourself**.
 
 Most business owners don't need an agency posting for them. They need:
 1. A plan they understand
@@ -21,8 +21,8 @@ Then it's theirs. No dependency. No monthly retainer for something they could do
 | Social Media System Setup | £249 | Complete engine: scheduler + calendar + templates + training | 6 hrs/mo |
 | Content Bank & Calendar | £149 | 30 days of post ideas, reusable calendar | 4 hrs/mo |
 | Social Media Templates | £129 | Branded Canva templates (posts, stories, carousels) | 3 hrs/mo |
-| Social Media Training | £149 | 90-min 1:1 session + recording | — |
-| Social Media Audit | £99 | Honest review + action plan | — |
+| Social Media Training | £149 | 90-min 1:1 session + recording |  -  |
+| Social Media Audit | £99 | Honest review + action plan |  -  |
 
 ---
 
@@ -155,17 +155,17 @@ For people who are posting but not seeing results.
 
 ## Suggested Combinations
 
-### "I'm Starting from Zero" — £399
+### "I'm Starting from Zero"  -  £399
 - Social Media System Setup (£249)
 - Content Bank & Calendar (£149)
 - **Bundle price: £359** (save £40)
 
-### "I Post But It Looks Amateur" — £378
+### "I Post But It Looks Amateur"  -  £378
 - Social Media Templates (£129)
 - Social Media System Setup (£249)
 - **Bundle price: £340** (save £38)
 
-### "I Don't Know What I'm Doing" — £348
+### "I Don't Know What I'm Doing"  -  £348
 - Social Media Audit (£99)
 - Social Media System Setup (£249)
 - **Bundle price: £313** (save £35)
@@ -192,7 +192,7 @@ Every delivery is customised:
 |---------|----------------|
 | Recording of training | They can rewatch anytime |
 | Quick reference guide | 1-page "what to do" they can print |
-| Pre-filled calendar | Not blank — already has prompts |
+| Pre-filled calendar | Not blank  -  already has prompts |
 | Templates, not designs | They edit, not create from scratch |
 | No jargon training | Plain English, practical focus |
 | 1-week follow-up | Catch questions before they get stuck |
@@ -202,7 +202,7 @@ Every delivery is customised:
 ## Positioning
 
 ### For Leapers
-> "You don't need to be on social media 24/7. You need a system that makes showing up feel easy — so you can focus on actually running your business."
+> "You don't need to be on social media 24/7. You need a system that makes showing up feel easy  -  so you can focus on actually running your business."
 
 ### For Scrappy Survivors
 > "You're already posting, but it's chaos. Let's turn that into a system you can batch in 2 hours a week."

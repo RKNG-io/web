@@ -1,7 +1,7 @@
-# Agent E Review — Behavioural Psychology Audit
+# Agent E Review  -  Behavioural Psychology Audit
 
 **Date:** 3 December 2024
-**Reviewer:** Claude (as Agent E — Brand Guardian)
+**Reviewer:** Claude (as Agent E  -  Brand Guardian)
 **Status:** ✅ Largely Approved | ⚠️ Minor Fixes Required
 
 ---
@@ -17,7 +17,7 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 
 ## Review by Component
 
-### 🟢 Landing Page Components — APPROVED
+### 🟢 Landing Page Components  -  APPROVED
 
 **Files reviewed:**
 - `Hero.tsx`
@@ -46,14 +46,14 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 
 | Location | Issue | Severity | Fix |
 |----------|-------|----------|-----|
-| `Hero.tsx:27` | "drown in admin" is slightly dramatic | ⚠️ Minor | Keep — acceptable |
-| `FAQ.tsx:29` | "We're here if you get stuck" — good | ✅ None | — |
+| `Hero.tsx:27` | "drown in admin" is slightly dramatic | ⚠️ Minor | Keep  -  acceptable |
+| `FAQ.tsx:29` | "We're here if you get stuck"  -  good | ✅ None |  -  |
 
-**Verdict:** ✅ **APPROVED** — No changes required
+**Verdict:** ✅ **APPROVED**  -  No changes required
 
 ---
 
-### 🟢 Questionnaire Flow — APPROVED WITH NOTES
+### 🟢 Questionnaire Flow  -  APPROVED WITH NOTES
 
 **Files reviewed:**
 - `start/page.tsx`
@@ -75,21 +75,21 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 
 | Location | Issue | Severity | Fix Required |
 |----------|-------|----------|--------------|
-| `persona-questions.ts:37` | Welcome screen says "This is your moment" — good | ✅ None | — |
-| `persona-questions.ts:169` | "What's the fear underneath the fear?" — may feel intense for some | ⚠️ Minor | Consider softer subtext |
+| `persona-questions.ts:37` | Welcome screen says "This is your moment"  -  good | ✅ None |  -  |
+| `persona-questions.ts:169` | "What's the fear underneath the fear?"  -  may feel intense for some | ⚠️ Minor | Consider softer subtext |
 | `start/page.tsx:69` | Error alert is generic (`alert(error.message)`) | ⚠️ Minor | Replace with branded error state |
 
 **Missing (per spec):**
 
-⚠️ **Micro-acknowledgments not implemented** — The spec requires brief validation after certain answers:
+⚠️ **Micro-acknowledgments not implemented**  -  The spec requires brief validation after certain answers:
 - "Got it. We'll flag anything to check with your employer."
 - "That's a lot to carry. Let's figure out what to tackle first."
 
-**Verdict:** ✅ **APPROVED** — Micro-acknowledgments should be added but not blocking
+**Verdict:** ✅ **APPROVED**  -  Micro-acknowledgments should be added but not blocking
 
 ---
 
-### 🟢 Bypass Intakes — APPROVED
+### 🟢 Bypass Intakes  -  APPROVED
 
 **Files reviewed:**
 - `start/choose/page.tsx`
@@ -116,7 +116,7 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 
 ---
 
-### 🟢 Report Display — APPROVED
+### 🟢 Report Display  -  APPROVED
 
 **Files reviewed:**
 - `reckoning/[token]/page.tsx`
@@ -130,7 +130,7 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 ✅ Cost of inaction shows working (transparent, not fear-mongering)
 ✅ Closing message is encouraging
 ✅ Service recommendations framed as optional
-✅ "Or take this report and run with it yourself" — perfect
+✅ "Or take this report and run with it yourself"  -  perfect
 ✅ GeneratingState messages are human ("Analysing your answers", "Almost there")
 
 **Issues Found:**
@@ -140,11 +140,11 @@ The codebase is **emotionally coherent** and **on-brand**. The copy correctly us
 | `ReportDisplay.tsx:89` | Section header says "The diagnosis" | ⚠️ Minor | Consider "What we see" to avoid clinical framing |
 | `ReportDisplay.tsx:281` | CTA says "Get started with support" | ⚠️ Minor | Could also offer "Browse services" as lower-commitment option |
 
-**Verdict:** ✅ **APPROVED** — Minor phrasing tweaks optional
+**Verdict:** ✅ **APPROVED**  -  Minor phrasing tweaks optional
 
 ---
 
-### 🟢 Report Generation Prompts — APPROVED
+### 🟢 Report Generation Prompts  -  APPROVED
 
 **Files reviewed:**
 - `lib/prompts/base.ts`
@@ -168,7 +168,7 @@ None. The prompt engineering is excellent.
 
 ---
 
-### 🟡 Error States — NEEDS IMPROVEMENT
+### 🟡 Error States  -  NEEDS IMPROVEMENT
 
 **Files reviewed:**
 - `reckoning/[token]/page.tsx` (failed state)
@@ -197,7 +197,7 @@ or we'll be in touch within 24 hours.
 [Try again] [Go back to home]
 ```
 
-**Verdict:** ⚠️ **CHANGES REQUESTED** — Error states need branded styling
+**Verdict:** ⚠️ **CHANGES REQUESTED**  -  Error states need branded styling
 
 ---
 
@@ -245,7 +245,7 @@ Checked all copy for banned patterns:
 | "Leverage" / "Synergy" | ❌ Not found |
 | Fear-based urgency | ❌ Not found |
 
-✅ **PASSED** — No red flags detected
+✅ **PASSED**  -  No red flags detected
 
 ---
 

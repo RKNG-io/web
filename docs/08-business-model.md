@@ -1,4 +1,4 @@
-# Reckoning — Business Model v2
+# Reckoning  -  Business Model v2
 
 ## The Vision
 
@@ -12,10 +12,10 @@ We're not an agency. We're not a course. We're the bridge between the life you'r
 
 People don't need more advice. They need:
 
-1. **Clarity** — What's actually blocking them
-2. **Permission** — To start where they are
-3. **Action** — Small shifts that compound
-4. **Support** — When they want it (not forced)
+1. **Clarity**  -  What's actually blocking them
+2. **Permission**  -  To start where they are
+3. **Action**  -  Small shifts that compound
+4. **Support**  -  When they want it (not forced)
 
 The Reckoning gives them 1–3 for free. Services give them 4 when they're ready.
 
@@ -24,7 +24,7 @@ The Reckoning gives them 1–3 for free. Services give them 4 when they're ready
 ## Two Paths In
 
 ### Path 1: "Help me figure it out"
-**The Reckoning** — Free diagnostic
+**The Reckoning**  -  Free diagnostic
 
 ```
 Questionnaire (15 min) → Personalised Report → Clarity on what's blocking them
@@ -39,7 +39,7 @@ Questionnaire (15 min) → Personalised Report → Clarity on what's blocking th
 - The report itself is the sales conversation
 
 ### Path 2: "I know what I need"
-**Bypass Intake** — Direct to quote
+**Bypass Intake**  -  Direct to quote
 
 ```
 "I need a website" → Simple intake (5 min) → Quote within 24 hours
@@ -170,7 +170,7 @@ AI is built into delivery, not sold as a gimmick:
 |-------------------|--------------|
 | **Reckoning generation** | Personalised report from questionnaire answers |
 | **Copy assistance** | Website copy, email sequences, social content |
-| **Voice agents** | Enquiry handling, booking, FAQs — trained on their voice |
+| **Voice agents** | Enquiry handling, booking, FAQs  -  trained on their voice |
 | **Automation logic** | Smart workflows that adapt |
 
 **How we talk about it:** 
@@ -199,7 +199,7 @@ AI is built into delivery, not sold as a gimmick:
 | Booking + payments | £149 | 2 hrs | £75/hr |
 | Email sequence | £199 | 4 hrs | £50/hr |
 
-*Tool costs near zero — clients use free tiers (Notion, Canva, Cal.com, Stripe).*
+*Tool costs near zero  -  clients use free tiers (Notion, Canva, Cal.com, Stripe).*
 
 ---
 
@@ -207,7 +207,7 @@ AI is built into delivery, not sold as a gimmick:
 
 ```
 1. ARRIVE
-   Landing page — two clear paths:
+   Landing page  -  two clear paths:
    "Get Your Reckoning" (exploration)
    "I know what I need" (bypass)
 
@@ -304,8 +304,8 @@ AI is built into delivery, not sold as a gimmick:
 
 | Risk | Mitigation |
 |------|------------|
-| **Capacity** — you're the bottleneck | Templatise, hire VA, raise prices |
-| **Price objections** — "just a website" | Lead with Reckoning (value), not deliverables |
+| **Capacity**  -  you're the bottleneck | Templatise, hire VA, raise prices |
+| **Price objections**  -  "just a website" | Lead with Reckoning (value), not deliverables |
 | **Scope creep** | Clear scoping, change request process |
 | **AI commoditisation** | Emphasise taste, curation, done-for-you |
 
@@ -313,11 +313,11 @@ AI is built into delivery, not sold as a gimmick:
 
 ## The Moat
 
-1. **The Reckoning** — Proprietary diagnostic that builds trust before sale
-2. **Voice match** — AI trained on their voice, not generic
-3. **Permission-giving** — Emotional positioning competitors don't have
-4. **Speed** — Days, not weeks
-5. **Independence** — They own everything, no lock-in
+1. **The Reckoning**  -  Proprietary diagnostic that builds trust before sale
+2. **Voice match**  -  AI trained on their voice, not generic
+3. **Permission-giving**  -  Emotional positioning competitors don't have
+4. **Speed**  -  Days, not weeks
+5. **Independence**  -  They own everything, no lock-in
 
 ---
 

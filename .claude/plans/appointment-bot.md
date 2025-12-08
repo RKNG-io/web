@@ -1,6 +1,6 @@
 # Appointment Bot Spec
 
-**Status:** Draft — awaiting decisions
+**Status:** Draft  -  awaiting decisions
 **Purpose:** Non-invasive chat widget for booking calls on the Reckoning site
 **Tone:** Warm, clear, low-pressure (anti-chirpy)
 
@@ -32,7 +32,7 @@ Doesn't block content. Doesn't auto-open. Doesn't nag.
 
 ## The Flow
 
-### Step 1 — Open
+### Step 1  -  Open
 
 User clicks bubble. Bot says:
 
@@ -44,7 +44,7 @@ Buttons:
 - Ask about a service
 - Just browsing
 
-### Step 2 — Context (if booking)
+### Step 2  -  Context (if booking)
 
 > "What's the main thing you want to achieve?"
 
@@ -56,7 +56,7 @@ Buttons based on personas:
 
 This tags the booking in your calendar/CRM so you're prepped.
 
-### Step 3 — Availability
+### Step 3  -  Availability
 
 Bot fetches your calendar and shows:
 
@@ -68,13 +68,13 @@ Bot fetches your calendar and shows:
 
 User picks one.
 
-### Step 4 — Details
+### Step 4  -  Details
 
 > "Perfect. What name and email should I use for the booking?"
 
 Single input or two fields. Parses and confirms.
 
-### Step 5 — Done
+### Step 5  -  Done
 
 > "All set. Confirmation sent to [email].
 > You'll get a short prep note before the call."
@@ -100,7 +100,7 @@ You need something that:
 |--------|------|--------|-------|
 | **Calendly** | Free–£10/mo | Low | Most common, solid API, handles reminders |
 | **Cal.com** | Free (self-host) or £12/mo | Low–Medium | Open source, more control, good API |
-| **Zoho Bookings** | Included with Zoho One | Low | You already use Zoho Mail — might integrate well |
+| **Zoho Bookings** | Included with Zoho One | Low | You already use Zoho Mail  -  might integrate well |
 | **Google Calendar + custom** | Free | High | Raw API, you build everything yourself |
 
 **My recommendation:** Start with **Calendly** or **Zoho Bookings** (since you're in Zoho already). Both have APIs that return available slots and create bookings.
@@ -129,7 +129,7 @@ Reasons:
 - Your brand rules are strict (Outfit font only, no shadows, specific colours)
 - Third-party widgets rarely match perfectly
 - The flow is simple enough (5 steps, button-driven)
-- It becomes part of your "silent demo" — shows what you can build
+- It becomes part of your "silent demo"  -  shows what you can build
 
 **Your call:** Custom (I build it) or third-party (faster but less control)?
 
@@ -210,7 +210,7 @@ Things to decide:
 - How far ahead can people book? (2 weeks? 1 month?)
 - Minimum notice? (24 hours?)
 
-Most calendar tools handle this — you'd configure it there.
+Most calendar tools handle this  -  you'd configure it there.
 
 ---
 
@@ -272,9 +272,9 @@ CREATE TABLE chat_bookings (
 
 ### Integration Points
 
-1. **Calendar API** — Fetch availability, create events
-2. **Email** — Confirmation via Resend (already in stack) or calendar's built-in
-3. **Existing questionnaire** — Could pre-fill chat if they've done the Reckoning
+1. **Calendar API**  -  Fetch availability, create events
+2. **Email**  -  Confirmation via Resend (already in stack) or calendar's built-in
+3. **Existing questionnaire**  -  Could pre-fill chat if they've done the Reckoning
 
 ---
 

@@ -5,8 +5,8 @@ You are a senior UX researcher auditing this application. Your job is to identif
 ## Context Files to Read First
 
 Before auditing, read these for brand context:
-- `docs/00-brand-voice.md` — Tone and copy guidelines
-- `docs/00-PSYCHOLOGY-BRIEF.md` — Target audience and emotional positioning
+- `docs/00-brand-voice.md`  -  Tone and copy guidelines
+- `docs/00-PSYCHOLOGY-BRIEF.md`  -  Target audience and emotional positioning
 
 ## Audit Scope: $ARGUMENTS
 
@@ -66,7 +66,7 @@ Provide findings as:
 ```
 
 ## Rules
-- Be specific — cite file paths and line numbers
-- Prioritise ruthlessly — not everything matters equally
-- Consider the solo business owner context — they're time-poor
+- Be specific  -  cite file paths and line numbers
+- Prioritise ruthlessly  -  not everything matters equally
+- Consider the solo business owner context  -  they're time-poor
 - Don't suggest features, suggest fixes to what exists

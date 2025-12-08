@@ -20,7 +20,7 @@ People at the very beginning. Still employed, or just starting out. Dreaming but
 
 ## Primary Beat
 
-**Unblock** — clarity, permission to start
+**Unblock**  -  clarity, permission to start
 
 ## Messaging
 
@@ -28,7 +28,7 @@ People at the very beginning. Still employed, or just starting out. Dreaming but
 > It's hard to start when you're still figuring it out. The gap between "I want to do this" and "I'm actually doing this" can feel huge.
 
 **Reframe:**
-> It's not. You don't need a perfect plan. You need a first step — and someone in your corner while you take it.
+> It's not. You don't need a perfect plan. You need a first step  -  and someone in your corner while you take it.
 
 ## CTA Energy
 
@@ -51,7 +51,7 @@ People at the very beginning. Still employed, or just starting out. Dreaming but
 ## Key Questions to Ask
 
 1. What does your life look like when this business is working?
-2. Who do you help — and what changes for them?
+2. Who do you help  -  and what changes for them?
 3. What's already in place?
 4. What's actually stopping you?
 5. What's the fear underneath the fear?

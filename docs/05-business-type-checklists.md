@@ -176,9 +176,9 @@ When someone selects "Other" and describes their business, the AI generates cust
       "text": "Do you have a vehicle set up for mobile grooming?",
       "type": "single",
       "options": [
-        "Yes — fully equipped",
-        "Partially — needs some work",
-        "No — still planning this"
+        "Yes  -  fully equipped",
+        "Partially  -  needs some work",
+        "No  -  still planning this"
       ]
     },
     {

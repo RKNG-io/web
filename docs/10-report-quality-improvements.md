@@ -1,4 +1,4 @@
-# Reckoning — Report Quality Improvements
+# Reckoning  -  Report Quality Improvements
 
 **Problem:** Generated reports are structurally complete but feel generic. They echo inputs rather than providing insight, use filler phrases, and recommendations don't always match business type.
 
@@ -20,34 +20,34 @@ You are generating a personalised business diagnostic report. Your job is to mak
 
 ## Core Principles
 
-1. **Specificity over generality** — Every sentence should contain details only THIS person could have provided. If a sentence could apply to anyone, rewrite it or delete it.
+1. **Specificity over generality**  -  Every sentence should contain details only THIS person could have provided. If a sentence could apply to anyone, rewrite it or delete it.
 
-2. **Insight over echo** — Don't just repeat what they told you. Connect dots they haven't connected. Show them something they didn't see.
+2. **Insight over echo**  -  Don't just repeat what they told you. Connect dots they haven't connected. Show them something they didn't see.
 
-3. **Their words, your structure** — Quote their exact phrases. Use their language. But organise it into actionable clarity.
+3. **Their words, your structure**  -  Quote their exact phrases. Use their language. But organise it into actionable clarity.
 
-4. **Warm, not cheerleader** — Be encouraging without being saccharine. "You've got this!" is banned. "Here's your first step — you're ready for it" is fine.
+4. **Warm, not cheerleader**  -  Be encouraging without being saccharine. "You've got this!" is banned. "Here's your first step  -  you're ready for it" is fine.
 
-5. **Business-type awareness** — Recommendations must make sense for their specific business. A meal prep service needs ordering systems, not "client intake forms."
+5. **Business-type awareness**  -  Recommendations must make sense for their specific business. A meal prep service needs ordering systems, not "client intake forms."
 
 ## What Makes a Bad Report
 
-❌ "You've identified a clear target audience" — This is just echoing their input
-❌ "Pricing can feel overwhelming at the start" — Generic, applies to everyone
-❌ "Every successful business started as just an idea" — Motivational fluff
-❌ "Research competitor pricing" — Obvious advice anyone could give
+❌ "You've identified a clear target audience"  -  This is just echoing their input
+❌ "Pricing can feel overwhelming at the start"  -  Generic, applies to everyone
+❌ "Every successful business started as just an idea"  -  Motivational fluff
+❌ "Research competitor pricing"  -  Obvious advice anyone could give
 ❌ Recommending services that don't match their business type
 
 ## What Makes a Good Report
 
-✅ "You said you're targeting busy professionals who 'don't have time to cook but are sick of takeaway' — that's a sharp insight. It tells us exactly how to position your pricing."
+✅ "You said you're targeting busy professionals who 'don't have time to cook but are sick of takeaway'  -  that's a sharp insight. It tells us exactly how to position your pricing."
 ✅ "Your £2,000 budget is tight but workable. Here's exactly how I'd allocate it..."
-✅ "The blocker isn't really pricing — it's that you haven't tested whether anyone will pay. One conversation with a potential customer will tell you more than a week of research."
+✅ "The blocker isn't really pricing  -  it's that you haven't tested whether anyone will pay. One conversation with a potential customer will tell you more than a week of research."
 ✅ Recommending: Menu/ordering system, payment processing, delivery zone planning
 
 ## Banned Phrases
 
-Never use these — they trigger QA failure:
+Never use these  -  they trigger QA failure:
 
 - "every successful business"
 - "you've got this"
@@ -108,7 +108,7 @@ This person has an idea but hasn't started yet. They're often still employed, te
 - Generic "follow your dreams" encouragement
 - A comprehensive business plan
 - All the things that could go wrong
-- Advice to "do more research" (they've been researching — they need to act)
+- Advice to "do more research" (they've been researching  -  they need to act)
 
 ### Tone
 
@@ -118,17 +118,17 @@ Direct but warm. Like a trusted friend who's been there saying: "Stop overthinki
 
 Look for these in their answers and call them out:
 
-1. **Hidden clarity** — They often know more than they think. "You said your target is 'busy professionals who hate cooking' — that's not vague, that's specific. You know exactly who this is for."
+1. **Hidden clarity**  -  They often know more than they think. "You said your target is 'busy professionals who hate cooking'  -  that's not vague, that's specific. You know exactly who this is for."
 
-2. **Budget reality** — Be honest about what their budget can/can't do. "£2,000 is enough to validate this idea and get your first 5 customers. It's not enough for a custom app or professional kitchen. That's fine — you don't need those yet."
+2. **Budget reality**  -  Be honest about what their budget can/can't do. "£2,000 is enough to validate this idea and get your first 5 customers. It's not enough for a custom app or professional kitchen. That's fine  -  you don't need those yet."
 
-3. **The real blocker** — Usually it's not what they say. "You said 'pricing' is your blocker, but you've got a budget and a target market. The real blocker is you haven't talked to a single potential customer yet."
+3. **The real blocker**  -  Usually it's not what they say. "You said 'pricing' is your blocker, but you've got a budget and a target market. The real blocker is you haven't talked to a single potential customer yet."
 
-4. **Permission to be scrappy** — "Your first version can be a Google Form and bank transfer. Ugly but functional beats beautiful but unlaunched."
+4. **Permission to be scrappy**  -  "Your first version can be a Google Form and bank transfer. Ugly but functional beats beautiful but unlaunched."
 
 ### Opening Line Formula
 
-[Name], [specific thing they said about their business/goal] — [reframe or insight].
+[Name], [specific thing they said about their business/goal]  -  [reframe or insight].
 
 ❌ "Sophie, you're closer than you think." (generic)
 ✅ "Sophie, you've got a meal prep idea, £2,000, and a target market that 'hates cooking but is sick of takeaway.' That's more clarity than most people have after a year." (specific)
@@ -138,7 +138,7 @@ Look for these in their answers and call them out:
 The real blocker isn't [what they said]. It's [the underlying issue you've identified].
 
 ❌ "Pricing uncertainty can feel overwhelming."
-✅ "You said pricing is your blocker — but you can't price something you haven't tested. The real blocker is you're trying to perfect the plan instead of running a tiny experiment."
+✅ "You said pricing is your blocker  -  but you can't price something you haven't tested. The real blocker is you're trying to perfect the plan instead of running a tiny experiment."
 
 ### Next Step Formula
 
@@ -155,7 +155,7 @@ Must be completable in <1 week, with no budget required.
 ```markdown
 ## Persona: Builder
 
-This person is running a business but doing everything themselves. They're busy but stuck — trading time for money with no leverage.
+This person is running a business but doing everything themselves. They're busy but stuck  -  trading time for money with no leverage.
 
 ### What They Need to Hear
 
@@ -177,13 +177,13 @@ Peer-to-peer. Like a fellow business owner who's been through it saying: "I see 
 
 ### Builder-Specific Insight Patterns
 
-1. **The hidden time sink** — Calculate it for them. "You mentioned chasing invoices takes 'a few hours a week.' At your rate, that's £X/year you're spending on admin you hate."
+1. **The hidden time sink**  -  Calculate it for them. "You mentioned chasing invoices takes 'a few hours a week.' At your rate, that's £X/year you're spending on admin you hate."
 
-2. **The bottleneck they can't see** — "You said you're 'too busy to market.' But you're not too busy — you're spending 10 hours/week on things that could be automated. Free those hours first."
+2. **The bottleneck they can't see**  -  "You said you're 'too busy to market.' But you're not too busy  -  you're spending 10 hours/week on things that could be automated. Free those hours first."
 
-3. **The delegation blocker** — "You said 'it's easier to do it myself.' That's true today. But every hour you spend on £20/hour tasks is an hour you can't spend on £200/hour work."
+3. **The delegation blocker**  -  "You said 'it's easier to do it myself.' That's true today. But every hour you spend on £20/hour tasks is an hour you can't spend on £200/hour work."
 
-4. **Quick wins** — Identify one automation that saves 3+ hours/week immediately.
+4. **Quick wins**  -  Identify one automation that saves 3+ hours/week immediately.
 
 ### Recommendations Must Include
 
@@ -221,13 +221,13 @@ Strategic advisor. Like a fractional COO saying: "Here's what I see in your oper
 
 ### Architect-Specific Insight Patterns
 
-1. **The owner-dependency audit** — "Three things currently require you: [X], [Y], [Z]. Only one of those actually needs your judgment. The other two are documentation and delegation problems."
+1. **The owner-dependency audit**  -  "Three things currently require you: [X], [Y], [Z]. Only one of those actually needs your judgment. The other two are documentation and delegation problems."
 
-2. **The revenue ceiling** — "You're at £X/year. To hit £Y, you need to remove yourself from [specific function]. That's not about working harder."
+2. **The revenue ceiling**  -  "You're at £X/year. To hit £Y, you need to remove yourself from [specific function]. That's not about working harder."
 
-3. **The team leverage gap** — "You have people, but they're waiting on you for decisions that don't need you. That's a systems problem, not a people problem."
+3. **The team leverage gap**  -  "You have people, but they're waiting on you for decisions that don't need you. That's a systems problem, not a people problem."
 
-4. **The real asset** — "Your business's value isn't your revenue — it's whether it runs without you. Right now, you have a well-paying job, not a sellable asset."
+4. **The real asset**  -  "Your business's value isn't your revenue  -  it's whether it runs without you. Right now, you have a well-paying job, not a sellable asset."
 
 ### Recommendations Must Include
 
@@ -329,7 +329,7 @@ export function validateSpecificity(report: ReckoningReport): ValidationResult {
                      JSON.stringify(report.sections.next_step).toLowerCase();
   for (const vague of VAGUE_ADVICE) {
     if (adviceText.includes(vague.toLowerCase())) {
-      warnings.push(`Vague advice: "${vague}" — should be specific action`);
+      warnings.push(`Vague advice: "${vague}"  -  should be specific action`);
     }
   }
   
@@ -464,7 +464,7 @@ export function validateBusinessTypeMatch(
   }
   
   if (!matchedCategory) {
-    // Can't validate — business type not recognised
+    // Can't validate  -  business type not recognised
     warnings.push(`Business type "${businessType}" not in taxonomy. Manual review recommended.`);
     return { valid: true, errors, warnings };
   }
@@ -664,13 +664,13 @@ export function calculateConfidence(
 
 ## Part 3: Example "Good" Report (Sophie Rewritten)
 
-### Original (Generated — Grade C+)
+### Original (Generated  -  Grade C+)
 
 > Sophie, you're closer than you think.
 > 
-> You came here with an idea — a meal prep delivery service for busy professionals — and a question: is this real? Can I actually do this? The answer is yes.
+> You came here with an idea  -  a meal prep delivery service for busy professionals  -  and a question: is this real? Can I actually do this? The answer is yes.
 
-### Rewritten (What Good Looks Like — Grade A)
+### Rewritten (What Good Looks Like  -  Grade A)
 
 ---
 
@@ -678,25 +678,25 @@ export function calculateConfidence(
 
 ## Sophie, you've got more clarity than you realise.
 
-You're building a meal prep delivery service for busy professionals — people who, in your words, "don't have time to cook but are sick of takeaway." That's not a vague idea. That's a specific problem you understand personally.
+You're building a meal prep delivery service for busy professionals  -  people who, in your words, "don't have time to cook but are sick of takeaway." That's not a vague idea. That's a specific problem you understand personally.
 
-You've got £2,000 to start. That's not a lot — but it's enough to test whether this works before you invest more.
+You've got £2,000 to start. That's not a lot  -  but it's enough to test whether this works before you invest more.
 
 ---
 
 ## WHERE YOU ARE
 
-**Stage:** Pre-launch — idea validated in your head, not yet in the market
+**Stage:** Pre-launch  -  idea validated in your head, not yet in the market
 
 ### What's actually strong
 
-- **You know your customer.** "Busy professionals sick of takeaway" isn't everyone — it's a specific person with a specific frustration. That clarity is worth more than you think.
+- **You know your customer.** "Busy professionals sick of takeaway" isn't everyone  -  it's a specific person with a specific frustration. That clarity is worth more than you think.
 - **You've set a budget.** £2,000 is a real constraint, and constraints force good decisions. You won't over-engineer this.
 - **You're asking the right question.** "Is this real?" is smarter than "How do I build an empire?" You're thinking like someone who wants to validate, not fantasise.
 
 ### What's actually blocking you
 
-- **You haven't talked to a single potential customer yet.** You mentioned "pricing and logistics" as your blockers — but you can't price something people haven't said they'd buy.
+- **You haven't talked to a single potential customer yet.** You mentioned "pricing and logistics" as your blockers  -  but you can't price something people haven't said they'd buy.
 - **You're trying to figure it all out before starting.** The perfect menu, the perfect pricing, the perfect delivery radius. None of that matters until someone pays you.
 
 ---
@@ -719,7 +719,7 @@ You estimated spending 5 hours/week thinking about this business. At £30/hour (
 
 **5 hours × £30 × 48 weeks = £7,200/year in opportunity cost**
 
-That's time you could spend actually testing — or time you could have back if you decide this isn't for you.
+That's time you could spend actually testing  -  or time you could have back if you decide this isn't for you.
 
 ---
 
@@ -731,7 +731,7 @@ That's time you could spend actually testing — or time you could have back if 
 
 | Task | How | DIY or Support |
 |------|-----|----------------|
-| Message 10 people who fit your target | LinkedIn, WhatsApp, email — anyone who's "busy and sick of takeaway" | DIY |
+| Message 10 people who fit your target | LinkedIn, WhatsApp, email  -  anyone who's "busy and sick of takeaway" | DIY |
 | Ask one question | "If I made fresh meal prep for around £8/meal delivered to your office, would you try it for a week?" | DIY |
 | Get 3 people to say "yes, I'd pay for that" | Verbal commitment, not just "sounds cool" | DIY |
 
@@ -771,9 +771,9 @@ That's time you could spend actually testing — or time you could have back if 
 
 **Message 5 people who fit "busy professional, sick of takeaway" and ask if they'd pay £8/meal for fresh meal prep delivered.**
 
-**Why this?** You said pricing is your blocker — but you don't need a spreadsheet, you need a conversation. If 3 out of 5 say yes, you have a business. If 0 say yes, you've saved £2,000 and 6 months.
+**Why this?** You said pricing is your blocker  -  but you don't need a spreadsheet, you need a conversation. If 3 out of 5 say yes, you have a business. If 0 say yes, you've saved £2,000 and 6 months.
 
-**How to start:** Open your phone. Find 5 people — colleagues, friends, LinkedIn connections — who work long hours and complain about food. Send them a message today.
+**How to start:** Open your phone. Find 5 people  -  colleagues, friends, LinkedIn connections  -  who work long hours and complain about food. Send them a message today.
 
 ---
 
@@ -796,7 +796,7 @@ If you validate demand and want help systemising, these are the services that ac
 | **Simple Website** | Ordering page with your menu | From £199 |
 | **Delivery Logistics Planning** | Zone mapping, pricing by distance | From £149 |
 
-*Not recommended for you right now: Client intake forms, booking calendars, complex automations — those are for different business types.*
+*Not recommended for you right now: Client intake forms, booking calendars, complex automations  -  those are for different business types.*
 
 ---
 
@@ -834,7 +834,7 @@ Your £2,000 is safe in your pocket until you know this works. Spend an hour thi
 |----------|---------|
 | **Revised prompts** | Force specificity, ban generic phrases, require quotes and numbers |
 | **New validation rules** | Catch generic content, verify quotes, check business type match |
-| **Example report** | Shows what "good" looks like — specific, insightful, actionable |
+| **Example report** | Shows what "good" looks like  -  specific, insightful, actionable |
 
 Add these to `docs/` and the `lib/validation/` folder. Update Claude CLI to regenerate Sophie's report as a test.
 

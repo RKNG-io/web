@@ -1,4 +1,4 @@
-# Reckoning Web — Agent Definitions
+# Reckoning Web  -  Agent Definitions
 
 Use these agents for parallel component development.
 
@@ -55,23 +55,23 @@ Use these agents for parallel component development.
 
 ## Parallel Execution Strategy
 
-### Phase 1 (Foundation) — Run in parallel:
+### Phase 1 (Foundation)  -  Run in parallel:
 - **ui-primitives**: Build Button, Card, SectionHeader
 - **data-migrator**: Copy services, questions, packages, types
 
-### Phase 2 (Landing Page) — Run in parallel:
+### Phase 2 (Landing Page)  -  Run in parallel:
 - **component-builder**: Hero section
 - **component-builder**: PersonaCards section
 - **component-builder**: HowItWorks section
 - **component-builder**: Nav component
 
-### Phase 3 (Landing Page cont.) — Run in parallel:
+### Phase 3 (Landing Page cont.)  -  Run in parallel:
 - **component-builder**: ReckoningCTA section
 - **component-builder**: ServiceExplorer section
 - **component-builder**: Testimonials section
 - **component-builder**: Footer component
 
-### Phase 4 (Features) — Run in parallel:
+### Phase 4 (Features)  -  Run in parallel:
 - **questionnaire-builder**: Full questionnaire flow
 - **api-builder**: Reckoning generation endpoint
 
@@ -92,7 +92,7 @@ Find the `.hero` section and convert it to React.
 Requirements:
 - Full viewport height
 - Charcoal background with radial gradient overlays
-- Tagline: "For business owners — and those about to be"
+- Tagline: "For business owners  -  and those about to be"
 - H1: "This is your reckoning."
 - Two CTA buttons
 - Use Tailwind classes from tailwind.config.ts

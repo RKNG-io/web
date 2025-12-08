@@ -1,8 +1,8 @@
-# Brand Voice Audit — 4 December 2024
+# Brand Voice Audit  -  4 December 2024
 
 ## Executive Summary
 
-Strong baseline adherence to brand voice guidelines — the "Blocked by / Unlocked by" frame is consistent, the tone avoids jargon, and the warmth feels genuine. However, **critical voice breaks occur at high-friction moments** (error states, loading screens, CTAs) where the copy becomes either too clinical or too performative.
+Strong baseline adherence to brand voice guidelines  -  the "Blocked by / Unlocked by" frame is consistent, the tone avoids jargon, and the warmth feels genuine. However, **critical voice breaks occur at high-friction moments** (error states, loading screens, CTAs) where the copy becomes either too clinical or too performative.
 
 **Brand Voice Health Score: 7.5/10**
 
@@ -32,7 +32,7 @@ We've noted what happened. You can try again, or we'll be in touch within 24 hou
 **Brand Voice Fix**:
 ```
 Loading: "Building your Reckoning. This takes about 30 seconds. Worth the wait."
-Error: "That didn't work. Let's try again — or we'll sort it out for you within 24 hours."
+Error: "That didn't work. Let's try again  -  or we'll sort it out for you within 24 hours."
 ```
 
 ---
@@ -41,18 +41,18 @@ Error: "That didn't work. Let's try again — or we'll sort it out for you withi
 
 | Component | CTA Copy |
 |-----------|----------|
-| Hero | "Get Your Reckoning — Free" |
-| HowItWorks | "Get Your Reckoning — Free" |
+| Hero | "Get Your Reckoning  -  Free" |
+| HowItWorks | "Get Your Reckoning  -  Free" |
 | BlockedUnlocked | "See what's blocking you" |
-| FinalCTA | "Get Your Reckoning — Free" |
+| FinalCTA | "Get Your Reckoning  -  Free" |
 | Packages | "Get started" |
 
 **Why this breaks voice**:
 - "Get started" is generic startup-speak
 - "See what's blocking you" introduces a third variant
-- Solo founders notice inconsistency — reads as lack of polish
+- Solo founders notice inconsistency  -  reads as lack of polish
 
-**Fix**: Use "Get Your Reckoning — Free" everywhere for primary CTA.
+**Fix**: Use "Get Your Reckoning  -  Free" everywhere for primary CTA.
 
 ---
 
@@ -72,22 +72,22 @@ You were 4 of 12 questions through as a Builder.
 ```
 Welcome back
 You're 4 of 12 questions into your Reckoning as a Builder.
-Let's finish what you started — takes about 5 more minutes.
+Let's finish what you started  -  takes about 5 more minutes.
 ```
 
 ---
 
 ## Off-Brand Copy (Specific Examples)
 
-### "Get started" — Generic Startup-Speak
+### "Get started"  -  Generic Startup-Speak
 **Where**: Packages section
-**Fix**: Replace with "Get Your Reckoning — Free"
+**Fix**: Replace with "Get Your Reckoning  -  Free"
 
-### "Personalised report" — Jargon Alert
+### "Personalised report"  -  Jargon Alert
 **Where**: Loading state
-**Fix**: "Building your Reckoning. We're seeing what's in the way — and what unlocks it."
+**Fix**: "Building your Reckoning. We're seeing what's in the way  -  and what unlocks it."
 
-### "We've noted what happened" — Corporate HR Voice
+### "We've noted what happened"  -  Corporate HR Voice
 **Where**: Error state
 **Fix**: "That didn't work. Try again, or we'll sort it out and reach out within 24 hours."
 
@@ -105,7 +105,7 @@ Stage-based labels = narrative (conversation)
 - Stage 3: "What you're building toward"
 
 ### 2. Loading Emoji
-Current ⏱ emphasises time pressure — opposite of "Space to breathe"
+Current ⏱ emphasises time pressure  -  opposite of "Space to breathe"
 
 **Better**: No emoji, just text. Or use ✨ (unlocking, not waiting)
 
@@ -122,11 +122,11 @@ Current subordinate styling implicitly judges users who skip the questionnaire.
 
 ### "View My Reckoning →" is too passive
 Keep "Continue →" throughout. Change loading screen headline to set expectations:
-"You're done. We're building your Reckoning — 30 seconds."
+"You're done. We're building your Reckoning  -  30 seconds."
 
 ### Resume prompt: Don't over-explain
 One line that reinforces the promise without repeating the pitch:
-"Let's finish your Reckoning — finding what's blocking you and what unlocks it."
+"Let's finish your Reckoning  -  finding what's blocking you and what unlocks it."
 
 ### BlockedUnlocked arrows
 Only on "Unlocked by" side to reinforce forward motion, not transactional feel.

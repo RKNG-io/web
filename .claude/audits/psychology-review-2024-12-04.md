@@ -1,8 +1,8 @@
-# Psychological Analysis of UX Audit — 4 December 2024
+# Psychological Analysis of UX Audit  -  4 December 2024
 
 ## Top 3 Issues That Matter Most Psychologically
 
-### 1. The "Dual CTA" Problem — Decision Fatigue at the Threshold
+### 1. The "Dual CTA" Problem  -  Decision Fatigue at the Threshold
 
 **UX Audit Says**: Hero CTAs have visual hierarchy issues (one button feels subordinate).
 
@@ -11,7 +11,7 @@
 **Cognitive Impact**:
 - Forces premature commitment before they understand what either path offers
 - Creates anxiety: "What if I pick wrong and waste time?"
-- The secondary styling on "I know what I need" inadvertently signals "you should probably do the other thing" — undermining the "both paths are valid" principle
+- The secondary styling on "I know what I need" inadvertently signals "you should probably do the other thing"  -  undermining the "both paths are valid" principle
 
 **Emotional Safety Risk**:
 People who "know what they need" may actually be defending against looking too closely at their situation. Making that button feel subordinate reinforces shame ("I should do the proper diagnostic but I'm taking the shortcut").
@@ -20,7 +20,7 @@ People who "know what they need" may actually be defending against looking too c
 
 ---
 
-### 2. Services Page Indecision — Trust Erosion Through Visible Uncertainty
+### 2. Services Page Indecision  -  Trust Erosion Through Visible Uncertainty
 
 **UX Audit Says**: Two versions exist with ?v=b toggle. Pick one and remove the other.
 
@@ -31,13 +31,13 @@ People who "know what they need" may actually be defending against looking too c
 - Inconsistent discount structures between versions = unreliable pricing
 - For someone already skeptical of "business guru solutions," this confirms their suspicion
 
-**Hidden Risk**: Even if users never see ?v=b, the internal indecision bleeds through. Maintenance of two versions means neither gets full attention. The compromise position is the worst position psychologically — it signals lack of conviction.
+**Hidden Risk**: Even if users never see ?v=b, the internal indecision bleeds through. Maintenance of two versions means neither gets full attention. The compromise position is the worst position psychologically  -  it signals lack of conviction.
 
 **Reframe**: This isn't a UX decision. It's a *commitment* decision. Pick the version that best serves the "Permission Before Prescription" principle from the psychology brief. VersionB's structured service explorer likely wins because it *shows* rather than *tells*.
 
 ---
 
-### 3. Progress Indicator — Numeric vs Journey-Based
+### 3. Progress Indicator  -  Numeric vs Journey-Based
 
 **UX Audit Says**: Use stage labels ("Getting to know you") instead of percentage.
 
@@ -58,14 +58,14 @@ Percentages force constant recalculation: "I'm at 40%, that means 6 more minutes
 
 ### Risk 1: The "Complete" Button Betrayal
 
-This isn't just misleading — it's a micro-betrayal. They've given you 15 minutes of vulnerable answers. The word "Complete" creates a *relief response*: "I did it." Then you take that away by showing *another* screen. The emotional whiplash creates doubt: "Did it actually work?"
+This isn't just misleading  -  it's a micro-betrayal. They've given you 15 minutes of vulnerable answers. The word "Complete" creates a *relief response*: "I did it." Then you take that away by showing *another* screen. The emotional whiplash creates doubt: "Did it actually work?"
 
 **Why This Matters More Than It Seems**:
 For someone who's already stuck and doubting themselves, clicking "Complete →" and then seeing "Preparing..." instead of results triggers the familiar pattern: "I did the thing but it didn't work."
 
 ### Risk 2: "Welcome Back" Screen Context Gap
 
-The real risk isn't recognition — it's *re-commitment*. They left mid-questionnaire. That means something interrupted them OR they had second thoughts. The welcome back screen needs to give them a reason to continue that's stronger than the reason they stopped.
+The real risk isn't recognition  -  it's *re-commitment*. They left mid-questionnaire. That means something interrupted them OR they had second thoughts. The welcome back screen needs to give them a reason to continue that's stronger than the reason they stopped.
 
 **Missing Element**:
 Instead of "Welcome back, [name]" → Try: "Welcome back, [name]. You were telling us about [last meaningful answer]. Want to finish your Reckoning?"
@@ -75,7 +75,7 @@ Instead of "Welcome back, [name]" → Try: "Welcome back, [name]. You were telli
 The transition from report to services is the highest-anxiety moment in the entire journey. They've just read truths about what's blocking them. Now you're asking them to spend money. The cognitive dissonance is: "They gave me this valuable thing for free... now they want money... was the report just a sales pitch?"
 
 **Missing Safeguard**:
-"Your Reckoning is yours to keep. These are services that could help — but only if you want them. Run with it yourself, or let us help."
+"Your Reckoning is yours to keep. These are services that could help  -  but only if you want them. Run with it yourself, or let us help."
 
 ### Risk 4: Broken Navigation Anchors
 
@@ -87,7 +87,7 @@ Broken anchors are *trust violations*, not just UX friction. If clicking "Servic
 
 ### BlockedUnlocked Interaction
 **UX Audit Says**: Add arrow icon to make rows obviously tappable.
-**Psychology Says**: Don't just make them *more* tappable — make them less *necessary* to tap. Show blocked/unlocked comparison at a glance. No content hiding.
+**Psychology Says**: Don't just make them *more* tappable  -  make them less *necessary* to tap. Show blocked/unlocked comparison at a glance. No content hiding.
 
 ### FAQ Estimated Read Time
 **UX Audit Says**: Add estimated read time to FAQ items.
@@ -101,14 +101,14 @@ Broken anchors are *trust violations*, not just UX friction. If clicking "Servic
 
 ## Quick Wins: Small Changes With Outsized Psychological Impact
 
-### 1. Replace "Get Your Reckoning — Free" with "Get Your Reckoning"
+### 1. Replace "Get Your Reckoning  -  Free" with "Get Your Reckoning"
 **Why**: "Free" signals "we expect you to be suspicious of cost" which primes suspicion.
 
 ### 2. Change Questionnaire Final Button Copy
 "Continue →" maintains consistency. Or go bold: "Show Me What I Got →"
 
 ### 3. Add Single Reassurance Line Before Questionnaire
-"This takes about 12 minutes. We save as you go — you can pause anytime."
+"This takes about 12 minutes. We save as you go  -  you can pause anytime."
 
 ### 4. Remove Footer Links to Non-Existent Pages
 An incomplete footer is *better* than broken links.

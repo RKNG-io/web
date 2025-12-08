@@ -1,20 +1,20 @@
 # Questionnaire: The Overwhelmed Owner (Marcus)
 
-Different animal entirely. Marcus doesn't need to start or tighten up — he needs to **get his life back**.
+Different animal entirely. Marcus doesn't need to start or tighten up  -  he needs to **get his life back**.
 
 ---
 
 ## Flow Structure
 
 ```
-1. WELCOME          — See him, acknowledge the weight
-2. THE BUSINESS     — What he's built (respect it)
-3. THE MACHINE      — How it runs (or doesn't)
-4. THE BOTTLENECK   — Where he's stuck in the middle
-5. THE COST         — What it's costing him (life, not just money)
-6. THE DREAM        — What freedom looks like
-7. THE READINESS    — Trust, budget, commitment
-8. THE MOMENT       — The thing that would change everything
+1. WELCOME           -  See him, acknowledge the weight
+2. THE BUSINESS      -  What he's built (respect it)
+3. THE MACHINE       -  How it runs (or doesn't)
+4. THE BOTTLENECK    -  Where he's stuck in the middle
+5. THE COST          -  What it's costing him (life, not just money)
+6. THE DREAM         -  What freedom looks like
+7. THE READINESS     -  Trust, budget, commitment
+8. THE MOMENT        -  The thing that would change everything
 ```
 
 ---
@@ -27,7 +27,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 >
 > But somewhere along the way, the thing you built started running you.
 >
-> This isn't about working harder. It's about building the systems that let you step back — and have it all keep working.
+> This isn't about working harder. It's about building the systems that let you step back  -  and have it all keep working.
 >
 > These questions are direct. I need to understand what's actually happening, not the version you tell people at networking events.
 >
@@ -42,7 +42,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 *Respect what they've built. Get the facts.*
 
 ### Q1: What's your business?
-*(Free text — keep it open for variety)*
+*(Free text  -  keep it open for variety)*
 
 > In a sentence: what do you do, and who do you do it for?
 
@@ -88,8 +88,8 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 ### Q6: Is the business profitable?
 *(Single choice)*
 
-- Yes — healthily
-- Yes — but tighter than I'd like
+- Yes  -  healthily
+- Yes  -  but tighter than I'd like
 - Breaking even
 - Not currently
 - I'm honestly not sure
@@ -139,10 +139,10 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 ### Q8: How many of those tools are you actually using properly?
 *(Single choice)*
 
-- Most of them — we're fairly systemised
-- Some — but there's a lot of unused potential
-- Few — we're paying for things we don't use
-- Almost none — I don't trust the systems
+- Most of them  -  we're fairly systemised
+- Some  -  but there's a lot of unused potential
+- Few  -  we're paying for things we don't use
+- Almost none  -  I don't trust the systems
 
 ### Q9: How do you know if last month was a good month?
 *(Single choice)*
@@ -151,7 +151,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 - I look at the bank balance
 - My accountant tells me eventually
 - Gut feel
-- I don't — not until much later
+- I don't  -  not until much later
 
 ### Q10: If you disappeared for two weeks, what would break?
 *(Free text)*
@@ -178,7 +178,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 - Responding to enquiries
 - Hiring / firing / HR issues
 - "Fixing" things when they go wrong
-- Everything — I'm the hub of the wheel
+- Everything  -  I'm the hub of the wheel
 
 ### Q12: Why does it still run through you?
 *(Multi-select)*
@@ -189,7 +189,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 - It's faster to just do it myself
 - I haven't had time to train someone
 - I tried to delegate and it went wrong
-- Control — I struggle to let go
+- Control  -  I struggle to let go
 - I don't know how to hand it over
 
 ### Q13: What questions do your team ask you that they should already know the answer to?
@@ -198,10 +198,10 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 ### Q14: How often are you solving the same problem more than once?
 *(Single choice)*
 
-- Constantly — same fires, different day
-- Often — patterns keep repeating
-- Sometimes — but mostly under control
-- Rarely — we've got good systems
+- Constantly  -  same fires, different day
+- Often  -  patterns keep repeating
+- Sometimes  -  but mostly under control
+- Rarely  -  we've got good systems
 
 ---
 
@@ -219,7 +219,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 - 70+
 - I've stopped counting
 
-### Q16: When did you last take a proper holiday — fully offline?
+### Q16: When did you last take a proper holiday  -  fully offline?
 *(Single choice)*
 
 - In the last 3 months
@@ -232,19 +232,19 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 *(Multi-select)*
 
 - Time with family / partner / kids
-- Health — sleep, exercise, stress
-- Friendships — I've disappeared
-- Hobbies — things I used to enjoy
-- Mental peace — I can't switch off
-- Patience — I'm shorter with people I love
-- Joy — I built this to be free, not trapped
-- Nothing major — I'm managing okay
+- Health  -  sleep, exercise, stress
+- Friendships  -  I've disappeared
+- Hobbies  -  things I used to enjoy
+- Mental peace  -  I can't switch off
+- Patience  -  I'm shorter with people I love
+- Joy  -  I built this to be free, not trapped
+- Nothing major  -  I'm managing okay
 
 ### Q18: Complete this sentence: "I didn't build this business to..."
 *(Free text)*
 
 ### Q19: What's the thing you're most afraid to admit about how things are right now?
-*(Free text, optional — but powerful)*
+*(Free text, optional  -  but powerful)*
 
 ---
 
@@ -255,24 +255,24 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 ### Q20: If the business ran smoothly without you for a month, what would you do with that time?
 *(Free text)*
 
-### Q21: What does "success" look like now — not when you started, but now?
+### Q21: What does "success" look like now  -  not when you started, but now?
 *(Single choice + free text)*
 
-- Growth — I want to scale further
-- Stability — I want it to run without chaos
-- Exit — I want to sell it eventually
-- Balance — I want my life back
-- Pivot — I want to change direction
+- Growth  -  I want to scale further
+- Stability  -  I want it to run without chaos
+- Exit  -  I want to sell it eventually
+- Balance  -  I want my life back
+- Pivot  -  I want to change direction
 - Other: ________
 
 ### Q22: Have you ever thought about selling the business?
 *(Single choice)*
 
-- Yes — actively exploring it
-- Yes — but not yet
-- Sometimes — when I'm exhausted
-- No — I want to keep it
-- No — but only because no one would buy this mess
+- Yes  -  actively exploring it
+- Yes  -  but not yet
+- Sometimes  -  when I'm exhausted
+- No  -  I want to keep it
+- No  -  but only because no one would buy this mess
 
 ### Q23: What would need to be true for someone to buy it?
 *(Free text, optional but diagnostic)*
@@ -288,11 +288,11 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 ### Q24: Have you worked with consultants, coaches, or agencies before?
 *(Single choice)*
 
-- Yes — good experience
-- Yes — mixed results
-- Yes — waste of money, won't do it again
-- No — never found the right one
-- No — never needed to
+- Yes  -  good experience
+- Yes  -  mixed results
+- Yes  -  waste of money, won't do it again
+- No  -  never found the right one
+- No  -  never needed to
 
 ### Q25: What would make you trust someone to help with this?
 *(Multi-select)*
@@ -304,17 +304,17 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 - They're honest, not salesy
 - They can prove results
 - Recommendations from people I trust
-- Affordable — I've wasted money before
+- Affordable  -  I've wasted money before
 
 ### Q26: What's your capacity to invest in fixing this?
 *(Single choice)*
 
-- Under £500 — cautious, need to see value first
-- £500–£1,500 — ready if it's the right solution
-- £1,500–£3,000 — serious about change
-- £3,000–£5,000 — want comprehensive help
-- £5,000+ — just fix it, my time is worth more
-- Not sure yet — depends what's possible
+- Under £500  -  cautious, need to see value first
+- £500–£1,500  -  ready if it's the right solution
+- £1,500–£3,000  -  serious about change
+- £3,000–£5,000  -  want comprehensive help
+- £5,000+  -  just fix it, my time is worth more
+- Not sure yet  -  depends what's possible
 
 ### Q27: What would make this feel like money well spent?
 *(Free text)*
@@ -332,11 +332,11 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 *(Single choice)*
 
 - "Here's exactly what's broken and how to fix it"
-- "You're not failing — this is normal"
+- "You're not failing  -  this is normal"
 - "It doesn't have to be this hard"
-- "Here's the first step — just one thing"
+- "Here's the first step  -  just one thing"
 - "Someone else can do this for you"
-- "You've built something valuable — now protect it"
+- "You've built something valuable  -  now protect it"
 
 ### Q30: Anything else I should know?
 *(Free text, optional)*
@@ -351,7 +351,7 @@ Different animal entirely. Marcus doesn't need to start or tighten up — he nee
 >
 > But the business you built doesn't have to cost you everything else.
 >
-> Your Reckoning is coming — a clear-eyed look at where the machine is breaking down, what's costing you the most, and exactly where to start.
+> Your Reckoning is coming  -  a clear-eyed look at where the machine is breaking down, what's costing you the most, and exactly where to start.
 >
 > Not a sales pitch. A diagnosis. Then you decide.
 >

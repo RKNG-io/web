@@ -94,7 +94,7 @@ Each persona gets a different Reckoning report with different checklists. The ph
 ### Phase 1: Foundation (This Week)
 *Stop the bleeding. Fix the urgent stuff.*
 
-#### 💰 Finance — Get Paid Without Chasing
+#### 💰 Finance  -  Get Paid Without Chasing
 - [ ] Audit current payment process (where are the leaks?)
 - [ ] Set up automated payment collection
 - [ ] Create late payment chase sequence
@@ -103,7 +103,7 @@ Each persona gets a different Reckoning report with different checklists. The ph
 
 > **Why this matters:** When payment is automated, you remove yourself from the money conversation entirely. No more awkward follow-ups. No more "did they forget?" anxiety.
 
-#### ⚙️ Operations — Stop the Chaos
+#### ⚙️ Operations  -  Stop the Chaos
 - [ ] List everything you do in a week (time audit)
 - [ ] Identify your biggest time sinks
 - [ ] Set up a proper CRM (stop tracking clients in your head)
@@ -112,7 +112,7 @@ Each persona gets a different Reckoning report with different checklists. The ph
 #### 📋 Compliance (If Not Done)
 - [ ] Check Self Assessment is up to date
 - [ ] Review record-keeping (5 years of records required)
-- [ ] GDPR audit — do you have proper consent?
+- [ ] GDPR audit  -  do you have proper consent?
 
 **Phase 1 total: 14 items**
 
@@ -158,11 +158,11 @@ Each persona gets a different Reckoning report with different checklists. The ph
 > 
 > You don't need to hire a VA to get your time back. Many tasks that used to require a person can now be handled by well-designed automation:
 > 
-> - **Intake processing** — AI reads enquiries, extracts key info, drafts responses
-> - **Scheduling** — Automated booking with smart rescheduling
-> - **Follow-ups** — Triggered emails based on client behaviour
-> - **Reporting** — Dashboards that update themselves
-> - **Content drafts** — AI-generated first drafts in your voice
+> - **Intake processing**  -  AI reads enquiries, extracts key info, drafts responses
+> - **Scheduling**  -  Automated booking with smart rescheduling
+> - **Follow-ups**  -  Triggered emails based on client behaviour
+> - **Reporting**  -  Dashboards that update themselves
+> - **Content drafts**  -  AI-generated first drafts in your voice
 > 
 > The goal isn't to replace humans. It's to stop YOU being the human doing repetitive work.
 
@@ -201,7 +201,7 @@ Each persona gets a different Reckoning report with different checklists. The ph
 - [ ] Identify your highest-value activities
 
 #### 💰 Finance
-- [ ] Review pricing — are you charging enough for your expertise?
+- [ ] Review pricing  -  are you charging enough for your expertise?
 - [ ] Analyse revenue by service/client (where's the profit?)
 - [ ] Identify recurring vs project revenue ratio
 - [ ] Set up financial dashboard (if not already)
@@ -229,7 +229,7 @@ Each persona gets a different Reckoning report with different checklists. The ph
 
 > **Beyond Hiring:**
 > 
-> Traditional scaling means hiring. But many bottleneck tasks don't need a person — they need a system:
+> Traditional scaling means hiring. But many bottleneck tasks don't need a person  -  they need a system:
 > 
 > | Task | Old Way | New Way |
 > |------|---------|---------|
@@ -295,11 +295,11 @@ Each persona gets a different Reckoning report with different checklists. The ph
 
 ### Key Differences
 
-**Launcher:** Weighted toward foundation — they need to set everything up from scratch. Growth phase is lighter because they need to get running first.
+**Launcher:** Weighted toward foundation  -  they need to set everything up from scratch. Growth phase is lighter because they need to get running first.
 
-**Builder:** Evenly distributed — they have basics but need systems everywhere. Heavy on operations and automation.
+**Builder:** Evenly distributed  -  they have basics but need systems everywhere. Heavy on operations and automation.
 
-**Architect:** Weighted toward later phases — foundation is about clarity and assessment, real work is AI-powered delegation and strategy.
+**Architect:** Weighted toward later phases  -  foundation is about clarity and assessment, real work is AI-powered delegation and strategy.
 
 ---
 
@@ -330,11 +330,11 @@ These aren't chatbots that say "I'm sorry, I didn't understand that." These are 
 
 ### How They Work
 
-1. **You tell us what you need** — We map your current process
-2. **We build it** — Custom prompts, integrations, testing
-3. **We train it on your voice** — Uses your past communications
-4. **You review outputs initially** — Human in the loop until confident
-5. **It runs** — You check exceptions, not everything
+1. **You tell us what you need**  -  We map your current process
+2. **We build it**  -  Custom prompts, integrations, testing
+3. **We train it on your voice**  -  Uses your past communications
+4. **You review outputs initially**  -  Human in the loop until confident
+5. **It runs**  -  You check exceptions, not everything
 
 ### What We DON'T Build
 
@@ -379,7 +379,7 @@ When payment is built in, you never have to ask for money again.
 🤖 YOU DON'T NEED TO HIRE A VA
 Many tasks that used to require a person can now be handled 
 by well-designed automation. AI reads enquiries, drafts responses,
-generates reports, sends follow-ups — and doesn't need training,
+generates reports, sends follow-ups  -  and doesn't need training,
 holidays, or management.
 ```
 
@@ -394,7 +394,7 @@ That's your priority list.
 ```
 🤖 SCALE WITHOUT HEADCOUNT
 Traditional scaling means hiring. But most bottleneck tasks 
-don't need a person — they need a system. AI handles the 
+don't need a person  -  they need a system. AI handles the 
 pattern-matching. You handle the judgment calls.
 ```
 
@@ -432,8 +432,8 @@ pattern-matching. You handle the judgment calls.
 
 | Persona | Pages | Focus |
 |---------|-------|-------|
-| Launcher | 10-11 | Comprehensive — they need everything explained |
-| Builder | 8-9 | Efficient — they know the basics, show the fixes |
-| Architect | 7-8 | Strategic — assessment and delegation focus |
+| Launcher | 10-11 | Comprehensive  -  they need everything explained |
+| Builder | 8-9 | Efficient  -  they know the basics, show the fixes |
+| Architect | 7-8 | Strategic  -  assessment and delegation focus |
 
 Architect report is shorter because they don't need hand-holding. They need clarity and a plan, not step-by-step instructions.

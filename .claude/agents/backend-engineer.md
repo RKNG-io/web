@@ -8,7 +8,7 @@ You are a senior backend engineer specialising in Node.js, PostgreSQL, and API a
 
 ## Your Tech Stack
 - **Runtime**: Node.js with Next.js API routes (App Router)
-- **Database**: PostgreSQL (direct queries via lib/db.ts — NO ORM in this project)
+- **Database**: PostgreSQL (direct queries via lib/db.ts  -  NO ORM in this project)
 - **Validation**: Zod for all input validation
 - **Auth**: NextAuth.js or magic links (when required)
 - **Background Jobs**: Inngest or Vercel background functions

@@ -1,4 +1,4 @@
-# Reckoning Report — Comprehensive Checklist Framework
+# Reckoning Report  -  Comprehensive Checklist Framework
 
 ## The Strategy
 
@@ -17,17 +17,17 @@ We never say "this is overwhelming" or "let us handle it." We just show the full
 
 ### Page Flow
 
-1. **Cover** — Their name, business type, date
-2. **The Mirror** — We heard you (their words, their situation)
-3. **The Snapshot** — Where you are now
-4. **Your Roadmap Overview** — The phases at a glance
-5. **Phase 1: Foundation** — What to do first (this week)
-6. **Phase 2: Operations** — Building the systems (weeks 2-4)
-7. **Phase 3: Growth** — Getting visible (month 2+)
-8. **The Full Picture** — Complete checklist by category
-9. **Resources** — Free tools, government links, templates
-10. **Your Path Forward** — DIY, supported, or let's talk
-11. **The One Thing** — Single next action
+1. **Cover**  -  Their name, business type, date
+2. **The Mirror**  -  We heard you (their words, their situation)
+3. **The Snapshot**  -  Where you are now
+4. **Your Roadmap Overview**  -  The phases at a glance
+5. **Phase 1: Foundation**  -  What to do first (this week)
+6. **Phase 2: Operations**  -  Building the systems (weeks 2-4)
+7. **Phase 3: Growth**  -  Getting visible (month 2+)
+8. **The Full Picture**  -  Complete checklist by category
+9. **Resources**  -  Free tools, government links, templates
+10. **Your Path Forward**  -  DIY, supported, or let's talk
+11. **The One Thing**  -  Single next action
 
 ---
 
@@ -56,7 +56,7 @@ Every checklist item belongs to one of these categories:
 > 
 > They book. They pay. You show up and do the work.
 > 
-> That psychological weight — the discomfort of asking to be paid — disappears. And for many people, that's worth more than the hours saved.
+> That psychological weight  -  the discomfort of asking to be paid  -  disappears. And for many people, that's worth more than the hours saved.
 
 **Where this appears:**
 - In the Operations/Finance section when discussing payment setup
@@ -158,7 +158,7 @@ Every checklist item belongs to one of these categories:
 
 - [ ] **Create a client intake process**
   - What info do you need before the first session?
-  - Questionnaire, contract, payment — automate the sequence
+  - Questionnaire, contract, payment  -  automate the sequence
 
 - [ ] **Set up basic invoicing** (if not using payment-at-booking)
   - Options: Wave (free), Xero, QuickBooks
@@ -234,7 +234,7 @@ Every checklist item belongs to one of these categories:
 
 ## The Full Picture (By Category)
 
-**This page shows everything in one view — comprehensive, maybe slightly daunting, but honest.**
+**This page shows everything in one view  -  comprehensive, maybe slightly daunting, but honest.**
 
 ### ⚖️ Legal Checklist
 
@@ -330,7 +330,7 @@ Every checklist item belongs to one of these categories:
 
 ## Resources Page
 
-**Free tools and official guidance — we link to real resources, not gatekeep.**
+**Free tools and official guidance  -  we link to real resources, not gatekeep.**
 
 ### Government Resources
 
@@ -368,11 +368,11 @@ Every checklist item belongs to one of these categories:
 
 Your employment contract likely includes clauses that affect what you can do outside work:
 
-1. **Non-compete clauses** — You may be restricted from working in similar industries or with competitors
-2. **Moonlighting restrictions** — Some contracts require employer approval for any outside work
-3. **IP assignment** — Work created during employment may belong to your employer
-4. **Confidentiality** — You cannot use employer information in your business
-5. **Disclosure requirements** — You may need to inform your employer in writing
+1. **Non-compete clauses**  -  You may be restricted from working in similar industries or with competitors
+2. **Moonlighting restrictions**  -  Some contracts require employer approval for any outside work
+3. **IP assignment**  -  Work created during employment may belong to your employer
+4. **Confidentiality**  -  You cannot use employer information in your business
+5. **Disclosure requirements**  -  You may need to inform your employer in writing
 
 **What to do:**
 - Find your contract and read it carefully
@@ -381,10 +381,10 @@ Your employment contract likely includes clauses that affect what you can do out
 
 ### Key Legal Points
 
-- **Moonlighting is not illegal in the UK** — but your contract may restrict it
-- **Duty of good faith** — Even without explicit clauses, you can't compete with your employer or use their resources
-- **Working Time Regulations** — Combined hours across jobs shouldn't exceed 48/week unless you've opted out
-- **Zero-hours contracts** — Exclusivity clauses are banned; employer cannot stop you taking other work
+- **Moonlighting is not illegal in the UK**  -  but your contract may restrict it
+- **Duty of good faith**  -  Even without explicit clauses, you can't compete with your employer or use their resources
+- **Working Time Regulations**  -  Combined hours across jobs shouldn't exceed 48/week unless you've opted out
+- **Zero-hours contracts**  -  Exclusivity clauses are banned; employer cannot stop you taking other work
 
 ### If Your Contract Requires Disclosure
 
@@ -421,8 +421,8 @@ Your employment contract likely includes clauses that affect what you can do out
 
 ### Make It Feel Like a Lot (Without Being Overwhelming)
 
-- Show the full checklist on one page — it's comprehensive
-- But break the action into phases — it's achievable
+- Show the full checklist on one page  -  it's comprehensive
+- But break the action into phases  -  it's achievable
 - Each phase has a clear "when you're done with this, you'll have X"
 - Visual progress indicators
 
@@ -475,7 +475,7 @@ All three are valid. We've already proven our value by showing them exactly what
 │  If you need to inform your employer, do it in writing      │
 │  and keep a copy.                                           │
 │                                                             │
-│  This isn't about asking permission — it's about            │
+│  This isn't about asking permission  -  it's about            │
 │  protecting yourself.                                       │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -499,4 +499,4 @@ All three are valid. We've already proven our value by showing them exactly what
 
 ---
 
-*The report is comprehensive because starting a business is comprehensive. We don't hide the work — we organise it, prioritise it, and show them exactly where we can help.*
+*The report is comprehensive because starting a business is comprehensive. We don't hide the work  -  we organise it, prioritise it, and show them exactly where we can help.*

@@ -22,7 +22,7 @@ Takes about 8 minutes. Worth it.
 _Don't overthink it. Morning routine, how your days feel, what you've let go of, what you've built._
 
 ### 2. Who You Help (Text)
-**Who do you help — and what changes for them?**
+**Who do you help  -  and what changes for them?**
 _Your clients, your people. What's different in their lives because of you?_
 
 ### 3. Business Type (Single Select)
@@ -45,7 +45,7 @@ _Your clients, your people. What's different in their lives because of you?_
 ### 5. Why Now (Multi Select)
 **Why now?**
 - I've been thinking about this for years and I'm done waiting
-- Something changed — job, life, realisation
+- Something changed  -  job, life, realisation
 - I'm already doing this on the side and ready to go all in
 - I'm not 100% sure it's "now" but I'm exploring
 
@@ -73,9 +73,9 @@ _Your clients, your people. What's different in their lives because of you?_
 
 ### 8. Website Feeling (Single Select)
 **When you imagine sending someone to your website, how do you feel?**
-- Proud — it represents me well
+- Proud  -  it represents me well
 - It's okay but needs work
-- Embarrassed — it's outdated or doesn't exist
+- Embarrassed  -  it's outdated or doesn't exist
 - I've been avoiding thinking about it
 
 ### 9. What's Missing (Multi Select)
@@ -91,14 +91,14 @@ _Your clients, your people. What's different in their lives because of you?_
 
 ### 10. Blockers (Multi Select)
 **What's actually stopping you from being further along?**
-- Time — I'm still working another job
-- Money — I can't invest much yet
-- Knowledge — I don't know the steps
-- Confidence — I'm not sure I'm ready
-- Tech — I find the tools overwhelming
-- Perfectionism — I keep waiting until it's "right"
-- Fear — what if it doesn't work?
-- Nothing specific — I just haven't done it
+- Time  -  I'm still working another job
+- Money  -  I can't invest much yet
+- Knowledge  -  I don't know the steps
+- Confidence  -  I'm not sure I'm ready
+- Tech  -  I find the tools overwhelming
+- Perfectionism  -  I keep waiting until it's "right"
+- Fear  -  what if it doesn't work?
+- Nothing specific  -  I just haven't done it
 
 ### 11. Core Fear (Single Select)
 **What's the fear underneath the fear?**
@@ -107,7 +107,7 @@ _Your clients, your people. What's different in their lives because of you?_
 - What if I fail publicly?
 - What if I succeed and can't handle it?
 - What if I invest and it doesn't pay off?
-- I'm not sure — just general anxiety
+- I'm not sure  -  just general anxiety
 - Honestly? I'm not that scared. I'm ready.
 
 ### 12. Timeline (Single Select)
@@ -116,7 +116,7 @@ _Your clients, your people. What's different in their lives because of you?_
 - Within the next month
 - Within 3 months
 - Within 6 months
-- No fixed timeline — exploring
+- No fixed timeline  -  exploring
 
 ### 13. Time Available (Single Select)
 **How much time can you realistically dedicate each week?**
@@ -149,7 +149,7 @@ _Your clients, your people. What's different in their lives because of you?_
 ```
 That's everything we need.
 
-Your Reckoning is being prepared —
+Your Reckoning is being prepared  - 
 a personalised report based on everything you just shared.
 
 It'll be ready in about 2 minutes.

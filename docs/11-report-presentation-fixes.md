@@ -1,4 +1,4 @@
-# Reckoning — Report Presentation & Validation Fixes
+# Reckoning  -  Report Presentation & Validation Fixes
 
 **Issues addressed:**
 1. PDF file naming (ugly tokens → human-readable)
@@ -69,10 +69,10 @@ export function getEmailSubject(recipientName: string): string {
 
 ### Design Principles
 
-1. **Scannable** — Headings, whitespace, visual hierarchy
-2. **Printable** — Checkboxes they can tick with a pen
-3. **Pin-to-wall worthy** — The journey map should be something they reference daily
-4. **Branded** — Uses Reckoning colours, Outfit font
+1. **Scannable**  -  Headings, whitespace, visual hierarchy
+2. **Printable**  -  Checkboxes they can tick with a pen
+3. **Pin-to-wall worthy**  -  The journey map should be something they reference daily
+4. **Branded**  -  Uses Reckoning colours, Outfit font
 
 ### Page Structure
 
@@ -312,7 +312,7 @@ export function JourneyMapPage({ phases }: { phases: Phase[] }) {
       
       {/* Intro text */}
       <Text style={styles.introText}>
-        Your path is validate first, build second. Each phase has clear tasks — 
+        Your path is validate first, build second. Each phase has clear tasks  -  
         tick them off as you go. Print this page and pin it somewhere visible.
       </Text>
       
@@ -346,7 +346,7 @@ When suggesting validation steps, always push for BUYING INTENT, not just stated
 "Would you buy this?" → Everyone says yes
 "Here's my credit card" → Real customers only
 
-People are polite. They'll say "sounds great!" to avoid awkwardness. That's not validation — it's social courtesy.
+People are polite. They'll say "sounds great!" to avoid awkwardness. That's not validation  -  it's social courtesy.
 
 ### Tactics to Suggest (Pick 1-2)
 
@@ -354,7 +354,7 @@ People are polite. They'll say "sounds great!" to avoid awkwardness. That's not 
 > "Ask for a £1 deposit to 'reserve a spot in the first batch.' Anyone who pays £1 is a real lead. Anyone who says 'sounds great!' but won't pay £1 was never going to buy."
 
 **2. A/B Landing Pages**
-> "Create two landing pages with different prices (e.g., £10/meal vs £14/meal). Run £20 of Facebook ads to your target area. See which gets more clicks. That's pricing data — not opinions."
+> "Create two landing pages with different prices (e.g., £10/meal vs £14/meal). Run £20 of Facebook ads to your target area. See which gets more clicks. That's pricing data  -  not opinions."
 
 **3. Pre-order**
 > "Offer 20% off for anyone who pre-orders before you launch. Real customers will commit. Wishful supporters won't."
@@ -369,7 +369,7 @@ People are polite. They'll say "sounds great!" to avoid awkwardness. That's not 
 
 In the "Next Step" section, after the basic ask (talk to 10 people), add:
 
-> "Even better: ask for a small commitment. 'If you're interested, I'm taking £5 deposits to reserve spots in my first batch — fully refundable if you change your mind.' Anyone who pays is your real first customer. Anyone who hesitates was never going to buy anyway."
+> "Even better: ask for a small commitment. 'If you're interested, I'm taking £5 deposits to reserve spots in my first batch  -  fully refundable if you change your mind.' Anyone who pays is your real first customer. Anyone who hesitates was never going to buy anyway."
 
 ### Prompt Instruction
 
@@ -464,7 +464,7 @@ export function validateBuyingIntent(report: ReckoningReport): ValidationResult 
   if (hasWeakValidation && !hasBuyingIntent) {
     warnings.push(
       'Only weak validation suggested ("would you buy", etc.). ' +
-      'Add a buying intent test — stated interest ≠ real demand.'
+      'Add a buying intent test  -  stated interest ≠ real demand.'
     );
   }
   
@@ -481,7 +481,7 @@ export function validateBuyingIntent(report: ReckoningReport): ValidationResult 
 Report says: `5 hours/week × £50/hour × 52 weeks = £13,000`
 Questionnaire says: `20 hours/week available`
 
-These should match — or the discrepancy should be explained.
+These should match  -  or the discrepancy should be explained.
 
 ### Validation Rule
 
@@ -600,7 +600,7 @@ export function validateConsistency(
           );
         }
       } else {
-        // Using MORE hours than they stated — likely error
+        // Using MORE hours than they stated  -  likely error
         errors.push(
           `Hours inconsistency: They said ${answerHours} hrs/week available, ` +
           `but calculation uses ${calcHours} hrs/week.`
@@ -711,7 +711,7 @@ interface Phase {
     diy_option: string | null;
     service_id: string | null;
   }>;
-  completion_criteria: string;  // NEW — what does "done" look like?
+  completion_criteria: string;  // NEW  -  what does "done" look like?
 }
 ```
 

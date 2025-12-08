@@ -1,4 +1,4 @@
-# Reckoning — Brand Voice Guide
+# Reckoning  -  Brand Voice Guide
 
 ## The One-Liner
 
@@ -10,11 +10,11 @@
 
 | Beat | What It Means For You |
 |------|----------------------|
-| **Unblock** | See clearly what's eating your time and energy. No more vague overwhelm — just "here's what's in the way." |
+| **Unblock** | See clearly what's eating your time and energy. No more vague overwhelm  -  just "here's what's in the way." |
 | **Unlock** | Get systems that handle the admin, the follow-ups, the invoices. Your voice. Your way. Without hiring. |
 | **Unleash** | Get the space to do the next thing. Work on your vision, not your inbox. Grow at your pace, authentically. |
 
-**The through-line:** All three give you space — to start, to breathe, to scale.
+**The through-line:** All three give you space  -  to start, to breathe, to scale.
 
 ---
 
@@ -22,7 +22,7 @@
 
 Not a consultancy. Not just coaching. Not just implementation.
 
-**All three — mapped to the beats:**
+**All three  -  mapped to the beats:**
 
 | Beat | Layer | What It Means |
 |------|-------|---------------|
@@ -44,7 +44,7 @@ Most people offer one. We offer all three.
 
 You didn't start your business to chase invoices, manage spreadsheets, and stress about social media.
 
-You started it for the work — the thing you're actually good at, the impact you want to have, the life you're trying to build.
+You started it for the work  -  the thing you're actually good at, the impact you want to have, the life you're trying to build.
 
 But somewhere along the way, the admin took over.
 
@@ -56,13 +56,13 @@ We help you take it back.
 
 > **Time.** The hours you're losing to emails, invoices, and "I should probably sort that out."
 >
-> **Space.** Mental, emotional, practical — room to think about your business, not just run it.
+> **Space.** Mental, emotional, practical  -  room to think about your business, not just run it.
 >
-> **Presence.** Show up online in a way that feels like you — not performative, not exhausting.
+> **Presence.** Show up online in a way that feels like you  -  not performative, not exhausting.
 >
 > **Systems.** Automations that handle the repetitive stuff, in your voice, your way.
 >
-> **Clarity.** Know what's blocking you. Know what to do next. Just the next step — not the whole life plan.
+> **Clarity.** Know what's blocking you. Know what to do next. Just the next step  -  not the whole life plan.
 >
 > **Calm.** The quiet confidence that comes from knowing things are handled.
 
@@ -107,7 +107,7 @@ This is our core language structure. Everything ladders up to it.
 | "I can't take payment easily" | A booking system that handles it (2 hours to set up) |
 | "Social media feels fake" | Permission to do it your way |
 | "It's easier to just do it myself" | Automation that sounds like you |
-| "I'm still employed — can I even do this?" | Knowing exactly what your contract says |
+| "I'm still employed  -  can I even do this?" | Knowing exactly what your contract says |
 | "I don't want to ask people for money" | Payments built into booking (the conversation disappears) |
 | "I need to hire to scale" | Systems that run without headcount |
 
@@ -118,9 +118,9 @@ This is our core language structure. Everything ladders up to it.
 ### 1. Fiercely In Your Corner
 Not soft cheerleading. Not harsh accountability.
 
-We enable — removing blockers, building systems, handling the weight.
-We empower — giving you clarity and tools.
-We activate — getting you moving, not letting you stay stuck.
+We enable  -  removing blockers, building systems, handling the weight.
+We empower  -  giving you clarity and tools.
+We activate  -  getting you moving, not letting you stay stuck.
 
 We believe in what you're building. We won't let you shrink from it.
 
@@ -159,7 +159,7 @@ We've done this before. We know the path. But it's their journey.
 | Your way | Permission to be authentic |
 | Next level | Aspiration, breaking plateaus |
 | Build | Active, creative, ownership |
-| Systems | Not people, not headcount — leverage |
+| Systems | Not people, not headcount  -  leverage |
 | One life | Stakes without pressure |
 
 ---
@@ -207,7 +207,7 @@ These are the things they need to hear:
 >
 > **Nobody can give you permission but you. This is you giving it.**
 >
-> **Success is a decision — supported by systems and strategy.**
+> **Success is a decision  -  supported by systems and strategy.**
 
 ---
 
@@ -217,7 +217,7 @@ These are the things they need to hear:
 
 We don't badge things "AI-powered" for marketing points.
 
-We say: "We build systems that do the repetitive work — in your voice, your tone, the way you'd do it if you had time."
+We say: "We build systems that do the repetitive work  -  in your voice, your tone, the way you'd do it if you had time."
 
 ### The Frame
 
@@ -232,7 +232,7 @@ We say: "We build systems that do the repetitive work — in your voice, your to
 ### The Promise
 > "You don't need to hire to scale. You need systems."
 >
-> "We build automation that sounds like you — because it learned from you."
+> "We build automation that sounds like you  -  because it learned from you."
 
 ### What We Don't Do
 - Generic chatbots
@@ -284,10 +284,10 @@ That's what we help them answer. Then we clear the path to get there.
 > It's hard to start when you're still figuring it out. The gap between "I want to do this" and "I'm actually doing this" can feel huge.
 
 **Reframe:**
-> It's not. You don't need a perfect plan. You need a first step — and someone in your corner while you take it.
+> It's not. You don't need a perfect plan. You need a first step  -  and someone in your corner while you take it.
 
 **What they get:**
-- Clarity on what you actually need to launch (not everything — just the essentials)
+- Clarity on what you actually need to launch (not everything  -  just the essentials)
 - A simple system for getting paid and getting found
 - Space to focus on the work, not the setup
 
@@ -305,13 +305,13 @@ That's what we help them answer. Then we clear the path to get there.
 **The feeling:** Stretched thin. Constant context-switching. Working *in* the business, not *on* it.
 
 **Acknowledge (soft):**
-> When you're the one doing everything — the work, the emails, the invoices, the posting — it's hard to find space to think, let alone grow.
+> When you're the one doing everything  -  the work, the emails, the invoices, the posting  -  it's hard to find space to think, let alone grow.
 
 **Reframe:**
-> You don't need to hire a team. You need systems that handle the repetitive stuff — so you can focus on the work that actually moves the needle.
+> You don't need to hire a team. You need systems that handle the repetitive stuff  -  so you can focus on the work that actually moves the needle.
 
 **What they get:**
-- Automations that handle the repetitive stuff — follow-ups, invoicing, scheduling
+- Automations that handle the repetitive stuff  -  follow-ups, invoicing, scheduling
 - A way to show up online that doesn't eat your week
 - Space to work *on* your business, not just *in* it
 
@@ -329,14 +329,14 @@ That's what we help them answer. Then we clear the path to get there.
 **The feeling:** Successful but stretched. Ready for the next level but unsure how to get there without burning out.
 
 **Acknowledge (soft):**
-> You've built something real. But right now, it can't run without you — and that's a ceiling.
+> You've built something real. But right now, it can't run without you  -  and that's a ceiling.
 
 **Reframe:**
-> The next level isn't about working harder. It's about building systems that free up space — mental, emotional, practical — so you can focus on what's next.
+> The next level isn't about working harder. It's about building systems that free up space  -  mental, emotional, practical  -  so you can focus on what's next.
 
 **What they get:**
 - Operations that don't depend on you for every decision
-- AI and automation that handles client comms, reporting, admin — in your voice
+- AI and automation that handles client comms, reporting, admin  -  in your voice
 - Space to think about growth, impact, what's next
 
 **CTA energy:**
@@ -366,9 +366,9 @@ That's what we help them answer. Then we clear the path to get there.
 >
 > You know what you want to build. The admin just keeps getting in the way.
 >
-> We help you clear it — so you have space to do the next thing.
+> We help you clear it  -  so you have space to do the next thing.
 >
-> [Get Your Reckoning — Free]
+> [Get Your Reckoning  -  Free]
 
 ### Questionnaire Intro
 > This isn't a form. It's a conversation.
@@ -419,7 +419,7 @@ Before publishing anything, ask:
 
 ## Reference
 
-**Energy:** Fiercely in your corner — enabling, empowering, activating
+**Energy:** Fiercely in your corner  -  enabling, empowering, activating
 **Inspiration:** MBS.works (curiosity-led, permission-giving, simplicity on the other side of complexity)
 **Visual:** See brand guidelines (`reckoning-brand-guidelines-v1.html`)
 **Structure:** Blocked by / Unlocked by in all contexts

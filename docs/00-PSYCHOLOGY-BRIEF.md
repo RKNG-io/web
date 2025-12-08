@@ -1,6 +1,6 @@
-# Reckoning — Behavioural Psychology Agent Brief
+# Reckoning  -  Behavioural Psychology Agent Brief
 
-**Role:** You are the behavioural psychologist architecting the entire user journey. Every touchpoint — from first click to completed purchase — should feel like a conversation with someone who sees them clearly and believes in what they're building.
+**Role:** You are the behavioural psychologist architecting the entire user journey. Every touchpoint  -  from first click to completed purchase  -  should feel like a conversation with someone who sees them clearly and believes in what they're building.
 
 ---
 
@@ -8,7 +8,7 @@
 
 ### Who We're Talking To
 
-People at a threshold. They have something they want to build — a business, a new chapter, a version of their life that's been waiting. They're not broken. They're not failures. They're just... stuck.
+People at a threshold. They have something they want to build  -  a business, a new chapter, a version of their life that's been waiting. They're not broken. They're not failures. They're just... stuck.
 
 **The feeling they arrive with:**
 - Overwhelmed by everything they "should" be doing
@@ -21,7 +21,7 @@ People at a threshold. They have something they want to build — a business, a 
 - "Someone finally gets it"
 - "This is actually doable"
 - "I know exactly what to do next"
-- "I'm not behind — I'm just getting started"
+- "I'm not behind  -  I'm just getting started"
 - Permission to begin
 
 ### The Emotional Arc
@@ -80,7 +80,7 @@ Whether they DIY or buy services, we're in their corner. Never make "doing it yo
 
 ### 5. Honesty Without Cruelty
 
-We tell the truth about what's blocking them — but we frame blockers as solvable, not as character flaws.
+We tell the truth about what's blocking them  -  but we frame blockers as solvable, not as character flaws.
 
 **Not:** "You're disorganised and that's costing you"
 **Instead:** "The systems aren't set up to support you yet"
@@ -110,7 +110,7 @@ Landing page → "Get Your Reckoning" → Questionnaire → Personalised Report 
 
 ### Path 2: "I Know What I Need" (The Bypass)
 
-**Who:** People who've already decided — they want a website, or automations, or a specific service. Don't make them prove themselves.
+**Who:** People who've already decided  -  they want a website, or automations, or a specific service. Don't make them prove themselves.
 
 **Journey:**
 ```
@@ -144,7 +144,7 @@ This is for people who arrive knowing what they want. Don't make them go through
    □ One-page (landing page, simple presence)
    □ Multi-page (services, about, contact, etc.)
    □ E-commerce (selling products)
-   □ Not sure — help me decide
+   □ Not sure  -  help me decide
 
 3. DO YOU HAVE COPY?
    □ Yes, I'll provide the text
@@ -159,14 +159,14 @@ This is for people who arrive knowing what they want. Don't make them go through
    □ Just use your judgment
 
 5. WHAT MATTERS MOST? (pick up to 2)
-   □ Speed — I need this live fast
-   □ SEO — I want to be found on Google
-   □ Conversions — I want visitors to take action
-   □ Beauty — I want it to look exceptional
-   □ Simplicity — I want to update it myself
+   □ Speed  -  I need this live fast
+   □ SEO  -  I want to be found on Google
+   □ Conversions  -  I want visitors to take action
+   □ Beauty  -  I want it to look exceptional
+   □ Simplicity  -  I want to update it myself
 
 6. ANYTHING ELSE WE SHOULD KNOW?
-   [text field — optional]
+   [text field  -  optional]
 
 7. HOW SHOULD WE REACH YOU?
    Name: ___________
@@ -197,7 +197,7 @@ Don't start with business questions. Start with connection.
 
 **First screen:**
 ```
-Before we dive in —
+Before we dive in  - 
 
 This isn't a test. There are no wrong answers.
 
@@ -211,11 +211,11 @@ Takes about 15 minutes. Worth it.
 
 ### Question Flow Principles
 
-1. **Dream before diagnosis** — Ask what they want before asking what's wrong
-2. **Acknowledge before advancing** — Brief validation after meaningful answers
-3. **One thing at a time** — Never show more than one question
-4. **Progress visible** — They should always know how far along they are
-5. **Easy questions first** — Build momentum before deeper questions
+1. **Dream before diagnosis**  -  Ask what they want before asking what's wrong
+2. **Acknowledge before advancing**  -  Brief validation after meaningful answers
+3. **One thing at a time**  -  Never show more than one question
+4. **Progress visible**  -  They should always know how far along they are
+5. **Easy questions first**  -  Build momentum before deeper questions
 
 ### Question Types
 
@@ -280,7 +280,7 @@ Not a percentage. A journey.
 ```
 That's everything we need.
 
-Your Reckoning is being prepared — 
+Your Reckoning is being prepared  -  
 a personalised report based on everything you just shared.
 
 It'll be ready in about 2 minutes.
@@ -329,7 +329,7 @@ It'll be ready in about 2 minutes.
    □ Ongoing posting
    □ Engagement management
    □ Ads setup
-   □ Not sure — help me figure it out
+   □ Not sure  -  help me figure it out
 
 2. WHICH PLATFORMS?
    □ Instagram

@@ -1,19 +1,19 @@
 # Questionnaire: The Scrappy Survivor (Jordan)
 
-Different energy. Jordan doesn't need permission to start — they need **permission to stop winging it**.
+Different energy. Jordan doesn't need permission to start  -  they need **permission to stop winging it**.
 
 ---
 
 ## Flow Structure
 
 ```
-1. WELCOME          — Acknowledge the hustle, no judgement
-2. THE REALITY      — What they've built (celebrate it)
-3. THE MESS         — What's held together by duct tape
-4. THE COST         — What it's costing them (time, money, sanity)
-5. THE UPGRADE      — What "professional" looks like to them
-6. THE CAPACITY     — Time, money, readiness
-7. THE MOMENT       — One thing that would change everything
+1. WELCOME           -  Acknowledge the hustle, no judgement
+2. THE REALITY       -  What they've built (celebrate it)
+3. THE MESS          -  What's held together by duct tape
+4. THE COST          -  What it's costing them (time, money, sanity)
+5. THE UPGRADE       -  What "professional" looks like to them
+6. THE CAPACITY      -  Time, money, readiness
+7. THE MOMENT        -  One thing that would change everything
 ```
 
 ---
@@ -26,7 +26,7 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 >
 > But "working" and "working well" aren't the same thing.
 >
-> The next few questions are about getting honest — what's solid, what's duct tape, and what would actually make this feel like a business instead of a hustle.
+> The next few questions are about getting honest  -  what's solid, what's duct tape, and what would actually make this feel like a business instead of a hustle.
 >
 > No judgement. Just clarity.
 >
@@ -62,11 +62,11 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 ### Q3: What does income look like right now?
 *(Single choice)*
 
-- Inconsistent — some months good, some scary
+- Inconsistent  -  some months good, some scary
 - Steady but modest (covers basics, not much more)
-- Comfortable — I'm making it work
-- Good — but I'm working too hard for it
-- Great — I just need better systems
+- Comfortable  -  I'm making it work
+- Good  -  but I'm working too hard for it
+- Great  -  I just need better systems
 
 ### Q4: How are clients finding you?
 *(Multi-select)*
@@ -76,7 +76,7 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 - Social media
 - Freelance platforms (Upwork, Fiverr, etc.)
 - Networking / events
-- They're not — I'm chasing everything
+- They're not  -  I'm chasing everything
 - Other: ________
 
 ### Q5: What are you most proud of so far?
@@ -93,24 +93,24 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 ### Q6: If a dream client landed on your website right now, how would you feel?
 *(Single choice)*
 
-- Great — it represents me well
-- Fine — it does the job
-- Nervous — it's outdated or underwhelming
-- Horrified — please don't look at it
+- Great  -  it represents me well
+- Fine  -  it does the job
+- Nervous  -  it's outdated or underwhelming
+- Horrified  -  please don't look at it
 - What website?
 
 ### Q7: What's held together by duct tape?
-*(Multi-select — they can pick as many as apply)*
+*(Multi-select  -  they can pick as many as apply)*
 
-- My pricing — I make it up each time
-- My website — outdated, embarrassing, or nonexistent
-- My contracts — inconsistent or I don't use them
-- My invoicing — manual, awkward, often late
-- My scheduling — back-and-forth emails, no system
-- My client communication — scattered across email, WhatsApp, DMs
-- My portfolio — doesn't show my best work
-- My boundaries — I say yes to everything
-- My processes — I reinvent the wheel every project
+- My pricing  -  I make it up each time
+- My website  -  outdated, embarrassing, or nonexistent
+- My contracts  -  inconsistent or I don't use them
+- My invoicing  -  manual, awkward, often late
+- My scheduling  -  back-and-forth emails, no system
+- My client communication  -  scattered across email, WhatsApp, DMs
+- My portfolio  -  doesn't show my best work
+- My boundaries  -  I say yes to everything
+- My processes  -  I reinvent the wheel every project
 - Honestly? Most of it
 
 ### Q8: What do clients experience that you wish they didn't?
@@ -122,8 +122,8 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 - Inconsistent communication
 - Delayed deliverables
 - Unprofessional booking / scheduling
-- Nothing — client experience is solid
-- I'm not sure — I've never asked
+- Nothing  -  client experience is solid
+- I'm not sure  -  I've never asked
 
 ### Q9: What do you keep saying you'll fix "when you have time"?
 *(Free text)*
@@ -137,14 +137,14 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 ### Q10: What is the mess actually costing you?
 *(Multi-select)*
 
-- Money — I underprice, forget to invoice, or lose leads
-- Time — I waste hours on admin that should be automated
-- Energy — I'm exhausted by the chaos
-- Reputation — I know I look less professional than I am
-- Confidence — I feel like a fraud
-- Opportunities — better clients go elsewhere
-- Sanity — I can't switch off, everything feels urgent
-- Relationships — work bleeds into everything
+- Money  -  I underprice, forget to invoice, or lose leads
+- Time  -  I waste hours on admin that should be automated
+- Energy  -  I'm exhausted by the chaos
+- Reputation  -  I know I look less professional than I am
+- Confidence  -  I feel like a fraud
+- Opportunities  -  better clients go elsewhere
+- Sanity  -  I can't switch off, everything feels urgent
+- Relationships  -  work bleeds into everything
 
 ### Q11: How many hours a week do you lose to admin, chasing, or chaos?
 *(Single choice)*
@@ -153,15 +153,15 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 - 3–5 hours
 - 5–10 hours
 - 10+ hours
-- I have no idea — it's constant background noise
+- I have no idea  -  it's constant background noise
 
 ### Q12: Have you ever lost money or a client because of the mess?
 *(Single choice)*
 
-- Yes — definitely
-- Probably — but I try not to think about it
-- Not yet — but I can feel it coming
-- No — I've been lucky
+- Yes  -  definitely
+- Probably  -  but I try not to think about it
+- Not yet  -  but I can feel it coming
+- No  -  I've been lucky
 
 ### Q13: When you think about your business at 2am, what keeps you up?
 *(Free text, optional but revealing)*
@@ -196,7 +196,7 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 - Better invoicing and getting paid faster
 - A way to manage clients without losing track
 - Templates and processes so I'm not starting from scratch
-- Boundaries — learning to say no
+- Boundaries  -  learning to say no
 - Honestly, I need someone to look at the whole thing
 
 ### Q16: Who do you look at and think "they've got it figured out"?
@@ -208,35 +208,35 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 
 ## 6. The Capacity
 
-*Practical — time, money, commitment.*
+*Practical  -  time, money, commitment.*
 
 ### Q17: How much time could you realistically carve out to fix this?
 *(Single choice)*
 
-- Almost none — I'm drowning
+- Almost none  -  I'm drowning
 - A few hours over the next month
 - 2–5 hours a week
 - I'd make time if I knew what to do
-- I'm ready to invest serious time — this is a priority
+- I'm ready to invest serious time  -  this is a priority
 
 ### Q18: What's your comfort zone for investing in getting this sorted?
 *(Single choice)*
 
-- Under £100 — I'll do most of it myself
-- £100–300 — I can invest a bit
-- £300–600 — I'm ready to fix this properly
-- £600–1,000 — I want real help
-- £1,000+ — just make it work, my time is worth more
-- I don't know yet — show me what's possible
+- Under £100  -  I'll do most of it myself
+- £100–300  -  I can invest a bit
+- £300–600  -  I'm ready to fix this properly
+- £600–1,000  -  I want real help
+- £1,000+  -  just make it work, my time is worth more
+- I don't know yet  -  show me what's possible
 
 ### Q19: What's your gut reaction to getting help?
 *(Single choice)*
 
-- Relief — please, yes
-- Skeptical — I've been burned before
-- Guilty — I should be able to do this myself
-- Curious — depends what it looks like
-- Resistant — I like doing things my way
+- Relief  -  please, yes
+- Skeptical  -  I've been burned before
+- Guilty  -  I should be able to do this myself
+- Curious  -  depends what it looks like
+- Resistant  -  I like doing things my way
 
 ---
 
@@ -265,7 +265,7 @@ Different energy. Jordan doesn't need permission to start — they need **permis
 >
 > Now let's make it run like it deserves to.
 >
-> Your Reckoning is on its way — a clear look at what's working, what's not, and exactly what to fix first.
+> Your Reckoning is on its way  -  a clear look at what's working, what's not, and exactly what to fix first.
 >
 > **This is the upgrade.**
 

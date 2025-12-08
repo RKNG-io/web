@@ -1,4 +1,4 @@
-# Reckoning — Report Generation System Specification
+# Reckoning  -  Report Generation System Specification
 
 **Version:** 1.0  
 **Purpose:** Ensure every Reckoning report is accurate, personal, on-brand, and safe before reaching the client.
@@ -86,7 +86,7 @@ export interface ReckoningReport {
     package: "launcher" | "builder" | "architect" | null;
   };
   
-  // For validation — echo back key inputs
+  // For validation  -  echo back key inputs
   input_echo: {
     name: string;
     persona: string;
@@ -700,7 +700,7 @@ export async function POST(request: Request) {
       const confidence = calculateConfidence(report, submission);
       
       if (confidence.score === 0 && attempts < maxAttempts) {
-        // Hard failure — retry with error feedback
+        // Hard failure  -  retry with error feedback
         console.log(`Attempt ${attempts} failed:`, confidence.flags);
         continue;
       }

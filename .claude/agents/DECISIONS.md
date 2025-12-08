@@ -73,7 +73,7 @@ Decisions made during development that all agents should follow.
 6. Numbers validation (budget/hours referenced)
 7. Quoted phrases validation (3+ direct quotes verified)
 8. Maths validation (calculations correct)
-9. Buying intent validation (Launcher — requires deposit/pre-order tactics)
+9. Buying intent validation (Launcher  -  requires deposit/pre-order tactics)
 10. Consistency validation (hours/rate/budget match original answers)
 
 ---

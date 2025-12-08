@@ -34,10 +34,10 @@ This folder provides that context.
 
 ### Starting a Session
 
-1. **Read `CURRENT-TASKS.md`** — Check what's in progress to avoid duplicating work
-2. **Read `SESSION-LOG.md`** — Understand recent context and patterns
-3. **Read `DECISIONS.md`** — Know the architectural constraints
-4. **Claim your task** — Move it to "In Progress" in `CURRENT-TASKS.md`
+1. **Read `CURRENT-TASKS.md`**  -  Check what's in progress to avoid duplicating work
+2. **Read `SESSION-LOG.md`**  -  Understand recent context and patterns
+3. **Read `DECISIONS.md`**  -  Know the architectural constraints
+4. **Claim your task**  -  Move it to "In Progress" in `CURRENT-TASKS.md`
 
 ### During Work
 
@@ -48,18 +48,18 @@ This folder provides that context.
 
 ### Ending a Session
 
-1. **Update `SESSION-LOG.md`** — Add what you completed with file paths
-2. **Update `CURRENT-TASKS.md`** — Move completed tasks, add discovered tasks
-3. **Update other files** — If you made new decisions, added deps, or created key files
+1. **Update `SESSION-LOG.md`**  -  Add what you completed with file paths
+2. **Update `CURRENT-TASKS.md`**  -  Move completed tasks, add discovered tasks
+3. **Update other files**  -  If you made new decisions, added deps, or created key files
 
 ---
 
 ## Rules
 
-1. **Don't duplicate work** — Always check `CURRENT-TASKS.md` first
-2. **Document decisions** — Future agents need to know why
-3. **Keep it current** — Stale docs are worse than no docs
-4. **Be specific** — Include file paths, not just descriptions
+1. **Don't duplicate work**  -  Always check `CURRENT-TASKS.md` first
+2. **Document decisions**  -  Future agents need to know why
+3. **Keep it current**  -  Stale docs are worse than no docs
+4. **Be specific**  -  Include file paths, not just descriptions
 
 ---
 

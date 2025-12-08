@@ -10,7 +10,7 @@ Employees. Customers. Revenue. Responsibility.
 But somewhere along the way, the thing you built started running you.
 
 This isn't about working harder. It's about building the systems
-that let you step back — and have it all keep working.
+that let you step back  -  and have it all keep working.
 
 These questions are direct. I need to understand what's actually happening,
 not the version you tell people at networking events.
@@ -62,7 +62,7 @@ _Be specific. What decisions, processes, or fires only you can handle?_
 - Responding to enquiries
 - Hiring / HR issues
 - Fixing things when they go wrong
-- Everything — I'm the hub of the wheel
+- Everything  -  I'm the hub of the wheel
 
 ### 6. Hours Worked (Single Select)
 **How many hours a week are you working?**
@@ -74,7 +74,7 @@ _Be specific. What decisions, processes, or fires only you can handle?_
 - I've stopped counting
 
 ### 7. Last Holiday (Single Select)
-**When did you last take a proper holiday — fully offline?**
+**When did you last take a proper holiday  -  fully offline?**
 - In the last 3 months
 - 6 months – 1 year ago
 - Over a year ago
@@ -84,13 +84,13 @@ _Be specific. What decisions, processes, or fires only you can handle?_
 ### 8. Personal Costs (Multi Select)
 **What is this costing you outside of work?**
 - Time with family / partner / kids
-- Health — sleep, exercise, stress
-- Friendships — I've disappeared
-- Hobbies — things I used to enjoy
-- Mental peace — I can't switch off
-- Patience — I'm shorter with people I love
-- Joy — I built this to be free, not trapped
-- Nothing major — I'm managing okay
+- Health  -  sleep, exercise, stress
+- Friendships  -  I've disappeared
+- Hobbies  -  things I used to enjoy
+- Mental peace  -  I can't switch off
+- Patience  -  I'm shorter with people I love
+- Joy  -  I built this to be free, not trapped
+- Nothing major  -  I'm managing okay
 
 ### 9. Didn't Build For (Text)
 **Complete this sentence: "I didn't build this business to..."**
@@ -113,18 +113,18 @@ _Be specific. What decisions, processes, or fires only you can handle?_
 ### 13. Need To Hear (Single Select)
 **What do you need to hear right now?**
 - Here's exactly what's broken and how to fix it
-- You're not failing — this is normal
+- You're not failing  -  this is normal
 - It doesn't have to be this hard
-- Here's the first step — just one thing
+- Here's the first step  -  just one thing
 - Someone else can do this for you
-- You've built something valuable — now protect it
+- You've built something valuable  -  now protect it
 
 ## Completion Screen
 
 ```
 That's everything we need.
 
-Your Reckoning is being prepared —
+Your Reckoning is being prepared  - 
 a personalised report based on everything you just shared.
 
 It'll be ready in about 2 minutes.

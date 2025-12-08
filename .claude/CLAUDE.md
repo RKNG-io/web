@@ -1,16 +1,16 @@
-# Reckoning Web — Project Instructions
+# Reckoning Web  -  Project Instructions
 
 ## Before Starting Any Task
 
-1. **Read `.claude/agents/CURRENT-TASKS.md`** — Check what's in progress, avoid conflicts
-2. **Read `.claude/agents/SESSION-LOG.md`** — Recent context and patterns
-3. **Read `.claude/agents/DECISIONS.md`** — Architectural constraints
-4. **Skim `.claude/agents/FILE-MAP.md`** — Find files quickly
+1. **Read `.claude/agents/CURRENT-TASKS.md`**  -  Check what's in progress, avoid conflicts
+2. **Read `.claude/agents/SESSION-LOG.md`**  -  Recent context and patterns
+3. **Read `.claude/agents/DECISIONS.md`**  -  Architectural constraints
+4. **Skim `.claude/agents/FILE-MAP.md`**  -  Find files quickly
 
 For brand/tone context (if needed):
-- `docs/00-brand-voice.md` — Tone guidelines
-- `docs/00-PSYCHOLOGY-BRIEF.md` — Emotional vision
-- `docs/DESIGN-RULES.md` — Visual design rules
+- `docs/00-brand-voice.md`  -  Tone guidelines
+- `docs/00-PSYCHOLOGY-BRIEF.md`  -  Emotional vision
+- `docs/DESIGN-RULES.md`  -  Visual design rules
 
 ## After Completing Work
 
@@ -23,7 +23,7 @@ For brand/tone context (if needed):
 
 ## Overview
 
-Next.js 14+ website for Reckoning — a business diagnostic platform for solopreneurs.
+Next.js 14+ website for Reckoning  -  a business diagnostic platform for solopreneurs.
 
 ## Tech Stack
 
@@ -42,18 +42,18 @@ Next.js 14+ website for Reckoning — a business diagnostic platform for solopre
 - **NO gradient backgrounds**
 - **NO generic shadows**
 - **Tokens in URLs** (not IDs) for public routes
-- **Lazy client initialization** — dev-friendly fallbacks when env vars missing
+- **Lazy client initialization**  -  dev-friendly fallbacks when env vars missing
 
 ## Brand Colours (Tailwind)
 
 ```
-charcoal: #2d2926    — Primary dark, text, headers
-ice: #F2F6F9         — Page backgrounds, cards
-fuchsia: #D14BA8     — CTAs, accents, links
-mint: #B6E2D3        — Fresh sections, success
-blue: #A8C3D1        — Secondary, borders, calm
-ink: #1a1a1a         — Deepest black
-stone: #E5E7E9       — Borders, dividers
+charcoal: #2d2926     -  Primary dark, text, headers
+ice: #F2F6F9          -  Page backgrounds, cards
+fuchsia: #D14BA8      -  CTAs, accents, links
+mint: #B6E2D3         -  Fresh sections, success
+blue: #A8C3D1         -  Secondary, borders, calm
+ink: #1a1a1a          -  Deepest black
+stone: #E5E7E9        -  Borders, dividers
 fuchsia-dark: #a33a85
 mint-light: #d4efe6
 blue-light: #c5d8e3
@@ -95,8 +95,8 @@ src/
 | Report generation | `api/reckoning/generate/route.ts` | `docs/09-report-generation-system.md` |
 | Validation (10 layers) | `lib/validation/confidence.ts` | `.claude/agents/DECISIONS.md` |
 | Prompts | `lib/prompts/builder.ts` | See persona files in `lib/prompts/personas/` |
-| Services/Cart | `components/services/CartContext.tsx` | — |
-| Stripe checkout | `api/checkout/route.ts` | — |
+| Services/Cart | `components/services/CartContext.tsx` |  -  |
+| Stripe checkout | `api/checkout/route.ts` |  -  |
 | Brand voice filter | `lib/validation/brand-voice.ts` | `docs/HUMANISER-CHANGES.md` |
 
 ## Environment Variables
@@ -123,7 +123,7 @@ STRIPE_WEBHOOK_SECRET=
 
 | Folder | Purpose |
 |--------|---------|
-| `.claude/agents/` | **Shared agent context** — read before working |
+| `.claude/agents/` | **Shared agent context**  -  read before working |
 | `.claude/plans/` | Implementation plans for major features |
 | `docs/` | Specs, brand, copy, business strategy |
 | `docs/business/` | Automation OS catalogue, research |
@@ -140,7 +140,7 @@ STRIPE_WEBHOOK_SECRET=
 
 ## Styling Rules
 
-- Use Tailwind exclusively — no CSS modules
+- Use Tailwind exclusively  -  no CSS modules
 - Use semantic colour names: `bg-charcoal`, `text-fuchsia`, `bg-mint`
 - Button variants: primary (fuchsia), secondary (charcoal), outline, tertiary (blue)
 - Border radius: `rounded-lg` (10px) for cards, `rounded-md` (6px) for buttons
@@ -156,7 +156,7 @@ STRIPE_WEBHOOK_SECRET=
 
 ## Testing
 
-- `pnpm dev` — Start dev server
-- `pnpm build` — Production build
-- `pnpm lint` — ESLint check
-- `pnpm test` — Run tests
+- `pnpm dev`  -  Start dev server
+- `pnpm build`  -  Production build
+- `pnpm lint`  -  ESLint check
+- `pnpm test`  -  Run tests

@@ -7,26 +7,26 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 ## Flow Structure
 
 ```
-1. WELCOME          — Set the tone, permission to dream
-2. THE VISION       — Where she's going (emotional fuel)
-3. THE NOW          — Where she is (no judgement)
-4. THE GAPS         — What's missing (diagnostic)
-5. THE BLOCKERS     — What's in the way (fears, real constraints)
-6. THE READINESS    — Commitment level (budget, time, urgency)
-7. THE MOMENT       — Final reflection (the reckoning)
+1. WELCOME           -  Set the tone, permission to dream
+2. THE VISION        -  Where she's going (emotional fuel)
+3. THE NOW           -  Where she is (no judgement)
+4. THE GAPS          -  What's missing (diagnostic)
+5. THE BLOCKERS      -  What's in the way (fears, real constraints)
+6. THE READINESS     -  Commitment level (budget, time, urgency)
+7. THE MOMENT        -  Final reflection (the reckoning)
 ```
 
 ---
 
 ## 1. Welcome
 
-*Not a question — sets the emotional container*
+*Not a question  -  sets the emotional container*
 
 > **This is your moment.**
 >
 > You're here because something in you knows it's time.
 >
-> The next few questions aren't a form — they're a conversation. Be honest. There are no wrong answers. Just you, telling the truth about where you are and where you want to be.
+> The next few questions aren't a form  -  they're a conversation. Be honest. There are no wrong answers. Just you, telling the truth about where you are and where you want to be.
 >
 > Takes about 8 minutes. Worth it.
 >
@@ -43,7 +43,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 
 > Don't overthink it. Morning routine, how your days feel, what you've let go of, what you've built.
 
-### Q2: Who do you help — and what changes for them?
+### Q2: Who do you help  -  and what changes for them?
 *(Free text)*
 
 > Your clients, your people. What's different in their lives because of you?
@@ -51,7 +51,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 ### Q2b: What kind of business are you building?
 *(Single choice + "Other" free text)*
 
-**Services — I work with people directly**
+**Services  -  I work with people directly**
 - Coaching (life, business, career, health)
 - Consulting / advisory
 - Therapy / counselling
@@ -61,14 +61,14 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 - Professional services (bookkeeping, VA, marketing)
 - Other service: ________
 
-**Products — I make or sell things**
+**Products  -  I make or sell things**
 - Food / meal prep / catering
 - Handmade / crafts / art
 - Digital products (courses, templates)
 - Physical products / e-commerce
 - Other product: ________
 
-**Hybrid — mix of both**
+**Hybrid  -  mix of both**
 - Describe briefly: ________
 
 ### Q2c: Will you work with clients online, in person, or both?
@@ -82,7 +82,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 *(Multiple choice + optional free text)*
 
 - I've been thinking about this for years and I'm done waiting
-- Something changed — job, life, realisation
+- Something changed  -  job, life, realisation
 - I'm already doing this on the side and ready to go all in
 - I'm not 100% sure it's "now" but I'm exploring
 - Other: ________
@@ -103,7 +103,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 - I'm already doing this full-time but want to level up
 
 ### Q5: What do you have in place already?
-*(Multi-select — CONDITIONAL based on Q2b business type)*
+*(Multi-select  -  CONDITIONAL based on Q2b business type)*
 
 **Universal items:**
 - Business name decided
@@ -118,7 +118,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 - Contracts or terms of service
 - Accounting / bookkeeping setup
 
-**[Additional items loaded based on business type — see business-type-checklists.md]**
+**[Additional items loaded based on business type  -  see business-type-checklists.md]**
 
 ### Q6: How do clients find you right now?
 *(Multi-select)*
@@ -127,7 +127,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 - Social media
 - My website
 - Directories or platforms (e.g., coaching directories)
-- They don't yet — I haven't launched
+- They don't yet  -  I haven't launched
 - Other: ________
 
 ---
@@ -139,9 +139,9 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 ### Q7: When you imagine sending someone to your website (or where you show up online), how do you feel?
 *(Single choice)*
 
-- Proud — it represents me well
+- Proud  -  it represents me well
 - It's okay but needs work
-- Embarrassed — it's outdated or doesn't exist
+- Embarrassed  -  it's outdated or doesn't exist
 - I've been avoiding thinking about it
 
 ### Q8: What feels most broken or missing right now?
@@ -169,32 +169,32 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 ### Q10: What's actually stopping you from being further along?
 *(Multi-select)*
 
-- Time — I'm still working another job
-- Money — I can't invest much yet
-- Knowledge — I don't know the steps
-- Confidence — I'm not sure I'm ready
-- Tech — I find the tools overwhelming
-- Perfectionism — I keep waiting until it's "right"
-- Fear — what if it doesn't work?
-- Nothing specific — I just haven't done it
+- Time  -  I'm still working another job
+- Money  -  I can't invest much yet
+- Knowledge  -  I don't know the steps
+- Confidence  -  I'm not sure I'm ready
+- Tech  -  I find the tools overwhelming
+- Perfectionism  -  I keep waiting until it's "right"
+- Fear  -  what if it doesn't work?
+- Nothing specific  -  I just haven't done it
 - Other: ________
 
 ### Q11: What's the fear underneath the fear?
-*(Single choice — this one cuts deep)*
+*(Single choice  -  this one cuts deep)*
 
 - What if I'm not good enough?
 - What if no one wants what I'm offering?
 - What if I fail publicly and have to go back?
 - What if I succeed and can't handle it?
 - What if I invest and it doesn't pay off?
-- I'm not sure — just a general anxiety
+- I'm not sure  -  just a general anxiety
 - Honestly? I'm not that scared. I'm ready.
 
 ### Q12: Is there anyone in your life who doesn't support this?
 *(Single choice)*
 
-- No — I have support
-- Yes — and it affects my confidence
+- No  -  I have support
+- Yes  -  and it affects my confidence
 - I haven't told anyone yet
 - It's complicated
 
@@ -202,16 +202,16 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 
 ## 6. The Readiness
 
-*Practical — budget, time, urgency.*
+*Practical  -  budget, time, urgency.*
 
-### Q13: When do you want to be "live" — a real business that clients can find and pay?
+### Q13: When do you want to be "live"  -  a real business that clients can find and pay?
 *(Single choice)*
 
 - Already am, just need to improve things
 - Within the next month
 - Within 3 months
 - Within 6 months
-- No fixed timeline — just exploring
+- No fixed timeline  -  just exploring
 
 ### Q14: How much time can you realistically dedicate to building this each week?
 *(Single choice)*
@@ -225,11 +225,11 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 ### Q15: What's your comfort zone for investing in getting set up properly?
 *(Single choice)*
 
-- Under £100 — I need to do most of it myself
-- £100–300 — I can invest a little
-- £300–500 — I'm ready to invest in doing this right
-- £500–1,000 — I want real help and I'm committed
-- £1,000+ — I want it done properly and I value my time
+- Under £100  -  I need to do most of it myself
+- £100–300  -  I can invest a little
+- £300–500  -  I'm ready to invest in doing this right
+- £500–1,000  -  I want real help and I'm committed
+- £1,000+  -  I want it done properly and I value my time
 - I'm not sure yet
 
 ---
@@ -255,7 +255,7 @@ The goal isn't data extraction. It's **a conversation that makes her feel seen, 
 >
 > I see you. This takes courage.
 >
-> Your Reckoning is being prepared — a clear view of where you are, what's next, and how to make it real.
+> Your Reckoning is being prepared  -  a clear view of where you are, what's next, and how to make it real.
 >
 > It'll arrive in your inbox within 24 hours. (Usually much faster.)
 >

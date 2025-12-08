@@ -20,15 +20,15 @@ Established, successful, but capped. The business can't run without them. They'v
 
 ## Primary Beat
 
-**Unleash** — scale, space for what's next
+**Unleash**  -  scale, space for what's next
 
 ## Messaging
 
 **Acknowledge:**
-> You've built something real. But right now, it can't run without you — and that's a ceiling.
+> You've built something real. But right now, it can't run without you  -  and that's a ceiling.
 
 **Reframe:**
-> The next level isn't about working harder. It's about building systems that free up space — mental, emotional, practical — so you can focus on what's next.
+> The next level isn't about working harder. It's about building systems that free up space  -  mental, emotional, practical  -  so you can focus on what's next.
 
 ## CTA Energy
 

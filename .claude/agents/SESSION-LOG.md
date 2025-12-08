@@ -23,7 +23,7 @@ Shared context for agents working in parallel on the Reckoning project.
 
 ---
 
-### Report Quality System v3 — Presentation & Validation
+### Report Quality System v3  -  Presentation & Validation
 
 #### 1. PDF File Naming
 **Files:**
@@ -369,16 +369,16 @@ POST /api/observability/log
 
 **What was done:**
 
-1. **Removed budget questions entirely** — Asking about budget feels extractive ("charge what they can afford"). Removed from:
+1. **Removed budget questions entirely**  -  Asking about budget feels extractive ("charge what they can afford"). Removed from:
    - All three persona questionnaires (Launcher, Builder, Architect)
    - `consistency.ts` validation
    - `numbers.ts` validation
 
-2. **Removed VA business type** — Not a target customer. Removed from:
+2. **Removed VA business type**  -  Not a target customer. Removed from:
    - `business-type.ts` validator map
    - Builder persona's business_type options
 
-3. **Added default fallback for "other" business types** — Instead of skipping validation when business type is unrecognised, now uses a permissive default config with no hard restrictions. This means validation still runs but doesn't flag irrelevant services for unknown business types.
+3. **Added default fallback for "other" business types**  -  Instead of skipping validation when business type is unrecognised, now uses a permissive default config with no hard restrictions. This means validation still runs but doesn't flag irrelevant services for unknown business types.
 
 4. **business-type.ts**: Now checks `business_type` answer directly first before falling back to keyword search. Falls back to `DEFAULT_BUSINESS_TYPE` config when unrecognised (permissive, no `irrelevant` services).
 
@@ -441,27 +441,27 @@ POST /api/observability/log
 
 ### Report Becomes Genuine Diagnostic (Not Just Sales Funnel)
 
-**Goal:** Transform the Reckoning report from a funnel into a genuine diagnostic that tells users EVERYTHING they need to do — not just services we sell.
+**Goal:** Transform the Reckoning report from a funnel into a genuine diagnostic that tells users EVERYTHING they need to do  -  not just services we sell.
 
 **Files:**
-- `web/src/data/services.ts` — Complete rewrite with purchaseType + Strategy Session
-- `web/src/data/diy-actions.ts` (NEW) — 22 DIY tasks users do themselves
-- `web/src/lib/types/index.ts` — Added PurchaseType
-- `web/src/types/report.ts` — Added ActionItems, ActionItem types
-- `web/src/lib/validation/schema.ts` — Added action_items to JSON schema + validation
-- `web/src/lib/prompts/base.ts` — Added action_items documentation
-- `web/src/lib/prompts/personas/launcher.ts` — Action items guidance
-- `web/src/lib/prompts/personas/builder.ts` — Action items guidance
-- `web/src/lib/prompts/personas/architect.ts` — Action items guidance
-- `web/src/lib/data/service-catalogue.ts` — Now re-exports from services.ts (single source of truth)
-- `web/src/data/service-catalogue.ts` (DELETED) — Was duplicate, unused
+- `web/src/data/services.ts`  -  Complete rewrite with purchaseType + Strategy Session
+- `web/src/data/diy-actions.ts` (NEW)  -  22 DIY tasks users do themselves
+- `web/src/lib/types/index.ts`  -  Added PurchaseType
+- `web/src/types/report.ts`  -  Added ActionItems, ActionItem types
+- `web/src/lib/validation/schema.ts`  -  Added action_items to JSON schema + validation
+- `web/src/lib/prompts/base.ts`  -  Added action_items documentation
+- `web/src/lib/prompts/personas/launcher.ts`  -  Action items guidance
+- `web/src/lib/prompts/personas/builder.ts`  -  Action items guidance
+- `web/src/lib/prompts/personas/architect.ts`  -  Action items guidance
+- `web/src/lib/data/service-catalogue.ts`  -  Now re-exports from services.ts (single source of truth)
+- `web/src/data/service-catalogue.ts` (DELETED)  -  Was duplicate, unused
 
 **What was done:**
 
 1. **Added PurchaseType to services**
-   - `instant` — Fixed price, order now (domain_setup, booking_system, etc.)
-   - `quote` — Needs scoping (website_multi, crm_setup, etc.)
-   - `retainer` — Ongoing support
+   - `instant`  -  Fixed price, order now (domain_setup, booking_system, etc.)
+   - `quote`  -  Needs scoping (website_multi, crm_setup, etc.)
+   - `retainer`  -  Ongoing support
 
 2. **Added Strategy Session service (£249)**
    - Two 45-minute sessions with async guidance
@@ -475,9 +475,9 @@ POST /api/observability/log
    - Includes: guidance, search_terms, triggers, priority
 
 4. **New action_items structure in report schema**
-   - `must_do[]` — Priority 1: Regulatory/critical
-   - `should_do[]` — Priority 2: Important for growth
-   - `could_do[]` — Priority 3: Nice-to-have
+   - `must_do[]`  -  Priority 1: Regulatory/critical
+   - `should_do[]`  -  Priority 2: Important for growth
+   - `could_do[]`  -  Priority 3: Nice-to-have
    - Each item has action_type: 'diy' | 'instant' | 'quote'
    - DIY items include: diy_action_id, guidance, search_terms
    - Service items include: service_id, price_from
@@ -501,4 +501,4 @@ POST /api/observability/log
 **Email Setup:**
 - **Business email**: Zoho (MX records on root domain)
 - **Transactional email**: Resend (sending only, via `send.` subdomain)
-- No conflict — Zoho handles inbox, Resend handles outbound transactional
+- No conflict  -  Zoho handles inbox, Resend handles outbound transactional

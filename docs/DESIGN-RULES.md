@@ -1,4 +1,4 @@
-# Reckoning — Design Rules
+# Reckoning  -  Design Rules
 
 **Status:** Canonical reference for all visual implementation
 **Source:** Extracted from build instructions, December 2024
@@ -77,8 +77,8 @@ Semantic:
 
 Before shipping, every page must:
 
-1. **Feel like Reckoning** — warm, confident, not generic
-2. **Load fast** — under 2s on 3G
-3. **Work on mobile** — thumb-friendly, readable
-4. **Have no broken states** — loading, error, empty all handled
-5. **Match the brand guidelines exactly** — colours, fonts, spacing
+1. **Feel like Reckoning**  -  warm, confident, not generic
+2. **Load fast**  -  under 2s on 3G
+3. **Work on mobile**  -  thumb-friendly, readable
+4. **Have no broken states**  -  loading, error, empty all handled
+5. **Match the brand guidelines exactly**  -  colours, fonts, spacing

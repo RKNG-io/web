@@ -20,15 +20,15 @@ Running a business, but doing everything themselves. Busy but stuck. Making it w
 
 ## Primary Beat
 
-**Unlock** — systems, time back
+**Unlock**  -  systems, time back
 
 ## Messaging
 
 **Acknowledge:**
-> When you're the one doing everything — the work, the emails, the invoices, the posting — it's hard to find space to think, let alone grow.
+> When you're the one doing everything  -  the work, the emails, the invoices, the posting  -  it's hard to find space to think, let alone grow.
 
 **Reframe:**
-> You don't need to hire a team. You need systems that handle the repetitive stuff — so you can focus on the work that actually moves the needle.
+> You don't need to hire a team. You need systems that handle the repetitive stuff  -  so you can focus on the work that actually moves the needle.
 
 ## CTA Energy
 

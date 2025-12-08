@@ -1,4 +1,4 @@
-# UK Automation OS — Master Catalogue
+# UK Automation OS  -  Master Catalogue
 
 A comprehensive infrastructure layer for UK businesses: presence → operations → automation → intelligence → creative.
 

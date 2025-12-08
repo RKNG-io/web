@@ -1,12 +1,12 @@
-# Reckoning Report — PDF Style Guide
+# Reckoning Report  -  PDF Style Guide
 
 ## Overview
 
-The Reckoning PDF is the moment of truth — a beautifully designed, personalised document that makes people feel *seen* and gives them a clear path forward. It's not a sales pitch. It's a diagnosis that naturally leads to action.
+The Reckoning PDF is the moment of truth  -  a beautifully designed, personalised document that makes people feel *seen* and gives them a clear path forward. It's not a sales pitch. It's a diagnosis that naturally leads to action.
 
 **Two outcomes, equal validity:**
-1. **Purchase services** — they know what they need, ready to buy
-2. **Book a discovery call** — they want to talk it through first
+1. **Purchase services**  -  they know what they need, ready to buy
+2. **Book a discovery call**  -  they want to talk it through first
 
 Both are wins. The PDF should make either feel like the obvious next step.
 
@@ -72,7 +72,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 
 ### Accent Rules
 
-- **Fuchsia**: Action items, CTAs, important numbers, links — never backgrounds
+- **Fuchsia**: Action items, CTAs, important numbers, links  -  never backgrounds
 - **Mint**: Success states, things they're doing right, the "after" state
 - **Blue**: Neutral sections, supporting info, less urgent items
 
@@ -106,7 +106,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 ```
 
 **Design notes:**
-- Personalised immediately — their name is the hero
+- Personalised immediately  -  their name is the hero
 - Subtle radial gradient (fuchsia at 5% opacity) in corner
 - Clean, confident, premium feel
 - No clutter
@@ -193,7 +193,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 
 **Content guidance:**
 - Always start with what's working (builds trust)
-- "What's missing" is neutral — gaps, not failures
+- "What's missing" is neutral  -  gaps, not failures
 - "What's costing you" is specific to their inputs
 - Each point should trace back to a questionnaire answer
 
@@ -217,7 +217,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 │  ┌─────────────────────────────────────┐│
 │  │                                     ││
 │  │  "[Insight that reframes or        ││  ← Pull quote
-│  │   gives permission — never         ││     Charcoal background
+│  │   gives permission  -  never         ││     Charcoal background
 │  │   explains the obvious]"           ││     White text
 │  │                                     ││     Fuchsia accent line left
 │  └─────────────────────────────────────┘│
@@ -237,10 +237,10 @@ Both are wins. The PDF should make either feel like the obvious next step.
 - Synthesis, not just summary
 - One core insight, clearly stated
 - Specific numbers from their inputs (hours worked, rates, etc.)
-- Never generic — always personal
+- Never generic  -  always personal
 
 **Pull quote rules:**
-- Never use "The real problem isn't X. It's Y." — that's patronising
+- Never use "The real problem isn't X. It's Y."  -  that's patronising
 - Don't explain what they already know
 - Instead: reframe, give permission, or surface something they felt but hadn't articulated
 - Good: "You've been waiting to feel ready. You already are."
@@ -292,7 +292,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
   - Service page (if we offer it)
   - Resource page (if DIY)
   - Dashboard checklist item
-- Never overwhelming — they can see more online
+- Never overwhelming  -  they can see more online
 
 ---
 
@@ -340,7 +340,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 - All numbers derived from their questionnaire
 - Revenue = their rate × hours lost to admin × weeks
 - Contrast: "if nothing changes" vs "if you start now"
-- Emotional but grounded — never manipulative
+- Emotional but grounded  -  never manipulative
 - The mint box is the vision, the goal state
 
 ---
@@ -393,11 +393,11 @@ Both are wins. The PDF should make either feel like the obvious next step.
 ```
 
 **Content guidance:**
-- DIY path is genuinely supported — not a throwaway
+- DIY path is genuinely supported  -  not a throwaway
 - "Do it with us" shows their recommended package
 - Individual services option always visible (from £79)
-- Discovery call is the third path — never pushy
-- "No pitch. Just clarity." — matches brand voice
+- Discovery call is the third path  -  never pushy
+- "No pitch. Just clarity."  -  matches brand voice
 
 ---
 
@@ -439,7 +439,7 @@ Both are wins. The PDF should make either feel like the obvious next step.
 ```
 
 **Content guidance:**
-- ONE action only — the most important thing
+- ONE action only  -  the most important thing
 - Specific: "Register your domain" not "Get started"
 - Achievable in 24 hours
 - The CTA links to either:
@@ -534,7 +534,7 @@ Radius: 8px
 ┌─────────────────────────────────────┐
 │ │  "Quote text here."               │
 │ │                                   │
-│ │                     — Attribution │
+│ │                      -  Attribution │
 └─────────────────────────────────────┘
 Left border: 4px Fuchsia
 Background: Mint-light or Charcoal
@@ -568,7 +568,7 @@ Radius: 6px
 
 | Section | Tone | Example |
 |---------|------|---------|
-| Cover | Confident, personal | [Their name] — no preamble |
+| Cover | Confident, personal | [Their name]  -  no preamble |
 | Mirror | Warm, listening | "You told us..." |
 | Snapshot | Clear-eyed, fair | "What's working... what's missing" |
 | Diagnosis | Insightful, direct | Reframe or give permission |
@@ -580,10 +580,10 @@ Radius: 6px
 ### Tone Rules
 
 **Never:**
-- "The real problem isn't X. It's Y." — patronising
-- "What you need to understand is..." — condescending
-- "You might not realise that..." — assumes ignorance
-- "Let me explain..." — positions us as teacher
+- "The real problem isn't X. It's Y."  -  patronising
+- "What you need to understand is..."  -  condescending
+- "You might not realise that..."  -  assumes ignorance
+- "Let me explain..."  -  positions us as teacher
 - Explaining back to them what they just told us
 
 **Instead:**

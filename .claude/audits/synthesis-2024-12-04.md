@@ -1,4 +1,4 @@
-# Expert Synthesis: Psychology + Brand Voice — 4 December 2024
+# Expert Synthesis: Psychology + Brand Voice  -  4 December 2024
 
 ## Where They Agree
 
@@ -11,7 +11,7 @@
 
 ---
 
-## Where They Disagree — And Who Wins
+## Where They Disagree  -  And Who Wins
 
 ### BlockedUnlocked Arrows
 - **Psychologist**: Make tapping unnecessary, show both states
@@ -19,7 +19,7 @@
 - **Winner**: Brand voice. Less clutter, visual relief when something unlocks.
 
 ### Loading Screen Strategy
-- **Psychologist**: Remove defensive language ("— Free")
+- **Psychologist**: Remove defensive language (" -  Free")
 - **Brand Voice**: Keep "Continue" throughout, change loading headline
 - **Winner**: Both right but incomplete. Change loading headline AND remove defensive modifiers.
 
@@ -43,7 +43,7 @@
 6. Add "We save as you go" reassurance
 
 ### Phase 3 (Week 2)
-7. Evaluate `/start/choose` flow — before or after questionnaire?
+7. Evaluate `/start/choose` flow  -  before or after questionnaire?
 8. Pick ONE services page version
 
 ---
@@ -52,7 +52,7 @@
 
 **The questionnaire is treated as a utility, not a ritual.**
 
-Both spotted symptoms (dual CTAs, generic copy, cold resume prompt) but missed the structural truth: The questionnaire is the *first experience* of "fiercely in your corner" — but it's designed like a form.
+Both spotted symptoms (dual CTAs, generic copy, cold resume prompt) but missed the structural truth: The questionnaire is the *first experience* of "fiercely in your corner"  -  but it's designed like a form.
 
 **What should happen:**
 - Make questionnaire conversational, not transactional
