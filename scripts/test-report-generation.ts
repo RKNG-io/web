@@ -6,9 +6,9 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk';
-import { LAUNCHER_SYSTEM_PROMPT, LAUNCHER_USER_PROMPT_TEMPLATE } from '../web/src/lib/prompts/personas/launcher';
-import { REPORT_OUTPUT_SCHEMA } from '../web/src/lib/prompts/schema';
-import { validateBrandVoice } from '../web/src/lib/validation/brand-voice';
+import { launcherPrompt, LAUNCHER_USER_PROMPT_TEMPLATE } from '../src/lib/prompts/personas/launcher';
+import { REPORT_OUTPUT_SCHEMA } from '../src/lib/prompts/schema';
+import { validateBrandVoice } from '../src/lib/validation/brand-voice';
 
 const testAnswers = {
   business_idea: 'I want to start a copywriting business for tech startups',
@@ -38,7 +38,7 @@ async function testGeneration() {
     const response = await client.messages.create({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 4096,
-      system: LAUNCHER_SYSTEM_PROMPT,
+      system: launcherPrompt,
       messages: [
         {
           role: 'user',
@@ -70,14 +70,16 @@ async function testGeneration() {
       console.log(`- Next steps: ${report.next_steps?.length || 0}`);
 
       // Validate brand voice
-      const fullText = JSON.stringify(report);
-      const voiceValidation = validateBrandVoice(fullText);
+      const voiceValidation = validateBrandVoice(report);
       console.log('\nBrand voice validation:');
-      console.log(`- Score: ${(voiceValidation.score * 100).toFixed(0)}%`);
       console.log(`- Valid: ${voiceValidation.valid}`);
-      if (voiceValidation.issues.length > 0) {
-        console.log(`- Issues:`);
-        voiceValidation.issues.forEach((issue) => console.log(`    - ${issue}`));
+      if (voiceValidation.errors.length > 0) {
+        console.log(`- Errors:`);
+        voiceValidation.errors.forEach((err) => console.log(`    - ${err}`));
+      }
+      if (voiceValidation.warnings.length > 0) {
+        console.log(`- Warnings:`);
+        voiceValidation.warnings.forEach((warn) => console.log(`    - ${warn}`));
       }
     } catch (parseError) {
       console.log('\nFailed to parse as JSON - response may need structured output');

@@ -5,23 +5,22 @@
  * Run with: npx ts-node scripts/seed-services.ts
  */
 
-import { services } from '../web/src/data/services';
+import { SERVICE_CATALOGUE } from '../src/data/services';
 
 async function seedServices() {
   console.log('Services catalogue:');
   console.log('==================');
-  
-  const categories = [...new Set(services.map((s) => s.category))];
-  
+
+  const categories = [...new Set(SERVICE_CATALOGUE.map((s) => s.category))];
+
   for (const category of categories) {
     console.log(`\n${category.toUpperCase()}`);
     console.log('-'.repeat(40));
-    
-    const categoryServices = services.filter((s) => s.category === category);
+
+    const categoryServices = SERVICE_CATALOGUE.filter((s) => s.category === category);
     for (const service of categoryServices) {
       console.log(`  ${service.name}`);
-      console.log(`    Price: £${service.price}`);
-      console.log(`    Status: ${service.status}`);
+      console.log(`    Price: £${service.basePrice}`);
       if (service.personas) {
         console.log(`    Personas: ${service.personas.join(', ')}`);
       }
@@ -29,9 +28,7 @@ async function seedServices() {
   }
 
   console.log('\n==================');
-  console.log(`Total services: ${services.length}`);
-  console.log(`Active: ${services.filter((s) => s.status === 'active').length}`);
-  console.log(`Discontinued: ${services.filter((s) => s.status === 'discontinued').length}`);
+  console.log(`Total services: ${SERVICE_CATALOGUE.length}`);
 }
 
 seedServices().catch(console.error);
