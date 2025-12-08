@@ -1,4 +1,4 @@
-# Reckoning  -  Business Model v2
+# Reckoning - Business Model v3
 
 ## The Vision
 
@@ -12,19 +12,19 @@ We're not an agency. We're not a course. We're the bridge between the life you'r
 
 People don't need more advice. They need:
 
-1. **Clarity**  -  What's actually blocking them
-2. **Permission**  -  To start where they are
-3. **Action**  -  Small shifts that compound
-4. **Support**  -  When they want it (not forced)
+1. **Clarity** - What's actually blocking them
+2. **Permission** - To start where they are
+3. **Action** - Small shifts that compound
+4. **Support** - When they want it (not forced)
 
-The Reckoning gives them 1–3 for free. Services give them 4 when they're ready.
+The Reckoning gives them 1-3 for free. Services give them 4 when they're ready.
 
 ---
 
 ## Two Paths In
 
 ### Path 1: "Help me figure it out"
-**The Reckoning**  -  Free diagnostic
+**The Reckoning** - Free diagnostic
 
 ```
 Questionnaire (15 min) → Personalised Report → Clarity on what's blocking them
@@ -39,7 +39,7 @@ Questionnaire (15 min) → Personalised Report → Clarity on what's blocking th
 - The report itself is the sales conversation
 
 ### Path 2: "I know what I need"
-**Bypass Intake**  -  Direct to quote
+**Bypass Intake** - Direct to quote
 
 ```
 "I need a website" → Simple intake (5 min) → Quote within 24 hours
@@ -57,7 +57,7 @@ Questionnaire (15 min) → Personalised Report → Clarity on what's blocking th
 ### Launcher
 **Where they are:** Still employed, planning, dreaming, haven't started yet.
 
-**What's blocking them:** 
+**What's blocking them:**
 - "I don't know where to start"
 - "I need to check my employment contract"
 - "I'm not ready yet"
@@ -97,40 +97,37 @@ Questionnaire (15 min) → Personalised Report → Clarity on what's blocking th
 
 ## Revenue Model
 
-### 1. Packages (Primary)
+### À La Carte Services (Primary)
 
-| Package | For | Price | Core Deliverables |
-|---------|-----|-------|-------------------|
-| **Launcher** | Starting out | £399 | Website + booking + payments + basic presence |
-| **Builder** | Already running | £599 | Automations + invoicing + follow-ups + content system |
-| **Architect** | Ready to scale | £999+ | AI workflows + delegation systems + dashboards |
-
-**Bundle discounts:**
-- 3+ services: 10% off
-- 5+ services: 15% off
-- 7+ services: 20% off
-
-### 2. À La Carte (Secondary)
-
-Individual services for people who know exactly what they need:
+The Reckoning diagnostic recommends specific services based on what's actually blocking each person. No forced bundles - they buy what they need, come back when ready for more.
 
 | Category | Examples | Price Range |
 |----------|----------|-------------|
-| **Get Found** | Website, Google Business, SEO basics, social setup | £99–£399 |
-| **Get Paid** | Booking, payments, invoicing, payment chasing | £79–£249 |
-| **Get Systematic** | Automations, workflows, email sequences, CRM | £149–£349 |
-| **Get Support** | Audits, training, strategy calls, ongoing help | £99–£299 |
+| **Presence** | Website, domain, email, link hub | £49-£399 |
+| **Operations** | Booking, payments, invoicing, CRM | £79-£299 |
+| **Automation** | Email sequences, workflows, social systems | £99-£249 |
+| **Visibility** | Google Business, SEO basics, multi-location | £79-£249 |
+| **Support** | Strategy sessions, audits, training | £99-£299 |
 
-**Pick & Fix:** "Just need one thing sorted? From £79."
+**Multi-service discounts:**
+- 2+ services: 5% off
+- 4+ services: 10% off
+- 6+ services: 15% off
 
-### 3. Retainers (Future)
+**Why à la carte over packages:**
+- A bigger business may need less (just one thing fixed)
+- Doing one thing well builds trust for the next purchase
+- People buy what they actually need, not a bundle with padding
+- Lower barrier to first purchase
+- Higher lifetime value through repeat purchases
+
+### Retainers (Ongoing Support)
 
 | Tier | Price | What's Included |
 |------|-------|-----------------|
-| **Check-in** | £99/mo | Monthly call, priority support, small tweaks |
-| **Partner** | £249/mo | Weekly async, ongoing optimisation, new automations |
-
-*Launch after proving core model.*
+| **Lite** | £79/mo | Hosting, updates, email support, one small tweak per month |
+| **Standard** | £149/mo | Monthly check-in call, priority support, 2-3 tweaks per month |
+| **Scale** | £299/mo | Quarterly planning, unlimited tweaks, new automations as you grow |
 
 ---
 
@@ -140,15 +137,15 @@ Individual services for people who know exactly what they need:
 
 | Service | Delivery Time | Notes |
 |---------|---------------|-------|
-| One-page website | 3–5 days | Includes copy if needed |
-| Multi-page website | 5–7 days | Up to 5 pages |
-| Booking system | 1–2 days | Calendly, Cal.com, or similar |
-| Payment setup | 1–2 days | Stripe, integrated with booking |
-| Invoicing automation | 2–3 days | Xero/QuickBooks integration |
-| Email sequences | 3–5 days | Welcome, follow-up, nurture |
-| Social media system | 3–5 days | Templates, calendar, scheduler setup |
-| AI voice agent | 5–7 days | Trained on their voice, handles enquiries |
-| Dashboard | 5–7 days | Key metrics in one place |
+| One-page website | 3-5 days | Includes copy if needed |
+| Multi-page website | 1-2 weeks | Up to 5 pages |
+| Booking system | 1-2 days | Calendly, Cal.com, or similar |
+| Payment setup | 1-2 days | Stripe, integrated with booking |
+| Invoicing automation | 2-3 days | Xero/QuickBooks integration |
+| Email sequences | 3-5 days | Welcome, follow-up, nurture |
+| Social media system | 3-5 days | Templates, calendar, scheduler setup |
+| Operations audit | 1 week | Deep dive into bottlenecks |
+| Dashboard | 1 week | Key metrics in one place |
 
 ### How It's Delivered
 
@@ -170,10 +167,9 @@ AI is built into delivery, not sold as a gimmick:
 |-------------------|--------------|
 | **Reckoning generation** | Personalised report from questionnaire answers |
 | **Copy assistance** | Website copy, email sequences, social content |
-| **Voice agents** | Enquiry handling, booking, FAQs  -  trained on their voice |
 | **Automation logic** | Smart workflows that adapt |
 
-**How we talk about it:** 
+**How we talk about it:**
 - "Automations that sound like you"
 - "Scale without headcount"
 - Not: "AI-powered" badges everywhere
@@ -182,24 +178,25 @@ AI is built into delivery, not sold as a gimmick:
 
 ## Unit Economics
 
-### Per Package
-
-| Package | Revenue | Delivery Hours | Effective Rate | Margin |
-|---------|---------|----------------|----------------|--------|
-| Launcher (£399) | £399 | 6–8 hrs | £50–66/hr | ~90% |
-| Builder (£599) | £599 | 10–14 hrs | £43–60/hr | ~90% |
-| Architect (£999) | £999 | 16–20 hrs | £50–62/hr | ~90% |
-
-### À La Carte
+### Per Service
 
 | Service | Price | Hours | Rate |
 |---------|-------|-------|------|
 | Google Business | £79 | 1 hr | £79/hr |
+| Domain + email | £98 | 1.5 hrs | £65/hr |
+| Booking system | £99 | 2 hrs | £50/hr |
 | One-page website | £199 | 3 hrs | £66/hr |
-| Booking + payments | £149 | 2 hrs | £75/hr |
-| Email sequence | £199 | 4 hrs | £50/hr |
+| Email sequence | £149 | 3 hrs | £50/hr |
+| Social media system | £249 | 5 hrs | £50/hr |
+| Operations audit | £299 | 4 hrs | £75/hr |
 
-*Tool costs near zero  -  clients use free tiers (Notion, Canva, Cal.com, Stripe).*
+*Tool costs near zero - clients use free tiers (Notion, Canva, Cal.com, Stripe).*
+
+### Revenue Patterns
+
+**First purchase:** Typically £79-£199 (low-risk entry)
+**Second purchase:** Often within 30 days if first delivery was good
+**Expansion:** Natural progression as business grows
 
 ---
 
@@ -207,7 +204,7 @@ AI is built into delivery, not sold as a gimmick:
 
 ```
 1. ARRIVE
-   Landing page  -  two clear paths:
+   Landing page - two clear paths:
    "Get Your Reckoning" (exploration)
    "I know what I need" (bypass)
 
@@ -221,20 +218,20 @@ AI is built into delivery, not sold as a gimmick:
    - What's blocking you
    - What unlocks it
    - Your path (prioritised steps)
-   - How we can help (soft CTA)
+   - Recommended services (specific to them)
 
 4. DECIDE
    DIY with the roadmap
    OR
-   Get help with specific services/packages
+   Get help with one specific thing
 
 5. DELIVER
    Build → Review → Handover → Support
 
-6. EXPAND (optional)
-   Additional services
-   Retainer
-   Referrals
+6. EXPAND (natural, not pushed)
+   "That worked well, can you help with X?"
+   OR
+   Retainer for ongoing support
 ```
 
 ---
@@ -244,20 +241,20 @@ AI is built into delivery, not sold as a gimmick:
 | Metric | Target | Why |
 |--------|--------|-----|
 | Questionnaire completion | >70% | Validates intake experience |
-| Reckoning → purchase | 15–25% | Conversion efficiency |
-| Bypass → purchase | 40–50% | High-intent path |
-| Average order value | £400+ | Package adoption |
+| Reckoning → first purchase | 15-25% | Conversion efficiency |
+| Bypass → purchase | 40-50% | High-intent path |
+| Average first order | £150+ | Entry point health |
 | Time to deliver | <7 days | Operational efficiency |
-| NPS | >50 | Referral potential |
-| Repeat purchase | 30%+ | Expansion revenue |
+| Repeat purchase rate | 40%+ | Trust indicator |
+| Time to second purchase | <60 days | Expansion velocity |
 
 ---
 
 ## Competitive Position
 
 ### vs. Agencies
-- **They charge:** £5k–£50k
-- **We charge:** £79–£999
+- **They charge:** £5k-£50k
+- **We charge:** £79-£399 per service
 - **They take:** Weeks/months
 - **We take:** Days
 - **They create:** Dependency
@@ -277,26 +274,26 @@ AI is built into delivery, not sold as a gimmick:
 
 ## Growth Path
 
-### Phase 1: Validate (Months 1–3)
+### Phase 1: Validate (Months 1-3)
 - Website live
 - Questionnaire working
-- Manual report generation (AI-assisted)
-- 10–20 paying clients
-- Revenue: £5k–10k/month
-
-### Phase 2: Systematise (Months 4–6)
 - Automated report generation
+- 10-20 paying clients
+- Revenue: £3k-8k/month
+
+### Phase 2: Systematise (Months 4-6)
 - Bypass intakes live
 - Service delivery templated
-- 30–50 clients
-- Revenue: £15k–25k/month
+- Repeat purchase patterns established
+- 30-50 clients
+- Revenue: £10k-20k/month
 
-### Phase 3: Scale (Months 7–12)
+### Phase 3: Scale (Months 7-12)
 - Retainers launched
 - Partner referral channel
 - VA support for delivery
 - 100+ clients
-- Revenue: £40k–60k/month
+- Revenue: £30k-50k/month
 
 ---
 
@@ -304,21 +301,23 @@ AI is built into delivery, not sold as a gimmick:
 
 | Risk | Mitigation |
 |------|------------|
-| **Capacity**  -  you're the bottleneck | Templatise, hire VA, raise prices |
-| **Price objections**  -  "just a website" | Lead with Reckoning (value), not deliverables |
+| **Capacity** - you're the bottleneck | Templatise, hire VA, raise prices |
+| **Price objections** - "just a website" | Lead with Reckoning (value), not deliverables |
 | **Scope creep** | Clear scoping, change request process |
 | **AI commoditisation** | Emphasise taste, curation, done-for-you |
+| **One-and-done clients** | Excellent delivery → natural expansion |
 
 ---
 
 ## The Moat
 
-1. **The Reckoning**  -  Proprietary diagnostic that builds trust before sale
-2. **Voice match**  -  AI trained on their voice, not generic
-3. **Permission-giving**  -  Emotional positioning competitors don't have
-4. **Speed**  -  Days, not weeks
-5. **Independence**  -  They own everything, no lock-in
+1. **The Reckoning** - Proprietary diagnostic that builds trust before sale
+2. **Human-sounding automations** - Their invoices, follow-ups, and sequences don't read like a robot wrote them
+3. **Permission-giving** - Emotional positioning competitors don't have
+4. **Speed** - Days, not weeks
+5. **Independence** - They own everything, no lock-in
+6. **Land and expand** - One thing done well leads to the next
 
 ---
 
-*You don't need to overhaul a thing. Introduce automations that sound like you. Build systems that let you grow without burning out.*
+*You don't need to overhaul a thing. Fix what's blocking you now. Come back when you're ready for the next step.*
