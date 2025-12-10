@@ -8,7 +8,7 @@ Active work being done by agents. Update this when starting/completing tasks to 
 
 | Task | Agent/Session | Started | Notes |
 |------|---------------|---------|-------|
-| Questionnaire builder | Separate agent | 2025-12-04 | DO NOT TOUCH - another agent working |
+| - | - | - | - |
 
 ---
 
@@ -70,6 +70,9 @@ Plan: `.claude/plans/website-builder.md`
 
 | Task | Completed | Agent |
 |------|-----------|-------|
+| Questionnaire rewrite - practical time/task audit | 2025-12-10 | Claude |
+| Action-oriented prompts + QA validation | 2025-12-10 | Claude |
+| Services page problem-first layout | 2025-12-10 | Claude |
 | Admin authentication middleware | 2025-12-08 | Claude |
 | Services page version choice (VersionA only) | 2025-12-08 | Claude |
 | UX consistency sweep (buttons, shadows, tap targets) | 2025-12-08 | Claude |

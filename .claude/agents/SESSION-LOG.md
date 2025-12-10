@@ -4,6 +4,77 @@ Shared context for agents working in parallel on the Reckoning project.
 
 ---
 
+## Session: 2025-12-10 (Questionnaire Rewrite)
+
+### Practical Time/Task Audit Approach
+
+**Philosophy shift:** Move from emotional "blockers" questions to practical operational diagnostics. Users describe pain → we identify fixes → we tell them cost.
+
+**Files:**
+- `src/data/persona-questions.ts` - Complete rewrite of Builder and Architect questionnaires
+- `src/lib/prompts/base.ts` - Added "Lead With The Fix" guidance
+- `src/lib/prompts/personas/builder.ts` - "Diagnose AND Prescribe" pattern
+- `src/lib/prompts/personas/architect.ts` - "Diagnose AND Prescribe" pattern
+- `src/lib/validation/action-oriented.ts` (NEW) - Validates prescriptive output
+- `src/lib/validation/confidence.ts` - Integrated action-oriented validation
+- `docs/questionnaires/REVISED-QUESTIONNAIRES-DRAFT.md` (NEW) - Draft spec
+
+**What was done:**
+
+1. **Launcher questionnaire - Simplified business type**
+   - Changed from 9 category options to 5 "what you do" options:
+     - Help them solve a problem (coaching, consulting, therapy)
+     - Make or build something (design, photography, trades)
+     - Teach them something (courses, tutoring, workshops)
+     - Sell them a product (physical or digital)
+     - Something else
+   - Updated skipIf from `ecommerce` to `sell_product`
+
+2. **Builder questionnaire - Time/task audit**
+   - New welcome: "You're making it work. Let's see where the time goes."
+   - Removed emotional questions (duct tape, costs, one thing, growth goal)
+   - Added practical questions:
+     - Hours worked per week
+     - Tasks dreaded checklist (invoicing, social, follow-ups, etc.)
+     - "Most annoying part of your week" (text)
+     - "Magic wand" - what would happen automatically (text)
+     - Payment system status (manual, software, automated, mess)
+     - Booking system status (manual, partial, automated, inconsistent)
+     - Typical day walkthrough
+     - What's working well (optional)
+
+3. **Architect questionnaire - Operations audit**
+   - New welcome: "This is an operations audit - not therapy."
+   - Simplified revenue and team size options
+   - Added operational questions:
+     - Bottleneck areas checklist (decisions, questions, complaints, etc.)
+     - "What breaks in 2 weeks" (text)
+     - Most repetitive task (text)
+     - "Needs systematising" checklist
+     - Biggest time sink
+     - "Walk me through yesterday" (more concrete)
+     - "10 hours back" goal
+     - Success outcome in 6 months
+
+4. **Action-oriented prompts (earlier commit)**
+   - Added "Lead With The Fix" guidance to base prompt
+   - Updated Builder/Architect prompts with "Diagnose AND Prescribe" pattern:
+     - ❌ "You need to delegate more"
+     - ✅ "You're spending 8 hours/week on invoicing. Invoicing System (£79) fixes this."
+   - New validation layer checks for:
+     - Service recommendations with prices for Builder/Architect
+     - Balance of DIY vs services (not all services)
+     - Fix-oriented language in diagnosis
+     - Specific next step actions
+
+5. **Services page - Problem-first layout (earlier commit)**
+   - 7 expandable problem cards instead of category grid
+   - Each problem maps to relevant services
+
+**Result:** Questionnaires now gather practical operational data for prescriptive fixes rather than emotional blockers for narrative insights.
+
+---
+
 ## Session: 2025-12-04 (Evening)
 
 ### Plan Organisation & CLAUDE.md Update
