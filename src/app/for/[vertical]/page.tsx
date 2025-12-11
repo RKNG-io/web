@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { getAutomationsByVertical } from '@/data/automation-catalogue'
@@ -25,6 +26,11 @@ type VerticalConfig = {
   subheadline: string
   painPoints: string[]
   description: string
+  seo: {
+    title: string
+    description: string
+    keywords: string[]
+  }
 }
 
 const VERTICAL_CONFIG: Record<Vertical, VerticalConfig> = {
@@ -40,6 +46,20 @@ const VERTICAL_CONFIG: Record<Vertical, VerticalConfig> = {
     ],
     description:
       'You got into fitness to help people get stronger - not to spend your evenings chasing payments. We handle the admin so you can stay in the gym.',
+    seo: {
+      title: 'Automations for Fitness Professionals | Reckoning',
+      description:
+        'Save hours every week on admin. Automated session reminders, payment collection, and no-show management for PTs, coaches, and gym owners.',
+      keywords: [
+        'fitness automation',
+        'PT software',
+        'gym management',
+        'personal trainer tools',
+        'fitness business automation',
+        'session reminders',
+        'fitness payment collection',
+      ],
+    },
   },
   wellness: {
     name: 'Wellness Practitioners',
@@ -53,19 +73,48 @@ const VERTICAL_CONFIG: Record<Vertical, VerticalConfig> = {
     ],
     description:
       'Your work requires presence. Hard to give that when you are thinking about unpaid invoices. We handle the admin so you can focus on your clients.',
+    seo: {
+      title: 'Automations for Wellness Practitioners | Reckoning',
+      description:
+        'Focus on your clients, not admin. Automated appointment reminders, invoicing, and cancellation management for therapists and wellness practitioners.',
+      keywords: [
+        'wellness automation',
+        'therapist software',
+        'massage therapist tools',
+        'wellness business automation',
+        'appointment reminders',
+        'holistic practitioner software',
+      ],
+    },
   },
   trades: {
     name: 'Trades & Services',
     headline: 'Quote faster. Get paid sooner.',
-    subheadline: 'For plumbers, sparks, builders, and anyone who works with their hands.',
+    subheadline: 'For plumbers, electricians, builders, cleaners, and anyone running a service business.',
     painPoints: [
       'Quotes going cold without follow-up',
       'Chasing deposits before you can start',
       'Invoices sitting unpaid for weeks',
-      'Paperwork after a long day on site',
+      'Paperwork after a long day of work',
     ],
     description:
-      'You are great at your trade. The paperwork? Not so much. We handle the quote chasing and payment reminders so you can focus on the work.',
+      'You are great at what you do. The paperwork? Not so much. We handle the quote chasing and payment reminders so you can focus on the work.',
+    seo: {
+      title: 'Automations for Trades & Services | Reckoning',
+      description:
+        'Less paperwork, more paid work. Automated quote follow-ups, deposit collection, and invoice reminders for tradespeople, cleaners, and service businesses.',
+      keywords: [
+        'tradesperson automation',
+        'trades business software',
+        'plumber invoicing',
+        'builder quote software',
+        'electrician software',
+        'cleaning business software',
+        'cleaner invoicing',
+        'deposit collection',
+        'quote follow-up',
+      ],
+    },
   },
   events: {
     name: 'Event Professionals',
@@ -79,6 +128,20 @@ const VERTICAL_CONFIG: Record<Vertical, VerticalConfig> = {
     ],
     description:
       'Events are stressful enough. We handle the payment links, deposit reminders, and follow-ups so you can focus on the event itself.',
+    seo: {
+      title: 'Automations for Event Professionals | Reckoning',
+      description:
+        'Focus on the event, not the admin. Automated deposit collection, payment links, and follow-ups for DJs, photographers, and event planners.',
+      keywords: [
+        'event automation',
+        'DJ booking software',
+        'photographer payment tools',
+        'event planner automation',
+        'wedding vendor software',
+        'deposit collection',
+        'event business tools',
+      ],
+    },
   },
 }
 
@@ -93,6 +156,39 @@ export function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ vertical: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { vertical } = await params
+
+  if (!['fitness', 'wellness', 'trades', 'events'].includes(vertical)) {
+    return {
+      title: 'Not Found | Reckoning',
+    }
+  }
+
+  const config = VERTICAL_CONFIG[vertical as Vertical]
+
+  return {
+    title: config.seo.title,
+    description: config.seo.description,
+    keywords: config.seo.keywords,
+    openGraph: {
+      title: config.seo.title,
+      description: config.seo.description,
+      type: 'website',
+      url: `https://rkng.io/for/${vertical}`,
+      siteName: 'Reckoning',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: config.seo.title,
+      description: config.seo.description,
+    },
+    alternates: {
+      canonical: `https://rkng.io/for/${vertical}`,
+    },
+  }
 }
 
 export default async function VerticalPage({ params }: PageProps) {

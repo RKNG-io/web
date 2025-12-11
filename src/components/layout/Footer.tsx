@@ -20,6 +20,33 @@ const Footer: React.FC = () => {
 
           {/* Links */}
           <div className="flex flex-wrap gap-16">
+            {/* Industries */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">Industries</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/for/fitness" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Fitness
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/for/wellness" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Wellness
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/for/trades" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Trades
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/for/events" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Events
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* Services */}
             <div>
               <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
@@ -30,30 +57,12 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/start" className="text-sm text-white/50 hover:text-white transition-colors">
-                    Get your Reckoning
+                  <Link href="/start/time-audit" className="text-sm text-white/50 hover:text-white transition-colors">
+                    Find my automations
                   </Link>
                 </li>
               </ul>
             </div>
-
-{/* Company - hidden until pages exist
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            */}
 
             {/* Contact */}
             <div>

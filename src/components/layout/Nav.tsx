@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isIndustryDropdownOpen, setIsIndustryDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,29 @@ const Nav = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsIndustryDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const navLinks = [
-    { label: 'Where are you?', href: '#where-are-you' },
     { label: 'How it works', href: '#how-it-works' },
-    { label: 'What you get', href: '#what-you-get' },
-    { label: 'Services', href: '#support' },
+    { label: 'Services', href: '/services' },
     { label: 'FAQ', href: '#faq' },
+  ];
+
+  const industryLinks = [
+    { label: 'Fitness', href: '/for/fitness', description: 'PTs, coaches, gym owners' },
+    { label: 'Wellness', href: '/for/wellness', description: 'Therapists, bodyworkers, healers' },
+    { label: 'Trades', href: '/for/trades', description: 'Plumbers, builders, cleaners' },
+    { label: 'Events', href: '/for/events', description: 'DJs, photographers, planners' },
   ];
 
   return (
@@ -41,26 +60,75 @@ const Nav = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-charcoal ${
+            {/* Industry Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsIndustryDropdownOpen(!isIndustryDropdownOpen)}
+                className={`text-sm font-medium transition-colors hover:text-charcoal flex items-center gap-1 ${
                   isScrolled ? 'text-charcoal/60' : 'text-white/70'
                 }`}
               >
-                {link.label}
-              </a>
+                Industries
+                <svg
+                  className={`w-4 h-4 transition-transform ${isIndustryDropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              {isIndustryDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-stone py-2 z-50">
+                  {industryLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-3 hover:bg-ice transition-colors"
+                      onClick={() => setIsIndustryDropdownOpen(false)}
+                    >
+                      <span className="block text-sm font-medium text-charcoal">{link.label}</span>
+                      <span className="block text-xs text-charcoal/50">{link.description}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {navLinks.map((link) => (
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-charcoal ${
+                    isScrolled ? 'text-charcoal/60' : 'text-white/70'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-charcoal ${
+                    isScrolled ? 'text-charcoal/60' : 'text-white/70'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
           {/* CTA */}
           <div className="hidden md:block">
             <Link
-              href="/start"
+              href="/start/time-audit"
               className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm transition-all hover:-translate-y-0.5 hover:bg-fuchsia/90"
             >
-              Get Your Reckoning
+              Find my automations
             </Link>
           </div>
 
@@ -91,12 +159,18 @@ const Nav = () => {
         {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? 'max-h-[500px] opacity-100 pb-6' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="flex flex-col gap-4 pt-4">
-            {navLinks.map((link) => (
-              <a
+          <div className="flex flex-col gap-2 pt-4">
+            {/* Industry Links */}
+            <p className={`text-xs uppercase tracking-wider font-medium pt-2 ${
+              isScrolled ? 'text-charcoal/50' : 'text-white/50'
+            }`}>
+              Industries
+            </p>
+            {industryLinks.map((link) => (
+              <Link
                 key={link.href}
                 href={link.href}
                 className={`font-medium py-2 transition-colors ${
@@ -105,14 +179,44 @@ const Nav = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
+            ))}
+
+            {/* Divider */}
+            <div className={`border-t my-2 ${isScrolled ? 'border-charcoal/10' : 'border-white/20'}`} />
+
+            {/* Main Links */}
+            {navLinks.map((link) => (
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`font-medium py-2 transition-colors ${
+                    isScrolled ? 'text-charcoal' : 'text-white'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-medium py-2 transition-colors ${
+                    isScrolled ? 'text-charcoal' : 'text-white'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Link
-              href="/start"
+              href="/start/time-audit"
               className="inline-flex items-center justify-center px-7 py-3 rounded-md bg-fuchsia text-white font-medium text-sm mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Your Reckoning
+              Find my automations
             </Link>
           </div>
         </div>

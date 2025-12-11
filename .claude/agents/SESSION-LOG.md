@@ -11,7 +11,7 @@ Shared context for agents working in parallel on the Reckoning project.
 **Shift:** From persona-based diagnostic to time audit → automation matcher.
 
 **Files created/modified:**
-- `src/app/for/[vertical]/page.tsx` (NEW) - Vertical landing pages
+- `src/app/for/[vertical]/page.tsx` (NEW) - Vertical landing pages with SEO
 - `src/app/start/time-audit/page.tsx` (NEW) - 8-screen intake UI
 - `src/app/start/time-audit/useTimeAudit.ts` (NEW) - State management hook
 - `src/app/api/intake/time-audit/route.ts` (NEW) - API endpoint
@@ -24,6 +24,24 @@ Shared context for agents working in parallel on the Reckoning project.
 - `src/components/landing/Hero.tsx` - CTA to `/start/time-audit`
 - `src/components/landing/FinalCTA.tsx` - CTA to `/start/time-audit`
 - `.claude/agents/copywriter.md` (NEW) - Copywriter agent
+
+**Navigation + SEO:**
+- `src/components/layout/Nav.tsx` - Added Industries dropdown with vertical links
+- `src/components/layout/Footer.tsx` - Added Industries section with vertical links
+- `src/app/for/[vertical]/page.tsx` - Added `generateMetadata` with title, description, keywords, OpenGraph, Twitter cards
+
+**Analytics infrastructure:**
+- `src/lib/analytics/index.ts` (NEW) - Privacy-respecting analytics core
+- `src/lib/analytics/useAnalytics.ts` (NEW) - React hook for tracking
+- Supports Plausible, Fathom, or custom backend
+- Respects Do Not Track
+- Typed event tracking for funnels
+
+**Geo content strategy:**
+- `docs/GEO-CONTENT-STRATEGY.md` (NEW) - Regional expansion playbook
+- Terminology mapping (ANZ → UK → US)
+- URL structure recommendations
+- Implementation checklist
 
 **Copy fixes:**
 - Vertical descriptions rewritten for inclusivity
