@@ -9,9 +9,12 @@ Key files and their purposes. Update when adding significant new files.
 | Path | Purpose |
 |------|---------|
 | `web/src/app/page.tsx` | Landing page |
-| `web/src/app/start/page.tsx` | Questionnaire intake |
+| `web/src/app/start/page.tsx` | Questionnaire intake (v1 persona-based) |
+| `web/src/app/start/time-audit/page.tsx` | **v2 Time Audit intake** (8 screens) |
+| `web/src/app/diagnostic/[token]/page.tsx` | **v2 Diagnostic results** (matched automations) |
+| `web/src/app/for/[vertical]/page.tsx` | **v2 Vertical landing pages** (fitness, wellness, trades, events) |
 | `web/src/app/services/page.tsx` | Services catalogue with cart |
-| `web/src/app/reckoning/[token]/page.tsx` | Public report view |
+| `web/src/app/reckoning/[token]/page.tsx` | Public report view (v1 AI-generated) |
 | `web/src/app/checkout/success/page.tsx` | Payment success |
 | `web/src/app/admin/` | Admin dashboard routes |
 
@@ -21,9 +24,10 @@ Key files and their purposes. Update when adding significant new files.
 
 | Path | Purpose |
 |------|---------|
-| `web/src/app/api/intake/route.ts` | Submit questionnaire |
+| `web/src/app/api/intake/route.ts` | Submit questionnaire (v1) |
+| `web/src/app/api/intake/time-audit/route.ts` | **v2 Time Audit submission** - runs matcher, saves diagnostic |
 | `web/src/app/api/intake/bypass/route.ts` | Quick intake (skip questions) |
-| `web/src/app/api/reckoning/generate/route.ts` | AI report generation |
+| `web/src/app/api/reckoning/generate/route.ts` | AI report generation (v1) |
 | `web/src/app/api/reckoning/pdf/[token]/route.ts` | PDF download |
 | `web/src/app/api/checkout/route.ts` | Stripe checkout session |
 | `web/src/app/api/webhooks/stripe/route.ts` | Stripe payment webhooks |
@@ -80,12 +84,30 @@ Key files and their purposes. Update when adding significant new files.
 
 ---
 
+## Automation Schema (v2)
+
+| Path | Purpose |
+|------|---------|
+| `docs/schema/README.md` | Schema overview, principles, versioning |
+| `docs/schema/entities.md` | Contact, Appointment, Invoice, Quote, Message, Event, Provider |
+| `docs/schema/automations.md` | Triggers, Steps, Actions, Conditions |
+| `docs/schema/variables.md` | Variable interpolation syntax and filters |
+| `docs/schema/integrations.md` | Supported tools by category |
+| `docs/schema/extension-guide.md` | How to extend the schema |
+| `docs/schema/catalogue.md` | All automations documented |
+| `src/types/automation.ts` | Canonical TypeScript types |
+| `src/data/automation-catalogue.ts` | 10 automations defined in code |
+| `src/lib/matcher.ts` | Automation selection algorithm |
+
+---
+
 ## Data & Config
 
 | Path | Purpose |
 |------|---------|
 | `web/src/lib/data/service-catalogue.ts` | Services definitions |
 | `web/src/lib/data/bundles.ts` | Bundle definitions |
+| `web/src/data/automation-catalogue.ts` | v2 automations catalogue |
 
 ---
 
@@ -95,7 +117,8 @@ Key files and their purposes. Update when adding significant new files.
 |------|---------|
 | `web/src/components/services/CartContext.tsx` | Cart state provider |
 | `web/src/components/services/CartDrawer.tsx` | Cart slide-out UI |
-| `web/src/app/start/useQuestionnaire.ts` | Questionnaire state hook |
+| `web/src/app/start/useQuestionnaire.ts` | Questionnaire state hook (v1) |
+| `web/src/app/start/time-audit/useTimeAudit.ts` | **v2 Time Audit state hook** |
 
 ---
 
@@ -105,6 +128,7 @@ Key files and their purposes. Update when adding significant new files.
 |------|---------|
 | `database/001_initial_schema.sql` | Core tables |
 | `database/002_*.sql` | Subsequent migrations |
+| `database/007_diagnostics.sql` | **v2 Diagnostics table** |
 
 ---
 

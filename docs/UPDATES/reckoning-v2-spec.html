@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning v2 — Build Specification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      --fuchsia: #D14BA8;
+      --mint: #B6E2D3;
+      --blue: #A8C3D1;
+      --stone: #E5E7E9;
+      --success: #2A7F78;
+      --warning: #C3B273;
+      --error: #c45d5d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: white;
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--stone);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+      color: var(--charcoal);
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+      color: #666;
+    }
+
+    p { margin-bottom: 1rem; color: #444; }
+    
+    .lead {
+      font-size: 1.125rem;
+      color: var(--charcoal);
+      margin-bottom: 2rem;
+    }
+
+    .version {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fuchsia);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--ice);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .card.dark {
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .card.dark p { color: rgba(255,255,255,0.8); }
+
+    .card.outline {
+      background: white;
+      border: 1px solid var(--stone);
+    }
+
+    .card.mint { background: var(--mint); }
+    .card.fuchsia { background: var(--fuchsia); color: white; }
+    .card.fuchsia p { color: rgba(255,255,255,0.9); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    ul, ol {
+      margin: 1rem 0 1rem 1.5rem;
+      color: #444;
+    }
+
+    li { margin-bottom: 0.5rem; }
+
+    code {
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 0.85em;
+      background: var(--ice);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+    }
+
+    pre {
+      background: var(--charcoal);
+      color: #f0f0f0;
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      margin: 1rem 0;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      background: var(--ice);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--stone);
+      vertical-align: top;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, rgba(209, 75, 168, 0.15) 0%, rgba(209, 75, 168, 0.05) 100%);
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25em 0.6em;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+
+    .tag.must { background: var(--fuchsia); color: white; }
+    .tag.should { background: var(--charcoal); color: white; }
+    .tag.could { background: var(--stone); color: #666; }
+
+    .flow-diagram {
+      background: var(--ice);
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 0.85rem;
+      line-height: 2;
+      margin: 1.5rem 0;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--fuchsia);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--fuchsia);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--stone);
+      margin: 3rem 0;
+    }
+
+    .toc {
+      background: var(--ice);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc li {
+      margin: 0.4rem 0;
+    }
+
+    .toc a {
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      color: var(--fuchsia);
+    }
+
+    .agent-card {
+      background: white;
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .agent-card h4 {
+      margin: 0 0 0.5rem;
+      color: var(--charcoal);
+      font-size: 1rem;
+    }
+
+    .agent-card p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .agent-card .role {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fuchsia);
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="version">Reckoning v2 — Build Specification</div>
+  <h1>We find what's costing you time.</h1>
+  <p class="subtitle">A clean-slate rebuild. Same brand, tighter positioning, simpler system.</p>
+
+  <nav class="toc">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#positioning">1. Positioning</a></li>
+      <li><a href="#user-journey">2. User Journey</a></li>
+      <li><a href="#verticals">3. Vertical Landing Pages</a></li>
+      <li><a href="#intake">4. The Intake</a></li>
+      <li><a href="#diagnostic">5. The Diagnostic</a></li>
+      <li><a href="#services">6. Services</a></li>
+      <li><a href="#agents">7. Agent Architecture</a></li>
+      <li><a href="#tech">8. Tech Stack</a></li>
+      <li><a href="#pages">9. Pages to Build</a></li>
+      <li><a href="#mobile">10. Mobile-First Design</a></li>
+      <li><a href="#brand">11. Brand Reference</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================ -->
+  <h2 id="positioning">1. Positioning</h2>
+  <!-- ============================================ -->
+
+  <div class="card dark">
+    <p style="font-size: 1.5rem; font-weight: 500; margin-bottom: 0.5rem;">We find what's costing you time.</p>
+    <p style="margin-bottom: 0;">Most business owners lose 10+ hours a week to tasks that could run themselves. We spot them. Then we fix them.</p>
+  </div>
+
+  <h3>What Reckoning Actually Is</h3>
+  <p><strong>Automations for people who don't know about automations.</strong></p>
+  <p>The diagnostic reveals what's possible. The services deliver it.</p>
+
+  <h3>The One-Liner Test</h3>
+  <p>If someone asks "what does Reckoning do?", the answer is:</p>
+  <blockquote>"We look at how you spend your week and show you what could run itself. Then we build it for you."</blockquote>
+
+  <h3>What We're Not</h3>
+  <ul>
+    <li>Not a coaching programme</li>
+    <li>Not a course</li>
+    <li>Not general business consulting</li>
+    <li>Not "helping you find your purpose"</li>
+  </ul>
+  <p>We find time leaks. We plug them with automations. That's it.</p>
+
+  <h3>Who It's For</h3>
+  <p>Small business owners and solopreneurs who:</p>
+  <ul>
+    <li>Are doing tasks they suspect could be automated</li>
+    <li>Don't know what's possible</li>
+    <li>Don't have time to figure it out</li>
+    <li>Would pay someone to just do it</li>
+  </ul>
+
+  <h3>Voice (Unchanged from v1)</h3>
+  <div class="grid-2">
+    <div class="card outline">
+      <h4 style="margin-top: 0;">We are</h4>
+      <p style="margin-bottom: 0;">Direct · Warm · Clear · Optimistic · Supportive</p>
+    </div>
+    <div class="card outline">
+      <h4 style="margin-top: 0;">We are not</h4>
+      <p style="margin-bottom: 0;">Salesy · Jargon-heavy · Pushy · Cold · Vague</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <h2 id="user-journey">2. User Journey</h2>
+  <!-- ============================================ -->
+
+  <div class="flow-diagram">
+    Landing Page → Intake (5 min) → Diagnostic → Services (optional)
+  </div>
+
+  <h3>The Core Loop</h3>
+  <ol>
+    <li><strong>Land</strong> — "We find what's costing you time"</li>
+    <li><strong>Intake</strong> — Tell us about your week (5 minutes, max)</li>
+    <li><strong>Diagnostic</strong> — Here's 3 things we can automate + what each saves you</li>
+    <li><strong>Choose</strong> — Pick one, we'll build it (or run with it yourself)</li>
+  </ol>
+
+  <h3>No Personas</h3>
+  <p>v1 had launcher/builder/architect. v2 doesn't segment. Everyone gets the same intake. The diagnostic adapts based on answers, not pre-assigned labels.</p>
+
+  <h3>Two Paths to Value</h3>
+  <div class="grid-2">
+    <div class="card mint">
+      <h4 style="margin-top: 0;">Run With It</h4>
+      <p style="margin-bottom: 0;">Free diagnostic. You see what's possible. Take it from there.</p>
+    </div>
+    <div class="card fuchsia">
+      <h4 style="margin-top: 0;">Done-for-You</h4>
+      <p style="margin-bottom: 0;">Same diagnostic. We build it. Transparent pricing. No calls required.</p>
+    </div>
+  </div>
+  <p>Both paths are valid. We show them what's possible — that's the value. If they want help building it, we're here.</p>
+
+  <!-- ============================================ -->
+  <h2 id="verticals">3. Vertical Landing Pages</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Four industries. Same intake. Different language.</p>
+
+  <h3>URL Structure</h3>
+  <pre>/for/fitness
+/for/wellness
+/for/trades
+/for/events</pre>
+
+  <p>Main landing page (<code>/</code>) is industry-agnostic. Vertical pages speak directly to each audience.</p>
+
+  <!-- FITNESS -->
+  <div class="card outline" style="margin-top: 2rem;">
+    <div class="section-label">Vertical 1</div>
+    <h3 style="margin-top: 0.5rem;">Fitness</h3>
+    <p><strong>Who:</strong> Personal trainers, gym owners, yoga/pilates instructors, online fitness coaches, bootcamp runners</p>
+    
+    <h4>Headline Options</h4>
+    <ul>
+      <li>"Stop chasing bookings. Start training."</li>
+      <li>"Your clients book, pay, and show up — automatically."</li>
+      <li>"Spend less time on admin. More time on the floor."</li>
+    </ul>
+
+    <h4>Pain Points (for landing page)</h4>
+    <ol>
+      <li><strong>Booking chaos</strong> — Back-and-forth messages to schedule sessions</li>
+      <li><strong>No-shows</strong> — Clients forget, you lose income</li>
+      <li><strong>Payment chasing</strong> — Awkward "did you transfer?" conversations</li>
+    </ol>
+
+    <h4>Example Automations</h4>
+    <ul>
+      <li>Booking link → calendar → automatic confirmation + reminder sequence</li>
+      <li>No-show? Automatic rebooking prompt + late cancel fee</li>
+      <li>Session complete → invoice sent → payment reminder at 3, 7, 14 days</li>
+      <li>Client hasn't booked in 2 weeks → "Missing you" nudge</li>
+    </ul>
+  </div>
+
+  <!-- WELLNESS -->
+  <div class="card outline">
+    <div class="section-label">Vertical 2</div>
+    <h3 style="margin-top: 0.5rem;">Wellness</h3>
+    <p><strong>Who:</strong> Massage therapists, physiotherapists, chiropractors, acupuncturists, nail technicians, hair stylists, aestheticians, spa owners</p>
+    
+    <h4>Headline Options</h4>
+    <ul>
+      <li>"Your clients rebook. Automatically."</li>
+      <li>"Fill your books without filling your inbox."</li>
+      <li>"Less admin. More appointments."</li>
+    </ul>
+
+    <h4>Pain Points (for landing page)</h4>
+    <ol>
+      <li><strong>Rebooking gap</strong> — Clients leave happy, then forget to book again</li>
+      <li><strong>Intake forms</strong> — Paper forms, lost info, asking the same questions</li>
+      <li><strong>Last-minute cancellations</strong> — Empty slots, lost revenue</li>
+    </ol>
+
+    <h4>Example Automations</h4>
+    <ul>
+      <li>Appointment ends → "Book your next session" email with link</li>
+      <li>Digital intake form → saved to client record → pre-filled next time</li>
+      <li>Cancellation → waitlist notification → slot filled automatically</li>
+      <li>6 weeks since last visit → "Time for your next [treatment]?" reminder</li>
+    </ul>
+  </div>
+
+  <!-- TRADES -->
+  <div class="card outline">
+    <div class="section-label">Vertical 3</div>
+    <h3 style="margin-top: 0.5rem;">Trades</h3>
+    <p><strong>Who:</strong> Electricians, plumbers, cleaners, landscapers, handymen, builders, decorators, locksmiths</p>
+    
+    <h4>Headline Options</h4>
+    <ul>
+      <li>"Quote, book, invoice — without the paperwork."</li>
+      <li>"Run your trade. Not your inbox."</li>
+      <li>"The admin runs itself. You run the jobs."</li>
+    </ul>
+
+    <h4>Pain Points (for landing page)</h4>
+    <ol>
+      <li><strong>Quote follow-up</strong> — Send quote, hear nothing, forget to chase</li>
+      <li><strong>Invoicing delays</strong> — Job done, invoice sent days later (or never)</li>
+      <li><strong>Scheduling mess</strong> — Texts, calls, WhatsApp — no single source of truth</li>
+    </ol>
+
+    <h4>Example Automations</h4>
+    <ul>
+      <li>Quote sent → follow-up at 2, 5, 10 days if no response</li>
+      <li>Job marked complete → invoice generated and sent immediately</li>
+      <li>Invoice unpaid after 7 days → automatic reminder sequence</li>
+      <li>Job complete → "Leave us a review?" request with direct link</li>
+      <li>Seasonal service due → "Time for your annual [boiler service/gutter clean]"</li>
+    </ul>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="card outline">
+    <div class="section-label">Vertical 4</div>
+    <h3 style="margin-top: 0.5rem;">Events</h3>
+    <p><strong>Who:</strong> Promoters, DJs, venue owners, caterers, florists, event photographers, mobile bars, boxing show organisers, wedding vendors</p>
+    
+    <h4>Headline Options</h4>
+    <ul>
+      <li>"Never drop the ball on another inquiry."</li>
+      <li>"From inquiry to invoice — on autopilot."</li>
+      <li>"You run the event. We run the admin."</li>
+    </ul>
+
+    <h4>Pain Points (for landing page)</h4>
+    <ol>
+      <li><strong>Inquiry overwhelm</strong> — Peak season = inbox explosion, leads go cold</li>
+      <li><strong>Deposit chasing</strong> — "Just waiting on the deposit" for weeks</li>
+      <li><strong>Timeline chaos</strong> — Multiple events, multiple stages, things slip through</li>
+    </ol>
+
+    <h4>Example Automations</h4>
+    <ul>
+      <li>Inquiry received → instant response + questionnaire to qualify</li>
+      <li>Quote sent → follow-up sequence until accepted or declined</li>
+      <li>Deposit due → automatic reminders until paid</li>
+      <li>Event date approaching → checklist reminders to client and you</li>
+      <li>Event complete → review request + "book your next event" prompt</li>
+    </ul>
+  </div>
+
+  <h3>Landing Page Template</h3>
+  <p>Each vertical page follows the same structure:</p>
+  <ol>
+    <li><strong>Hero</strong> — Vertical-specific headline + subhead + CTA</li>
+    <li><strong>Pain points</strong> — "Sound familiar?" — the 3 things that eat their time</li>
+    <li><strong>How it works</strong> — Same 3 steps (Intake → Diagnostic → Services)</li>
+    <li><strong>Example automations</strong> — 3-4 specific to their industry</li>
+    <li><strong>Social proof</strong> — Testimonial or case study (placeholder initially)</li>
+    <li><strong>CTA</strong> — "Get your diagnostic (5 min, free)"</li>
+    <li><strong>FAQ</strong> — 3-4 industry-specific questions</li>
+  </ol>
+
+  <h3>Intake Tagging</h3>
+  <p>When someone arrives from <code>/for/fitness</code>, the intake captures:</p>
+  <pre>{ "source_vertical": "fitness" }</pre>
+  <p>This enables:</p>
+  <ul>
+    <li>Industry-specific diagnostic language</li>
+    <li>Relevant automation suggestions</li>
+    <li>Conversion tracking by vertical</li>
+    <li>Future: vertical-specific email sequences</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2 id="intake">4. The Intake</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">5 minutes. Focused on time costs. No psychological deep-dive.</p>
+
+  <h3>Design Principles</h3>
+  <ul>
+    <li>One question per screen</li>
+    <li>Progress indicator (not percentage — stages)</li>
+    <li>Can go back</li>
+    <li>Saves progress (localStorage)</li>
+    <li>Email captured at the end, not the start</li>
+  </ul>
+
+  <h3>Question Flow</h3>
+
+  <h4>Screen 1: Name</h4>
+  <p><em>"What should we call you?"</em></p>
+  <p>Text input. Required.</p>
+
+  <h4>Screen 2: Business</h4>
+  <p><em>"What's your business? (A few words is fine.)"</em></p>
+  <p>Text input. Examples shown: "Life coaching", "Freelance design", "Online bakery"</p>
+
+  <h4>Screen 3: Stage</h4>
+  <p><em>"Where are you right now?"</em></p>
+  <ul>
+    <li>Just getting started (no customers yet)</li>
+    <li>Got some customers, building momentum</li>
+    <li>Established, looking to scale or streamline</li>
+  </ul>
+  <p>Single select.</p>
+
+  <h4>Screen 4: Hours</h4>
+  <p><em>"How many hours a week do you spend on your business?"</em></p>
+  <p>Number input or slider (5–60+ range).</p>
+
+  <h4>Screen 5: Time Sinks</h4>
+  <p><em>"What eats the most time? (Pick up to 3)"</em></p>
+  <ul>
+    <li>Emails and messages</li>
+    <li>Invoicing and chasing payments</li>
+    <li>Scheduling and calendar</li>
+    <li>Social media</li>
+    <li>Admin and data entry</li>
+    <li>Client onboarding</li>
+    <li>Creating content</li>
+    <li>Something else → [text field]</li>
+  </ul>
+  <p>Multi-select, max 3.</p>
+
+  <h4>Screen 6: Biggest Frustration</h4>
+  <p><em>"What's the one thing you wish just... ran itself?"</em></p>
+  <p>Text input. This is gold for the diagnostic.</p>
+
+  <h4>Screen 7: Tools</h4>
+  <p><em>"What tools do you already use? (Select any that apply)"</em></p>
+  <ul>
+    <li>Google Workspace</li>
+    <li>Microsoft 365</li>
+    <li>Xero / QuickBooks</li>
+    <li>Calendly / Acuity</li>
+    <li>Stripe / PayPal</li>
+    <li>Mailchimp / ConvertKit</li>
+    <li>Notion / Trello / Asana</li>
+    <li>Instagram / Facebook / LinkedIn</li>
+    <li>Other → [text field]</li>
+  </ul>
+  <p>Multi-select.</p>
+
+  <h4>Screen 8: Email</h4>
+  <p><em>"Where should we send your diagnostic?"</em></p>
+  <p>Email input. Required.</p>
+  <p>Checkbox: "Send me occasional tips on saving time (you can unsubscribe anytime)"</p>
+
+  <h4>Screen 9: Processing</h4>
+  <p><em>"Building your diagnostic..."</em></p>
+  <p>Loading state. ~30 seconds. Then redirect to diagnostic page.</p>
+
+  <h3>Micro-Copy</h3>
+  <ul>
+    <li>Acknowledge answers briefly: "Got it.", "That's helpful.", "Noted."</li>
+    <li>No cheery exclamation marks</li>
+    <li>No "Great choice!"</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2 id="diagnostic">5. The Diagnostic</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">One page. Three automations. Clear value. No fluff.</p>
+
+  <h3>Structure</h3>
+
+  <h4>Header</h4>
+  <p><strong>[Name], here's what we found.</strong></p>
+  <p>You're spending roughly [X] hours a week on [top time sink]. Here's how to get some of that back.</p>
+
+  <h4>Section 1: The Opportunities</h4>
+  <p>Three cards. Each contains:</p>
+  <ul>
+    <li><strong>What</strong> — The automation (e.g., "Automated invoice reminders")</li>
+    <li><strong>Time saved</strong> — Hours per week (e.g., "~2 hrs/week")</li>
+    <li><strong>How it works</strong> — One sentence (e.g., "Xero sends reminders at 7, 14, 21 days automatically")</li>
+    <li><strong>Done-for-you</strong> — Price + "Get this" button</li>
+  </ul>
+  <p><em>Note: We show what's possible. No links, no step-by-step instructions. They leave knowing what could change — and we're here if they want help making it happen.</em></p>
+
+  <h4>Section 2: The Maths</h4>
+  <p>Simple calculation:</p>
+  <pre>
+[Hours saved/week] × [Weeks/year] = [Hours back/year]
+
+At £[their implied hourly rate], that's £[annual value] in time.
+  </pre>
+  <p>Only show if we have enough data to make it credible. Otherwise, skip.</p>
+
+  <h4>Section 3: Your Next Step</h4>
+  <p>One highlighted action:</p>
+  <blockquote>"If you do one thing this week: [specific action]"</blockquote>
+  <p>Service CTA or "Run with it yourself — we're here when you need us."</p>
+
+  <h4>Footer</h4>
+  <ul>
+    <li>Download as PDF (one-pager)</li>
+    <li>Share link (public URL with token)</li>
+    <li>"Questions? Reply to the email — it goes to a human."</li>
+  </ul>
+
+  <h3>Diagnostic Output Schema</h3>
+  <pre>
+{
+  "recipient": {
+    "name": "Sophie",
+    "business": "Life coaching",
+    "stage": "building"
+  },
+  "summary": {
+    "hours_per_week": 35,
+    "top_time_sink": "Scheduling and calendar",
+    "estimated_recoverable_hours": 6
+  },
+  "opportunities": [
+    {
+      "id": "auto-scheduling",
+      "title": "Automated Scheduling",
+      "time_saved_weekly": 3,
+      "description": "Clients book directly into your calendar. No back-and-forth.",
+      "service": {
+        "id": "scheduling-setup",
+        "price": 149,
+        "includes": "Calendly Pro setup, calendar integration, custom booking page, email confirmations"
+      }
+    },
+    // ... 2 more opportunities
+  ],
+  "calculation": {
+    "hours_per_week": 6,
+    "weeks_per_year": 48,
+    "annual_hours": 288,
+    "hourly_value": 50,
+    "annual_value": 14400
+  },
+  "next_step": {
+    "action": "Set up a booking link and add it to your email signature",
+    "why": "Every scheduling email you eliminate is 10 minutes back."
+  }
+}
+  </pre>
+
+  <h3>PDF Format</h3>
+  <p>One page. Printable. Pin-to-wall worthy.</p>
+  <ul>
+    <li>Header with name and date</li>
+    <li>Three opportunity boxes with checkboxes (☐)</li>
+    <li>The maths</li>
+    <li>The one thing to do</li>
+    <li>rkng.com footer</li>
+  </ul>
+  <p>Filename: <code>[Name]-Diagnostic-[YYYY-MM-DD].pdf</code></p>
+
+  <!-- ============================================ -->
+  <h2 id="services">6. Services</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Automations, transparently priced. No packages. No bundles. Pick what you need.</p>
+
+  <h3>Service Categories</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Example Services</th>
+        <th>Price Range</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Scheduling</strong></td>
+        <td>Booking system setup, calendar integration, reminder sequences</td>
+        <td>£99–£249</td>
+      </tr>
+      <tr>
+        <td><strong>Payments</strong></td>
+        <td>Invoice automation, payment reminders, recurring billing</td>
+        <td>£149–£349</td>
+      </tr>
+      <tr>
+        <td><strong>Client Comms</strong></td>
+        <td>Welcome sequences, follow-up automations, email templates</td>
+        <td>£199–£399</td>
+      </tr>
+      <tr>
+        <td><strong>Admin</strong></td>
+        <td>Form → spreadsheet automations, data entry elimination, notifications</td>
+        <td>£149–£299</td>
+      </tr>
+      <tr>
+        <td><strong>Social</strong></td>
+        <td>Scheduling setup, content calendar template, basic automation</td>
+        <td>£199–£449</td>
+      </tr>
+      <tr>
+        <td><strong>Custom</strong></td>
+        <td>Bespoke automation for their specific workflow</td>
+        <td>From £499</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Service Page Structure</h3>
+  <p>Each service has:</p>
+  <ul>
+    <li><strong>What it is</strong> — One sentence</li>
+    <li><strong>What you get</strong> — Bullet list of deliverables</li>
+    <li><strong>How long it takes</strong> — Turnaround time</li>
+    <li><strong>Price</strong> — Fixed, not "from"</li>
+    <li><strong>Get started</strong> — Checkout button (Stripe)</li>
+  </ul>
+
+  <h3>No Calls Required</h3>
+  <p>Checkout is self-service. Brief intake form after payment captures specifics. We reach out within 24 hours to confirm scope.</p>
+
+  <!-- ============================================ -->
+  <h2 id="agents">7. Agent Architecture</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Internal system. Four components. Customer never sees this.</p>
+
+  <p><em>Note: This is how the sausage gets made. None of this is customer-facing. They just see the diagnostic.</em></p>
+
+  <div class="agent-card">
+    <div class="role">Agent 1</div>
+    <h4>Intake Processor</h4>
+    <p>Receives questionnaire submission. Structures data. Passes to Diagnostic Generator.</p>
+    <p><strong>Input:</strong> Raw questionnaire answers<br>
+    <strong>Output:</strong> Structured intake object</p>
+  </div>
+
+  <div class="agent-card">
+    <div class="role">Agent 2</div>
+    <h4>Diagnostic Generator</h4>
+    <p>Analyses intake. Identifies automation opportunities. Calculates time savings. Generates diagnostic JSON.</p>
+    <p><strong>Input:</strong> Structured intake<br>
+    <strong>Output:</strong> Diagnostic JSON (see schema above)</p>
+  </div>
+
+  <div class="agent-card">
+    <div class="role">Agent 3</div>
+    <h4>Humaniser</h4>
+    <p>Takes diagnostic JSON. Writes the copy. Ensures tone is warm, direct, on-brand. Uses their exact words where possible.</p>
+    <p><strong>Input:</strong> Diagnostic JSON + intake answers<br>
+    <strong>Output:</strong> Humanised diagnostic ready for display</p>
+  </div>
+
+  <div class="agent-card">
+    <div class="role">Agent 4</div>
+    <h4>Validator</h4>
+    <p>Checks output for: accuracy (maths), brand voice (no banned phrases), personalisation (uses their name/words), service validity (IDs exist).</p>
+    <p><strong>Input:</strong> Humanised diagnostic<br>
+    <strong>Output:</strong> Confidence score + flags</p>
+    <p><strong>Threshold:</strong> ≥90% auto-send. &lt;90% queue for review.</p>
+  </div>
+
+  <h3>Flow</h3>
+  <div class="flow-diagram">
+    Intake → Processor → Generator → Humaniser → Validator → [Auto-send or Review Queue]
+  </div>
+
+  <h3>Validation Rules (Carried from v1)</h3>
+  <ul>
+    <li><strong>Name match</strong> — Diagnostic must use their submitted name</li>
+    <li><strong>Maths check</strong> — Calculations must be accurate</li>
+    <li><strong>Service IDs</strong> — Must exist in service catalogue</li>
+    <li><strong>Banned phrases</strong> — "you should", "you must", "most businesses fail", "leverage", "synergy"</li>
+    <li><strong>Quoted phrases</strong> — Must include at least one phrase from their answers</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2 id="tech">8. Tech Stack</h2>
+  <!-- ============================================ -->
+
+  <h3>Frontend</h3>
+  <ul>
+    <li>Next.js 14 (App Router)</li>
+    <li>TypeScript</li>
+    <li>Tailwind CSS</li>
+    <li>Framer Motion (minimal — transitions only)</li>
+  </ul>
+
+  <h3>Backend</h3>
+  <ul>
+    <li>Next.js API routes</li>
+    <li>Supabase (Postgres + Auth + Storage)</li>
+    <li>Anthropic API (Claude Sonnet for generation)</li>
+    <li>Resend (transactional email)</li>
+    <li>Stripe (payments)</li>
+  </ul>
+
+  <h3>Database Tables</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Table</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>intakes</code></td>
+        <td>Raw questionnaire submissions</td>
+      </tr>
+      <tr>
+        <td><code>diagnostics</code></td>
+        <td>Generated diagnostics (JSON + status)</td>
+      </tr>
+      <tr>
+        <td><code>orders</code></td>
+        <td>Service purchases</td>
+      </tr>
+      <tr>
+        <td><code>services</code></td>
+        <td>Service catalogue (can be JSON file for MVP)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Deployment</h3>
+  <ul>
+    <li>Vercel (frontend + API)</li>
+    <li>Supabase (managed Postgres)</li>
+    <li>Domain: rkng.com</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2 id="pages">9. Pages to Build</h2>
+  <!-- ============================================ -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Route</th>
+        <th>Purpose</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/</code></td>
+        <td>Landing page</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/start</code></td>
+        <td>Questionnaire (multi-step)</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/diagnostic/[token]</code></td>
+        <td>Personalised diagnostic page</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/for/fitness</code></td>
+        <td>Fitness vertical landing</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/for/wellness</code></td>
+        <td>Wellness vertical landing</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/for/trades</code></td>
+        <td>Trades vertical landing</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/for/events</code></td>
+        <td>Events vertical landing</td>
+        <td><span class="tag should">Should</span></td>
+      </tr>
+      <tr>
+        <td><code>/services</code></td>
+        <td>Service catalogue</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/services/[id]</code></td>
+        <td>Individual service page</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/checkout/[service-id]</code></td>
+        <td>Stripe checkout flow</td>
+        <td><span class="tag must">Must</span></td>
+      </tr>
+      <tr>
+        <td><code>/about</code></td>
+        <td>About Reckoning</td>
+        <td><span class="tag should">Should</span></td>
+      </tr>
+      <tr>
+        <td><code>/admin</code></td>
+        <td>Review queue + stats</td>
+        <td><span class="tag should">Should</span></td>
+      </tr>
+      <tr>
+        <td><code>/admin/diagnostic/[id]</code></td>
+        <td>Review/edit diagnostic</td>
+        <td><span class="tag should">Should</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Landing Page Structure</h3>
+  <ol>
+    <li><strong>Hero</strong> — "We find what's costing you time." + CTA</li>
+    <li><strong>How it works</strong> — 3 steps (Intake → Diagnostic → Services)</li>
+    <li><strong>Example diagnostic</strong> — Screenshot or interactive preview</li>
+    <li><strong>Services preview</strong> — Categories + price ranges</li>
+    <li><strong>CTA</strong> — "Get your diagnostic (5 min, free)"</li>
+    <li><strong>Footer</strong> — Links, contact</li>
+  </ol>
+
+  <!-- ============================================ -->
+  <h2 id="mobile">10. Mobile-First Design</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Design for mobile first. Desktop is the enhancement, not the default.</p>
+
+  <h3>Why Mobile-First Matters Here</h3>
+  <ul>
+    <li><strong>Fitness</strong> — PTs are on their phones between sessions</li>
+    <li><strong>Wellness</strong> — Therapists check emails on breaks, rarely at a desk</li>
+    <li><strong>Trades</strong> — In the van, on site, phone is the only screen</li>
+    <li><strong>Events</strong> — Running around venues, phone is their office</li>
+  </ul>
+  <p>These audiences live on mobile. If it doesn't work on a phone, it doesn't work.</p>
+
+  <h3>Design Constraints</h3>
+
+  <h4>Intake</h4>
+  <ul>
+    <li>One question per screen — no scrolling to find the "Next" button</li>
+    <li>Large tap targets (min 48px height)</li>
+    <li>Thumb-friendly button placement (bottom of screen)</li>
+    <li>Progress indicator always visible</li>
+    <li>No horizontal scrolling ever</li>
+  </ul>
+
+  <h4>Diagnostic</h4>
+  <ul>
+    <li>Cards stack vertically</li>
+    <li>Expandable sections for detail (not all visible at once)</li>
+    <li>Sticky CTA at bottom of viewport</li>
+    <li>PDF download works on mobile (not just "open in browser")</li>
+  </ul>
+
+  <h4>Landing Pages</h4>
+  <ul>
+    <li>Hero text readable without zooming</li>
+    <li>Single-column layout below 768px</li>
+    <li>Images optimised (WebP, lazy loading)</li>
+    <li>No hover-dependent interactions</li>
+  </ul>
+
+  <h4>Navigation</h4>
+  <ul>
+    <li>Hamburger menu on mobile (not visible nav items)</li>
+    <li>Logo links home</li>
+    <li>Primary CTA always accessible (sticky or in hamburger)</li>
+  </ul>
+
+  <h3>Breakpoints</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Breakpoint</th>
+        <th>Target</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>< 640px</code></td>
+        <td>Mobile</td>
+        <td>Primary design target</td>
+      </tr>
+      <tr>
+        <td><code>640px – 1024px</code></td>
+        <td>Tablet</td>
+        <td>2-column where appropriate</td>
+      </tr>
+      <tr>
+        <td><code>> 1024px</code></td>
+        <td>Desktop</td>
+        <td>Full layout, max-width container</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Testing Requirement</h3>
+  <p>Every page must be tested on:</p>
+  <ul>
+    <li>iPhone SE (small screen)</li>
+    <li>iPhone 14 Pro (standard)</li>
+    <li>Android mid-range (e.g., Samsung A series)</li>
+  </ul>
+  <p>If it breaks on iPhone SE, it's not done.</p>
+
+  <!-- ============================================ -->
+  <h2 id="brand">11. Brand Reference</h2>
+  <!-- ============================================ -->
+
+  <p>Full guidelines in <code>reckoning-brand-guidelines-v1.html</code>. Key elements:</p>
+
+  <h3>Colours</h3>
+  <div class="grid-3">
+    <div class="card" style="background: var(--charcoal); color: white; text-align: center;">
+      <strong>Charcoal</strong><br>#2d2926
+    </div>
+    <div class="card" style="background: var(--ice); text-align: center;">
+      <strong>Ice</strong><br>#F2F6F9
+    </div>
+    <div class="card" style="background: var(--fuchsia); color: white; text-align: center;">
+      <strong>Fuchsia</strong><br>#D14BA8
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card" style="background: var(--mint); text-align: center;">
+      <strong>Mint</strong><br>#B6E2D3
+    </div>
+    <div class="card" style="background: var(--blue); text-align: center;">
+      <strong>Blue</strong><br>#A8C3D1
+    </div>
+  </div>
+
+  <h3>Typography</h3>
+  <ul>
+    <li><strong>Primary:</strong> Outfit (all weights)</li>
+    <li><strong>Secondary:</strong> Source Serif 4 (pull quotes only)</li>
+  </ul>
+
+  <h3>Logo</h3>
+  <p>Wordmark: "Reckoning" in Outfit Semibold, with optional rising fuchsia line accent.</p>
+  <p>Short mark: "R" for favicons and avatars.</p>
+
+  <hr>
+
+  <h2>What's Not in v2</h2>
+  <p>Explicitly descoped from this build:</p>
+  <ul>
+    <li>Personas (launcher/builder/architect)</li>
+    <li>Full 5-section PDF report</li>
+    <li>Bypass intakes (website/automations/social)</li>
+    <li>IGNT integration</li>
+    <li>Package bundles</li>
+    <li>User accounts/login</li>
+  </ul>
+  <p>These can be added later. v2 is the core loop: intake → diagnostic → services.</p>
+
+  <hr>
+
+  <p style="text-align: center; color: #888; font-size: 0.9rem; margin-top: 3rem;">
+    Reckoning v2 Specification · December 2025 · rkng.com
+  </p>
+
+</body>
+</html>

@@ -463,4 +463,116 @@ export async function getOrderStats(): Promise<{
   };
 }
 
+// ═══════════════════════════════════════════════════════════════
+// DIAGNOSTICS (v2 time audit → automation matching)
+// ═══════════════════════════════════════════════════════════════
+
+export interface DiagnosticRecord {
+  id: string;
+  token: string;
+  name: string;
+  email: string;
+  business: string;
+  stage: string;
+  hours_per_week: number;
+  time_sinks: string[];
+  biggest_frustration: string;
+  tools: string[];
+  source_vertical: string | null;
+  matches: Array<{
+    automation_id: string;
+    score: number;
+    match_reasons: string[];
+  }>;
+  status: 'pending' | 'ready' | 'viewed';
+  created_at: Date;
+  viewed_at: Date | null;
+}
+
+export async function createDiagnostic(
+  token: string,
+  name: string,
+  email: string,
+  business: string,
+  stage: string,
+  hoursPerWeek: number,
+  timeSinks: string[],
+  biggestFrustration: string,
+  tools: string[],
+  sourceVertical: string | null,
+  matches: DiagnosticRecord['matches']
+): Promise<DiagnosticRecord> {
+  const [diagnostic] = await query<DiagnosticRecord>(
+    `INSERT INTO diagnostics (
+      token, name, email, business, stage, hours_per_week,
+      time_sinks, biggest_frustration, tools, source_vertical,
+      matches, status
+    )
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, 'ready')
+    RETURNING *`,
+    [
+      token,
+      name,
+      email,
+      business,
+      stage,
+      hoursPerWeek,
+      JSON.stringify(timeSinks),
+      biggestFrustration,
+      JSON.stringify(tools),
+      sourceVertical,
+      JSON.stringify(matches),
+    ]
+  );
+  return diagnostic;
+}
+
+export async function getDiagnosticByToken(token: string): Promise<DiagnosticRecord | null> {
+  return queryOne<DiagnosticRecord>(
+    'SELECT * FROM diagnostics WHERE token = $1',
+    [token]
+  );
+}
+
+export async function markDiagnosticViewed(token: string): Promise<void> {
+  await query(
+    `UPDATE diagnostics SET status = 'viewed', viewed_at = NOW() WHERE token = $1`,
+    [token]
+  );
+}
+
+export async function getRecentDiagnostics(limit = 20): Promise<DiagnosticRecord[]> {
+  return query<DiagnosticRecord>(
+    `SELECT * FROM diagnostics ORDER BY created_at DESC LIMIT $1`,
+    [limit]
+  );
+}
+
+export async function getDiagnosticStats(): Promise<{
+  total: number;
+  viewedRate: number;
+  avgHoursPerWeek: number;
+}> {
+  const [stats] = await query<{
+    total: string;
+    viewed: string;
+    avg_hours: string;
+  }>(`
+    SELECT
+      COUNT(*) as total,
+      COUNT(*) FILTER (WHERE status = 'viewed') as viewed,
+      COALESCE(AVG(hours_per_week), 0) as avg_hours
+    FROM diagnostics
+  `);
+
+  const total = parseInt(stats.total, 10);
+  const viewed = parseInt(stats.viewed, 10);
+
+  return {
+    total,
+    viewedRate: total > 0 ? Math.round((viewed / total) * 100) : 0,
+    avgHoursPerWeek: Math.round(parseFloat(stats.avg_hours)),
+  };
+}
+
 export default pool;

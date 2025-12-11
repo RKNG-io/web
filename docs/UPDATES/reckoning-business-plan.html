@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reckoning — Business Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2d2926;
+      --ice: #F2F6F9;
+      --fuchsia: #D14BA8;
+      --mint: #B6E2D3;
+      --blue: #A8C3D1;
+      --stone: #E5E7E9;
+      --success: #2A7F78;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: white;
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--stone);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+      color: #666;
+    }
+
+    p { margin-bottom: 1rem; color: #444; }
+    
+    .lead {
+      font-size: 1.125rem;
+      color: var(--charcoal);
+      margin-bottom: 2rem;
+    }
+
+    .version {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fuchsia);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--ice);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .card.dark {
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .card.dark p { color: rgba(255,255,255,0.8); }
+    .card.dark h3 { color: white; margin-top: 0; }
+
+    .card.outline {
+      background: white;
+      border: 1px solid var(--stone);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .grid-2, .grid-4 { grid-template-columns: 1fr; }
+    }
+
+    ul, ol {
+      margin: 1rem 0 1rem 1.5rem;
+      color: #444;
+    }
+
+    li { margin-bottom: 0.5rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      background: var(--ice);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--stone);
+      vertical-align: top;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--fuchsia);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--stone);
+      margin: 3rem 0;
+    }
+
+    .metric {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .metric .number {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--fuchsia);
+      line-height: 1;
+    }
+
+    .metric .label {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    .vision-box {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .vision-box h3 {
+      color: var(--fuchsia);
+      margin-top: 0;
+    }
+
+    .vision-box p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--stone);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.35rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--fuchsia);
+      border: 2px solid white;
+    }
+
+    .timeline-item.future::before {
+      background: white;
+      border: 2px solid var(--stone);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="version">Business Plan — December 2025</div>
+  <h1>Reckoning</h1>
+  <p class="subtitle">We find what's costing you time. Then we fix it.</p>
+
+  <!-- ============================================ -->
+  <h2>The Vision</h2>
+  <!-- ============================================ -->
+
+  <div class="vision-box">
+    <h3>What We Do</h3>
+    <p>Small business owners lose hours every week to tasks that could run themselves.</p>
+    <p style="margin-bottom: 0;">We find those tasks. We build the automations. They get their time back.</p>
+  </div>
+
+  <h3>The Core Insight</h3>
+  <p><strong>The diagnostic is customer acquisition. The real product is programmatic delivery of automations that compound over time.</strong></p>
+  <p>We're not building a diagnostic tool. We're building an automation delivery system that happens to start with a diagnostic.</p>
+
+  <h3>The Evolution</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Stage</th>
+        <th>What the Customer Sees</th>
+        <th>What Happens Behind the Scenes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Now</strong></td>
+        <td>Get a diagnostic. Pick what you want automated. We build it in days.</td>
+        <td>Human configures from templates</td>
+      </tr>
+      <tr>
+        <td><strong>Next</strong></td>
+        <td>Same experience. Faster delivery. Hours, not days.</td>
+        <td>System configures, human reviews</td>
+      </tr>
+      <tr>
+        <td><strong>Future</strong></td>
+        <td>Instant. Describe the problem, get the automation.</td>
+        <td>Fully automated, human for edge cases</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The customer experience gets faster and simpler. The back-end gets more automated. Margins expand.</p>
+
+  <!-- ============================================ -->
+  <h2>The Problem</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Small business owners lose 10+ hours a week to repetitive tasks. They know there's a better way. They don't have time to find it.</p>
+
+  <h3>The Gap</h3>
+  <div class="grid-2">
+    <div class="card outline">
+      <h4 style="margin-top: 0;">Big Companies</h4>
+      <p style="margin-bottom: 0;">IT departments. Consultants. Problems get solved.</p>
+    </div>
+    <div class="card outline">
+      <h4 style="margin-top: 0;">Small Business</h4>
+      <p style="margin-bottom: 0;">No time. No budget. No idea what's possible. Problems persist.</p>
+    </div>
+  </div>
+
+  <h3>What They're Doing Instead</h3>
+  <ul>
+    <li>Copy-pasting between apps</li>
+    <li>Manually sending reminder emails</li>
+    <li>Chasing invoices by hand</li>
+    <li>Booking appointments via back-and-forth texts</li>
+    <li>Saying "I'll sort that out when I have time" (they never do)</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2>The Solution</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">We find what's costing you time. Then we fix it.</p>
+
+  <h3>How It Works</h3>
+  <ol>
+    <li><strong>Tell us about your week</strong> — 5 minutes</li>
+    <li><strong>Get your diagnostic</strong> — 3 automations you're missing + what each saves</li>
+    <li><strong>Pick one</strong> — We build it. Or DIY with our guidance.</li>
+  </ol>
+
+  <h3>Why It Works</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Others</th>
+        <th>Reckoning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"Here's 1,000 templates"</td>
+        <td>"Here's the 3 that matter for your business"</td>
+      </tr>
+      <tr>
+        <td>Figure it out yourself</td>
+        <td>We build it for you</td>
+      </tr>
+      <tr>
+        <td>Generic advice</td>
+        <td>Personalised to your workflow</td>
+      </tr>
+      <tr>
+        <td>Hourly consulting</td>
+        <td>Fixed prices, no surprises</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================ -->
+  <h2>Target Market</h2>
+  <!-- ============================================ -->
+
+  <p class="lead">Four industries. High admin burden. Underserved by existing solutions.</p>
+
+  <div class="grid-2">
+    <div class="card outline">
+      <h4 style="margin-top: 0;">🏋️ Fitness</h4>
+      <p>PTs, gym owners, yoga instructors, online coaches</p>
+      <p style="margin-bottom: 0; font-size: 0.85rem; color: #888;">Booking chaos · No-shows · Payment chasing</p>
+    </div>
+    <div class="card outline">
+      <h4 style="margin-top: 0;">💆 Wellness</h4>
+      <p>Massage, physio, nails, hair, aesthetics, spas</p>
+      <p style="margin-bottom: 0; font-size: 0.85rem; color: #888;">Rebooking gaps · Intake forms · Cancellations</p>
+    </div>
+    <div class="card outline">
+      <h4 style="margin-top: 0;">🔧 Trades</h4>
+      <p>Electricians, plumbers, cleaners, builders</p>
+      <p style="margin-bottom: 0; font-size: 0.85rem; color: #888;">Quote follow-up · Invoicing · Scheduling mess</p>
+    </div>
+    <div class="card outline">
+      <h4 style="margin-top: 0;">🎪 Events</h4>
+      <p>Promoters, DJs, venues, caterers, wedding vendors</p>
+      <p style="margin-bottom: 0; font-size: 0.85rem; color: #888;">Inquiry overwhelm · Deposit chasing · Timeline chaos</p>
+    </div>
+  </div>
+
+  <h3>Why These Four</h3>
+  <ul>
+    <li><strong>High repetition</strong> — Lots of tasks to automate</li>
+    <li><strong>Underserved</strong> — Big tools don't fit; DIY is too hard</li>
+    <li><strong>Mobile-first</strong> — They're on phones, not desks</li>
+    <li><strong>Clear ROI</strong> — Time saved = money saved</li>
+    <li><strong>Network access</strong> — Direct connections in fitness, events, boxing</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2>Revenue Model</h2>
+  <!-- ============================================ -->
+
+  <h3>Service Fees</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Service Category</th>
+        <th>Price Range</th>
+        <th>Avg. Ticket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Scheduling automations</td>
+        <td>£99 – £249</td>
+        <td>£175</td>
+      </tr>
+      <tr>
+        <td>Payment automations</td>
+        <td>£149 – £349</td>
+        <td>£250</td>
+      </tr>
+      <tr>
+        <td>Client comms sequences</td>
+        <td>£199 – £399</td>
+        <td>£300</td>
+      </tr>
+      <tr>
+        <td>Admin automations</td>
+        <td>£149 – £299</td>
+        <td>£225</td>
+      </tr>
+      <tr>
+        <td>Custom builds</td>
+        <td>From £499</td>
+        <td>£750</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Average order value:</strong> £275</p>
+
+  <h3>Unit Economics</h3>
+
+  <div class="grid-4">
+    <div class="card metric">
+      <div class="number">£275</div>
+      <div class="label">Avg. Order</div>
+    </div>
+    <div class="card metric">
+      <div class="number">~2hrs</div>
+      <div class="label">Delivery Time</div>
+    </div>
+    <div class="card metric">
+      <div class="number">£50</div>
+      <div class="label">Tool Costs</div>
+    </div>
+    <div class="card metric">
+      <div class="number">~65%</div>
+      <div class="label">Gross Margin</div>
+    </div>
+  </div>
+
+  <h3>Margin Expansion Over Time</h3>
+  <p>As delivery gets more efficient:</p>
+  <ul>
+    <li>Delivery time: 2 hours → 30 minutes</li>
+    <li>Gross margin: 65% → 80%+</li>
+    <li>Capacity: 5x without hiring</li>
+  </ul>
+
+  <h3>Future: Subscription</h3>
+  <p>Once delivery is instant:</p>
+  <ul>
+    <li><strong>Basic:</strong> £29/month — Diagnostic + 1 automation/month</li>
+    <li><strong>Pro:</strong> £79/month — Unlimited automations</li>
+  </ul>
+  <p><em>Not for now. Noted for later.</em></p>
+
+  <!-- ============================================ -->
+  <h2>Go-to-Market</h2>
+  <!-- ============================================ -->
+
+  <h3>Phase 1: Prove It (Months 1-3)</h3>
+  <ul>
+    <li>Launch four vertical landing pages</li>
+    <li>Organic content: industry-specific pain points</li>
+    <li>Personal network: fitness and events contacts</li>
+    <li><strong>Goal:</strong> 50 diagnostics, 15 paying customers</li>
+  </ul>
+
+  <h3>Phase 2: Scale It (Months 4-6)</h3>
+  <ul>
+    <li>Identify top-converting vertical</li>
+    <li>Paid ads to that vertical</li>
+    <li>Case studies and testimonials</li>
+    <li>Referral program</li>
+    <li><strong>Goal:</strong> 200 diagnostics/month, 50 customers/month</li>
+  </ul>
+
+  <h3>Phase 3: Speed It Up (Months 7-12)</h3>
+  <ul>
+    <li>Faster delivery</li>
+    <li>Expand service catalogue</li>
+    <li>Same team, more volume</li>
+    <li><strong>Goal:</strong> 3x throughput</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2>Roadmap</h2>
+  <!-- ============================================ -->
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4 style="margin-top: 0;">Q1 2026</h4>
+      <p><strong>Launch</strong> — Core product live. Four verticals. Diagnostic + services.</p>
+    </div>
+    <div class="timeline-item">
+      <h4 style="margin-top: 0;">Q2 2026</h4>
+      <p><strong>Optimise</strong> — Double down on top vertical. Paid acquisition. First case studies.</p>
+    </div>
+    <div class="timeline-item">
+      <h4 style="margin-top: 0;">Q3 2026</h4>
+      <p><strong>Accelerate</strong> — Faster delivery. Higher margins. More services.</p>
+    </div>
+    <div class="timeline-item future">
+      <h4 style="margin-top: 0;">Q4 2026</h4>
+      <p><strong>Scale</strong> — Referral engine. Expanded catalogue. 3x volume.</p>
+    </div>
+    <div class="timeline-item future">
+      <h4 style="margin-top: 0;">2026</h4>
+      <p><strong>Subscription</strong> — Instant delivery. Recurring revenue.</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Competition</h2>
+  <!-- ============================================ -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>What They Do</th>
+        <th>Why We're Different</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Zapier / Make</strong></td>
+        <td>DIY automation platforms</td>
+        <td>We build it for them. No learning curve.</td>
+      </tr>
+      <tr>
+        <td><strong>Virtual Assistants</strong></td>
+        <td>Human labour for admin</td>
+        <td>We eliminate the task, not outsource it.</td>
+      </tr>
+      <tr>
+        <td><strong>Business Coaches</strong></td>
+        <td>Strategy and mindset</td>
+        <td>We implement, not advise.</td>
+      </tr>
+      <tr>
+        <td><strong>Industry Software</strong></td>
+        <td>All-in-one platforms</td>
+        <td>We work with existing tools, not replace them.</td>
+      </tr>
+      <tr>
+        <td><strong>Freelancers</strong></td>
+        <td>Custom builds, hourly rates</td>
+        <td>Fixed pricing. Faster. Diagnostic-first.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================ -->
+  <h2>What Gets Harder to Copy</h2>
+  <!-- ============================================ -->
+
+  <ul>
+    <li><strong>Diagnostic quality</strong> — Gets better with every customer</li>
+    <li><strong>Vertical expertise</strong> — "What works for PTs" becomes institutional knowledge</li>
+    <li><strong>Speed</strong> — Faster delivery = better margins = lower prices = more customers</li>
+    <li><strong>Brand in niches</strong> — "The automation people for [industry]"</li>
+  </ul>
+
+  <!-- ============================================ -->
+  <h2>Risks</h2>
+  <!-- ============================================ -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Risk</th>
+        <th>Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Tool dependency</strong></td>
+        <td>Build on multiple platforms. Don't lock in.</td>
+      </tr>
+      <tr>
+        <td><strong>Delivery bottleneck</strong></td>
+        <td>Invest in efficiency early. Don't hire to scale.</td>
+      </tr>
+      <tr>
+        <td><strong>Wrong vertical</strong></td>
+        <td>Four verticals from day one. Fast to pivot.</td>
+      </tr>
+      <tr>
+        <td><strong>Commoditisation</strong></td>
+        <td>Compete on speed and expertise, not features.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================ -->
+  <h2>Year 1 Projection</h2>
+  <!-- ============================================ -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Quarter</th>
+        <th>Diagnostics</th>
+        <th>Customers</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Q1</td>
+        <td>150</td>
+        <td>40</td>
+        <td>£11,000</td>
+      </tr>
+      <tr>
+        <td>Q2</td>
+        <td>400</td>
+        <td>100</td>
+        <td>£27,500</td>
+      </tr>
+      <tr>
+        <td>Q3</td>
+        <td>600</td>
+        <td>150</td>
+        <td>£41,250</td>
+      </tr>
+      <tr>
+        <td>Q4</td>
+        <td>800</td>
+        <td>200</td>
+        <td>£55,000</td>
+      </tr>
+      <tr style="background: var(--ice); font-weight: 600;">
+        <td>Year 1</td>
+        <td>1,950</td>
+        <td>490</td>
+        <td>£134,750</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Assumptions:</strong> 25% conversion, £275 average order, £500/month ad spend from Q2</p>
+
+  <!-- ============================================ -->
+  <h2>Success Metrics</h2>
+  <!-- ============================================ -->
+
+  <h3>North Star</h3>
+  <blockquote>Hours saved per customer</blockquote>
+
+  <h3>Key Metrics</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Target (Month 6)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Diagnostic completion rate</td>
+        <td>>70%</td>
+      </tr>
+      <tr>
+        <td>Diagnostic → customer conversion</td>
+        <td>>25%</td>
+      </tr>
+      <tr>
+        <td>Customer satisfaction (NPS)</td>
+        <td>>50</td>
+      </tr>
+      <tr>
+        <td>Repeat purchase rate</td>
+        <td>>20%</td>
+      </tr>
+      <tr>
+        <td>Referral rate</td>
+        <td>>10%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div class="card dark">
+    <h3>In One Sentence</h3>
+    <p style="margin-bottom: 0; font-size: 1.1rem;">Reckoning finds the automations small businesses don't know they're missing — and builds them.</p>
+  </div>
+
+  <hr>
+
+  <p style="text-align: center; color: #888; font-size: 0.9rem; margin-top: 3rem;">
+    Reckoning Business Plan · December 2025 · rkng.com
+  </p>
+
+</body>
+</html>

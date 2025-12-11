@@ -70,6 +70,11 @@ Plan: `.claude/plans/website-builder.md`
 
 | Task | Completed | Agent |
 |------|-----------|-------|
+| v2 Vertical Landing Pages (/for/fitness, etc.) | 2025-12-11 | Claude |
+| Landing page CTAs updated to /start/time-audit | 2025-12-11 | Claude |
+| v2 Time Audit Intake Flow (8 screens) | 2025-12-11 | Claude |
+| v2 Diagnostic Results Page | 2025-12-11 | Claude |
+| v2 Schema & Automation Catalogue | 2025-12-11 | Claude |
 | Questionnaire rewrite - practical time/task audit | 2025-12-10 | Claude |
 | Action-oriented prompts + QA validation | 2025-12-10 | Claude |
 | Services page problem-first layout | 2025-12-10 | Claude |

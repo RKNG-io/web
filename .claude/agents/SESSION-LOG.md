@@ -4,6 +4,44 @@ Shared context for agents working in parallel on the Reckoning project.
 
 ---
 
+## Session: 2025-12-11 (V2 Intake Flow + Vertical Pages)
+
+### V2 Pivot Implementation
+
+**Shift:** From persona-based diagnostic to time audit → automation matcher.
+
+**Files created/modified:**
+- `src/app/for/[vertical]/page.tsx` (NEW) - Vertical landing pages
+- `src/app/start/time-audit/page.tsx` (NEW) - 8-screen intake UI
+- `src/app/start/time-audit/useTimeAudit.ts` (NEW) - State management hook
+- `src/app/api/intake/time-audit/route.ts` (NEW) - API endpoint
+- `src/app/diagnostic/[token]/page.tsx` (NEW) - Results page
+- `src/types/automation.ts` (NEW) - Types for v2 system
+- `src/data/automation-catalogue.ts` (NEW) - 30+ automations
+- `src/lib/matcher.ts` (NEW) - Matching algorithm
+- `src/lib/db.ts` - Added diagnostic queries
+- `database/007_diagnostics.sql` (NEW) - Migration
+- `src/components/landing/Hero.tsx` - CTA to `/start/time-audit`
+- `src/components/landing/FinalCTA.tsx` - CTA to `/start/time-audit`
+- `.claude/agents/copywriter.md` (NEW) - Copywriter agent
+
+**Copy fixes:**
+- Vertical descriptions rewritten for inclusivity
+- "You became a PT" → "You got into fitness" (broader appeal)
+- Added "and anyone helping people move/making moments/etc." to subheadlines
+
+**Lint fixes:**
+- Fixed setState-in-effect pattern in `useTimeAudit.ts`
+- Used lazy state initialization instead of effect
+- Removed unused `progress` variable from page component
+
+**Routes now working:**
+- `/for/fitness`, `/for/wellness`, `/for/trades`, `/for/events`
+- `/start/time-audit`
+- `/diagnostic/[token]`
+
+---
+
 ## Session: 2025-12-10 (Questionnaire Rewrite)
 
 ### Practical Time/Task Audit Approach
@@ -564,6 +602,78 @@ POST /api/observability/log
    - Generic guidance with search terms instead
 
 **Result:** Reports now tell users everything they need to do, with DIY guidance for things we don't sell and clear purchase paths for things we do. Feels like genuine help, not just a sales pitch.
+
+---
+
+## Session: 2025-12-11 (v2 Schema & Architecture)
+
+### Reckoning v2 — Automation-First Architecture
+
+**Context:** Reviewed v2 spec and related docs in `docs/UPDATES/`. Major positioning shift from "business diagnostic with personas" to "time audit → automation recommendations".
+
+**Key Decision:** The value isn't AI-generated prose — it's **curation**. We know which automations help which problems. The system matches them efficiently. AI becomes a polish layer (personalised intro), not the core engine.
+
+**Files Created:**
+
+**Schema Documentation (`docs/schema/`):**
+- `README.md` — Schema overview, design principles, versioning
+- `entities.md` — Contact, Appointment, Invoice, Quote, Message, Event, Provider
+- `automations.md` — Triggers, Steps, Actions, Conditions
+- `variables.md` — Variable interpolation syntax and filters
+- `integrations.md` — Supported tools by category
+- `extension-guide.md` — How to extend the schema
+- `catalogue.md` — All automations with details
+
+**TypeScript Types:**
+- `src/types/automation.ts` — Canonical types for all schema entities
+
+**Automation Catalogue:**
+- `src/data/automation-catalogue.ts` — 10 automations defined:
+  - Event Payment Links (free, gateway)
+  - Invoice Reminder Sequence (£199)
+  - Appointment Confirmation + Reminder (£149)
+  - No-Show Follow-up (£99)
+  - Quote Follow-up Sequence (£149)
+  - Rebooking Prompt (£79)
+  - Review Request (£79)
+  - Client Re-engagement (£149)
+  - Session Complete → Invoice (£179)
+  - Deposit Reminder Sequence (£149)
+
+**Matcher Logic:**
+- `src/lib/matcher.ts` — Scoring algorithm to select automations based on:
+  - Time sink matches (30 points each)
+  - Vertical match (20 points)
+  - Business stage match (15 points)
+  - Tool compatibility (10 points each)
+  - Bonuses/penalties for time savings, free setup, missing tools
+
+**Schema Design Decisions:**
+- Terminology drawn from Schema.org, Stripe, Xero, HubSpot, Calendly, iCalendar
+- `customer` not `client` (Stripe/Schema.org consensus)
+- `provider` not `business` (Schema.org term)
+- `appointment` not `booking` (clearer for services)
+- `start_time`/`end_time` not `startDate`/`endDate` (iCal pattern)
+- snake_case for all JSON properties (matches Stripe/Calendly)
+
+**Architecture:**
+```
+Catalogue (schema-compliant automations)
+    ↓
+Matcher (intake answers → top 3 automations)
+    ↓
+Diagnostic (assembled output, not AI-generated)
+    ↓
+Configurator [future] (inject customer variables)
+    ↓
+Deployer [future] (Zapier/Make/n8n config generation)
+```
+
+**What's Next:**
+- [ ] Build new intake flow (8 screens per v2 spec)
+- [ ] Build diagnostic output page (`/diagnostic/[token]`)
+- [ ] Vertical landing pages (`/for/fitness`, etc.)
+- [ ] Remove persona system from codebase
 
 ---
 

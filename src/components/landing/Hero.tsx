@@ -33,13 +33,13 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/start"
+                href="/start/time-audit"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-fuchsia text-white font-medium transition-all hover:-translate-y-0.5 hover:bg-fuchsia/90"
               >
-                Get Your Reckoning  - Free
+                Find what's costing you time
               </Link>
               <Link
-                href="/start/choose"
+                href="/services"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-transparent border-2 border-white text-white font-medium transition-transform hover:-translate-y-0.5"
               >
                 I know what I need
